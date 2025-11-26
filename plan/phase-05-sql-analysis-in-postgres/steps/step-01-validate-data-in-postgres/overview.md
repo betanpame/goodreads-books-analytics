@@ -3,6 +3,7 @@
 In this step you will confirm that the Goodreads books data is correctly stored and usable in PostgreSQL.
 
 You will:
+
 - Inspect table structure and row counts.
 - Validate column types and basic statistics.
 - Perform sanity checks against the original CSV / pandas data.
