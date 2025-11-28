@@ -1,8 +1,8 @@
-## Task 02 – Write Learning Reflections
+## Task 02 – Write learning reflections
 
 ### Objective
 
-Capture what **you personally learned** from the project in a way that you can reuse in interviews and future projects.
+Capture what **you personally learned** from the project so you can reuse it in interviews and as notes for future projects.
 
 ### Outputs
 
@@ -20,16 +20,16 @@ Capture what **you personally learned** from the project in a way that you can r
 
 2. **Write short paragraphs under each heading**
 
-   - Keep it personal and concrete ("I learned how to use window functions to rank books per author" instead of generalities).
+   - Keep it personal and concrete (better "I learned how to use window functions to rank books per author" than very generic statements).
 
-3. **Add 1–2 bullet points per section for interview talking points**
+3. **Add 1–2 bullets per section as interview talking points**
 
-   - For each heading, add bullets like:
-     - "Example: debugging a mismatch between pandas and SQL results."
-     - "Example: designing a cleaning pipeline that balances strictness and data retention."
+   - For example:
+     - "Debugging a mismatch between results in pandas and SQL."
+     - "Designing a cleaning pipeline that balances data quality and retention."
 
 4. **Review and keep it honest**
-   - This document is mainly for you; clarity and honesty are more important than polish.
+   - This document is mainly for you; clarity and honesty are more important than perfect wording.
 
 ### Checklist
 

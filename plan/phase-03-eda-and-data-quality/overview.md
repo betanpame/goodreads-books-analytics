@@ -4,6 +4,12 @@
 
 Perform a structured **Exploratory Data Analysis (EDA)** and evaluate the **data quality** of the Goodreads Books dataset. By the end of this phase you should have a clear understanding of distributions, relationships between key variables, and known data issues (with decisions on how to handle them).
 
+Here, **EDA (Exploratory Data Analysis)** means:
+
+- Looking at summary statistics, charts, and tables.
+- Describing what you see in simple language.
+- Generating questions and hypotheses about the data.
+
 ## Inputs
 
 - Phase 02 completed:
@@ -41,4 +47,4 @@ Detailed steps are under `steps/`:
 
 - Start simple: histograms, boxplots, and bar charts are enough at this stage.
 - Always connect plots back to the **business questions**: what does this distribution say about reader behavior or book characteristics?
-- Document your assumptions, even if they seem obvious. This is key for professional work and for future you.
+- Document your assumptions, even if they seem obvious. This is key for professional work and for future you. You can keep these notes directly in the notebook or in a markdown file under `docs/`.

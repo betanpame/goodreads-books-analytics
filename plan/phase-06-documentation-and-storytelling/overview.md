@@ -4,6 +4,12 @@
 
 Transform your work into a **clear, professional story** that can be understood by non-technical stakeholders and showcased in your portfolio.
 
+In this phase you will practice **data storytelling**:
+
+- Explaining _why_ you did each step, not only _what_ you did.
+- Turning technical results (tables, charts, queries) into plain-language insights.
+- Organizing your repository so that a new reader can follow the project end to end.
+
 ## Inputs
 
 - All previous phases substantially completed.
@@ -40,8 +46,15 @@ Detailed steps are under `steps/`:
 3. **Step 3 – Create Summary Narrative or Slides**  
    Folder: `steps/step-03-create-summary-narrative/`
 
+4. **Step 4 – Polish Notebooks and Visuals**  
+   Folder: `steps/step-04-polish-notebooks-and-visuals/`
+
+5. **Step 5 – Prepare Sharing and Next Notes**  
+   Folder: `steps/step-05-prepare-sharing-and-next-notes/`
+
 ## Tips
 
 - Think of this phase as preparing to show your work to a hiring manager or a client.
 - Avoid jargon when possible; explain technical terms briefly when you use them.
 - Include 2–3 key charts directly in the README or include links/screenshots.
+- Ask yourself: "If I came to this repository for the first time, could I understand what the project does and what the main findings are in 5–10 minutes?" If not, improve the structure or explanations.

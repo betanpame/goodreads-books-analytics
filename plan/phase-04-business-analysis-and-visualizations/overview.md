@@ -4,6 +4,11 @@
 
 Use cleaned data and insights from EDA to answer the main **business questions** of the project, producing clear visualizations and narratives using Python (pandas + plotting libraries).
 
+In this phase you turn EDA results into **business analysis**:
+
+- You decide which metrics matter most (for example: average rating per author, number of ratings per publisher).
+- You build charts that a non-technical person can understand at a glance.
+
 ## Inputs
 
 - Phase 03 completed:
@@ -41,3 +46,4 @@ Detailed steps are under `steps/`:
 - Keep each chart focused on **one main message**.
 - Use titles, axis labels, and annotations so that someone can understand the chart without reading the code.
 - Save or export key figures so they can be embedded later in the main README or a slide deck.
+- When you write your explanations, imagine you are explaining the chart to a friend who has never seen the dataset before.

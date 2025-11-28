@@ -4,6 +4,12 @@
 
 Make the project **easy to run, share, and extend**, and outline how it could be moved to the cloud in the future. This phase focuses on containers, reproducibility, and roadmap ideas.
 
+Here you will think like an engineer who wants other people to use this work:
+
+- Making sure that setup steps are clear and repeatable.
+- Using Docker to hide environment complexity from the user.
+- Writing down realistic but simple next steps for a future cloud deployment.
+
 ## Inputs
 
 - Core analysis and documentation completed (Phases 01–06).
@@ -39,5 +45,5 @@ Detailed steps are under `steps/`:
 ## Tips
 
 - Think from the perspective of a new collaborator: could they clone the repo and, following your instructions, get everything running?
-- Consider adding simple health checks (e.g., a test query to PostgreSQL) as part of your run instructions.
-- When defining cloud next steps, keep it high-level but concrete: mention possible services (e.g., managed PostgreSQL, hosted Jupyter, or container orchestration).
+- Consider adding simple health checks (for example, a test query to PostgreSQL or a small sanity-check notebook) as part of your run instructions.
+- When defining cloud next steps, keep it high-level but concrete: mention possible services (for example, managed PostgreSQL, hosted Jupyter, or container orchestration) and briefly state what role each would play.

@@ -4,6 +4,12 @@
 
 Set up a **reproducible development environment** for the Goodreads Books Analytics project using Docker, Jupyter Notebooks, and PostgreSQL. By the end of this phase you will be able to open a notebook, access the `books.csv` file, and (optionally) connect to a PostgreSQL database running in Docker.
 
+In this phase you will see a few important tools for the first time:
+
+- **Docker**: a tool that lets you run your code inside small, isolated environments called _containers_. Each container has its own Python, libraries, and configuration.
+- **PostgreSQL**: a popular open-source relational database used to store and query data with SQL.
+- **Jupyter Notebook / JupyterLab**: an interactive environment where you can run Python code in small cells and see results immediately (tables, charts, text).
+
 ## Inputs
 
 - This repository cloned locally.
@@ -43,6 +49,6 @@ Work through these steps in order. Each step contains tasks with checklists to g
 
 ## Tips
 
-- If Docker is new to you, take your time with Step 2 and 3. The goal is not just to get it running but to understand **why** the Dockerfile and compose file are written in a certain way.
-- Keep notes of any issues you hit and how you solved them. These notes are useful later and can be added to the project documentation.
+- If Docker is new to you, take your time with Step 2 and 3. The goal is not just to get it running but to understand **why** the Dockerfile and compose file are written in a certain way. You can also read a short beginner article or watch a short video on "What is Docker?" before or during this phase.
+- Keep notes of any issues you hit and how you solved them. These notes are useful later and can be added to the project documentation (for example, in `docs/repo-notes.md`).
 - Use Git from the beginning. Even small setup changes (like adding a Dockerfile) should be committed with clear messages.

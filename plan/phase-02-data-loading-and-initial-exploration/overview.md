@@ -4,6 +4,11 @@
 
 Understand the structure of the Goodreads Books dataset and perform a **first-pass exploration** using both pandas and SQL. By the end of this phase you should be able to load the data into a pandas DataFrame, view basic summaries, and have a clear idea of how the data will be stored in PostgreSQL.
 
+Some key concepts in this phase:
+
+- **pandas DataFrame**: a table-like data structure in Python (rows and columns) that you can filter, aggregate, and visualize.
+- **Schema (database schema)**: the design of your tables and columns in the database (for example, which columns go into which table and which data type each column uses).
+
 ## Inputs
 
 - Phase 01 completed (environment and Docker/Jupyter ready).
@@ -39,5 +44,5 @@ Work through these steps linearly. It is better to start with pandas because it 
 ## Tips
 
 - Focus on **understanding** the meaning of each column: what does it represent? how might it be used in analysis?
-- Keep track of potential data issues you observe (missing values, strange codes, inconsistent formats). These will be explored more deeply in Phase 03.
+- Keep track of potential data issues you observe (missing values, strange codes, inconsistent formats). These will be explored more deeply in Phase 03. You can write these notes in `docs/dataset-notes.md`.
 - Start simple for PostgreSQL: a single main table for books is enough at this stage. You can normalize later if needed.

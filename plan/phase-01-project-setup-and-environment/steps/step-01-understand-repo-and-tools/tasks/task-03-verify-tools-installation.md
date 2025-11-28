@@ -21,8 +21,9 @@ You should have the following installed:
    - `git --version`
    - `docker --version`
    - `python --version` (optional but recommended)
-3. Open Docker Desktop and confirm it is running without errors.
-4. Verify that your PostgreSQL Docker container can start successfully (you can do this now or in a later phase, depending on your setup).
+3. If any of these commands fail or show an error, make a note in `docs/repo-notes.md` and look up how to install or fix that tool on your operating system (for example, "install Git on Windows" or "install Docker Desktop on Windows"). Do not worry if it takes time to fix this; it is normal.
+4. Open Docker Desktop and confirm it is running without errors.
+5. Verify that your PostgreSQL Docker container can start successfully (you can do this now or in a later phase, depending on your setup).
 
 ## Checklist
 
@@ -30,6 +31,7 @@ You should have the following installed:
 - [ ] Docker Desktop is installed and running.
 - [ ] Python 3.x is installed (optional but recommended).
 - [ ] I know how to start and stop my PostgreSQL Docker container.
+- [ ] I have noted any installation or configuration issues in `docs/repo-notes.md`.
 
 ## Result
 

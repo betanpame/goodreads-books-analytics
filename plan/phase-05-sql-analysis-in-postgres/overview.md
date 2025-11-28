@@ -4,6 +4,12 @@
 
 Reproduce and extend key analyses using **SQL in PostgreSQL**. This phase helps you build SQL skills and see how database queries can complement or replace pandas-based analysis.
 
+In this phase you will focus on:
+
+- Writing **SQL queries** to answer analytical questions.
+- Understanding how results from SQL relate to the results you already obtained with pandas.
+- Getting more comfortable working directly with a relational database.
+
 ## Inputs
 
 - Phases 02–04 completed or partially completed:
@@ -44,3 +50,4 @@ Detailed steps are under `steps/`:
 - Start by translating your favorite pandas analyses into SQL. This creates a direct mental bridge between the two worlds.
 - Save your queries in `.sql` files, not only in notebooks. This is more professional and reusable.
 - Use comments generously in SQL scripts, especially while learning.
+- If you are new to SQL, keep a small "cheat sheet" in `docs/` (for example, common `SELECT`, `WHERE`, and `GROUP BY` patterns) and update it as you learn.
