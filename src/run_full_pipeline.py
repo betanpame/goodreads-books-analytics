@@ -18,7 +18,6 @@ Requires ``DATABASE_URL`` in the environment if ``--load-to-postgres`` is used.
 from __future__ import annotations
 
 import argparse
-import os
 from pathlib import Path
 from typing import Any
 
@@ -27,15 +26,18 @@ from sqlalchemy import create_engine
 from sqlalchemy.engine import Engine
 
 from .cleaning import clean_books
+from .db_config import build_database_url_from_env
 
 
 def get_engine_from_env() -> Engine:
-    database_url = os.getenv("DATABASE_URL")
-    if not database_url:
-        raise RuntimeError(
-            "DATABASE_URL environment variable is not set. "
-            "Example: postgresql+psycopg2://user:password@localhost:5432/goodreads"
-        )
+    """Create a SQLAlchemy Engine using env vars.
+
+    Usa ``DATABASE_URL`` si está definido. En caso contrario,
+    construye la URL a partir de las variables de entorno
+    relacionadas con PostgreSQL (POSTGRES_DB, POSTGRES_USER, etc.).
+    """
+
+    database_url = build_database_url_from_env()
     return create_engine(database_url)
 
 
