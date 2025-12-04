@@ -15,7 +15,7 @@ In this phase you will focus on:
 - Phases 02–04 completed or partially completed:
   - Data loaded into PostgreSQL.
   - Some business questions already explored with pandas.
-- Working connection from Python/Jupyter to PostgreSQL (from Phase 01).
+- Working connection from Python CLI to PostgreSQL (from Phase 01).
 
 ## Outputs / Deliverables
 
@@ -23,7 +23,7 @@ In this phase you will focus on:
    - Create necessary tables (if not already done).
    - Run analytical queries answering key questions.
    - Include comments explaining what each query does.
-2. A **comparison notebook** (optional but recommended) that:
+2. A **comparison analysis script** (optional but recommended) that:
    - Runs SQL queries from Python using `sqlalchemy` or similar.
    - Compares results from SQL and pandas for the same questions.
 3. Comfort with basic to intermediate SQL patterns:
@@ -48,6 +48,6 @@ Detailed steps are under `steps/`:
 ## Tips
 
 - Start by translating your favorite pandas analyses into SQL. This creates a direct mental bridge between the two worlds.
-- Save your queries in `.sql` files, not only in notebooks. This is more professional and reusable.
+- Save your queries in `.sql` files, not only in analysis scripts. This is more professional and reusable.
 - Use comments generously in SQL scripts, especially while learning.
 - If you are new to SQL, keep a small "cheat sheet" in `docs/` (for example, common `SELECT`, `WHERE`, and `GROUP BY` patterns) and update it as you learn.

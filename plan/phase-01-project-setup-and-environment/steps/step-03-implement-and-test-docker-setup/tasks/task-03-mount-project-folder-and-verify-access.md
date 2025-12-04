@@ -7,16 +7,16 @@ Ensure that your running Docker container can see and work with the `goodreads-b
 ## Instructions
 
 1. When starting the container, mount the project folder from your host into the container (e.g., using a Docker volume or bind mount).
-2. From within Jupyter, navigate the file browser and confirm that you can see the repository structure (including `data/`, `plan/`, `README.md`).
-3. Create a simple test notebook inside the mounted folder and save it.
-4. Check on your host machine that the new notebook file appears in the repository.
+2. From within the running container shell, list the repository contents (confirm `data/`, `plan/`, `README.md`, etc. are visible under `/app`).
+3. Create a simple test analysis script inside the mounted folder using the container shell and save/run it.
+4. Check on your host machine that the new analysis script file appears in the repository.
 
 ## Checklist
 
 - [ ] I have mounted the project folder into the container.
-- [ ] I can see project files from within Jupyter.
-- [ ] I have created and saved a test notebook from inside the container.
+- [ ] I can list the repository contents from inside the container shell.
+- [ ] I have created and saved a test analysis script from inside the container and confirmed it exists on the host.
 
 ## Result
 
-Your Dockerized Jupyter environment is now fully integrated with your project files, ready for analysis.
+Your Dockerized Python CLI workflow environment is now fully integrated with your project files, ready for analysis.

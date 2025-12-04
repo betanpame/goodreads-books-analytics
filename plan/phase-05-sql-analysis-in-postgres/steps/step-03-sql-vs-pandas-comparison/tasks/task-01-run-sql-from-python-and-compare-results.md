@@ -12,7 +12,7 @@ Execute your SQL analysis queries from Python, load results into pandas, and com
 
 ### Outputs / Deliverables
 
-- A notebook section (or a dedicated notebook) that:
+- A analysis script section (or a dedicated analysis script) that:
   - Runs selected SQL files/queries.
   - Loads results into pandas DataFrames.
   - Compares them with existing pandas outputs.

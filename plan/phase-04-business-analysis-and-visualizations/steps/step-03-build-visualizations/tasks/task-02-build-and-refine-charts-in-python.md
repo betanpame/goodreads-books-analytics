@@ -12,7 +12,7 @@ Implement the planned visualizations using Python plotting libraries and refine 
 
 ### Outputs / Deliverables
 
-- 5–8 completed plots in your main analysis notebook.
+- 5–8 completed plots in your main analysis analysis script.
 - Well-formatted figures with titles, axis labels, legends, and annotations.
 - (Optional) Saved image files (PNG/SVG) for reuse in documentation.
 
@@ -51,7 +51,7 @@ Implement the planned visualizations using Python plotting libraries and refine 
      - `plt.savefig("figures/top_authors_by_rating.png", bbox_inches="tight", dpi=150)`.
 
 6. **Add brief captions**
-   - Under each plot in the notebook, add a short markdown caption explaining what the reader should notice.
+   - Under each plot in the analysis script, add a short markdown caption explaining what the reader should notice.
 
 ### Checklist
 

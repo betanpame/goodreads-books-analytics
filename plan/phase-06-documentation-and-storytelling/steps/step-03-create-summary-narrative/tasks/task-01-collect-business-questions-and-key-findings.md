@@ -11,7 +11,7 @@ Bring together in one place the main business questions and the most important f
 - [ ] For each question, briefly note:
   - The approach used (EDA, simple model, SQL queries, etc.).
   - 1–2 key findings.
-  - Links to notebooks or queries where the result is shown.
+  - Links to analysis scripts or queries where the result is shown.
 - [ ] Save this table/list in a markdown file (for example `docs/story-questions-and-findings.md`).
 
 ## Expected outcome

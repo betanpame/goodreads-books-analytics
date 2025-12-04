@@ -19,14 +19,14 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
-from typing import Any
 
-import pandas as pd
 from sqlalchemy import create_engine
 from sqlalchemy.engine import Engine
 
 from .cleaning import clean_books
 from .db_config import build_database_url_from_env
+from .raw_ingestion import load_books_csv
+from .schema import ensure_books_clean_schema
 
 
 def get_engine_from_env() -> Engine:
@@ -73,8 +73,12 @@ def run_pipeline(
     postgres_table: str = "books_clean",
 ) -> None:
     print(f"[pipeline] Loading raw CSV from {csv_path} ...")
-    df_raw = pd.read_csv(csv_path)
+    df_raw, stats = load_books_csv(csv_path)
     print(f"[pipeline] Raw rows: {len(df_raw):,}")
+    if stats.repaired_rows:
+        print(
+            f"[pipeline] Repaired {stats.repaired_rows:,} row(s) with embedded commas in the authors column."
+        )
 
     print("[pipeline] Cleaning data ...")
     df_clean = clean_books(df_raw)
@@ -89,6 +93,7 @@ def run_pipeline(
         print("[pipeline] Loading cleaned data into PostgreSQL ...")
         engine = get_engine_from_env()
         df_clean.to_sql(postgres_table, engine, if_exists="replace", index=False)
+        ensure_books_clean_schema(engine, postgres_table)
         print(f"[pipeline] Loaded cleaned data into table '{postgres_table}'.")
 
     print("[pipeline] Done.")

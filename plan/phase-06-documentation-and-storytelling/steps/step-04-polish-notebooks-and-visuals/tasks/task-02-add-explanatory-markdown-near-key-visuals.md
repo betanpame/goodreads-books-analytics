@@ -6,8 +6,8 @@ Provide context for each important visualization with a brief explanation in nat
 
 ## Steps
 
-- [ ] Go through the main notebooks and locate key visualizations.
-- [ ] Before or after each important chart, add a markdown cell that includes:
+- [ ] Go through the main analysis scripts and locate key visualizations.
+- [ ] Before or after each important chart, add a module docstring or Markdown note that includes:
   - One sentence about what the chart shows.
   - One sentence about the main interpretation or conclusion.
   - Optional: how it connects to the corresponding business question.
@@ -15,4 +15,4 @@ Provide context for each important visualization with a brief explanation in nat
 
 ## Expected outcome
 
-Notebooks that read like a guided story, where each chart is accompanied by a short, understandable explanation.
+Analysis Scripts that read like a guided story, where each chart is accompanied by a short, understandable explanation.

@@ -6,7 +6,7 @@ Decide appropriate PostgreSQL data types for each column in `books.csv`.
 
 ## Instructions
 
-1. Based on your pandas exploration, create a mapping table (in a markdown file or your notebook) with columns:
+1. Based on your pandas exploration, create a mapping table (in a markdown file or your analysis script) with columns:
    - `column_name`
    - `example_values`
    - `pandas_dtype`

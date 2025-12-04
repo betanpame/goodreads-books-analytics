@@ -1,25 +1,25 @@
-# Task 01 – Create Initial EDA Notebook
+# Task 01 – Create Initial EDA Analysis Script
 
 ## Objective
 
-Create a Jupyter notebook that will serve as the starting point for your exploratory work on the Goodreads Books dataset.
+Create a Python CLI workflow analysis script that will serve as the starting point for your exploratory work on the Goodreads Books dataset.
 
 ## Instructions
 
-1. Start your Python + Jupyter Docker container (from Phase 01).
-2. In the Jupyter file browser, navigate to the `notebooks/` folder of this repository (create it if it does not exist).
-3. Create a new notebook named, for example, `01_initial_inspection_books.ipynb`.
-4. In the first cells of the notebook, add markdown explaining:
-   - The purpose of the notebook (initial inspection of `books.csv`).
+1. Start your Python CLI Docker container (from Phase 01) or activate the local virtual environment.
+2. Create the folder `src/analyses/` if it does not already exist.
+3. Add a new Python script named, for example, `01_initial_inspection_books.py`.
+4. At the top of the file, include a module docstring describing:
+   - The purpose of the script (initial inspection of `books.csv`).
    - A short description of the dataset (what each row represents).
-5. Save the notebook.
+5. Add a `main()` function (even if empty for now) so future steps can call the script via `python -m src.analyses.01_initial_inspection_books`.
 
 ## Checklist
 
-- [ ] The `notebooks/` folder exists at the project root.
-- [ ] I have created `01_initial_inspection_books.ipynb`.
-- [ ] The notebook contains an introductory markdown cell.
+- [ ] The `src/analyses/` folder exists at the project root.
+- [ ] I have created `01_initial_inspection_books.py`.
+- [ ] The analysis script contains an introductory module docstring or comments explaining its purpose.
 
 ## Result
 
-You now have a dedicated notebook to use for initial exploration with pandas.
+You now have a dedicated analysis script to use for initial exploration with pandas.

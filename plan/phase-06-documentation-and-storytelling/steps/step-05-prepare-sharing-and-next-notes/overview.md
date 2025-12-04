@@ -8,7 +8,7 @@ Este step cierra la fase 06 al enfocarse en cómo presentar y mantener el proyec
 
 ## Qué harás en este step
 
-- Revisar que el `README.md`, los notebooks y los assets de storytelling estén enlazados entre sí.
+- Revisar que el `README.md`, los analysis scripts y los assets de storytelling estén enlazados entre sí.
 - Anotar en un archivo (por ejemplo en `docs/next-steps.md` o similar) posibles mejoras futuras y extensiones del proyecto.
 - Verificar que las instrucciones de ejecución sean realmente reproducibles en otra máquina (Docker, dependencias, etc., según lo que tengas implementado).
 - Pensar dónde y cómo compartirás el proyecto (GitHub, portafolio, LinkedIn, blog) y dejar notas al respecto.

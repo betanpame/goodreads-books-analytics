@@ -23,7 +23,7 @@ This step aligns with Phase 06 by focusing on the **story** behind the analyses:
 By the end of this step you should have:
 
 - A **written summary** (and optionally slides) that tells the story of the project end to end.
-- Clear references to the visualizations/notebooks where each point is explored in more depth.
+- Clear references to the visualizations/analysis scripts where each point is explored in more depth.
 - An asset ready to use in interviews or presentations.
 
 Detailed tasks are in the `tasks/` folder for this step.

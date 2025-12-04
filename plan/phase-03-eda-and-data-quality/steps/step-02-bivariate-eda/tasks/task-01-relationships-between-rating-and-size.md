@@ -16,7 +16,7 @@ Examine how book size and popularity relate to reader ratings.
 3. Optionally, use binning techniques:
    - Group books by page count buckets (e.g., 0–200, 200–400, 400–600, etc.).
    - Compute average rating per bucket and plot as a bar chart or line plot.
-4. Interpret findings in markdown cells:
+4. Interpret findings in module docstring or Markdown notes:
    - Do longer books tend to have higher ratings?
    - Do more-rated books have higher or lower average ratings?
 

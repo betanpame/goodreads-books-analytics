@@ -6,7 +6,7 @@ Confirm that the data in PostgreSQL matches the source CSV / pandas DataFrame in
 
 ### Inputs
 
-- `books.csv` file and/or pandas EDA notebook from previous phases.
+- `books.csv` file and/or pandas EDA analysis script from previous phases.
 - `books` table in PostgreSQL.
 
 ### Outputs / Deliverables
@@ -18,11 +18,11 @@ Confirm that the data in PostgreSQL matches the source CSV / pandas DataFrame in
 
 1. **Get reference numbers from pandas or CSV**
 
-   - In a notebook, compute:
+   - In a analysis script, compute:
      - `n_rows_csv = len(df_raw)`
      - `avg_rating_csv = df_raw["average_rating"].mean()`
      - `min_pub_date_csv`, `max_pub_date_csv` if dates are parsed.
-   - Note these values in a markdown cell.
+   - Note these values in a module docstring or Markdown note.
 
 2. **Compute the same metrics in PostgreSQL**
 

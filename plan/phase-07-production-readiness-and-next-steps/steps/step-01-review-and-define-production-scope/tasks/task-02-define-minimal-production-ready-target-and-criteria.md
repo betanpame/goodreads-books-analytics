@@ -27,7 +27,7 @@ Decide what "**production-ready**" means for this portfolio project and define c
    - Examples:
      - "A new user can run one script to load and clean the data."
      - "Core data quality checks run and report status."
-     - "Main analysis notebooks run with minimal configuration."
+     - "Main analysis analysis scripts run with minimal configuration."
      - "SQL queries for key metrics can be executed without editing code."
 
 4. **Prioritize criteria**

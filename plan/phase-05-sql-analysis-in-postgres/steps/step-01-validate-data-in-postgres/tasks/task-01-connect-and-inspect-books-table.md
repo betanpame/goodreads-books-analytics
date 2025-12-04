@@ -48,11 +48,11 @@ Verify that you can connect to the PostgreSQL database and inspect the core `boo
 
 6. **(Optional) Connect from Python**
 
-   - In a Jupyter notebook, use `sqlalchemy` or `psycopg2` to connect.
+   - In a Python CLI workflow analysis script, use `sqlalchemy` or `psycopg2` to connect.
    - Run `pd.read_sql("SELECT * FROM books LIMIT 5", con)` to confirm Python ↔ PostgreSQL connectivity.
 
 7. **Document connection details and notes**
-   - In your project docs (or a markdown cell), write down:
+   - In your project docs (or a module docstring or Markdown note), write down:
      - How you start PostgreSQL.
      - How you connect (CLI command, GUI connection string).
      - Any issues encountered and how you solved them.

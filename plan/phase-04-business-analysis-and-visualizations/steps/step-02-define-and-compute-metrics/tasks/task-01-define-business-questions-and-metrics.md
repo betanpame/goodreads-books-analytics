@@ -11,7 +11,7 @@ Translate the project goals into a **clear list of business questions** and **qu
 
 ### Outputs / Deliverables
 
-- A markdown section (in the notebook or a separate `.md` file) listing 5–8 key business questions.
+- A markdown section (in the analysis script or a separate `.md` file) listing 5–8 key business questions.
 - For each question, a set of 1–3 specific metrics with a short description.
 - A simple table (could be Markdown) mapping: `Question -> Metric -> Columns needed -> Notes`.
 
@@ -29,7 +29,7 @@ Feel free to adapt these to your interests:
 
 1. **Review EDA findings**
 
-   - Skim your EDA notebook from Phase 03.
+   - Skim your EDA analysis script from Phase 03.
    - Note down patterns or questions that felt interesting or surprising.
 
 2. **Draft 5–8 business questions**
@@ -52,7 +52,7 @@ Feel free to adapt these to your interests:
 
 4. **Create a mapping table**
 
-   - In a markdown cell, create a simple table with columns:
+   - In a module docstring or Markdown note, create a simple table with columns:
      - `Question`
      - `Metric(s)`
      - `Columns used` (e.g., `average_rating`, `ratings_count`, `authors`, `publication_year`, etc.).

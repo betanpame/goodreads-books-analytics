@@ -12,18 +12,18 @@ In this phase you turn EDA results into **business analysis**:
 ## Inputs
 
 - Phase 03 completed:
-  - EDA notebook with key findings.
+  - EDA analysis script with key findings.
   - Documented cleaning rules.
-- A cleaned or prepared DataFrame (either as a separate dataset or transformed within a notebook).
+- A cleaned or prepared DataFrame (either as a separate dataset or transformed within a analysis script).
 
 ## Outputs / Deliverables
 
-1. A main **analysis notebook** (e.g., `02_analysis_and_visualizations.ipynb`) that:
+1. A main **analysis analysis script** (e.g., `02_analysis_and_visualizations.py`) that:
    - Applies cleaning steps decided in Phase 03.
    - Computes key metrics (e.g., top authors/publishers, rating distributions, trends over time).
    - Contains 5–8 clear, well-labeled charts answering the main business questions.
 2. A set of **intermediate tables or DataFrames** that could be reused in SQL or future dashboards.
-3. A short **written summary** (within the notebook or a markdown file) explaining major insights.
+3. A short **written summary** (within the analysis script or a markdown file) explaining major insights.
 
 ## Steps in This Phase
 

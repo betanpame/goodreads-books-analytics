@@ -13,17 +13,17 @@ Here you will think like an engineer who wants other people to use this work:
 ## Inputs
 
 - Core analysis and documentation completed (Phases 01–06).
-- Working Docker setup for Python/Jupyter and PostgreSQL (even if still basic).
+- Working Docker setup for Python CLI and PostgreSQL (even if still basic).
 
 ## Outputs / Deliverables
 
 1. A **refined Docker setup** (e.g., `docker-compose.yml`, Dockerfiles) that:
-   - Starts the Python/Jupyter environment.
+   - Starts the Python CLI environment.
    - Connects to PostgreSQL.
    - Makes it easy for someone else to reproduce your environment.
 2. **Run instructions** in the README for:
    - Starting containers.
-   - Opening notebooks.
+   - Opening analysis scripts.
    - Running key analyses.
 3. A short **"Next Steps" roadmap** suggesting how to:
    - Deploy the analytics environment to a cloud provider.
@@ -45,5 +45,5 @@ Detailed steps are under `steps/`:
 ## Tips
 
 - Think from the perspective of a new collaborator: could they clone the repo and, following your instructions, get everything running?
-- Consider adding simple health checks (for example, a test query to PostgreSQL or a small sanity-check notebook) as part of your run instructions.
-- When defining cloud next steps, keep it high-level but concrete: mention possible services (for example, managed PostgreSQL, hosted Jupyter, or container orchestration) and briefly state what role each would play.
+- Consider adding simple health checks (for example, a test query to PostgreSQL or a small sanity-check analysis script) as part of your run instructions.
+- When defining cloud next steps, keep it high-level but concrete: mention possible services (for example, managed PostgreSQL, hosted Python CLI workflow, or container orchestration) and briefly state what role each would play.

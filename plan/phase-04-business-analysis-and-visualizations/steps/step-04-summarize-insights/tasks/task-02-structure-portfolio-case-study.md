@@ -7,12 +7,12 @@ Design a **case study structure** that you can use in your portfolio or as a blo
 ### Inputs
 
 - Executive summary and key findings from Task 01.
-- Notebooks, figures, and notes from all previous phases.
+- Analysis Scripts, figures, and notes from all previous phases.
 
 ### Outputs / Deliverables
 
 - An outline for a case study document (could be `docs/case-study-outline.md`).
-- A mapping from case study sections to project assets (notebooks, figures, SQL scripts).
+- A mapping from case study sections to project assets (analysis scripts, figures, SQL scripts).
 
 ### Suggested Steps
 
@@ -29,13 +29,13 @@ Design a **case study structure** that you can use in your portfolio or as a blo
 2. **Create a bullet outline**
 
    - Under each section, add 3–5 bullet points describing what you would explain.
-   - Include references to specific notebooks and figures where appropriate.
+   - Include references to specific analysis scripts and figures where appropriate.
 
 3. **Link to project artifacts**
 
    - For each major section, note which assets you would show:
-     - EDA notebook (`01_eda_books.ipynb`)
-     - Analysis notebook (`02_analysis_and_visualizations.ipynb`)
+     - EDA analysis script (`01_eda_books.py`)
+     - Analysis analysis script (`02_analysis_and_visualizations.py`)
      - Saved figures (e.g., `figures/top_authors_by_rating.png`).
 
 4. **Identify gaps for future improvement**

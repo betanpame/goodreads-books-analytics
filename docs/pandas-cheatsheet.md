@@ -54,4 +54,4 @@ plt.ylabel("Count of Books")
 plt.show()
 ```
 
-Use these snippets as starting points in your notebooks and customize them for your analysis.
+Use these snippets as starting points in your analysis scripts and customize them for your analysis.

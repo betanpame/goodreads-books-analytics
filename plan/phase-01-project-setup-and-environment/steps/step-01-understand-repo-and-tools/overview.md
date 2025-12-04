@@ -2,7 +2,7 @@
 
 ## Goal
 
-Familiarize yourself with the project repository, the dataset, and the main tools you will use (VS Code, Git, Docker, Jupyter, PostgreSQL).
+Familiarize yourself with the project repository, the dataset, and the main tools you will use (VS Code, Git, Docker, Python CLI workflow, PostgreSQL).
 
 ## Why This Step Matters
 

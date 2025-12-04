@@ -19,8 +19,8 @@ Implement **reusable Python functions** that compute the metrics defined in Task
 
 1. **Set up a metrics section or module**
 
-   - In your main analysis notebook, create a section (markdown heading) called `Metrics and Summary Tables`.
-   - Alternatively, create a Python module like `src/metrics.py` and import it into the notebook.
+   - In your main analysis analysis script, create a section (markdown heading) called `Metrics and Summary Tables`.
+   - Alternatively, create a Python module like `src/metrics.py` and import it into the analysis script.
 
 2. **Implement functions for each core metric**
 

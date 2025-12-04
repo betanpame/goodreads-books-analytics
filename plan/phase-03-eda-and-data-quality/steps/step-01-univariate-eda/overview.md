@@ -15,6 +15,6 @@ Univariate analysis helps you:
 
 Detailed tasks are in the `tasks/` folder:
 
-1. `task-01-setup-eda-notebook-and-imports.md`
+1. `task-01-setup-eda-analysis script-and-imports.md`
 2. `task-02-explore-numeric-distributions.md`
 3. `task-03-explore-categorical-distributions.md`

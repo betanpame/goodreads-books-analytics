@@ -6,7 +6,7 @@ Quantify missing data and identify potential duplicate or near-duplicate records
 
 ## Instructions
 
-1. In your EDA notebook, compute missing values:
+1. In your EDA analysis script, compute missing values:
    - Use `df.isna().sum()` to see missing counts per column.
    - Compute the percentage of missing entries for each column.
 2. Investigate duplicates:

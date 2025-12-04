@@ -8,7 +8,7 @@ Fill in the main sections of `README.md` with clear, professional text, avoiding
 
 - [ ] Write the **introduction and motivation**, explaining what problem you are addressing and why it is interesting.
 - [ ] Write the **dataset** section, explaining where `data/books.csv` comes from, what it contains, and any limitations.
-- [ ] Describe the **architecture and technologies**: Python/pandas, PostgreSQL, Docker, key notebooks and scripts.
+- [ ] Describe the **architecture and technologies**: Python/pandas, PostgreSQL, Docker, key analysis scripts and scripts.
 - [ ] Add a **how to run the project** section (in its current state), for example:
   - Minimum requirements.
   - Basic commands (with or without Docker, depending on what you already have implemented).

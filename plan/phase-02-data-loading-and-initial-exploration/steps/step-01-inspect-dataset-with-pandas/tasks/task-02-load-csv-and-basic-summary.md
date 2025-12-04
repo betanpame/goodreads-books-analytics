@@ -6,17 +6,17 @@ Load the `books.csv` file using pandas and compute basic summary statistics to u
 
 ## Instructions
 
-1. In `01_initial_inspection_books.ipynb`, import the necessary libraries:
+1. In `01_initial_inspection_books.py`, import the necessary libraries:
    - `import pandas as pd`
 2. Load the CSV file:
-   - Use a relative path like `../data/books.csv` (depending on where your notebook lives).
+   - Use a relative path like `../data/books.csv` (depending on where your analysis script lives).
    - Consider specifying `encoding` if needed (e.g., `encoding="utf-8"`).
 3. Display basic information:
    - First rows (`head()`).
    - Last rows (`tail()`).
    - `.info()` to see column types and non-null counts.
    - `.describe()` for numeric columns.
-4. Note any immediate observations in markdown cells (e.g., which columns have many missing values, unusual ranges, etc.).
+4. Note any immediate observations in module docstring or Markdown notes (e.g., which columns have many missing values, unusual ranges, etc.).
 
 ## Checklist
 

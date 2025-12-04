@@ -45,7 +45,7 @@ Practice **intermediate SQL patterns**, especially window functions, to answer m
    - Execute them and inspect results, focusing on whether rankings and rolling averages look reasonable.
 
 5. **Document learnings**
-   - In a markdown file or notebook, briefly explain:
+   - In a markdown file or analysis script, briefly explain:
      - What each window function does in your queries.
      - Any gotchas you encountered (ordering, partitions, performance).
 

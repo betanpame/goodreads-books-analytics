@@ -15,11 +15,11 @@ Here, **EDA (Exploratory Data Analysis)** means:
 - Phase 02 completed:
   - Data load into pandas working.
   - (Optional) Data available in PostgreSQL.
-- At least one notebook created for initial exploration.
+- At least one analysis script created for initial exploration.
 
 ## Outputs / Deliverables
 
-1. A dedicated **EDA notebook** (e.g., `01_eda_books.ipynb`) covering:
+1. A dedicated **EDA analysis script** (e.g., `01_eda_books.py`) covering:
    - Univariate analysis (distributions of ratings, ratings_count, num_pages, etc.).
    - Bivariate analysis (e.g., rating vs number of pages, rating vs publication year).
    - Categorical analysis (e.g., by author, publisher, language_code).
@@ -47,4 +47,4 @@ Detailed steps are under `steps/`:
 
 - Start simple: histograms, boxplots, and bar charts are enough at this stage.
 - Always connect plots back to the **business questions**: what does this distribution say about reader behavior or book characteristics?
-- Document your assumptions, even if they seem obvious. This is key for professional work and for future you. You can keep these notes directly in the notebook or in a markdown file under `docs/`.
+- Document your assumptions, even if they seem obvious. This is key for professional work and for future you. You can keep these notes directly in the analysis script or in a markdown file under `docs/`.

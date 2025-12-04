@@ -15,7 +15,7 @@ Before designing tables or complex analysis, you need a clear picture of:
 
 Detailed tasks are in the `tasks/` folder:
 
-1. `task-01-create-initial-eda-notebook.md`
+1. `task-01-create-initial-eda-analysis script.md`
 2. `task-02-load-csv-and-basic-summary.md`
 3. `task-03-explore-key-columns-and-types.md`
 

@@ -2,16 +2,16 @@
 
 ## Objective
 
-Design how Docker Compose (or an equivalent tool) will manage your Python/Jupyter container and PostgreSQL container.
+Design how Docker Compose (or an equivalent tool) will manage your Python CLI container and PostgreSQL container.
 
 ## Instructions
 
 1. Decide whether you will:
    - Use an existing `docker-compose.yml` that already defines PostgreSQL, or
-   - Create a new `docker-compose.yml` that includes both Python/Jupyter and PostgreSQL services.
+   - Create a new `docker-compose.yml` that includes both Python CLI and PostgreSQL services.
 2. In your notes or in a new file (for example `docker/compose-design-notes.md`), describe:
    - Service names (e.g., `app` for Python, `db` for PostgreSQL).
-   - Which ports will be exposed (e.g., `8888` for Jupyter, `5432` for PostgreSQL).
+   - Which ports will be exposed (e.g., `8888` for Python CLI workflow, `5432` for PostgreSQL).
    - How volumes will be used to:
      - Mount the project folder into the Python container.
      - Persist PostgreSQL data.

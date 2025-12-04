@@ -16,14 +16,14 @@ Translate your EDA and data quality findings into a clear, documented set of cle
 4. Optionally, tag rules as:
    - "Must-do now".
    - "Nice-to-have later".
-5. Add a short summary in your EDA notebook pointing to this markdown file.
+5. Add a short summary in your EDA analysis script pointing to this markdown file.
 
 ## Checklist
 
 - [ ] I have created `docs/data-cleaning-rules.md` (or similar).
 - [ ] I have written specific rules for handling missing values, duplicates, and outliers.
 - [ ] I have explained the rationale behind each rule.
-- [ ] I have linked or referenced this file from my EDA notebook.
+- [ ] I have linked or referenced this file from my EDA analysis script.
 
 ## Result
 

@@ -11,7 +11,7 @@ Create a **concise, non-technical summary** of the most important insights from 
 
 ### Outputs / Deliverables
 
-- A 3–6 paragraph executive summary in markdown (either in the main notebook or in a separate file like `docs/summary-phase-04.md`).
+- A 3–6 paragraph executive summary in markdown (either in the main analysis script or in a separate file like `docs/summary-phase-04.md`).
 - A bullet list of 5–10 key findings, each linked to specific charts/metrics.
 
 ### Suggested Steps

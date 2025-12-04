@@ -25,11 +25,11 @@ Identify which parts of your current workflow are **scripted and reproducible** 
    - For each workflow, mark it as:
      - "Scripted" (can be run via script or single command).
      - "Partially scripted" (some scripts, some manual steps).
-     - "Manual" (mostly done by clicking/typing in notebooks or tools).
+     - "Manual" (mostly done by clicking/typing in analysis scripts or tools).
 
 3. **Describe current implementation briefly**
 
-   - Add 1–2 sentences per workflow explaining how you currently perform it (e.g., "Load CSV via Jupyter notebook cell", "Run `to_sql` in a one-off script").
+   - Add 1–2 sentences per workflow explaining how you currently perform it (e.g., "Load CSV by running a helper function inside `src/analyses/01_eda_books.py`", "Run `to_sql` in a one-off script").
 
 4. **Highlight gaps and pain points**
    - Note where manual steps are slow, error-prone, or hard to remember.

@@ -1,60 +1,88 @@
-"""Script to load data/books.csv into PostgreSQL.
+"""Script to load data/books.csv into PostgreSQL."""
 
-Usage (from project root, after setting DATABASE_URL):
-
-    python -m src.load_books_to_postgres --table books
-
-The script expects a ``DATABASE_URL`` environment variable in the
-standard form, for example:
-
-    postgresql+psycopg2://user:password@localhost:5432/goodreads
-"""
 from __future__ import annotations
 
 import argparse
-from typing import Any
+import logging
+from datetime import datetime
+from pathlib import Path
+from typing import Callable, List
 
 import pandas as pd
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
 
+from .cleaning import clean_books, explode_authors
 from .db_config import build_database_url_from_env
+
+LOGGER = logging.getLogger(__name__)
+LOG_DIR = Path("logs")
+AUTHOR_STAGE_TABLE = "book_authors_stage"
 
 
 def get_engine_from_env() -> Engine:
-    """Create a SQLAlchemy Engine using env vars.
-
-    Usa ``DATABASE_URL`` si está definido. En caso contrario,
-    construye la URL a partir de las variables de entorno
-    relacionadas con PostgreSQL (POSTGRES_DB, POSTGRES_USER, etc.).
-    """
+    """Create a SQLAlchemy Engine using env vars."""
 
     database_url = build_database_url_from_env()
     return create_engine(database_url)
 
 
+def _bad_line_logger(bad_lines: List[str]) -> Callable[[list[str]], None]:
+    def handler(bad_line: list[str]) -> None:
+        bad_lines.append(",".join(bad_line))
+
+    return handler
+
+
+def read_books_csv(csv_path: str) -> tuple[pd.DataFrame, list[str]]:
+    """Read the books CSV while capturing malformed rows."""
+
+    bad_lines: list[str] = []
+    df = pd.read_csv(
+        csv_path,
+        on_bad_lines=_bad_line_logger(bad_lines),
+        engine="python",
+    )
+    return df, bad_lines
+
+
+def log_bad_lines(bad_lines: list[str]) -> None:
+    if not bad_lines:
+        return
+
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+    log_path = LOG_DIR / f"load_books_bad_lines_{timestamp}.log"
+    log_path.write_text("\n".join(bad_lines), encoding="utf-8")
+    LOGGER.warning("Skipped %d malformed rows. Details recorded in %s", len(bad_lines), log_path)
+
+
 def load_books_csv_to_postgres(csv_path: str, table_name: str, if_exists: str = "replace") -> None:
-    """Load the books CSV into a PostgreSQL table.
+    """Load the books CSV into PostgreSQL, emitting author staging rows."""
 
-    Parameters
-    ----------
-    csv_path:
-        Path to ``books.csv``.
-    table_name:
-        Target table name in PostgreSQL.
-    if_exists:
-        Behavior if the table already exists (``fail``, ``replace``, ``append``).
-    """
+    LOGGER.info("Reading CSV from %s", csv_path)
+    df_raw, bad_lines = read_books_csv(csv_path)
+    log_bad_lines(bad_lines)
+    LOGGER.info("Loaded %d rows after skipping %d malformed entries", len(df_raw), len(bad_lines))
 
-    print(f"[load] Reading CSV from {csv_path} ...")
-    df = pd.read_csv(csv_path)
-    print(f"[load] Loaded {len(df):,} rows.")
+    df_clean = clean_books(df_raw)
+    author_stage = explode_authors(df_clean)
 
+    LOGGER.info("Writing %d cleaned rows to table %s", len(df_clean), table_name)
     engine = get_engine_from_env()
 
-    print(f"[load] Writing to PostgreSQL table '{table_name}' (if_exists={if_exists}) ...")
-    df.to_sql(table_name, engine, if_exists=if_exists, index=False)
-    print("[load] Done.")
+    with engine.begin() as connection:
+        df_clean.to_sql(table_name, connection, if_exists=if_exists, index=False)
+        if not author_stage.empty:
+            LOGGER.info(
+                "Writing %d author rows to staging table %s", len(author_stage), AUTHOR_STAGE_TABLE
+            )
+            author_stage.to_sql(AUTHOR_STAGE_TABLE, connection, if_exists="replace", index=False)
+        else:
+            LOGGER.info("No multi-author rows detected. Dropping staging table if it exists.")
+            connection.execute(text(f"DROP TABLE IF EXISTS {AUTHOR_STAGE_TABLE}"))
+
+    LOGGER.info("Load finished successfully.")
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -79,6 +107,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
 
 def main(argv: list[str] | None = None) -> None:
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(name)s - %(message)s",
+    )
     args = parse_args(argv)
     load_books_csv_to_postgres(
         csv_path=args.csv_path,

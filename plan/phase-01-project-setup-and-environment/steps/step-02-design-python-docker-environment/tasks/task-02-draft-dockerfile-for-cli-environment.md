@@ -1,8 +1,8 @@
-# Task 02 – Draft Dockerfile for Python and Jupyter
+# Task 02 – Draft Dockerfile for Python and Python CLI workflow
 
 ## Objective
 
-Create a first draft of the Dockerfile that will define your Python + Jupyter environment.
+Create a first draft of the Dockerfile that will define your Python CLI environment.
 
 ## Instructions
 
@@ -22,4 +22,4 @@ Create a first draft of the Dockerfile that will define your Python + Jupyter en
 
 ## Result
 
-You have a starting point for your Python + Jupyter Docker image, which you will implement and refine in the next step.
+You have a starting point for your Python CLI Docker image, which you will implement and refine in the next step.

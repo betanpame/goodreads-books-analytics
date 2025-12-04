@@ -14,7 +14,7 @@ Understand the main folders and files in the `goodreads-books-analytics` reposit
    - `README.md`
 3. For each folder, write a short note in a markdown file such as `docs/repo-notes.md` describing:
    - What the folder is for.
-   - What you expect to store there later (for example, notebooks, SQL scripts, Docker files).
+   - What you expect to store there later (for example, analysis scripts, SQL scripts, Docker files).
 4. Open `data/books.csv` and look at the first ~30–50 lines just to get a feel for the columns and data types. You can open it directly in VS Code (it will show as a text or table view) or, if you prefer, you can open it in a spreadsheet tool such as Excel or LibreOffice Calc.
 
 ## Checklist

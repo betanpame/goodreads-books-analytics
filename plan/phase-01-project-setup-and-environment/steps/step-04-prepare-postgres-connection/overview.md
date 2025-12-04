@@ -2,12 +2,12 @@
 
 ## Goal
 
-Prepare a **clean and secure way** for your Python/Jupyter environment to connect to PostgreSQL running in Docker.
+Prepare a **clean and secure way** for your Python CLI environment to connect to PostgreSQL running in Docker.
 
 ## Why This Step Matters
 
 Storing connection details (host, port, user, password, database) in a consistent place makes it easier to:
-- Reuse the configuration across notebooks and scripts.
+- Reuse the configuration across analysis scripts and scripts.
 - Avoid hardcoding sensitive values in code.
 - Switch between local and (future) cloud databases.
 

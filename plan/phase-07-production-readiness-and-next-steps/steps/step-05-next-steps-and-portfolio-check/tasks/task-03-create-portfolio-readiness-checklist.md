@@ -14,7 +14,7 @@ Define a **checklist** to confirm the project is ready to showcase in your portf
 
    - Example areas:
      - README and documentation.
-     - Notebooks and code quality.
+     - Analysis Scripts and code quality.
      - SQL scripts and database.
      - Data pipeline and tests.
      - Visualizations and figures.
@@ -24,8 +24,8 @@ Define a **checklist** to confirm the project is ready to showcase in your portf
    - For example, under README:
      - "[ ] Project overview clear and up-to-date".
      - "[ ] Setup and run instructions tested".
-   - Under notebooks:
-     - "[ ] Key notebooks run from top to bottom without errors".
+   - Under analysis scripts:
+     - "[ ] Key analysis scripts run from top to bottom without errors".
 
 3. **Add a final overall check**
 

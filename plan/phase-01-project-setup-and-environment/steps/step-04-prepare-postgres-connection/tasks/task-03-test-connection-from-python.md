@@ -7,8 +7,8 @@ Verify that your Python code (running in the Docker container) can successfully 
 ## Instructions
 
 1. Start your PostgreSQL Docker container (if it is not already running).
-2. Start your Python/Jupyter container and open a notebook.
-3. In the notebook, write a small Python snippet that:
+2. Start your Python CLI container and open a analysis script.
+3. In the analysis script, write a small Python snippet that:
    - Reads connection parameters from environment variables or a config file.
    - Uses `sqlalchemy` or `psycopg2` to open a connection.
    - Runs a simple query like `SELECT 1;`.
@@ -16,7 +16,7 @@ Verify that your Python code (running in the Docker container) can successfully 
 
 ## Checklist
 
-- [ ] Both PostgreSQL and Python/Jupyter containers are running.
+- [ ] Both PostgreSQL and Python CLI containers are running.
 - [ ] I have written Python code to connect to PostgreSQL.
 - [ ] I have successfully executed a test query.
 

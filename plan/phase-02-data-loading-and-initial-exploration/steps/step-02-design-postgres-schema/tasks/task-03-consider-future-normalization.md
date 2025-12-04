@@ -6,7 +6,7 @@ Think ahead about how you might normalize the schema in the future (without impl
 
 ## Instructions
 
-1. In a markdown file (e.g., `docs/schema-notes.md`) or in your notebook, brainstorm how the data could be split into multiple tables, for example:
+1. In a markdown file (e.g., `docs/schema-notes.md`) or in your analysis script, brainstorm how the data could be split into multiple tables, for example:
    - `books` (core book information).
    - `authors` (one row per author).
    - `book_authors` (linking table between books and authors, since a book can have multiple authors).

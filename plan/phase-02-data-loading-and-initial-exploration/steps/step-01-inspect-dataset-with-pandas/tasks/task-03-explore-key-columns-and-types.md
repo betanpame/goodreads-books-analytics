@@ -6,7 +6,7 @@ Look more closely at specific columns that are important for later analysis and 
 
 ## Instructions
 
-1. In your notebook, focus on these key columns:
+1. In your analysis script, focus on these key columns:
    - `bookID`
    - `title`
    - `authors`
@@ -24,7 +24,7 @@ Look more closely at specific columns that are important for later analysis and 
    - Number of missing values (`isna().sum()`).
 3. For `publication_date`, try parsing it as a datetime column using `pd.to_datetime` and note any parsing issues.
 4. For `authors`, note that multiple authors are separated by `/`. Write down an idea of how you might handle this later (even if you do not implement it yet).
-5. Document your findings in markdown cells.
+5. Document your findings in module docstring or Markdown notes.
 
 ## Checklist
 

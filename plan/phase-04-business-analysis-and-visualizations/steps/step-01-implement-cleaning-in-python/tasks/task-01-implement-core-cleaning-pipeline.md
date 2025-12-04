@@ -11,15 +11,15 @@ Translate the data quality rules from Phase 03 into a **reusable Python cleaning
 
 ### Outputs / Deliverables
 
-- A Python module or notebook section with a main function, e.g. `clean_books(df_raw) -> df_clean`.
-- A list of clear, documented cleaning steps (markdown cell in the notebook or docstring).
+- A Python module or analysis script section with a main function, e.g. `clean_books(df_raw) -> df_clean`.
+- A list of clear, documented cleaning steps (module docstring or Markdown note in the analysis script or docstring).
 - At least 3–5 small checks/prints/assertions that confirm the cleaning behaves as expected.
 
 ### Suggested Steps
 
-1. **Create or reuse a notebook for cleaning**
+1. **Create or reuse a analysis script for cleaning**
 
-   - Open your main analysis notebook (e.g., `02_analysis_and_visualizations.ipynb`) or create a dedicated `01_cleaning_books.ipynb`.
+   - Open your main analysis analysis script (e.g., `02_analysis_and_visualizations.py`) or create a dedicated `01_cleaning_books.py`.
    - Import core libraries: `pandas`, `numpy` (optional), and any helpers you used before.
 
 2. **Load the raw dataset**
@@ -29,7 +29,7 @@ Translate the data quality rules from Phase 03 into a **reusable Python cleaning
 
 3. **Define a `clean_books` function**
 
-   - In a code cell, define a function such as:
+   - In a code block, define a function such as:
      - `def clean_books(df: pd.DataFrame) -> pd.DataFrame:`
    - Inside this function, progressively apply the cleaning rules from Phase 03.
 
@@ -75,7 +75,7 @@ Translate the data quality rules from Phase 03 into a **reusable Python cleaning
       - `assert df_clean["num_pages"].min() > 0`
 
 11. **Document your pipeline**
-    - Add a markdown cell summarizing each cleaning step in bullet points.
+    - Add a module docstring or Markdown note summarizing each cleaning step in bullet points.
     - Briefly explain any important trade-offs (e.g., why you chose to drop some rows instead of imputing values).
 
 ### Checklist

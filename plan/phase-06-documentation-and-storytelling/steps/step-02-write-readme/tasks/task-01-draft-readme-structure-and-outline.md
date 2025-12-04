@@ -12,7 +12,7 @@ Create a clear outline for the main `README.md`, defining sections and order bef
   - Dataset description.
   - Architecture and technologies used (Python, PostgreSQL, Docker).
   - How to run the project locally.
-  - Summary of key findings with links to notebooks/figures.
+  - Summary of key findings with links to src/analyses/figures.
 - [ ] Check that the section order tells a logical story for someone who has never seen the project.
 
 ## Expected outcome

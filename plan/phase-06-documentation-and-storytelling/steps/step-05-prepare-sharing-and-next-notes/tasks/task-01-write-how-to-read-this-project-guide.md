@@ -21,13 +21,13 @@ Give new visitors a **short navigation guide** so they know where to start and h
 
    - For each profile, list 3–5 bullets indicating:
      - Which README sections to read.
-     - Which notebook(s) to open.
+     - Which analysis script(s) to open.
      - Which figures or SQL files to review, if applicable.
 
 3. **Mention estimated time and effort**
 
    - Example: "If you have 5 minutes, read the Project Overview and Key Insights sections in the README."
-   - "If you have 30 minutes, run `02_analysis_and_visualizations.ipynb` end to end."
+   - "If you have 30 minutes, run `02_analysis_and_visualizations.py` end to end."
 
 4. **Place the guide in the repo**
    - Keep it as `docs/how-to-read-this-project.md` or as a clear section inside the README, but always make sure it is linked from the README.

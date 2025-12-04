@@ -6,7 +6,7 @@ Improve the readability and quality of visualizations so they clearly communicat
 
 ## Steps
 
-- [ ] Identify the most important charts in your notebooks (the ones you will use in the README or narrative).
+- [ ] Identify the most important charts in your analysis scripts (the ones you will use in the README or narrative).
 - [ ] For each key chart, review:
   - Descriptive title (what it shows and why it matters).
   - Clear axis labels, with units where applicable.

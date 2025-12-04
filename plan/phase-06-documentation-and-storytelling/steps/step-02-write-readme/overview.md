@@ -14,7 +14,7 @@ This step aligns with Phase 06 by turning technical work into an understandable 
   - Dataset description (`data/books.csv`).
   - High-level architecture overview (Python, PostgreSQL, Docker).
   - Basic instructions to run the project locally (and leave room for future cloud deployment).
-  - Summary of key findings with references to charts or notebooks.
+  - Summary of key findings with references to charts or analysis scripts.
 - Ensure the language is clear, avoiding unnecessary jargon and briefly explaining technical terms.
 
 ## Expected outcome
@@ -22,7 +22,7 @@ This step aligns with Phase 06 by turning technical work into an understandable 
 By the end of this step you should have:
 
 - A root `README.md` with clear, complete sections.
-- Links from the README to key notebooks, SQL scripts, and other important resources.
+- Links from the README to key analysis scripts, SQL scripts, and other important resources.
 - A professional tone oriented toward someone seeing the project for the first time.
 
 Detailed tasks are in the `tasks/` folder for this step.

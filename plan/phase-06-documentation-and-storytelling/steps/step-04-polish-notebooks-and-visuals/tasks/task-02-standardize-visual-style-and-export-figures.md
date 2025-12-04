@@ -6,14 +6,14 @@ Ensure your visualizations have a **consistent, professional look**, and export 
 
 ### Outputs
 
-- Updated plots in notebooks with consistent styling.
+- Updated plots in analysis scripts with consistent styling.
 - A curated set of figure files saved under `figures/`.
 
 ### Steps
 
 1. **Choose a default plotting style**
 
-   - For example, use `seaborn.set_theme(style="whitegrid")` at the top of analysis notebooks.
+   - For example, use `seaborn.set_theme(style="whitegrid")` at the top of analysis analysis scripts.
    - Stick to a small, consistent set of color palettes.
 
 2. **Review and refine each key chart**
@@ -38,7 +38,7 @@ Ensure your visualizations have a **consistent, professional look**, and export 
 
 ### Checklist
 
-- [ ] Global plotting style set in main analysis notebooks.
+- [ ] Global plotting style set in main analysis analysis scripts.
 - [ ] Titles, labels, and legends cleaned up for key charts.
 - [ ] Figure sizes consistent and readable.
 - [ ] Important charts exported to `figures/` with clear filenames.

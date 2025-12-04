@@ -2,7 +2,7 @@
 
 ### Objective
 
-Move your `clean_books` logic out of notebooks into a **Python module** so it can be reused by scripts and tests.
+Move your `clean_books` logic out of analysis scripts into a **Python module** so it can be reused by scripts and tests.
 
 ### Outputs
 
@@ -10,9 +10,9 @@ Move your `clean_books` logic out of notebooks into a **Python module** so it ca
 
 ### Steps
 
-1. **Review existing cleaning steps in notebooks**
+1. **Review existing cleaning steps in analysis scripts**
 
-   - Find the notebook cells where you implemented cleaning (types, missing values, outliers, text normalization, etc.).
+   - Find the sections in your analysis scripts where you implemented cleaning (types, missing values, outliers, text normalization, etc.).
 
 2. **Create `src/cleaning.py`**
 
@@ -21,7 +21,7 @@ Move your `clean_books` logic out of notebooks into a **Python module** so it ca
 
 3. **Move cleaning logic into the function**
 
-   - Copy the core transformations from the notebook into the function body.
+   - Copy the core transformations from the analysis script into the function body.
    - Keep steps in a clear order (type casting, missing values, outliers, text normalization).
 
 4. **Add docstrings and comments**
@@ -31,18 +31,18 @@ Move your `clean_books` logic out of notebooks into a **Python module** so it ca
      - Main cleaning rules applied.
      - What the function returns.
 
-5. **Update notebooks to use the module**
+5. **Update analysis scripts to use the module**
 
-   - Replace inline cleaning code in notebooks with:
+   - Replace inline cleaning code in analysis scripts with:
      - `from src.cleaning import clean_books`
      - `df_clean = clean_books(df_raw)`.
 
-6. **Run notebooks to confirm behavior**
+6. **Run analysis scripts to confirm behavior**
    - Ensure cleaned results are equivalent to what you had before moving the logic.
 
 ### Checklist
 
 - [ ] `src/cleaning.py` created.
 - [ ] `clean_books` function implemented with documented rules.
-- [ ] Notebooks import and use `clean_books`.
+- [ ] Analysis Scripts import and use `clean_books`.
 - [ ] Cleaned outputs validated against prior version.

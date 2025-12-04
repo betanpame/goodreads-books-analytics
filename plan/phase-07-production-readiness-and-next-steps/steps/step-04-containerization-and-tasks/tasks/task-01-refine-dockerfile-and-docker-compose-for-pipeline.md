@@ -2,7 +2,7 @@
 
 ### Objective
 
-Update your Docker setup so that it can run **not only Jupyter**, but also the data pipeline scripts inside containers.
+Update your Docker setup so that it can run **not only Python CLI workflow**, but also the data pipeline scripts inside containers.
 
 ### Outputs
 

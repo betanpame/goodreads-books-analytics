@@ -11,13 +11,13 @@ Some key concepts in this phase:
 
 ## Inputs
 
-- Phase 01 completed (environment and Docker/Jupyter ready).
+- Phase 01 completed (environment and Docker/Python CLI workflow ready).
 - `data/books.csv` available locally.
 - (Optional but recommended) Access to a running PostgreSQL instance.
 
 ## Outputs / Deliverables
 
-1. A **notebook** that:
+1. A **analysis script** that:
    - Loads `books.csv` into pandas.
    - Displays head/tail samples and basic info (`.info()`, `.describe()`).
    - Lists column names and data types.

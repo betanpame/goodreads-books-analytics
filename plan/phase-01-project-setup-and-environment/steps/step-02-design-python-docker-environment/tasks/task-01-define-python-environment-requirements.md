@@ -12,7 +12,7 @@ List the Python packages and tools that your Docker-based environment must inclu
    - `numpy`
    - `matplotlib`
    - `seaborn`
-   - `jupyter` / `jupyterlab`
+   - `python-dotenv`
    - `sqlalchemy`
    - `psycopg2-binary` (for PostgreSQL connections)
 3. Mark which packages are **must-have** for Phase 01–04 and which are **optional/for later**.

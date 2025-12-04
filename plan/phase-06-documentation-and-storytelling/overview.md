@@ -13,7 +13,7 @@ In this phase you will practice **data storytelling**:
 ## Inputs
 
 - All previous phases substantially completed.
-- Notebooks with EDA and analysis.
+- Analysis Scripts with EDA and analysis.
 - SQL scripts and Docker setup in place or in progress.
 
 ## Outputs / Deliverables
@@ -24,10 +24,10 @@ In this phase you will practice **data storytelling**:
    - High-level architecture (Python, PostgreSQL, Docker).
    - How to run the project locally (and later in the cloud).
    - Summary of key findings with example charts.
-2. Organized **notebooks**:
+2. Organized **analysis scripts**:
    - Clear naming and ordering.
    - Minimal duplication.
-   - Explanatory markdown cells.
+   - Explanatory module docstring or Markdown notes.
 3. A short **written report or presentation outline** summarizing:
    - Business questions.
    - Approach.
@@ -37,8 +37,8 @@ In this phase you will practice **data storytelling**:
 
 Detailed steps are under `steps/`:
 
-1. **Step 1 – Organize and Clean Notebooks**  
-   Folder: `steps/step-01-organize-notebooks/`
+1. **Step 1 – Organize and Clean Analysis Scripts**  
+   Folder: `steps/step-01-organize-src/analyses/`
 
 2. **Step 2 – Write and Polish README**  
    Folder: `steps/step-02-write-readme/`
@@ -46,8 +46,8 @@ Detailed steps are under `steps/`:
 3. **Step 3 – Create Summary Narrative or Slides**  
    Folder: `steps/step-03-create-summary-narrative/`
 
-4. **Step 4 – Polish Notebooks and Visuals**  
-   Folder: `steps/step-04-polish-notebooks-and-visuals/`
+4. **Step 4 – Polish Analysis Scripts and Visuals**  
+   Folder: `steps/step-04-polish-analysis scripts-and-visuals/`
 
 5. **Step 5 – Prepare Sharing and Next Notes**  
    Folder: `steps/step-05-prepare-sharing-and-next-notes/`

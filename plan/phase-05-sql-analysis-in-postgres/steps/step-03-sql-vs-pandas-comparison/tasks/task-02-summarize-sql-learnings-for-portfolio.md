@@ -41,7 +41,7 @@ Create a **short write-up** that highlights your SQL skills and how they complem
 4. **Link to assets**
 
    - Reference the `sql/` folder and example files.
-   - Optionally, link to the comparison notebook.
+   - Optionally, link to the comparison analysis script.
 
 5. **Review and polish**
    - Ensure the text is concise and clear.
@@ -52,5 +52,5 @@ Create a **short write-up** that highlights your SQL skills and how they complem
 - [ ] Key SQL accomplishments listed.
 - [ ] Narrative paragraphs about SQL experience written.
 - [ ] Bullet list of SQL capabilities added.
-- [ ] Links to SQL scripts and notebook added.
+- [ ] Links to SQL scripts and analysis script added.
 - [ ] Text reviewed for clarity and portfolio readiness.

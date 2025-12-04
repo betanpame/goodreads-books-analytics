@@ -1,23 +1,23 @@
-## Task 01 – Clean and Annotate Notebooks
+## Task 01 – Clean and Annotate Analysis Scripts
 
 ### Objective
 
-Polish your notebooks so they read like **clear, guided analyses** rather than raw scratch work.
+Polish your analysis scripts so they read like **clear, guided analyses** rather than raw scratch work.
 
 ### Outputs
 
-- All key notebooks cleaned, with explanatory markdown and minimal noise.
+- All key analysis scripts cleaned, with explanatory markdown and minimal noise.
 
 ### Steps
 
-1. **Identify key notebooks**
+1. **Identify key analysis scripts**
 
-   - Decide which notebooks you want to show in your portfolio (e.g., EDA, cleaning, analysis, SQL comparison).
+   - Decide which analysis scripts you want to show in your portfolio (e.g., EDA, cleaning, analysis, SQL comparison).
    - Focus cleanup efforts on these first.
 
 2. **Add structure with markdown headings**
 
-   - For each notebook, add headings such as:
+   - For each analysis script, add headings such as:
      - Introduction / Goals.
      - Data Loading.
      - EDA.
@@ -27,27 +27,27 @@ Polish your notebooks so they read like **clear, guided analyses** rather than r
 
 3. **Explain code blocks**
 
-   - Before each major code cell, add 1–3 sentences explaining what you are about to do and why.
+   - Before each major code block, add 1–3 sentences explaining what you are about to do and why.
    - Avoid explaining trivial imports, but do explain data transformations and analytical steps.
 
-4. **Remove or minimize noisy cells**
+4. **Remove or minimize noisy sections**
 
-   - Delete cells that are purely debugging or repeated experiments.
-   - If some experiments are useful for learning, group them in a separate "Appendix" section.
+   - Delete helper snippets that are purely debugging or repeated experiments.
+   - If some experiments are useful for learning, group them in a separate "Appendix" section or move them to comments at the bottom.
 
-5. **Ensure notebooks run from top to bottom**
+5. **Ensure analysis scripts run from top to bottom**
 
-   - Restart the kernel and run all cells to confirm there are no missing dependencies or ordering issues.
+   - Run each script from a clean terminal session (e.g., `python -m src.analyses.01_eda_books`) to confirm there are no missing dependencies or ordering issues.
 
 6. **Standardize style**
-   - Use consistent naming for variables and sections across notebooks.
+   - Use consistent naming for variables and sections across analysis scripts.
    - Make sure plots are large enough and labeled.
 
 ### Checklist
 
-- [ ] Portfolio notebooks identified.
-- [ ] Headings added to structure each notebook.
+- [ ] Portfolio analysis scripts identified.
+- [ ] Headings added to structure each analysis script.
 - [ ] Explanatory markdown added before important code blocks.
-- [ ] Debug/noise cells removed or moved to Appendix.
-- [ ] Notebooks run cleanly from top to bottom.
-- [ ] Style and tone consistent across notebooks.
+- [ ] Debug/noise sections removed or moved to Appendix.
+- [ ] Analysis Scripts run cleanly from top to bottom.
+- [ ] Style and tone consistent across analysis scripts.
