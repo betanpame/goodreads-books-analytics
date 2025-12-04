@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  POSTGRES_DB: goodreads
+  POSTGRES_USER: goodreads_user
+  POSTGRES_PASSWORD: postgres_ci_password
+  POSTGRES_HOST: localhost
+  POSTGRES_PORT: "5432"
+  DATABASE_URL: postgresql+psycopg2://goodreads_user:postgres_ci_password@localhost:5432/goodreads
+  PYTHON_VERSION: "3.11"
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: "pip"
+
+      - name: Create .env file for tooling parity
+        run: |
+          cat <<'EOF' > .env
+          PROJECT_NAME=goodreads_books_analytics
+          POSTGRES_VERSION=17
+          POSTGRES_DB=${POSTGRES_DB}
+          POSTGRES_USER=${POSTGRES_USER}
+          POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+          POSTGRES_PORT=${POSTGRES_PORT}
+          POSTGRES_HOST=${POSTGRES_HOST}
+          EOF
+
+      - name: Start PostgreSQL via docker compose
+        run: docker compose -f docker-compose.postgresql.yml up -d
+
+      - name: Wait for PostgreSQL to become ready
+        run: |
+          for i in {1..30}; do
+            if docker compose -f docker-compose.postgresql.yml exec -T postgres pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}; then
+              exit 0
+            fi
+            sleep 2
+          done
+          exit 1
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install "python-dotenv[cli]"
+
+      - name: Run pytest (plain)
+        run: python -m pytest tests
+
+      - name: Run pytest with dotenv
+        run: python -m dotenv run -- python -m pytest tests
+
+      - name: Shutdown PostgreSQL
+        if: always()
+        run: docker compose -f docker-compose.postgresql.yml down -v
