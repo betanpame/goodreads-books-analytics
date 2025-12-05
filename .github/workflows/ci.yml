@@ -218,6 +218,29 @@ jobs:
       - name: Show comparison summary
         run: cat outputs/phase05_step03_task01/comparison_summary.md
 
+      - name: Generate comparison chart
+        run: python -m src.analyses.plot_comparison_summary \
+          --input outputs/phase05_step03_task01/comparison_summary.csv \
+          --output outputs/phase05_step03_task01/comparison_summary.png
+
+      - name: Generate shareable slide deck
+        run: python -m src.analyses.export_phase05_slide \
+          --notes docs/phase-05-step-03-task-01-notes.md \
+          --summary-csv outputs/phase05_step03_task01/comparison_summary.csv \
+          --chart outputs/phase05_step03_task01/comparison_summary.png \
+          --output docs/phase-05-step-03-task-01-slide.pptx
+
+      - name: Upload SQL vs pandas artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase05-sql-vs-pandas-${{ github.run_id }}
+          path: |
+            outputs/phase05_step03_task01/comparison_summary.csv
+            outputs/phase05_step03_task01/comparison_summary.md
+            outputs/phase05_step03_task01/comparison_summary.png
+            docs/phase-05-step-03-task-01-slide.pptx
+
       - name: Fail if mismatches detected
         run: |
           if compgen -G "outputs/phase05_step03_task01/*_differences.csv" > /dev/null; then

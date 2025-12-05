@@ -108,28 +108,38 @@ C:/Users/Pamela/Documents/GitHub/goodreads-books-analytics/.venv/Scripts/python.
 
 Este paso verifica que los análisis SQL de la fase 05 coinciden con los CSV generados en pandas (fase 04).
 
+### Ejecución rápida (recomendada)
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Phase05ComparisonRefresh.ps1
+```
+
+El script anterior levanta los contenedores, recarga `books_clean`, ejecuta el comparador y regenera el gráfico `comparison_summary.png`. Usa `-Cases` para limitar métricas o `-SkipChart` si no necesitas el PNG.
+
+### Pasos manuales
+
 1. **Levanta los contenedores**
 
-	```powershell
-	docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
-	```
+   ```powershell
+   docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
+   ```
 
 2. **Carga el dataset curado a PostgreSQL** (solo cuando `books_clean` cambie)
 
-	```powershell
-	docker compose -f docker-compose.python.yml run --rm app `
-		python -m src.load_books_clean_to_postgres `
-		--csv-path data/derived/books_clean.csv `
-		--table books_clean
-	```
+   ```powershell
+   docker compose -f docker-compose.python.yml run --rm app `
+   	python -m src.load_books_clean_to_postgres `
+   	--csv-path data/derived/books_clean.csv `
+   	--table books_clean
+   ```
 
 3. **Ejecuta el comparador SQL vs pandas**
 
-	```powershell
-	docker compose -f docker-compose.python.yml run --rm app `
-		python -m src.analyses.sql_vs_pandas_compare `
-		--output-dir outputs/phase05_step03_task01
-	```
+   ```powershell
+   docker compose -f docker-compose.python.yml run --rm app `
+   	python -m src.analyses.sql_vs_pandas_compare `
+   	--output-dir outputs/phase05_step03_task01
+   ```
 
 Resultados clave:
 
@@ -137,6 +147,12 @@ Resultados clave:
 - `outputs/phase05_step03_task01/comparison_summary.png` brinda un gráfico listo para presentaciones.
 - Archivos `*_differences.csv` solo aparecen cuando existen discrepancias; si quieres reiniciar la evidencia, elimina esos archivos y vuelve a correr el comando.
 - Documentación extendida: `docs/phase-05-step-03-task-01-notes.md`.
+
+### Solución de problemas rápida
+
+1. `*_differences.csv` presente → inspecciona el archivo correspondiente en `outputs/phase05_step03_task01/` para ver filas divergentes.
+2. Vuelve a cargar `books_clean` con `scripts/Invoke-Phase05ComparisonRefresh.ps1` (o el paso manual 2) para garantizar que Postgres usa el CSV curado más reciente.
+3. Ejecuta de nuevo el comparador; si la discrepancia persiste, revisa los SQL involucrados y actualiza la lógica en `src/analyses/sql_vs_pandas_compare.py`.
 
 ---
 
