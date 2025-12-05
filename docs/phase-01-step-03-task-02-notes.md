@@ -7,7 +7,7 @@ This note documents how I verified that the Dockerized Python environment actual
 - I already built the image `goodreads-analytics-python:latest` in Task 01 using `docker/python/Dockerfile` and the root `requirements.txt`.
 - Docker Desktop is running on Windows.
 - I am working from the project root folder:
-  `C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics`
+  `C:\Users\shady\documents\GITHUB\goodreads-books-analytics`
 
 ### 2. Start a container for CLI verification
 
@@ -65,7 +65,7 @@ To re-run this task on another machine or at a later time:
 2. Build the image (if not already built):
 
    ```powershell
-   cd "C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics"
+   cd "C:\Users\shady\documents\GITHUB\goodreads-books-analytics"
    docker build -f docker/python/Dockerfile -t goodreads-analytics-python:latest .
    ```
 

@@ -4,6 +4,8 @@ on:
   push:
     branches: ["main"]
   pull_request:
+  schedule:
+    - cron: "0 5 * * *"
 
 permissions:
   contents: read
@@ -68,6 +70,88 @@ jobs:
       - name: Run pytest with dotenv
         run: python -m dotenv run -- python -m pytest tests
 
+      - name: Validate metrics catalog
+        run: python -m src.analyses.metrics_catalog \
+          --books-csv data/derived/books_clean.csv \
+          --output-markdown outputs/phase04_metrics_catalog.md
+
       - name: Shutdown PostgreSQL
         if: always()
         run: docker compose -f docker-compose.postgresql.yml down -v
+
+  sql-smoke:
+    runs-on: ubuntu-latest
+    needs: tests
+    if: ${{ always() }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: "pip"
+
+      - name: Create .env file for tooling parity
+        run: |
+          cat <<'EOF' > .env
+          PROJECT_NAME=goodreads_books_analytics
+          POSTGRES_VERSION=17
+          POSTGRES_DB=${POSTGRES_DB}
+          POSTGRES_USER=${POSTGRES_USER}
+          POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+          POSTGRES_PORT=${POSTGRES_PORT}
+          POSTGRES_HOST=${POSTGRES_HOST}
+          EOF
+
+      - name: Start PostgreSQL via docker compose
+        run: docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d postgres
+
+      - name: Wait for PostgreSQL to become ready
+        run: |
+          for i in {1..30}; do
+            if docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec -T postgres pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}; then
+              exit 0
+            fi
+            sleep 2
+          done
+          exit 1
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Load books dataset into PostgreSQL
+        run: python -m src.load_books_to_postgres \
+          --csv-path data/books.csv \
+          --table books \
+          --if-exists replace
+
+      - name: Load canonical mapping table
+        run: python -m src.load_duplicate_mapping \
+          --csv-path data/derived/duplicate_bookid_mapping.csv \
+          --table bookid_canonical_map \
+          --if-exists replace
+
+      - name: Run SQL smoke tests
+        run: |
+          set -euo pipefail
+          scripts=(
+            sql/analysis/20_top_authors_weighted_rating.sql
+            sql/analysis/30_top_books_by_engagement.sql
+            sql/analysis/40_publication_year_trends.sql
+            sql/analysis/50_language_quality_summary.sql
+            sql/analysis/55_duplicate_share.sql
+          )
+          for script in "${scripts[@]}"; do
+            echo "Running ${script}"
+            docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec -T -e PAGER=cat postgres \
+              psql -q -v ON_ERROR_STOP=1 -U ${POSTGRES_USER} -d ${POSTGRES_DB} -f /app/${script}
+          done
+
+      - name: Shutdown PostgreSQL
+        if: always()
+        run: docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml down -v

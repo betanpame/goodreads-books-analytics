@@ -1,0 +1,15 @@
+column_name,data_type,is_nullable
+book_id,bigint,YES
+title,text,YES
+authors,text,YES
+average_rating,double precision,YES
+isbn,text,YES
+isbn13,text,YES
+language_code,text,YES
+num_pages,bigint,YES
+ratings_count,bigint,YES
+text_reviews_count,bigint,YES
+publication_date,date,YES
+publisher,text,YES
+authors_raw,text,YES
+authors_clean,text,YES

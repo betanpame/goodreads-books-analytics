@@ -20,7 +20,7 @@ According to `plan/phase-02-data-loading-and-initial-exploration/steps/step-02-d
 While this task is mostly DDL design, I still start with the standard commands so the dataset and container are ready if I need to double-check anything:
 
 ```powershell
-cd C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.initial_inspection_books --sample-size 1000 --verbose
 ```
@@ -114,7 +114,7 @@ For broader questions or troubleshooting tips, see `docs/data-faq.md`.
 
 ## 10. Running the DDL inside Postgres (How-to)
 
-These are the exact commands I ran on December 4, 2025 to create the `books` table inside the Dockerized Postgres instance. Run them from the repo root (`C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics`).
+These are the exact commands I ran on December 4, 2025 to create the `books` table inside the Dockerized Postgres instance. Run them from the repo root (`C:\Users\shady\documents\GITHUB\goodreads-books-analytics`).
 
 1. **Ensure Postgres is up** (only needed once per session):
    ```powershell

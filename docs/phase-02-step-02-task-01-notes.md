@@ -20,7 +20,7 @@ Per `plan/phase-02-data-loading-and-initial-exploration/steps/step-02-design-pos
 Use the same reproducible command sequence we established in Step 01 any time you need to inspect the dataset:
 
 ```powershell
-cd C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.initial_inspection_books --sample-size 1000 --verbose
 ```

@@ -8,7 +8,7 @@ Use this template whenever you document a new task inside Phase 02 → Step 01. 
 2. **How to run this analysis script** – include the canonical three-command block:
 
    ```powershell
-   cd C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics
+   cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
    docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
    docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m <module> --sample-size 1000 --verbose
    ```

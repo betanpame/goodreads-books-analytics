@@ -23,7 +23,7 @@ Use the same reproducible command sequence every time you revisit this task:
 1. **Move into the repository**
 
 ```powershell
-cd C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 ```
 
 2. **Start (or verify) Docker services** so the Python CLI container and Postgres are online:
@@ -49,7 +49,7 @@ Use the same trio of commands whenever you document a new Phase 02 → Step 01 t
 I reused the same Dockerized CLI workflow from Tasks 01 and 02:
 
 ```powershell
-cd C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 # Ensure Python + Postgres services are running
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
 # Execute the scripted analysis inside the Python container

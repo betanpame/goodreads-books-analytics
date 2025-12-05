@@ -1,0 +1,8 @@
+column,rule,description,row_count,sample_file
+average_rating,iqr_outlier,Outside 1.5×IQR bounds,250,average_rating_iqr_outlier.csv
+num_pages,iqr_outlier,Outside 1.5×IQR bounds,540,num_pages_iqr_outlier.csv
+num_pages,below_valid_min,Falls below hard minimum 1.0,76,num_pages_below_valid_min.csv
+num_pages,suspect_low,Below soft lower bound 10.0,195,num_pages_suspect_low.csv
+num_pages,suspect_high,Above soft upper bound 2000.0,12,num_pages_suspect_high.csv
+ratings_count,iqr_outlier,Outside 1.5×IQR bounds,1729,ratings_count_iqr_outlier.csv
+text_reviews_count,iqr_outlier,Outside 1.5×IQR bounds,1631,text_reviews_count_iqr_outlier.csv

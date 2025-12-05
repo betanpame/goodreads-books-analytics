@@ -26,7 +26,7 @@ Follow these repeatable steps anytime you need to reproduce the outputs:
 1. **Open the repository**
 
    ```powershell
-   cd C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics
+   cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
    ```
 
 2. **Start (or confirm) the Docker services** so Python and Postgres are running:
@@ -52,7 +52,7 @@ This three-command flow is now the canonical template for every Phase 02 → Ste
 I reused the Docker-based Python CLI environment from Phase 01. Everything happens inside the `app` container so the exact same Python version and dependencies run every time.
 
 ```powershell
-cd C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 
 # Start Python + Postgres containers in the background
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d

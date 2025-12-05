@@ -37,13 +37,13 @@ To open a terminal in VS Code already positioned at the project root:
 3. Confirm the prompt path looks similar to:
 
 ```powershell
-PS C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics>
+PS C:\Users\shady\documents\GITHUB\goodreads-books-analytics>
 ```
 
 If not, you can navigate there with:
 
 ```powershell
-Set-Location "C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics"
+Set-Location "C:\Users\shady\documents\GITHUB\goodreads-books-analytics"
 ```
 
 ---

@@ -45,7 +45,7 @@ To use the compose file and start both the Python CLI `app` service and the `pos
 1. Navigate to the project root:
 
    ```powershell
-   cd "C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics"
+   cd "C:\Users\shady\documents\GITHUB\goodreads-books-analytics"
    ```
 
 2. Start the services defined in `docker-compose.python.yml` in detached mode:
@@ -124,7 +124,7 @@ The final step is to check that the newly created analysis script exists in the 
 
 1. On the host, in VS Code or File Explorer, I navigated to the `docs/` folder of the project:
 
-   - `C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics\docs`.
+   - `C:\Users\shady\documents\GITHUB\goodreads-books-analytics\docs`.
 
 2. I confirmed that the new analysis script file I created from within the container shell (for example, `docker-mount-test.py`) appeared in this folder.
 

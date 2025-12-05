@@ -31,7 +31,7 @@ Every Phase 02 → Step 01 task now shares the same three-command recipe so runs
 1. **Open the repository** (this also keeps VS Code in sync with the docker bind mount):
 
 ```powershell
-cd C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 ```
 
 2. **Start or refresh the containers** so the Python CLI and Postgres services are ready:
@@ -72,7 +72,7 @@ The Docker Compose configuration mounts the **entire project** into the containe
 From the project root on Windows (PowerShell), the stack is started with:
 
 ```powershell
-cd C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up --build
 ```
@@ -82,7 +82,7 @@ What this does:
 - **Builds** the Python image defined in `docker/python/Dockerfile` if needed.
 - Starts an `app` container that mounts the entire repository and idles until you run a CLI command.
 - Starts a `postgres` container for the database.
-- Mounts the local project folder (`C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics`) to `/app` inside the `app` container.
+- Mounts the local project folder (`C:\Users\shady\documents\GITHUB\goodreads-books-analytics`) to `/app` inside the `app` container.
 
 With this setup there is no browser-based interface. Instead, open a terminal (either on the host or via `docker compose exec app bash`) and run scripts directly with commands such as `python -m src.analyses.initial_inspection_books`.
 

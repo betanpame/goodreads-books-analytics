@@ -1,0 +1,6 @@
+| Metric | CSV / pandas | PostgreSQL | Matches | Delta |
+| --- | --- | --- | --- | --- |
+| row_count | 11119 | 11119 | yes | 0 |
+| average_rating | 3.93414 | 3.93414 | yes | 0.000000 |
+| min_publication_date | 1900-01-01 | 1900-01-01 | yes | 0 days |
+| max_publication_date | 2020-03-31 | 2020-03-31 | yes | 0 days |

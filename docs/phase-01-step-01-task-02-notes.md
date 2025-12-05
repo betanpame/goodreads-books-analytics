@@ -43,7 +43,7 @@ You can inspect the CSV in **VS Code** or in a **spreadsheet tool**.
 In PowerShell you can run:
 
 ```powershell
-start excel "C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics\data\books.csv"
+start excel "C:\Users\shady\documents\GITHUB\goodreads-books-analytics\data\books.csv"
 ```
 
 This opens the CSV in Excel, where each column is easier to see.

@@ -18,7 +18,7 @@ Deliverables:
 
 ## 2. Reproduce the container + schema state
 
-Run these commands from the repo root (`C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics`). They keep Postgres available and confirm the table is present.
+Run these commands from the repo root (`C:\Users\shady\documents\GITHUB\goodreads-books-analytics`). They keep Postgres available and confirm the table is present.
 
 ```powershell
 # Start/ensure services

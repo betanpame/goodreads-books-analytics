@@ -1,0 +1,11 @@
+column,null_count,distinct_count
+book_id,0,11119
+title,0,10344
+authors,0,6623
+average_rating,0,209
+ratings_count,0,5293
+text_reviews_count,0,1822
+num_pages,0,997
+language_code,0,27
+publication_date,2,3673
+publisher,0,2289

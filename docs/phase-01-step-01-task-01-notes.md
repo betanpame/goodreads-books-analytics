@@ -28,7 +28,7 @@ The objectives of this document are:
 To open the project in VS Code on Windows using PowerShell:
 
 ```powershell
-code C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics
+code C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 ```
 
 What this does:
@@ -86,7 +86,7 @@ Steps you can follow:
 If you prefer to use Excel or another spreadsheet tool:
 
 ```powershell
-start excel "C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics\data\books.csv"
+start excel "C:\Users\shady\documents\GITHUB\goodreads-books-analytics\data\books.csv"
 ```
 
 (You can replace `excel` with another program if needed.)
@@ -234,16 +234,16 @@ You can think of `project-structure-overview.md` as a document you would proudly
 Task 01 checklist from the planning file:
 
 - [x] **I have opened the repository in VS Code.**  
-      → Documented how to open the repo with `code` from PowerShell.
+       → Documented how to open the repo with `code` from PowerShell.
 
 - [x] **I have reviewed all top-level folders and files.**  
-      → Listed and explained all important top-level items.
+       → Listed and explained all important top-level items.
 
 - [x] **I have written short notes describing the purpose of each folder in `docs/repo-notes.md`.**  
-      → Updated `repo-notes.md` with concrete descriptions for each folder and file.
+       → Updated `repo-notes.md` with concrete descriptions for each folder and file.
 
 - [x] **I have briefly inspected `data/books.csv` (in VS Code or a spreadsheet tool).**  
-      → Read the first rows, identified columns, and recorded a quick first impression.
+       → Read the first rows, identified columns, and recorded a quick first impression.
 
 With these steps completed and documented, **Phase 01 → Step 01 → Task 01** is fully done.
 

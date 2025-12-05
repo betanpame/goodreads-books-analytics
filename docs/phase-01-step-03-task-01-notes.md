@@ -100,7 +100,7 @@ Together, the Dockerfile and `requirements.txt` fully describe the environment t
 From the project root (`goodreads-books-analytics`), the image was built with:
 
 ```powershell
-cd "C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics"
+cd "C:\Users\shady\documents\GITHUB\goodreads-books-analytics"
 
 docker build -f docker/python/Dockerfile -t goodreads-analytics-python:latest .
 ```

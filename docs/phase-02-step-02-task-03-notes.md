@@ -16,7 +16,7 @@ From `plan/phase-02-data-loading-and-initial-exploration/steps/step-02-design-po
 
 ## 2. How to reproduce the exploratory queries
 
-Even though this task is mostly conceptual, I ran a pandas scan to quantify how often authors, publishers, and languages repeat. Re-run it anytime with these commands from the repo root (`C:\Users\shady\OneDrive\Documentos\GITHUB\goodreads-books-analytics`):
+Even though this task is mostly conceptual, I ran a pandas scan to quantify how often authors, publishers, and languages repeat. Re-run it anytime with these commands from the repo root (`C:\Users\shady\documents\GITHUB\goodreads-books-analytics`):
 
 ```powershell
 # 1) Make sure dependencies are installed

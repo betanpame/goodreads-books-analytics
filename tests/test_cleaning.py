@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 import pandas as pd
+import pytest
 
 from src.cleaning import (
     cast_numeric_columns,
     clean_books,
     explode_authors,
     normalize_authors_column,
+    normalize_identifier_columns,
     parse_publication_date,
     rename_columns,
 )
@@ -41,6 +43,13 @@ def test_cast_numeric_columns_coerces_strings_and_clips_rating() -> None:
     assert casted["average_rating"].iloc[0] == 5  # clipped to max 5
 
 
+def test_cast_numeric_columns_raises_on_bad_strings() -> None:
+    df = pd.DataFrame({"book_id": ["abc"], "num_pages": ["101"]})
+
+    with pytest.raises(ValueError):
+        cast_numeric_columns(df)
+
+
 def test_parse_publication_date_handles_multiple_formats() -> None:
     df = pd.DataFrame({"publication_date": ["9/1/98", "2015-07-30"]})
 
@@ -71,6 +80,15 @@ def test_normalize_authors_column_preserves_raw_and_trims() -> None:
     assert pd.isna(normalized.loc[1, "authors"])
 
 
+def test_normalize_identifier_columns_keeps_leading_zeros_and_trims() -> None:
+    df = pd.DataFrame({"isbn": [" 00123 "], "isbn13": [9780439785969]})
+
+    normalized = normalize_identifier_columns(df)
+
+    assert normalized.loc[0, "isbn"] == "00123"
+    assert normalized.loc[0, "isbn13"] == "9780439785969"
+
+
 def test_explode_authors_supports_multiple_delimiters_and_deduplication() -> None:
     df = pd.DataFrame(
         {
@@ -97,6 +115,7 @@ def test_clean_books_runs_full_pipeline() -> None:
             "publication_date": ["9/1/98"],
             "ratings_count": ["5"],
             "text_reviews_count": ["1"],
+            "isbn13": [9780439785969],
         }
     )
 
@@ -105,3 +124,4 @@ def test_clean_books_runs_full_pipeline() -> None:
     assert cleaned.loc[0, "authors"] == "Alice / Bob"
     assert cleaned.loc[0, "average_rating"] == 5
     assert str(cleaned.loc[0, "publication_date"]) == "1998-09-01"
+    assert cleaned.loc[0, "isbn13"] == "9780439785969"
