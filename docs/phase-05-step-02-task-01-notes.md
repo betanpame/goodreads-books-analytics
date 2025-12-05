@@ -6,6 +6,20 @@ Translate the plan’s “set up sql folder and conventions” checklist into co
 
 ## 2. How to run the SQL scripts
 
+### 2.1 Quick-start checklist (follow top-to-bottom)
+
+| Step                  | Command                                                                                | What to see                                                         |
+| --------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 1. Navigate           | `cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`                         | Prompt shows repo root.                                             |
+| 2. Start stack        | `docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d`   | `app` and `postgres` display as `Up` in `docker compose ps`.        |
+| 3. Sanity check mount | `docker compose ... exec postgres ls /app/sql`                                         | Lists `schema/` and `analysis/`.                                    |
+| 4. Open psql          | `docker compose ... exec -e PAGER=cat postgres psql -q -U goodreads_user -d goodreads` | Prompt changes to `goodreads=#`.                                    |
+| 5. Run scripts        | Inside `psql`: `\i sql/schema/01_create_books_table.sql`, etc.                         | Each script echoes `psql:...: command executed` plus result tables. |
+| 6. Verify             | `SELECT COUNT(*) FROM books;`                                                          | Returns `11119`.                                                    |
+| 7. Exit               | `\q`                                                                                   | Back to PowerShell prompt.                                          |
+
+### 2.2 Detailed steps (with additional context)
+
 1. **Start from the repo root** so the bind mount aligns with `/app` inside the containers:
 
 ```powershell
@@ -18,18 +32,26 @@ cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
 ```
 
-Wait until `docker compose ps` shows both `app` and `postgres` containers as `Up` before running SQL.
+Immediately follow up with `docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml ps` and wait until both services show `Up`.
 
-3. **Open an interactive `psql` shell** with pagination disabled (eliminates the `TURN: No such file or directory` warning) and quiet output for clean transcripts:
+3. **Confirm Postgres can read the repo** (skip this check after the first success):
+
+```powershell
+docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec postgres ls /app/sql/analysis
+```
+
+If the directory is missing, recreate the container (`... up -d --force-recreate postgres`).
+
+4. **Open an interactive `psql` shell** with pagination disabled (eliminates the `TURN: No such file or directory` warning) and quiet output for clean transcripts:
 
 ```powershell
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec -e PAGER=cat `
-   postgres psql -q -U goodreads_user -d goodreads
+  postgres psql -q -U goodreads_user -d goodreads
 ```
 
 Expected prompt: `goodreads=#`. If authentication fails, re-source `.env` or run `docker compose ... exec postgres env | findstr GOODREADS` to confirm credentials.
 
-4. **Execute scripts from inside `psql`** using repo-relative paths (the repo mounts at `/app`). Run schema files before analysis files to keep dependencies aligned:
+5. **Execute scripts from inside `psql`** using repo-relative paths (the repo mounts at `/app`). Run schema files before analysis files to keep dependencies aligned:
 
 ```psql
 \i sql/schema/01_create_books_table.sql
@@ -37,16 +59,23 @@ Expected prompt: `goodreads=#`. If authentication fails, re-source `.env` or run
 \i sql/analysis/00_sanity_checks.sql
 ```
 
-Each `\i` prints `psql:...: command executed` plus any query output; capture these logs for documentation.
+Each `\i` prints `psql:...: command executed` plus any query output; capture these logs for documentation. After the schema is in place, quickly re-run `SELECT COUNT(*) FROM books;` to confirm the expected 11,119 rows.
 
-5. **Leave the session** with `\q` when finished. For automated checks (CI, smoke tests), feed the script directly without the interactive shell:
+6. **Leave the session or run scripts non-interactively** once you capture the outputs. For automation, feed the script directly without the interactive shell:
 
 ```powershell
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec -e PAGER=cat `
-   postgres psql -q -U goodreads_user -d goodreads -v ON_ERROR_STOP=1 -f /app/sql/analysis/00_sanity_checks.sql
+  postgres psql -q -U goodreads_user -d goodreads -v ON_ERROR_STOP=1 -f /app/sql/analysis/00_sanity_checks.sql
 ```
 
-Swap the file path for any script under `sql/schema/` or `sql/analysis/`. The `-v ON_ERROR_STOP=1` flag makes CI fail fast if any statement errors.
+Swap the file path for any script under `sql/schema/` or `sql/analysis/`. The `-v ON_ERROR_STOP=1` flag makes CI fail fast if any statement errors. Use PowerShell to loop through multiple files when needed:
+
+```powershell
+foreach($file in 'schema/01_create_books_table.sql','schema/02_create_books_canonical_view.sql','analysis/00_sanity_checks.sql') {
+  docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec -e PAGER=cat `
+   postgres psql -q -U goodreads_user -d goodreads -v ON_ERROR_STOP=1 -f ("/app/sql/$file")
+}
+```
 
 ## 3. Environment recap
 

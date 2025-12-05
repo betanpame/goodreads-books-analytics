@@ -64,7 +64,11 @@ These artifacts already include the `publication_year` feature, so any downstrea
 
 The CSVs list average rating, median `ratings_count`, median `text_reviews_count`, and book counts for the configured "top N" languages/publishers so dashboards can reuse the aggregates without rerunning pandas code.
 
+**Where can I find the Phase 05 Step 02 Task 03 SQL exports?** – The Postgres-first versions of the language/publisher rankings and rolling publication metrics live under `outputs/phase05_step02_task03/` as `70_language_publisher_rankings.csv` and `80_publication_year_rolling_stats.csv`. Regenerate them by running the corresponding SQL files with `psycopg2` (see Task 03 notes for the snippet) or via `docker compose ... psql -f /app/sql/analysis/<file>.sql` plus `\copy`.
+
 **How should I interpret small-sample categories?** – Some high-scoring languages (e.g., `zho` or `jpn`) and prestige publishers have fewer than 100 titles. Treat their averages as directional insight, cite the `book_count` column, and pair them with the engagement chart so readers know whether a spike reflects broad sentiment or a niche cohort.
+
+**Why do the SQL publisher rankings mostly show English rows?** – The SQL script filters to languages where each publisher ships at least 20 canonical books. Today only `eng` and `en-US` satisfy that threshold. Lower the limit inside the script’s `params` CTE if you need to explore smaller cohorts, but keep the documented outputs strict to avoid one-book leaderboards.
 
 **Where are the Step 03 Task 01 data-quality outputs?** – After running `python -m src.analyses.eda_books`, inspect `outputs/phase03_univariate/step03_task01_missing_duplicates/`. It contains `missing_values_summary.csv` plus `duplicate_summary.csv` and detailed samples (`partial_duplicates_by_subset.csv`). These files are the single source of truth for missingness rates and duplicate counts referenced in the task notes.
 
@@ -218,6 +222,14 @@ This inspects the key columns listed in the plan (IDs, ratings, counts, language
 **How do I tweak thresholds like `top_n`, `min_year`, or the language coverage filter?** – Each script declares a `params` CTE at the top. Adjust the literal values (e.g., set `SELECT 25::int AS top_n`) and rerun the same command. No other clauses need editing.
 
 **Where should I document or export the SQL outputs?** – Copy/paste the tabular results into `docs/phase-05-step-02-task-02-notes.md`, or add `\copy` statements if you need CSVs for dashboards. Reference the `sql/README.md` analysis catalog whenever you cite one of the scripts in a presentation.
+
+## Phase 05 Step 02 quick walkthroughs
+
+**What is the fastest way to rerun the Task 01 sanity scripts?** – From the repo root run `docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d`, then start `psql` with `docker compose ... exec -e PAGER=cat postgres psql -q -U goodreads_user -d goodreads`. Inside the prompt execute `\i sql/schema/01_create_books_table.sql`, `\i sql/schema/02_create_books_canonical_view.sql`, and `\i sql/analysis/00_sanity_checks.sql`, then confirm `SELECT COUNT(*) FROM books;` returns `11119` before exiting with `\q`.
+
+**Is there a single command sequence for all Task 02 SQL files?** – Yes. Use PowerShell’s `foreach` to iterate over the numbered scripts: `foreach($script in '20_top_authors_weighted_rating.sql','30_top_books_by_engagement.sql','40_publication_year_trends.sql','50_language_quality_summary.sql','55_duplicate_share.sql') { docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec -e PAGER=cat postgres psql -q -v ON_ERROR_STOP=1 -U goodreads_user -d goodreads -f ("/app/sql/analysis/$script") }`. The loop stops on the first failure because each call includes `ON_ERROR_STOP=1`.
+
+**How can I regenerate the Task 03 CSV exports without storing credentials locally?** – Keep the stack running and execute the inline Python helper inside the `app` container so it reuses the `.env` secrets: `docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python - <<'PY' ... PY` (see the Task 03 note for the exact snippet). The script reads each SQL file, runs it against Postgres, and saves fresh CSVs to `outputs/phase05_step02_task03/`.
 
 ## CLI / environment
 

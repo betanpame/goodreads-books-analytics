@@ -6,12 +6,27 @@ Implement the plan’s "translate core metrics to SQL" checklist by recreating t
 
 ## 2. How to run the analysis scripts
 
+### 2.1 Quick-start runbook
+
+| Step                 | Command                                                                                                                                                           | Expected outcome                                                     |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| 1. Navigate + start  | `cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`<br>`docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d`            | `docker compose ... ps` shows `app` and `postgres` as `Up`.          |
+| 2. Mount check       | `docker compose ... exec postgres ls /app/sql/analysis`                                                                                                           | Lists `20_*.sql` through `55_*.sql`.                                 |
+| 3. Single-script run | `docker compose ... exec -e PAGER=cat postgres psql -q -v ON_ERROR_STOP=1 -U goodreads_user -d goodreads -f /app/sql/analysis/20_top_authors_weighted_rating.sql` | Table output plus `(15 rows)` footer; exit code 0.                   |
+| 4. Multi-script loop | `foreach($id in 20,30,40,50,55) { docker compose ... -f ("/app/sql/analysis/${id}_*.sql") }`                                                                      | All scripts run sequentially; stop immediately if a statement fails. |
+| 5. Evidence capture  | `\copy (SELECT ...) TO '/app/outputs/...csv' WITH CSV HEADER` or rerun via pandas (`python -m src.analyses.export_sql ...`).                                      | CSV saved under `outputs/phase05_step02_task02/` (optional).         |
+
+### 2.2 Detailed workflow
+
 1. **Start from the repo root and boot the stack** so the bind mount exposes `sql/` inside the Postgres container (new in this task):
 
    ```powershell
    cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics
    docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
+   docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml ps
    ```
+
+   Wait for both services to display `Up`. If the Postgres container was recreated, re-run the schema scripts from Task 01 before proceeding.
 
 2. **Run each metric script with `psql` in quiet mode**. The repo now mounts at `/app`, so every file can be executed with a single command plus `ON_ERROR_STOP=1` for CI parity:
 
@@ -23,9 +38,35 @@ Implement the plan’s "translate core metrics to SQL" checklist by recreating t
    | M9 – Language quality & reach       | `sql/analysis/50_language_quality_summary.sql`    | …                                                                                                                                                                                                                           |
    | M11 – Duplicate share               | `sql/analysis/55_duplicate_share.sql`             | …                                                                                                                                                                                                                           |
 
-3. **Interactive option:** open `psql` once and call `\i sql/analysis/<file>.sql` in numeric order. The `.:/app:ro` mount we added to both Compose files makes the repo visible under `/app` for this workflow.
+   PowerShell automation keeps the commands short:
 
-4. **Capture outputs** (either copy/paste the terminal tables or redirect to CSV via `\copy`) so task notes and portfolio artifacts always cite verifiable SQL evidence.
+   ```powershell
+   foreach($script in '20_top_authors_weighted_rating.sql','30_top_books_by_engagement.sql','40_publication_year_trends.sql','50_language_quality_summary.sql','55_duplicate_share.sql') {
+     docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec -e PAGER=cat `
+       postgres psql -q -v ON_ERROR_STOP=1 -U goodreads_user -d goodreads -f ("/app/sql/analysis/$script")
+   }
+   ```
+
+3. **Interactive option:** open `psql` once and call `\i sql/analysis/<file>.sql` in numeric order. The `.:/app:ro` mount we added to both Compose files makes the repo visible under `/app` for this workflow. Run `\timing on` before the `\i` commands if you want duration metadata for the notes.
+
+4. **Capture outputs** (either copy/paste the terminal tables or redirect to CSV via `\copy`) so task notes and portfolio artifacts always cite verifiable SQL evidence. Inside `psql`, paste the final `SELECT` from the script inside a `\copy` wrapper, for example:
+
+   ```psql
+   \copy (
+      WITH params AS (...),
+              books_with_canonical AS (...),
+              author_rollup AS (...)
+      SELECT *
+      FROM author_rollup
+      WHERE total_ratings >= (SELECT min_total_ratings FROM params)
+      ORDER BY weighted_average_rating DESC, total_ratings DESC
+      LIMIT (SELECT top_n FROM params)
+   ) TO '/app/outputs/phase05_step02_task02/M1_top_authors.csv' WITH CSV HEADER
+   ```
+
+   Paste the full text from the SQL file (including the `WITH` block) in place of the ellipses so `psql` runs the identical statement it used for the on-screen results.
+
+   Prefer the lighter pandas export by running `python -m src.analyses.export_sql --query-path sql/analysis/<file>.sql --output outputs/phase05_step02_task02/<file>.csv` inside the `app` container when you need artifacts for multiple scripts. That helper automatically pulls credentials from the `.env` file.
 
 ## 3. Environment recap
 
