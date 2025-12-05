@@ -7,15 +7,15 @@ WITH params AS (
         5000::bigint AS min_total_ratings,
         15::int AS top_n
 ),
-books_with_canonical AS (
+books_base AS (
     SELECT
-        b.book_id,
-        COALESCE(m."canonical_bookID", b.book_id) AS canonical_book_id,
-        b.average_rating,
-        b.ratings_count
-    FROM books AS b
-    LEFT JOIN bookid_canonical_map AS m
-        ON b.book_id = m."duplicate_bookID"
+        book_id,
+        canonical_book_id,
+        average_rating,
+        ratings_count
+    FROM books_clean
+    WHERE average_rating IS NOT NULL
+      AND ratings_count > 0
 ),
 author_rollup AS (
     SELECT
@@ -24,12 +24,10 @@ author_rollup AS (
         SUM(b.ratings_count) AS total_ratings,
         COUNT(DISTINCT b.canonical_book_id) AS book_count
     FROM book_authors_stage AS a
-    JOIN books_with_canonical AS b
+    JOIN books_base AS b
         ON a.book_id = b.book_id
     WHERE
         a.author_name IS NOT NULL
-        AND b.average_rating IS NOT NULL
-        AND b.ratings_count > 0
     GROUP BY a.author_name
 )
 SELECT

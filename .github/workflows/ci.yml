@@ -155,3 +155,77 @@ jobs:
       - name: Shutdown PostgreSQL
         if: always()
         run: docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml down -v
+
+  sql-vs-pandas:
+    runs-on: ubuntu-latest
+    needs: sql-smoke
+    if: ${{ always() }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: "pip"
+
+      - name: Create .env file for tooling parity
+        run: |
+          cat <<'EOF' > .env
+          PROJECT_NAME=goodreads_books_analytics
+          POSTGRES_VERSION=17
+          POSTGRES_DB=${POSTGRES_DB}
+          POSTGRES_USER=${POSTGRES_USER}
+          POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+          POSTGRES_PORT=${POSTGRES_PORT}
+          POSTGRES_HOST=${POSTGRES_HOST}
+          EOF
+
+      - name: Start Python + PostgreSQL services
+        run: docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
+
+      - name: Wait for PostgreSQL to become ready
+        run: |
+          for i in {1..30}; do
+            if docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec -T postgres pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}; then
+              exit 0
+            fi
+            sleep 2
+          done
+          exit 1
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Remove previous diff artifacts
+        run: rm -f outputs/phase05_step03_task01/*_differences.csv || true
+
+      - name: Load books_clean dataset into PostgreSQL
+        run: python -m src.load_books_clean_to_postgres \
+          --csv-path data/derived/books_clean.csv \
+          --table books_clean \
+          --if-exists replace
+
+      - name: Run SQL vs pandas comparison CLI
+        run: python -m src.analyses.sql_vs_pandas_compare \
+          --log-level INFO \
+          --output-dir outputs/phase05_step03_task01
+
+      - name: Show comparison summary
+        run: cat outputs/phase05_step03_task01/comparison_summary.md
+
+      - name: Fail if mismatches detected
+        run: |
+          if compgen -G "outputs/phase05_step03_task01/*_differences.csv" > /dev/null; then
+            echo "::error::SQL vs pandas mismatches detected. Inspect outputs/phase05_step03_task01 for details."
+            ls outputs/phase05_step03_task01/*_differences.csv
+            exit 1
+          fi
+
+      - name: Shutdown services
+        if: always()
+        run: docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml down -v

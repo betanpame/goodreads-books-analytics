@@ -66,6 +66,10 @@ The CSVs list average rating, median `ratings_count`, median `text_reviews_count
 
 **Where can I find the Phase 05 Step 02 Task 03 SQL exports?** – The Postgres-first versions of the language/publisher rankings and rolling publication metrics live under `outputs/phase05_step02_task03/` as `70_language_publisher_rankings.csv` and `80_publication_year_rolling_stats.csv`. Regenerate them by running the corresponding SQL files with `psycopg2` (see Task 03 notes for the snippet) or via `docker compose ... psql -f /app/sql/analysis/<file>.sql` plus `\copy`.
 
+**Where do the SQL vs pandas comparison results live (Phase 05 Step 03 Task 01)?** – Run the Docker-only CLI `docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.sql_vs_pandas_compare`. The command executes the Phase 05 SQL scripts, loads the Phase 04 pandas CSVs, and writes `comparison_summary.{csv,md}` plus any `<metric>_differences.csv` files to `outputs/phase05_step03_task01/`.
+
+**What if the summary shows mismatches?** – Now that `books_clean` lives in Postgres and every SQL script queries it, the comparison CLI should report a clean sweep. If you see differences, rerun `python -m src.load_books_clean_to_postgres` (to refresh `books_clean` + `book_authors_stage`) and re-execute the SQL scripts. The per-metric differences CSVs remain the fastest way to debug any lingering drift.
+
 **How should I interpret small-sample categories?** – Some high-scoring languages (e.g., `zho` or `jpn`) and prestige publishers have fewer than 100 titles. Treat their averages as directional insight, cite the `book_count` column, and pair them with the engagement chart so readers know whether a spike reflects broad sentiment or a niche cohort.
 
 **Why do the SQL publisher rankings mostly show English rows?** – The SQL script filters to languages where each publisher ships at least 20 canonical books. Today only `eng` and `en-US` satisfy that threshold. Lower the limit inside the script’s `params` CTE if you need to explore smaller cohorts, but keep the documented outputs strict to avoid one-book leaderboards.
@@ -86,6 +90,17 @@ The CSVs list average rating, median `ratings_count`, median `text_reviews_count
 **How do I use the duplicate→canonical mapping in SQL?** – Load `data/derived/duplicate_bookid_mapping.csv` into a staging table (for example, `bookid_canonical_map`) with columns `duplicate_bookid` and `canonical_bookid`. When building fact tables, left join on `duplicate_bookid`; coalesce to `canonical_bookid` if present, else fall back to the original `bookID`. This ensures audiobook/translation variants roll up to the same canonical record without deleting the source rows.
 
 **What command loads the mapping into Postgres?** – After setting `DATABASE_URL`, run either `python -m src.load_duplicate_mapping --table bookid_canonical_map` (local venv) or `docker compose -f docker-compose.python.yml exec app python -m src.load_duplicate_mapping --table bookid_canonical_map`. The script validates the CSV and writes it with `to_sql`, so the table is ready for Phase 04 ETL jobs.
+
+**How do I load the cleaned dataset into Postgres for SQL analysis?** – Use the Docker-only CLI so every Phase 05 query touches the curated data:
+
+```powershell
+docker compose -f docker-compose.python.yml run --rm app `
+	python -m src.load_books_clean_to_postgres `
+	--csv-path data/derived/books_clean.csv `
+	--table books_clean
+```
+
+The command writes `books_clean` (11127 rows) and refreshes `book_authors_stage`, so the SQL scripts no longer depend on the raw CSV or the standalone duplicate mapping.
 
 **Can I safely delete the outputs folder?** – Yes; the next script execution recreates the files. This is a good way to verify that the pipeline still works end-to-end.
 

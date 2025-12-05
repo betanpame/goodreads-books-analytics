@@ -104,6 +104,42 @@ C:/Users/Pamela/Documents/GitHub/goodreads-books-analytics/.venv/Scripts/python.
 
 ---
 
+## Comparar SQL vs pandas (Fase 05 · Step 03)
+
+Este paso verifica que los análisis SQL de la fase 05 coinciden con los CSV generados en pandas (fase 04).
+
+1. **Levanta los contenedores**
+
+	```powershell
+	docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
+	```
+
+2. **Carga el dataset curado a PostgreSQL** (solo cuando `books_clean` cambie)
+
+	```powershell
+	docker compose -f docker-compose.python.yml run --rm app `
+		python -m src.load_books_clean_to_postgres `
+		--csv-path data/derived/books_clean.csv `
+		--table books_clean
+	```
+
+3. **Ejecuta el comparador SQL vs pandas**
+
+	```powershell
+	docker compose -f docker-compose.python.yml run --rm app `
+		python -m src.analyses.sql_vs_pandas_compare `
+		--output-dir outputs/phase05_step03_task01
+	```
+
+Resultados clave:
+
+- `outputs/phase05_step03_task01/comparison_summary.csv` y `.md` muestran métricas, filas y estado (`Match`).
+- `outputs/phase05_step03_task01/comparison_summary.png` brinda un gráfico listo para presentaciones.
+- Archivos `*_differences.csv` solo aparecen cuando existen discrepancias; si quieres reiniciar la evidencia, elimina esos archivos y vuelve a correr el comando.
+- Documentación extendida: `docs/phase-05-step-03-task-01-notes.md`.
+
+---
+
 ## Documentación adicional
 
 - `docs/dataset-notes.md`: notas sobre el dataset de Goodreads.

@@ -5,39 +5,35 @@
 WITH params AS (
     SELECT 20::int AS top_n
 ),
-books_with_canonical AS (
+ranked_books AS (
     SELECT
-        b.book_id,
-        COALESCE(m."canonical_bookID", b.book_id) AS canonical_book_id,
-        b.title,
-        b.average_rating,
-        b.language_code,
-        b.publication_date,
-        b.ratings_count,
-        b.text_reviews_count
-    FROM books AS b
-    LEFT JOIN bookid_canonical_map AS m
-        ON b.book_id = m."duplicate_bookID"
+        *,
+        ROW_NUMBER() OVER (
+            PARTITION BY canonical_book_id
+            ORDER BY is_duplicate, book_id
+        ) AS canonical_rank
+    FROM books_clean
+    WHERE canonical_book_id IS NOT NULL
 ),
 representatives AS (
-    SELECT DISTINCT ON (canonical_book_id)
+    SELECT
         canonical_book_id,
         book_id AS representative_book_id,
         title,
         average_rating,
         language_code,
         publication_date
-    FROM books_with_canonical
-    ORDER BY canonical_book_id,
-             CASE WHEN canonical_book_id = book_id THEN 0 ELSE 1 END,
-             book_id
+    FROM ranked_books
+    WHERE canonical_rank = 1
 ),
 engagement_rollup AS (
     SELECT
         canonical_book_id,
         MAX(ratings_count) AS ratings_count,
-        MAX(text_reviews_count) AS text_reviews_count
-    FROM books_with_canonical
+        MAX(ratings_count_capped) AS ratings_count_capped,
+        MAX(text_reviews_count) AS text_reviews_count,
+        MAX(text_reviews_count_capped) AS text_reviews_count_capped
+    FROM books_clean
     GROUP BY canonical_book_id
 ),
 canonical_metrics AS (
@@ -49,9 +45,9 @@ canonical_metrics AS (
         r.language_code,
         r.publication_date,
         e.ratings_count,
+        e.ratings_count_capped,
         e.text_reviews_count,
-        GREATEST(0, LEAST(COALESCE(e.ratings_count, 0), 597244)) AS ratings_count_capped,
-        GREATEST(0, LEAST(COALESCE(e.text_reviews_count, 0), 14812)) AS text_reviews_count_capped
+        e.text_reviews_count_capped
     FROM representatives AS r
     JOIN engagement_rollup AS e USING (canonical_book_id)
 ),

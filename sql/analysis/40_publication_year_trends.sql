@@ -5,39 +5,29 @@
 WITH params AS (
     SELECT 1950::int AS min_year
 ),
-books_with_canonical AS (
+ranked_books AS (
     SELECT
-        b.book_id,
-        COALESCE(m."canonical_bookID", b.book_id) AS canonical_book_id,
-        b.title,
-        b.average_rating,
-        b.language_code,
-        b.publication_date,
-        b.ratings_count,
-        b.text_reviews_count,
-        EXTRACT(YEAR FROM b.publication_date)::int AS publication_year
-    FROM books AS b
-    LEFT JOIN bookid_canonical_map AS m
-        ON b.book_id = m."duplicate_bookID"
+        *,
+        ROW_NUMBER() OVER (
+            PARTITION BY canonical_book_id
+            ORDER BY is_duplicate, book_id
+        ) AS canonical_rank
+    FROM books_clean
+    WHERE canonical_book_id IS NOT NULL
 ),
 representatives AS (
-    SELECT DISTINCT ON (canonical_book_id)
+    SELECT
         canonical_book_id,
-        book_id AS representative_book_id,
-        average_rating,
-        language_code,
-        publication_date,
-        publication_year
-    FROM books_with_canonical
-    ORDER BY canonical_book_id,
-             CASE WHEN canonical_book_id = book_id THEN 0 ELSE 1 END,
-             book_id
+        publication_year,
+        average_rating
+    FROM ranked_books
+    WHERE canonical_rank = 1
 ),
 engagement_rollup AS (
     SELECT
         canonical_book_id,
-        MAX(ratings_count) AS ratings_count
-    FROM books_with_canonical
+        MAX(ratings_count_capped) AS ratings_count_capped
+    FROM books_clean
     GROUP BY canonical_book_id
 ),
 canonical_metrics AS (
@@ -45,14 +35,14 @@ canonical_metrics AS (
         r.canonical_book_id,
         r.publication_year,
         r.average_rating,
-        GREATEST(0, LEAST(COALESCE(e.ratings_count, 0), 597244)) AS ratings_count_capped
+        e.ratings_count_capped
     FROM representatives AS r
     JOIN engagement_rollup AS e USING (canonical_book_id)
 )
 SELECT
     publication_year,
     ROUND(AVG(average_rating)::numeric, 4) AS average_rating,
-    ROUND(percentile_cont(0.5) WITHIN GROUP (ORDER BY ratings_count_capped)::numeric, 0) AS median_ratings_count_capped,
+    percentile_cont(0.5) WITHIN GROUP (ORDER BY ratings_count_capped)::numeric AS median_ratings_count_capped,
     COUNT(*) AS canonical_book_count
 FROM canonical_metrics, params
 WHERE publication_year IS NOT NULL

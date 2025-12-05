@@ -1,0 +1,9 @@
+| Comparison | SQL rows | pandas rows | Shared rows | Row match | Value mismatches | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| M1_top_authors_by_weighted_rating | 15 | 15 | 15 | yes | 0 | Match |
+| M3_top_books_by_ratings_count | 20 | 20 | 20 | yes | 0 | Match |
+| M4_top_books_by_text_reviews | 20 | 20 | 20 | yes | 0 | Match |
+| M7_average_rating_by_year | 70 | 70 | 70 | yes | 0 | Match |
+| M8_median_ratings_count_by_year | 70 | 70 | 70 | yes | 0 | Match |
+| M9_language_rating_summary | 6 | 6 | 6 | yes | 0 | Match |
+| M11_duplicate_share | 1 | 1 | 1 | yes | 0 | Match |
