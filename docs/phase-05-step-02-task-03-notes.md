@@ -13,14 +13,14 @@ Translate the "advanced SQL" plan items (top books per author, language/publishe
 
 ### Quick-run overview (TL;DR)
 
-| Step | Command                                                                                                                                                           | Expected signal                                           |
-| ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| 1    | `cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`                                                                                                    | Prompt switches to repo root.                             |
-| 2    | `docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d`                                                                              | `docker compose ... ps` shows `app` + `postgres` as `Up`. |
-| 3    | `docker compose ... exec postgres ls /app/sql/analysis \| findstr 6`                                                                                              | Numbered `60_`, `70_`, `80_` scripts are visible.         |
-| 4    | `docker compose ... exec -e PAGER=cat postgres psql -q -v ON_ERROR_STOP=1 -U goodreads_user -d goodreads -f /app/sql/analysis/70_language_publisher_rankings.sql` | Query prints ~9 rows and exits 0.                         |
-| 5    | Repeat step 4 for `60_*.sql` and `80_*.sql` (or use a PowerShell `foreach`).                                                                                      | Tables show documented row counts.                        |
-| 6    | Export evidence via `\copy` or the Python helper in Section 3.                                                                                                    | CSVs appear under `outputs/phase05_step02_task03/`.       |
+| Step | Command                                                                                                                         | Expected signal                                           |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| 1    | `cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`                                                                  | Prompt switches to repo root.                             |
+| 2    | `docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d`                                            | `docker compose ... ps` shows `app` + `postgres` as `Up`. |
+| 3    | `docker compose ... exec postgres ls /app/sql/analysis \| findstr 6`                                                            | Numbered `60_`, `70_`, `80_` scripts are visible.         |
+| 4    | `.\scripts\Invoke-Task03Run.ps1` or `.\scripts\Invoke-Task03Run.ps1 -Script 70`                                                 | Helper runs all or specific scripts via Docker.           |
+| 5    | (Manual alternative) `docker compose ... exec -e PAGER=cat postgres psql -q -v ON_ERROR_STOP=1 -f /app/sql/analysis/<file>.sql` | Tables show documented row counts.                        |
+| 6    | Export evidence via `\copy` or the Python helper in Section 3.                                                                  | CSVs appear under `outputs/phase05_step02_task03/`.       |
 
 ### 2.1 Prepare the Docker/Postgres stack (run once per session)
 
@@ -53,7 +53,24 @@ docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exe
 
 **Parameter tweaks:** Each script starts with a `params` CTE. Adjust the literal values there (e.g., change `per_author_limit`, `min_total_ratings`, `min_canonical_books`, or `min_year`) and rerun the same command. No other clause editing required.
 
-### 2.3 Optional: Run once and stay inside psql
+### 2.3 PowerShell helper (Invoke-Task03Run)
+
+To avoid retyping compose/psql flags, use the bundled helper:
+
+```powershell
+# Run all Task 03 scripts in numeric order
+./scripts/Invoke-Task03Run.ps1
+
+# Run a single script (aliases: 60/authors, 70/publishers, 80/rolling)
+./scripts/Invoke-Task03Run.ps1 -Script 70
+./scripts/Invoke-Task03Run.ps1 -Script authors,rolling
+```
+
+The function wraps the same Docker command used elsewhere (`PAGER=cat`, `-q`, `ON_ERROR_STOP=1`). It stops on the first failure and prints a green “completed” line when all requested scripts succeed.
+
+> **Execution policy note:** Windows blocks unsigned scripts by default. If you see `running scripts is disabled on this system`, rerun with `powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Task03Run.ps1 -Script all` (or set a less restrictive policy for the current process scope).
+
+### 2.4 Optional: Run once and stay inside psql
 
 If you prefer a single `psql` session:
 
@@ -64,7 +81,7 @@ If you prefer a single `psql` session:
 2. Inside `psql`, execute the scripts in numeric order with `\i sql/analysis/60_top_books_per_author.sql` (the repo is mounted at `/app`).
 3. Type `\q` to exit.
 
-### 2.4 Export results to CSV for documentation
+### 2.5 Export results to CSV for documentation
 
 Use either approach:
 

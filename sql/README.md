@@ -37,6 +37,20 @@ All commands must run inside Docker so paths resolve to `/app/...` in the contai
 
 Because the repository is mounted at `/app`, the relative `sql/...` paths resolve automatically. Repeat the pattern for any new scripts. If a script depends on environment variables or temp tables, document that inline at the top of the file.
 
+### Optional helper (Phase 05 · Step 02 · Task 03)
+
+The repo ships with `scripts/Invoke-Task03Run.ps1`, a PowerShell wrapper that runs the Task 03 analysis files (`60_`, `70_`, `80_`) via Docker without retyping compose flags:
+
+```powershell
+# Run all Task 03 scripts
+powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Task03Run.ps1
+
+# Run specific scripts (aliases: 60/authors, 70/publishers, 80/rolling)
+powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Task03Run.ps1 -Script authors,rolling
+```
+
+If your execution policy already allows local scripts, drop the `-ExecutionPolicy Bypass` segment. The helper enforces `PAGER=cat`, `-q`, and `ON_ERROR_STOP=1`, stopping immediately if any SQL file fails.
+
 ## Example workflow
 
 1. Create/refresh the books table.
