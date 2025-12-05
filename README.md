@@ -112,3 +112,8 @@ C:/Users/Pamela/Documents/GitHub/goodreads-books-analytics/.venv/Scripts/python.
 - `docs/repo-notes.md`: notas generales sobre el repositorio y el plan del proyecto.
 
 La carpeta `plan/` contiene una guía fase por fase para ir desarrollando el proyecto de forma estructurada.
+
+### Ayudas rápidas (Fase 05 · SQL)
+
+- `sql/README.md` describe el flujo completo para ejecutar scripts con Docker y `psql`.
+- `scripts/Invoke-Task03Run.ps1` ejecuta los tres análisis avanzados de la Fase 05 · Step 02 · Task 03 sin reescribir los comandos (`powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Task03Run.ps1 -Script all`).
