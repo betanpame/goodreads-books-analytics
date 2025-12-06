@@ -1,3 +1,4 @@
+[CmdletBinding()]
 param(
     [string[]]$Cases,
     [switch]$SkipChart,
@@ -36,14 +37,6 @@ function Invoke-Phase05ComparisonRefresh {
         PS> .\scripts\Invoke-Phase05ComparisonRefresh.ps1 -Cases M1_top_authors_by_weighted_rating -SkipChart
         Refreshes only the selected case and keeps the previous chart on disk.
     #>
-    [CmdletBinding()]
-    param(
-        [string[]]$Cases,
-        [switch]$SkipChart,
-        [switch]$SkipDiffCleanup,
-        [switch]$ExportSlide
-    )
-
     $ErrorActionPreference = 'Stop'
     $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
     $composeArgs = @('compose', '-f', 'docker-compose.python.yml', '-f', 'docker-compose.postgresql.yml')

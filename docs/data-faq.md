@@ -70,6 +70,10 @@ The CSVs list average rating, median `ratings_count`, median `text_reviews_count
 
 **What if the summary shows mismatches?** – Now that `books_clean` lives in Postgres and every SQL script queries it, the comparison CLI should report a clean sweep. If you see differences, rerun `python -m src.load_books_clean_to_postgres` (to refresh `books_clean` + `book_authors_stage`) and re-execute the SQL scripts. The per-metric differences CSVs remain the fastest way to debug any lingering drift.
 
+**Where can I find the Phase 05 Step 03 Task 02 portfolio summary?** – The recruiter-facing narrative lives in `README.md` under “SQL Portfolio Spotlight (Fase 05)” and is mirrored in `docs/phase-05-step-03-task-02-notes.md`. Both files describe the SQL questions solved, the PostgreSQL features exercised, and where to download the supporting CSV/PNG/PPTX artifacts.
+
+**How do I refresh the SQL portfolio artifacts without Jupyter?** – Stay inside Docker + PowerShell: `cd` to the repo, run `docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d`, then execute `powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Phase05ComparisonRefresh.ps1 -ExportSlide`. This single command reloads `books_clean`, reruns the SQL vs pandas comparison, regenerates `comparison_summary.{csv,md,png}`, and exports `phase05_sql_vs_pandas.pptx`—no notebooks required.
+
 **How should I interpret small-sample categories?** – Some high-scoring languages (e.g., `zho` or `jpn`) and prestige publishers have fewer than 100 titles. Treat their averages as directional insight, cite the `book_count` column, and pair them with the engagement chart so readers know whether a spike reflects broad sentiment or a niche cohort.
 
 **Why do the SQL publisher rankings mostly show English rows?** – The SQL script filters to languages where each publisher ships at least 20 canonical books. Today only `eng` and `en-US` satisfy that threshold. Lower the limit inside the script’s `params` CTE if you need to explore smaller cohorts, but keep the documented outputs strict to avoid one-book leaderboards.

@@ -156,6 +156,34 @@ Resultados clave:
 
 ---
 
+## SQL Portfolio Spotlight (Fase 05)
+
+Durante Step 03 consolidamos todo el trabajo SQL dentro del flujo de Python/Docker para que cualquier reclutador pueda reproducirlo sin abrir notebooks. El guion es el siguiente:
+
+- **Narrativa** → Partimos de los CSV generados en pandas (Fase 04), los cargamos en PostgreSQL con `src.load_books_clean_to_postgres`, y luego usamos `src.analyses.sql_vs_pandas_compare` para demostrar que ambas capas responden las mismas preguntas de negocio.
+- **Preguntas respondidas** → Rankings de autores/libros, evolución temporal de ratings, idiomas/publishers más sólidos, duplicados, engagement percentiles y rolling windows.
+- **Entrega visual** → `scripts/Invoke-Phase05ComparisonRefresh.ps1 -ExportSlide` refresca métricas, genera `comparison_summary.png` y exporta una diapositiva (`outputs/phase05_step03_task01/phase05_sql_vs_pandas.pptx`) lista para portfolios o entrevistas.
+
+### Capacidades SQL practicadas
+
+- Agrupaciones con `GROUP BY`, filtros con `HAVING` y cláusulas `WHERE` parametrizadas vía CTEs.
+- Ventanas (`ROW_NUMBER`, `PERCENTILE_CONT`, frames de 3 años) para rankings por autor y métricas rolling.
+- Combinación de vistas canonicalizadas + staging (`book_authors_stage`) para evitar duplicados en los KPIs.
+- Exportación repetible desde Python (sin Jupyter) usando Docker Compose para garantizar el mismo entorno en cualquier máquina.
+
+### Activos para mostrar en el portfolio
+
+| Activo                                                          | Descripción                                                    | Cómo regenerarlo                                                                                           |
+| --------------------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `README.md` · sección “SQL Portfolio Spotlight”                 | Resumen ejecutivo en tono profesional, listo para recruiters.  | Actual archivo (sin pasos adicionales).                                                                    |
+| `docs/phase-05-step-03-task-02-notes.md`                        | Bitácora detallada (paso a paso, comandos PowerShell).         | `powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Phase05ComparisonRefresh.ps1` + seguir la nota. |
+| `outputs/phase05_step03_task01/comparison_summary.{csv,md,png}` | Evidencia cuantitativa y visual del parity SQL vs pandas.      | `docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.sql_vs_pandas_compare`.   |
+| `docs/phase-05-step-03-task-01-slide.pptx`                      | Diapositiva con storytelling (ingresa directo en portafolios). | `scripts/Invoke-Phase05ComparisonRefresh.ps1 -ExportSlide`.                                                |
+
+Toda la fase opera con `docker compose` y módulos de Python; evita notebooks para mantener trazabilidad y favorecer automatización/CI. Para más contexto, revisa las notas del Task 02 (`docs/phase-05-step-03-task-02-notes.md`).
+
+---
+
 ## Documentación adicional
 
 - `docs/dataset-notes.md`: notas sobre el dataset de Goodreads.

@@ -6,7 +6,7 @@ sqlalchemy
 psycopg2-binary
 python-dotenv
 python-pptx
+pytest
 # Optional tools (uncomment if needed)
-# pytest
 # black
 # ruff

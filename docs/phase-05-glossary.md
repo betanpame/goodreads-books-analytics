@@ -24,6 +24,7 @@ Beginner-friendly reference for every concept introduced while validating and qu
 - **Row-count parity** – Requirement that `COUNT(*)` in PostgreSQL matches the reference metric exactly. Any non-zero delta in `books_stats_comparison.csv` means the load diverged and must be re-run.
 - **Numeric tolerance** – The comparison script allows ±1e-6 when matching floating-point aggregates to account for binary rounding differences between pandas and PostgreSQL `double precision`.
 - **Publication window** – The `[1900-01-01, 2020-03-31]` date span verified by both pandas and SQL. Treat it as the official temporal coverage when writing SQL date filters or dashboards.
+- **SQL portfolio spotlight** – The recruiter-facing digest published in `README.md` (section “SQL Portfolio Spotlight”) and mirrored in `docs/phase-05-step-03-task-02-notes.md`. It stitches together the comparison outputs, PPTX export, and SQL features practiced so stakeholders can judge Phase 05 without running the code themselves.
 
 ## Column profiling
 
@@ -40,6 +41,7 @@ Beginner-friendly reference for every concept introduced while validating and qu
 - **Information schema probe** – The query used by the validation CLI: `SELECT column_name, data_type, is_nullable FROM information_schema.columns WHERE table_schema=:schema AND table_name=:table`. Treat it as the authoritative source for schema documentation.
 - **Order column** – CLI flag that controls which column sorts the preview rows (default `book_id`). Useful when you want the preview to focus on high-engagement books (`--order-column ratings_count`) or recent dates.
 - **`params` CTE** – Tiny configuration block at the top of each analysis script (top_n, min_year, min_book_threshold). Editing these literals is the supported way to change thresholds without touching the rest of the SQL.
+- **Python/Docker-only workflow** – Guardrail for Phase 05: run every CLI through `docker compose` (or the PowerShell wrapper) so Python modules, PostgreSQL, and dependencies stay identical across machines. Notebooks are intentionally excluded to keep automation and CI trivial.
 
 ## SQL workspace conventions
 
@@ -70,3 +72,4 @@ Beginner-friendly reference for every concept introduced while validating and qu
 - **Related outputs:** `outputs/phase05_postgres_validation/books_schema_snapshot.csv` and `books_sample_preview.csv` – refreshed alongside every validation run.
 - **Comparison outputs:** `outputs/phase05_postgres_validation/books_stats_comparison.csv` + `.md` – show the row count, average rating, and publication-window parity that Task 02 requires.
 - **Profiling outputs:** `books_null_distinct_summary.*`, `books_numeric_ranges.*`, `books_top_language_code.csv`, `books_top_publisher.csv` – the official evidence set for Task 03’s column audits.
+- **Notes:** `docs/phase-05-step-03-task-02-notes.md` – portfolio-focused walkthrough for Step 03 Task 02, including the Python/Docker command block, recruiter narrative, capability bullets, and artifact checklist.

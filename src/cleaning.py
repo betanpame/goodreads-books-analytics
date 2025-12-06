@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import numbers
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import List, Optional
 
 import pandas as pd
@@ -143,7 +143,7 @@ def enforce_publication_year_bounds(df: pd.DataFrame) -> pd.DataFrame:
 
     df_bounds = df.copy()
     years = pd.to_numeric(df_bounds["publication_year"], errors="coerce")
-    current_year = datetime.utcnow().year
+    current_year = datetime.now(UTC).year
     future_cap = current_year + FUTURE_YEAR_BUFFER_YEARS
 
     mask_low = years < PUBLICATION_YEAR_MIN
