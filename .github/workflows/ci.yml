@@ -71,7 +71,7 @@ jobs:
         run: python -m dotenv run -- python -m pytest tests
 
       - name: Validate metrics catalog
-        run: python -m src.analyses.metrics_catalog \
+        run: python -m src.analyses.support.documentation.metrics_catalog \
           --books-csv data/derived/books_clean.csv \
           --output-markdown outputs/phase04_metrics_catalog.md
 
@@ -211,7 +211,7 @@ jobs:
           --if-exists replace
 
       - name: Run SQL vs pandas comparison CLI
-        run: python -m src.analyses.sql_vs_pandas_compare \
+        run: python -m src.analyses.portfolio.p04_sql_vs_pandas_compare \
           --log-level INFO \
           --output-dir outputs/phase05_step03_task01
 
@@ -219,12 +219,13 @@ jobs:
         run: cat outputs/phase05_step03_task01/comparison_summary.md
 
       - name: Generate comparison chart
-        run: python -m src.analyses.plot_comparison_summary \
+        run:
+          python -m src.analyses.support.storytelling.plot_comparison_summary \
           --input outputs/phase05_step03_task01/comparison_summary.csv \
           --output outputs/phase05_step03_task01/comparison_summary.png
 
       - name: Generate shareable slide deck
-        run: python -m src.analyses.export_phase05_slide \
+        run: python -m src.analyses.support.storytelling.export_phase05_slide \
           --notes docs/phase-05-step-03-task-01-notes.md \
           --summary-csv outputs/phase05_step03_task01/comparison_summary.csv \
           --chart outputs/phase05_step03_task01/comparison_summary.png \

@@ -35,7 +35,7 @@ docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up 
 3. **Run the scripted inspection** inside the Python container with the same flags I documented for Tasks 01 and 02:
 
 ```powershell
-docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.initial_inspection_books --sample-size 1000 --verbose
+docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.portfolio.p01_initial_inspection_books --sample-size 1000 --verbose
 ```
 
 This command emits all Task 03 metrics to the terminal and refreshes the helper CSV files under `outputs/initial_inspection/` so reviewers can diff results over time.

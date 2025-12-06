@@ -11,7 +11,7 @@ Use this quick-reference while working through Phase 05 tasks (PostgreSQL valida
 ## Validation & Comparison CLIs
 
 - **Postgres stats comparison CLI** – `python -m src.analyses.postgres_compare_stats` checks row counts, min/max dates, and aggregate ratings between CSV inputs and Postgres tables. Use it right after loading data to confirm the warehouse copy mirrors the source file.
-- **SQL vs pandas comparison CLI** – `python -m src.analyses.sql_vs_pandas_compare` runs the numbered SQL analysis files, loads the Phase 04 metric CSVs, and compares key columns per metric. It is purpose-built for Step 03 Task 01 and produces review-friendly CSV/Markdown summaries.
+- **SQL vs pandas comparison CLI** – `python -m src.analyses.portfolio.p04_sql_vs_pandas_compare` runs the numbered SQL analysis files, loads the Phase 04 metric CSVs, and compares key columns per metric. It is purpose-built for Step 03 Task 01 and produces review-friendly CSV/Markdown summaries.
 - **Numeric tolerance & rounding** – The comparison CLI coerces numeric columns to floats and rounds configurable columns (e.g., average ratings to 4 decimals) before checking abs-delta ≤ 1e-4. Counts remain exact, so any integer mismatch is surfaced in the differences CSV.
 
 ## Output Artifacts

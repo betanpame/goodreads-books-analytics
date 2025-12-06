@@ -10,7 +10,7 @@ Implement reproducible Python/Docker functions that compute the core metrics (M1
 cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics
 # Option A – direct command
 docker compose --env-file .env.example -f docker-compose.python.yml run --no-deps --rm `
-  app python -m src.analyses.run_core_metrics `
+  app python -m src.analyses.portfolio.p03_core_metrics_suite `
   --books-csv data/derived/books_clean.csv `
   --output-dir outputs/phase04_core_metrics
 
@@ -26,7 +26,7 @@ make core-metrics
 
 - **Image:** `python:3.14-slim` (identical to Step 01 cleaning runs).
 - **Dependencies:** pandas 2.x from `requirements.txt`; functions live in `src/metrics/core_metrics.py`.
-- **Entrypoint:** `src/analyses/run_core_metrics.py` orchestrates loading, validation, metric generation, and CSV export.
+- **Entrypoint:** `src/analyses/portfolio/p03_core_metrics_suite.py` orchestrates loading, validation, metric generation, and CSV export.
 - **Data:** `data/derived/books_clean.csv` (regenerated earlier) is the single input; all outputs land in `outputs/phase04_core_metrics/`.
 
 ## 4. Findings / results

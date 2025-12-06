@@ -29,12 +29,12 @@ powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Phase05ComparisonRefre
 
 What the script does (and the internal commands it triggers):
 
-| Stage                 | Internal CLI                                                                                                                                                                                        | Key log lines                                                                                                           |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Stack bootstrap       | `docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d`                                                                                                                | `Ensuring docker compose stack is up...` followed by container IDs.                                                     |
-| Table refresh         | `docker compose -f docker-compose.python.yml run --rm app python -m src.load_books_clean_to_postgres --csv-path data/derived/books_clean.csv --table books_clean`                                   | `Writing 11127 rows to table books_clean` and `Writing 19216 author rows to book_authors_stage`.                        |
-| Metric comparison     | `docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.sql_vs_pandas_compare --output-dir outputs/phase05_step03_task01`                                                  | `Running SQL for M1_...` through `M11_...` plus `Wrote summary table... All SQL vs pandas comparisons matched`.         |
-| Visualization + slide | `docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.plot_comparison_summary` and `python -m src.analyses.export_phase05_slide` (invoked inside the PowerShell wrapper) | `Saved chart to outputs/.../comparison_summary.png` and `Saved slide deck to docs/phase-05-step-03-task-01-slide.pptx`. |
+| Stage                 | Internal CLI                                                                                                                                                                                                                                  | Key log lines                                                                                                           |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Stack bootstrap       | `docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d`                                                                                                                                                          | `Ensuring docker compose stack is up...` followed by container IDs.                                                     |
+| Table refresh         | `docker compose -f docker-compose.python.yml run --rm app python -m src.load_books_clean_to_postgres --csv-path data/derived/books_clean.csv --table books_clean`                                                                             | `Writing 11127 rows to table books_clean` and `Writing 19216 author rows to book_authors_stage`.                        |
+| Metric comparison     | `docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.portfolio.p04_sql_vs_pandas_compare --output-dir outputs/phase05_step03_task01`                                                                              | `Running SQL for M1_...` through `M11_...` plus `Wrote summary table... All SQL vs pandas comparisons matched`.         |
+| Visualization + slide | `docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.support.storytelling.plot_comparison_summary` and `python -m src.analyses.support.storytelling.export_phase05_slide` (invoked inside the PowerShell wrapper) | `Saved chart to outputs/.../comparison_summary.png` and `Saved slide deck to docs/phase-05-step-03-task-01-slide.pptx`. |
 
 ## 3. Environment recap
 
@@ -79,8 +79,8 @@ Saved slide deck to docs/phase-05-step-03-task-01-slide.pptx
 - `outputs/phase05_step03_task01/comparison_summary.csv`
 - `outputs/phase05_step03_task01/comparison_summary.md`
 - `outputs/phase05_step03_task01/comparison_summary.png`
-- `outputs/phase05_step03_task01/phase05_sql_vs_pandas.pptx`
-- `README.md` · section "SQL Portfolio Spotlight (Fase 05)" (textual artifact, no binary refresh needed once added)
+- `docs/phase-05-step-03-task-01-slide.pptx`
+- `README.md` · sección "SQL Portfolio Spotlight (Fase 05)" (textual artifact, no binary refresh needed once added)
 - `docs/phase-05-step-03-task-02-notes.md` (this file)
 
 ## 8. Q&A / data troubleshooting
@@ -115,7 +115,7 @@ A: After the command finishes, open `docs/phase-05-step-03-task-01-slide.pptx` (
 
 Durante Step 03 consolidamos todo el trabajo SQL dentro del flujo de Python/Docker para que cualquier reclutador pueda reproducirlo sin abrir notebooks. El guion es el siguiente:
 
-- **Narrativa** → Partimos de los CSV generados en pandas (Fase 04), los cargamos en PostgreSQL con `src.load_books_clean_to_postgres`, y luego usamos `src.analyses.sql_vs_pandas_compare` para demostrar que ambas capas responden las mismas preguntas de negocio.
+- **Narrativa** -> Partimos de los CSV generados en pandas (Fase 04), los cargamos en PostgreSQL con `src.load_books_clean_to_postgres`, y luego usamos `src.analyses.portfolio.p04_sql_vs_pandas_compare` para demostrar que ambas capas responden las mismas preguntas de negocio.
 - **Preguntas respondidas** → Rankings de autores/libros, evolución temporal de ratings, idiomas/publishers más sólidos, duplicados, engagement percentiles y rolling windows.
 - **Entrega visual** → `scripts/Invoke-Phase05ComparisonRefresh.ps1 -ExportSlide` refresca métricas, genera `comparison_summary.png` y exporta una diapositiva (`outputs/phase05_step03_task01/phase05_sql_vs_pandas.pptx`) lista para portfolios o entrevistas.
 
@@ -132,6 +132,6 @@ Durante Step 03 consolidamos todo el trabajo SQL dentro del flujo de Python/Dock
 | --- | --- | --- |
 | `README.md` · sección “SQL Portfolio Spotlight” | Resumen ejecutivo en tono profesional, listo para recruiters. | Actual archivo (sin pasos adicionales). |
 | `docs/phase-05-step-03-task-02-notes.md` | Bitácora detallada (paso a paso, comandos PowerShell). | `powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Phase05ComparisonRefresh.ps1` + seguir la nota. |
-| `outputs/phase05_step03_task01/comparison_summary.{csv,md,png}` | Evidencia cuantitativa y visual del parity SQL vs pandas. | `docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.sql_vs_pandas_compare`. |
+| `outputs/phase05_step03_task01/comparison_summary.{csv,md,png}` | Evidencia cuantitativa y visual del parity SQL vs pandas. | `docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.portfolio.p04_sql_vs_pandas_compare`. |
 | `docs/phase-05-step-03-task-01-slide.pptx` | Diapositiva con storytelling (ingresa directo en portafolios). | `scripts/Invoke-Phase05ComparisonRefresh.ps1 -ExportSlide`. |
 ```

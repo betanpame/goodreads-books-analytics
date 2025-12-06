@@ -56,7 +56,7 @@ function Invoke-Phase05ComparisonRefresh {
             '--csv-path' 'data/derived/books_clean.csv' '--table' 'books_clean' '--if-exists' 'replace'
 
         Write-Host 'Running SQL vs pandas comparison CLI...' -ForegroundColor Cyan
-        $compareCommand = @($composeArgs + @('run', '--rm', 'app', 'python', '-m', 'src.analyses.sql_vs_pandas_compare', '--log-level', 'INFO', '--output-dir', 'outputs/phase05_step03_task01'))
+        $compareCommand = @($composeArgs + @('run', '--rm', 'app', 'python', '-m', 'src.analyses.portfolio.p04_sql_vs_pandas_compare', '--log-level', 'INFO', '--output-dir', 'outputs/phase05_step03_task01'))
         if ($Cases -and $Cases.Count -gt 0) {
             $compareCommand += '--cases'
             $compareCommand += $Cases
@@ -65,14 +65,14 @@ function Invoke-Phase05ComparisonRefresh {
 
         if (-not $SkipChart) {
             Write-Host 'Regenerating comparison_summary.png chart...' -ForegroundColor Cyan
-            & docker @composeArgs 'run' '--rm' 'app' 'python' '-m' 'src.analyses.plot_comparison_summary' `
+            & docker @composeArgs 'run' '--rm' 'app' 'python' '-m' 'src.analyses.support.storytelling.plot_comparison_summary' `
                 '--input' 'outputs/phase05_step03_task01/comparison_summary.csv' `
                 '--output' 'outputs/phase05_step03_task01/comparison_summary.png'
         }
 
         if ($ExportSlide) {
             Write-Host 'Exporting presentation slide deck...' -ForegroundColor Cyan
-            & docker @composeArgs 'run' '--rm' 'app' 'python' '-m' 'src.analyses.export_phase05_slide' `
+            & docker @composeArgs 'run' '--rm' 'app' 'python' '-m' 'src.analyses.support.storytelling.export_phase05_slide' `
                 '--notes' 'docs/phase-05-step-03-task-01-notes.md' `
                 '--summary-csv' 'outputs/phase05_step03_task01/comparison_summary.csv' `
                 '--chart' 'outputs/phase05_step03_task01/comparison_summary.png' `

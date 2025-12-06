@@ -22,7 +22,7 @@ While this task is mostly DDL design, I still start with the standard commands s
 ```powershell
 cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
-docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.initial_inspection_books --sample-size 1000 --verbose
+docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.portfolio.p01_initial_inspection_books --sample-size 1000 --verbose
 ```
 
 Those commands verify that pandas can still read `data/books.csv` and that our profiling from Task 01 remains accurate.

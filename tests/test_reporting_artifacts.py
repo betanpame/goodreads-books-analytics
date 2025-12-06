@@ -7,8 +7,8 @@ import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from src.analyses.plot_comparison_summary import render_chart
-from src.analyses.export_phase05_slide import export_slide
+from src.analyses.support.storytelling.plot_comparison_summary import render_chart
+from src.analyses.support.storytelling.export_phase05_slide import export_slide
 
 matplotlib.use("Agg")  # ensure headless-friendly backend
 

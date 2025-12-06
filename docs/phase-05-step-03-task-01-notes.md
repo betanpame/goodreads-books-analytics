@@ -42,7 +42,7 @@
 
    ```powershell
    docker compose -f docker-compose.python.yml run --rm app `
-      python -m src.analyses.sql_vs_pandas_compare `
+      python -m src.analyses.portfolio.p04_sql_vs_pandas_compare `
       --log-level INFO `
       --output-dir outputs/phase05_step03_task01
    ```
@@ -77,7 +77,7 @@
 | M9 – Language quality summary                 | `sql/analysis/50_language_quality_summary.sql`                             | `outputs/phase04_core_metrics/M9_language_rating_summary.csv`        |
 | M11 – Duplicate share                         | `sql/analysis/55_duplicate_share.sql`                                      | `outputs/phase04_core_metrics/M11_duplicate_share.csv`               |
 
-All comparisons run through the new helper `src/analyses/sql_vs_pandas_compare.py`.
+All comparisons run through the new helper `src/analyses.portfolio.p04_sql_vs_pandas_compare.py`.
 
 ## 5. Findings and interpretation
 
@@ -99,7 +99,7 @@ Additional notes:
 
 - `outputs/phase05_step03_task01/comparison_summary.csv` now lists “Match” for every metric, and the CLI logs end with `All SQL vs pandas comparisons matched`.
 - Historic checkpoints from the earlier mismatch investigation are kept in `outputs/phase05_step03_task01/M7_*_differences.csv`, `M8_*_differences.csv`, and `M9_*_differences.csv` to show exactly which rows diverged before the fixes landed.
-- Slide-ready export: `docs/phase-05-step-03-task-01-slide.pptx` (generated via `python -m src.analyses.export_phase05_slide`) combines these notes, the coverage summary, and the chart for Phase 05 presentations.
+- Slide-ready export: `docs/phase-05-step-03-task-01-slide.pptx` (generated via `python -m src.analyses.support.storytelling.export_phase05_slide`) combines these notes, the coverage summary, and the chart for Phase 05 presentations.
 - If someone sees mismatches in the future, the first remediation should be: (1) rerun `python -m src.load_books_clean_to_postgres` to refresh the warehouse copy; (2) rerun the SQL scripts (or just re-run the comparison CLI, which executes them automatically); (3) inspect any regenerated `*_differences.csv` files to pinpoint drift.
 - Keeping `books_clean` as the single source makes it straightforward to expand coverage—just add new cases to `COMPARISON_CASES` with the corresponding SQL file and pandas CSV, then rerun the CLI.
 
@@ -131,7 +131,7 @@ Additional notes:
 ## 10. Appendix – key command transcript
 
 ```
-docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.sql_vs_pandas_compare
+docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.portfolio.p04_sql_vs_pandas_compare
 # ...
 2025-12-05 21:21:11,558 INFO __main__ - Running SQL for M1_top_authors_by_weighted_rating
 ...

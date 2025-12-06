@@ -30,7 +30,7 @@ Beginner-friendly definitions for the concepts introduced while operationalizing
 - **Validation suite** – Lightweight functions inside `run_cleaning.py` that assert: (1) ratings stay within [0, 5]; (2) page caps hold; (3) engagement caps hold; (4) `canonical_book_id` has no nulls. Treat a failing validation as a release blocker.
 - **`--no-deps` flag** – Docker Compose option used during CLI runs to skip the PostgreSQL container when only file IO is required. This avoids port 5432 conflicts while keeping the workflow entirely inside Docker.
 - **Dry-run limit (`--limit`)** – Optional CLI argument that processes only the first _n_ rows. Handy for fast debugging without touching the full CSV.
-- **Core metrics CLI** – `python -m src.analyses.run_core_metrics` (or `make core-metrics`) loads `books_clean.csv`, executes the M1/M3/M4/M5/M7/M8/M9/M11 functions, and writes CSVs into `outputs/phase04_core_metrics/` so reviewers have concrete artifacts.
+- **Core metrics CLI** – `python -m src.analyses.portfolio.p03_core_metrics_suite` (or `make core-metrics`) loads `books_clean.csv`, executes the M1/M3/M4/M5/M7/M8/M9/M11 functions, and writes CSVs into `outputs/phase04_core_metrics/` so reviewers have concrete artifacts.
 
 ## Documentation Cross-links
 
