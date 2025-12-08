@@ -27,7 +27,9 @@ From `plan/phase-03-eda-and-data-quality/steps/step-02-bivariate-eda/tasks/task-
 
 ## 3. How to run it
 
-From the repository root (`C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`):
+From the repository root (`C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`).
+
+### Command block (copy/paste)
 
 ```powershell
 # Local Python virtualenv
@@ -37,6 +39,14 @@ C:/Users/shady/Documents/GITHUB/goodreads-books-analytics/.venv/Scripts/python.e
 docker compose -f docker-compose.python.yml run --rm app \
   python -m src.analyses.eda_books
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈4 minutes locally (deriving publication_year + generating three line charts); ≈5 minutes via Docker.
+- **Success checklist:**
+  - CLI log includes `Derived publication_year for ... rows` followed by three `Saved ... per year` lines referencing the temporal subfolder.
+  - Directory `outputs/phase03_univariate/step02_task02_temporal/` contains the three CSV/PNG pairs described below.
+  - When `--verbose` is enabled the log prints coverage percentages and the warning about sparse post-2006 data.
 
 Key artifacts for this task:
 

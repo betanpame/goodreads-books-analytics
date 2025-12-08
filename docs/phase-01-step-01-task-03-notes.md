@@ -28,6 +28,21 @@ The outcome should be:
 
 ## 2. Where to run the checks
 
+### Command block (copy/paste)
+
+```powershell
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
+git --version
+docker --version
+python --version
+docker compose -f docker-compose.postgresql.yml ps
+```
+
+### Estimated runtime & success outputs
+
+- **Runtime:** <20 seconds; each command returns immediately if tools are installed.
+- **Success checklist:** - Version strings print for Git, Docker, and Python (no “command not found” errors). - `docker compose ... ps` lists the `postgres` service with status `Up` and the host port mapping (e.g., `5491->5432`). - Prompt stays at the project root (`PS C:\Users\shady...>`) ready for the remaining steps.
+
 All checks were run from the **project root** in a **PowerShell** terminal on Windows.
 
 To open a terminal in VS Code already positioned at the project root:

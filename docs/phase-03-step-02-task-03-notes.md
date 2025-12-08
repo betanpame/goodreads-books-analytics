@@ -28,7 +28,9 @@ From `plan/phase-03-eda-and-data-quality/steps/step-02-bivariate-eda/tasks/task-
 
 ## 3. How to run it
 
-From `C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`:
+From `C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`.
+
+### Command block (copy/paste)
 
 ```powershell
 # Local Python virtualenv
@@ -38,6 +40,14 @@ C:/Users/shady/Documents/GITHUB/goodreads-books-analytics/.venv/Scripts/python.e
 docker compose -f docker-compose.python.yml run --rm app \
     python -m src.analyses.eda_books
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈4 minutes locally; ≈5 minutes in Docker because of the extra aggregations and charts.
+- **Success checklist:**
+  - Logs show `Language category summary saved to ...` and `Publisher category summary saved to ...` along with the top-N counts.
+  - Folder `outputs/phase03_univariate/step02_task03_category_relationships/` contains both CSVs plus four PNG bar charts.
+  - Console output reiterates which top-N filters were applied, so you can cite them directly in documentation.
 
 New artifacts for this task:
 

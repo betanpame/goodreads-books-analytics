@@ -8,6 +8,8 @@
 
 ## 2. How to run this analysis script
 
+### Command block (copy/paste)
+
 ```powershell
 cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
@@ -19,6 +21,14 @@ Optional local venv run:
 ```powershell
 C:/Users/shady/Documents/GITHUB/goodreads-books-analytics/.venv/Scripts/python.exe -m src.analyses.eda_books --output-dir outputs/phase03_univariate
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈5 minutes in Docker (includes duplicate scans + Postgres writes); ≈4 minutes via local venv.
+- **Success checklist:**
+  - CLI log mentions `Saved missing-value summary ...`, `Full row duplicates identified: 0`, and `Saved ... partial duplicates ...` plus mapping creation lines.
+  - `outputs/phase03_univariate/step03_task01_missing_duplicates/` contains the three CSV evidence files.
+  - `data/derived/duplicate_bookid_mapping.csv` refreshes and, if you run the loader, `SELECT COUNT(*) FROM bookid_canonical_map;` returns 16.
 
 ## 3. Environment recap
 

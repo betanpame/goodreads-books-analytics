@@ -8,6 +8,23 @@ Task reference: `plan/phase-01-project-setup-and-environment/steps/step-02-desig
 
 ## 1. High-level decision: separate compose files
 
+### Command block (copy/paste)
+
+```powershell
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
+New-Item -ItemType File -Path docker-compose.python.yml -Force | Out-Null
+code docker-compose.python.yml
+docker compose -f docker-compose.python.yml config
+```
+
+### Estimated runtime & success outputs
+
+- **Runtime:** ~20 seconds to scaffold + validate the compose file; `docker compose ... config` runs in under 3 seconds if the YAML is valid.
+- **Success checklist:**
+  - `docker-compose.python.yml` exists in the repo root and opens in VS Code for editing.
+  - `docker compose ... config` prints the merged configuration without errors, confirming that YAML syntax and env references are correct.
+  - The generated config shows both the `app` and `postgres` services with the expected volume/network definitions.
+
 The first decision in this task is **how** to organize Docker Compose files. There are two common options:
 
 1. A **single** `docker-compose.yml` that defines both Python CLI and PostgreSQL.

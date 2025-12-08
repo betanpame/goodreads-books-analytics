@@ -28,7 +28,9 @@ The rest of the CLI (`--csv-path`, `--limit`, `--output-dir`, `--verbose`) stays
 
 ## 3. How to run it
 
-From the repository root (`C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`):
+From the repository root (`C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`).
+
+### Command block (copy/paste)
 
 ```powershell
 # Local Python virtualenv
@@ -40,6 +42,14 @@ C:/Users/shady/Documents/GITHUB/goodreads-books-analytics/.venv/Scripts/python.e
 docker compose -f docker-compose.python.yml run --rm app \
   python -m src.analyses.eda_books --verbose
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈4 minutes locally (scatter plots + bucket summaries); ≈5 minutes in Docker.
+- **Success checklist:**
+  - Logs mention `Saved relationship plot to ... average_rating_vs_pages_scatter.png` (three times) plus the page-bucket CSV path.
+  - Folder `outputs/phase03_univariate/step02_task01_relationships/` exists with the three scatter PNGs and `average_rating_by_page_bucket.csv`/`.png`.
+  - Pearson correlation values print in the console for each pairing (`num_pages vs rating -> n=...`).
 
 Key outputs for this task:
 

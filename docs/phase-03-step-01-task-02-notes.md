@@ -31,7 +31,9 @@ All functions include concise log messages so the console transcript doubles as 
 
 ## 3. How to run it
 
-From the repository root (`C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`):
+From the repository root (`C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`), rerun the shared CLI.
+
+### Command block (copy/paste)
 
 ```powershell
 # Optional: start the dockerized Python environment if you prefer containers
@@ -43,11 +45,15 @@ C:/Users/shady/Documents/GITHUB/goodreads-books-analytics/.venv/Scripts/python.e
     --verbose
 ```
 
-Flags:
+### Estimated runtime & success checks
 
-- `--csv-path` lets you point at alternate derived files (defaults to `data/books.csv`).
-- `--limit` is handy for spot checks and keeps the same semantics as other Phase 02/03 CLIs.
-- `--output-dir` controls where CSV + PNG artifacts land.
+- **Runtime:** ≈3 minutes locally (loading 11k rows + generating four plots and CSVs). Docker runs take ~4 minutes.
+- **Success checklist:**
+  - CLI log shows `Saved numeric summary to outputs\phase03_univariate\numeric_summary.csv` and four `Saved ... distribution plot` lines.
+  - `outputs/phase03_univariate/` contains `numeric_summary.csv` plus the four PNGs (`average_rating_distribution.png`, etc.).
+  - Terminal prints the interpretation logs (mean/median/min/max) for each numeric column when `--verbose` is set.
+
+Flags remain the same: `--csv-path` (defaults to `data/books.csv`), `--limit` for sampling, and `--output-dir` to redirect artifacts.
 
 ---
 

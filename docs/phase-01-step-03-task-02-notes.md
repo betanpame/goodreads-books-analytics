@@ -11,6 +11,21 @@ This note documents how I verified that the Dockerized Python environment actual
 
 ### 2. Start a container for CLI verification
 
+#### Command block (copy/paste)
+
+```powershell
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
+docker run --rm -it -v ${PWD}:/app --name goodreads_python_test goodreads-analytics-python:latest /bin/bash
+```
+
+#### Estimated runtime & success outputs
+
+- **Runtime:** Starts in ~5 seconds once the image is built (faster on SSD).
+- **Success checklist:**
+  - Bash prompt appears inside the container with working directory `/app`.
+  - `ls` shows the project folders (`data`, `docs`, `plan`, etc.), confirming the bind mount.
+  - Exiting the shell stops and removes the container automatically because of `--rm`.
+
 From a PowerShell terminal opened in the project root, I launched an interactive container session that mounts the repository and lands me in `/app`:
 
 ```powershell

@@ -16,9 +16,13 @@ Deliverables confirmed in this run:
 
 ---
 
+docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app \
+
 ## 2. How to run the loader
 
 All commands execute from the project root: `C:\Users\shady\documents\GITHUB\goodreads-books-analytics`.
+
+### Command block (copy/paste)
 
 ```powershell
 # 1) Ensure both the Python CLI and Postgres services are online
@@ -27,8 +31,16 @@ docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up 
 
 # 2) Run the ETL inside the Python container
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app \
-    python -m src.load_books_to_postgres --csv-path data/books.csv --table books --if-exists replace
+        python -m src.load_books_to_postgres --csv-path data/books.csv --table books --if-exists replace
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈4–5 minutes for a full reload (containers spin up in ~1 minute, pandas load/clean/write takes ~3 minutes).
+- **Success checklist:**
+  - `docker compose ... up -d` reports both services as healthy.
+  - Loader logs include lines for skipped malformed rows, row counts (`Loaded 11119 rows ...`, `Writing 19202 author rows ...`), and `Load finished successfully.`
+  - `logs/load_books_bad_lines_<timestamp>.log` exists when rows are skipped, confirming error handling ran.
 
 Environment notes:
 

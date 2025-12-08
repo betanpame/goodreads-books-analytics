@@ -26,25 +26,23 @@ In this notes file we go beyond the minimal checklist and document:
 
 ## 2. How to run this analysis script
 
-Every Phase 02 → Step 01 task now shares the same three-command recipe so runs stay reproducible:
+Every Phase 02 → Step 01 task now shares the same three-command recipe so runs stay reproducible.
 
-1. **Open the repository** (this also keeps VS Code in sync with the docker bind mount):
+### Command block (copy/paste)
 
 ```powershell
 cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
-```
-
-2. **Start or refresh the containers** so the Python CLI and Postgres services are ready:
-
-```powershell
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
-```
-
-3. **Run the scripted analysis** inside the Python container with the flags required for this phase:
-
-```powershell
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.initial_inspection_books --sample-size 1000 --verbose
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈90 seconds on a cold start (container spin-up <1 min, script <30 seconds). Subsequent runs usually finish in under 30 seconds.
+- **Success checklist:**
+  - `docker compose ... up -d` reports the Python CLI (`app`) and Postgres containers as `Running`.
+  - The CLI log prints environment info, repository listing, and `Loaded shape: (rows=1000, columns=12)`.
+  - `outputs/initial_inspection/books_sample_preview.csv` and `books_numeric_summary.csv` show fresh timestamps after the run.
 
 Feel free to open an interactive shell via `docker compose ... exec app bash` if you want to re-run the script multiple times, but the three commands above are the canonical template that every future task note should re-use.
 

@@ -19,7 +19,9 @@ I kept the existing filename `src/analyses/eda_books.py` (already referenced els
 
 ## 2. How to run the script
 
-All commands are executed from the repo root (`C:\Users\shady\documents\GITHUB\goodreads-books-analytics`).
+Run the bootstrap script from the repo root (`C:\Users\shady\documents\GITHUB\goodreads-books-analytics`).
+
+### Command block (copy/paste)
 
 ```powershell
 # Ensure containers are running (Python CLI + Postgres)
@@ -31,10 +33,18 @@ docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exe
 ```
 
 The script accepts `--csv-path` (defaults to `data/books.csv`), `--limit`, and `--verbose` flags so it is quick to iterate while we build histogram/boxplot helpers later in Step 01.
+python -m src.analyses.eda_books --limit 1000 --verbose
 
 ---
 
-## 3. Script highlights (`src/analyses/eda_books.py`)
+### Estimated runtime & success checks
+
+- **Runtime:** ≈2 minutes end-to-end when containers are cold; ≈30 seconds for subsequent reruns.
+- **Success checklist:**
+
+  - `docker compose ... up -d` reports the `app` and `postgres` services as `Running`.
+  - CLI log prints `Loading dataset from data/books.csv`, `Loaded shape: (rows=1000, columns=12)`, and the column list/head preview.
+  - `outputs/phase03_univariate/` is created (or timestamped) with the glossary pointer mentioned at the end of the log.
 
 - **Docstring & logging** – Describes the scope (“univariate and bivariate EDA”) and emits structured logs so we can trace dataset loading.
 - **Imports** – `pandas`, `numpy`, `matplotlib.pyplot`, and `seaborn` are configured with a consistent white-grid theme, larger figure size, and friendlier print options for arrays/DataFrames.

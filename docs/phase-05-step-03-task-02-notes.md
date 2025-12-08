@@ -13,19 +13,29 @@ Summarize every SQL insight from Phase 05 in a portfolio-ready format while rein
 
 ## 2. How to run this analysis script
 
-Prerequisites before running anything:
-
-- Docker Desktop running and logged in (the compose files depend on the default Docker Desktop context).
-- `.env` copied from `.env.example` and updated with PostgreSQL credentials— the PowerShell script reads the same variables used by the Python modules.
-- `books_clean.csv` present under `data/derived/`; if missing, rerun the cleaning pipeline from Phase 04 first.
-
-Use the canonical three-command block, then call the orchestration script with slide export enabled. This keeps everything reproducible without leaving PowerShell.
+### Command block (copy/paste)
 
 ```powershell
 cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
 powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Phase05ComparisonRefresh.ps1 -ExportSlide
 ```
+
+### Estimated runtime & success outputs
+
+- **Runtime:** ≈45 seconds end-to-end on a warm Docker stack (Ryzen 7 / 16 GB RAM). First run may take ~2 minutes while pulling images.
+- **Success checklist:**
+  - `outputs/phase05_step03_task01/comparison_summary.{csv,md,png}` refreshed with the latest timestamp.
+  - `docs/phase-05-step-03-task-01-slide.pptx` rewritten with the same timestamp as the PNG/CSV.
+  - PowerShell log prints `All SQL vs pandas comparisons matched` and lists all 11 metrics (M1–M11).
+
+### Prerequisites before running anything
+
+- Docker Desktop running and logged in (the compose files depend on the default Docker Desktop context).
+- `.env` copied from `.env.example` and updated with PostgreSQL credentials—the PowerShell script reads the same variables used by the Python modules.
+- `books_clean.csv` present under `data/derived/`; if missing, rerun the cleaning pipeline from Phase 04 first.
+
+Run the canonical three-command block above, then call the orchestration script with slide export enabled. This keeps everything reproducible without leaving PowerShell.
 
 What the script does (and the internal commands it triggers):
 

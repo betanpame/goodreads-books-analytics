@@ -20,13 +20,14 @@ Deliverables:
 
 Run these commands from the repo root (`C:\Users\shady\documents\GITHUB\goodreads-books-analytics`). They keep Postgres available and confirm the table is present.
 
+### Command block (copy/paste)
+
 ```powershell
 # Start/ensure services
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d postgres
 
 # Run the DDL (safe because the script uses IF NOT EXISTS)
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml cp sql/create_books_table.sql postgres:/tmp/create_books_table.sql
-
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec postgres psql -U goodreads_user -d goodreads -f /tmp/create_books_table.sql
 
 # Double-check
@@ -35,6 +36,14 @@ docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exe
 # Optional cleanup
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec postgres rm /tmp/create_books_table.sql
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈3 minutes when the Postgres container is cold (copy + `psql` run dominate); ≈60 seconds once Postgres is already running.
+- **Success checklist:**
+  - `up -d postgres` exits without errors and `docker compose ps postgres` shows the container as `Running`.
+  - The `psql -f` command prints either `CREATE TABLE` or `NOTICE: relation "books" already exists, skipping`.
+  - `\d books` lists all columns defined in `sql/create_books_table.sql`, confirming the schema is ready for ETL work.
 
 Expected: `CREATE TABLE` plus `NOTICE: relation "books" already exists, skipping` if you have run it before.
 

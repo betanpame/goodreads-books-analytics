@@ -16,12 +16,14 @@ From `plan/phase-02-data-loading-and-initial-exploration/steps/step-02-design-po
 
 ## 2. How to reproduce the exploratory queries
 
-Even though this task is mostly conceptual, I ran a pandas scan to quantify how often authors, publishers, and languages repeat. Re-run it anytime with these commands from the repo root (`C:\Users\shady\documents\GITHUB\goodreads-books-analytics`):
+Even though this task is mostly conceptual, I ran a pandas scan to quantify how often authors, publishers, and languages repeat. Re-run it anytime with these commands from the repo root (`C:\Users\shady\documents\GITHUB\goodreads-books-analytics`).
+
+### Command block (copy/paste)
 
 ```powershell
 # 1) Make sure dependencies are installed
 python -m venv .venv
-.\.venv\Scripts\activate
+\.\.venv\Scripts\activate
 pip install -r requirements.txt
 pip install pandas  # explicit here because the snippet depends on it
 
@@ -62,6 +64,14 @@ pprint(summary)
 python tmp_normalization_scan.py
 Remove-Item tmp_normalization_scan.py
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈5 minutes the first time (creating the virtual environment and installing dependencies dominates); reruns after the venv exists take ≈60–90 seconds.
+- **Success checklist:**
+  - `.\.venv\Scripts\activate` succeeds and `pip install -r requirements.txt` finishes without errors.
+  - The script prints a dictionary containing keys such as `'row_count'`, `'unique_authors'`, `'rows_with_multiple_authors'`, and `'top_publishers'`.
+  - Temporary file `tmp_normalization_scan.py` is removed at the end, keeping the repo clean.
 
 > 🛈 **Why `on_bad_lines='skip'`?** The raw CSV contains at least one malformed row (line 3350) with 13 columns. Skipping bad lines lets the quick scan finish without blocking this task. The full ETL in Phase 03 will log and clean such rows explicitly.
 

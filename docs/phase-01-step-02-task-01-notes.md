@@ -24,6 +24,23 @@ Having this written down helps you:
 
 ## 2. Creating a dedicated requirements notes file
 
+### Command block (copy/paste)
+
+```powershell
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
+New-Item -ItemType Directory -Path docker -Force | Out-Null
+New-Item -ItemType File -Path docker\python-requirements-notes.md -Force | Out-Null
+code docker\python-requirements-notes.md
+```
+
+### Estimated runtime & success outputs
+
+- **Runtime:** ~10 seconds (most of it is VS Code opening the markdown file).
+- **Success checklist:**
+  - Folder `docker/` exists (or is confirmed) in the project root.
+  - File `docker/python-requirements-notes.md` appears in VS Code and in the Explorer tree.
+  - You can start editing the file immediately to capture base image and dependency decisions.
+
 The task suggests creating a new markdown file for environment notes (for example, `docker/python-requirements-notes.md`).
 
 In this project, that file was created at:

@@ -23,6 +23,23 @@ The objectives of this document are:
 
 ## 2. Reviewing the repository structure
 
+### Command block (copy/paste)
+
+```powershell
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
+code .
+Get-ChildItem -Name
+Get-Content -TotalCount 50 data\books.csv
+```
+
+### Estimated runtime & success outputs
+
+- **Runtime:** <30 seconds end-to-end (VS Code launch may take a few seconds if closed).
+- **Success checklist:**
+  - VS Code opens with `goodreads-books-analytics` as the workspace root.
+  - `Get-ChildItem -Name` prints the expected top-level folders (`data`, `docs`, `plan`, `src`, `tests`, etc.).
+  - `Get-Content` shows the header plus ~50 lines of `books.csv`, confirming the dataset is accessible.
+
 ### 2.1. Opening the repository in VS Code
 
 To open the project in VS Code on Windows using PowerShell:

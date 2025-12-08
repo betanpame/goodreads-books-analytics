@@ -26,6 +26,23 @@ The output is a richer `docs/dataset-notes.md` plus your own understanding of wh
 
 ## 2. Opening and inspecting `data/books.csv`
 
+### Command block (copy/paste)
+
+```powershell
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
+code data\books.csv
+# Optional spreadsheet preview
+start excel "C:\\Users\\shady\\documents\\GITHUB\\goodreads-books-analytics\\data\\books.csv"
+```
+
+### Estimated runtime & success outputs
+
+- **Runtime:** Instant for VS Code preview; ~5 seconds if Excel needs to launch.
+- **Success checklist:**
+  - The VS Code tab shows the CSV header and the first ~50 rows without errors.
+  - Excel (if used) opens the same file with columns aligned.
+  - You can read column names such as `bookID`, `title`, `authors`, `average_rating`, confirming access to the dataset.
+
 ### 2.1. How to open the file
 
 You can inspect the CSV in **VS Code** or in a **spreadsheet tool**.

@@ -8,11 +8,29 @@
 
 ## 2. How to run this analysis script
 
+Run the CLI from the repo root to regenerate the outlier evidence.
+
+### Command block (copy/paste)
+
 ```powershell
 cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.eda_books --output-dir outputs/phase03_univariate --verbose
 ```
+
+Optional local venv call:
+
+```powershell
+C:/Users/shady/Documents/GITHUB/goodreads-books-analytics/.venv/Scripts/python.exe -m src.analyses.eda_books --output-dir outputs/phase03_univariate --verbose
+```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈5 minutes in Docker (plots + CSV samples); ≈4 minutes via the local venv.
+- **Success checklist:**
+  - CLI log emits `Saved numeric outlier summary ...`, multiple `Saved ... histogram/boxplot` lines, and `outlier_rule_violations.csv` summary.
+  - Folder `outputs/phase03_univariate/step03_task02_outliers/` exists with rule-specific CSVs and the `plots/` subfolder containing eight PNGs.
+  - When `--verbose` is active, the console lists row counts per rule (e.g., `num_pages suspect_low -> 195 rows`).
 
 Optional local venv call:
 

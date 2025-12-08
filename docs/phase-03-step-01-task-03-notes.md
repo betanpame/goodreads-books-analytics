@@ -32,7 +32,9 @@ All helpers reuse the same CLI introduced in Task 02, which keeps onboarding sim
 
 ## 3. How to run it
 
-From the repo root (`C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`):
+From the repo root (`C:\Users\shady\Documents\GITHUB\goodreads-books-analytics`), reuse the same CLI.
+
+### Command block (copy/paste)
 
 ```powershell
 C:/Users/shady/Documents/GITHUB/goodreads-books-analytics/.venv/Scripts/python.exe `
@@ -40,11 +42,13 @@ C:/Users/shady/Documents/GITHUB/goodreads-books-analytics/.venv/Scripts/python.e
     --verbose
 ```
 
-Outputs created under `outputs/phase03_univariate/`:
+### Estimated runtime & success checks
 
-- Value-count tables: `language_code_value_counts.csv`, `publisher_value_counts.csv`, `authors_value_counts.csv`.
-- Bar charts: `language_code_top_12_bar.png`, `publisher_top_15_bar.png`, `authors_top_15_bar.png`.
-- Outlier aides: `count_outlier_recommendations.csv`, `ratings_count_top_titles.csv`, `text_reviews_count_top_titles.csv`.
+- **Runtime:** ≈3 minutes in the local venv (categorical value counts + plots). Docker adds ~1 minute of overhead.
+- **Success checklist:**
+  - CLI log lists three lines like `Saved language_code value counts to ...` and `Saved ... bar chart to ...`.
+  - Files `language_code_value_counts.csv`, `publisher_value_counts.csv`, `authors_value_counts.csv`, and the related PNGs exist under `outputs/phase03_univariate/`.
+  - `count_outlier_recommendations.csv` plus the two “top titles” CSVs refresh with current timestamps so you can cite the caps immediately.
 
 Use `--limit` or `--output-dir` to customize iterations the same way we did in Task 02.
 

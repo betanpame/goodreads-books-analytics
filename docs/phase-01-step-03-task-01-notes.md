@@ -21,6 +21,24 @@ After this task, you have a concrete, runnable image for the Python CLI environm
 
 ## 2. Reviewing the Dockerfile and requirements
 
+### Command block (copy/paste)
+
+```powershell
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
+code docker\python\Dockerfile
+code requirements.txt
+docker build -f docker/python/Dockerfile -t goodreads-analytics-python:latest .
+docker images goodreads-analytics-python
+```
+
+### Estimated runtime & success outputs
+
+- **Runtime:** ~90 seconds on the first build (Docker pulls base image + installs packages); subsequent builds take ~20 seconds thanks to caching.
+- **Success checklist:**
+  - VS Code opens both the Dockerfile and `requirements.txt` so you can verify contents before building.
+  - `docker build ...` finishes without errors and prints `Successfully tagged goodreads-analytics-python:latest`.
+  - `docker images goodreads-analytics-python` lists the image with a recent `CREATED` timestamp.
+
 Before building, we checked two files:
 
 - `docker/python/Dockerfile`

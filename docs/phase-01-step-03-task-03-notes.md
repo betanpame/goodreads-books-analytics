@@ -13,7 +13,24 @@ The task objective from the plan is:
 
 In practice, this means using a **bind mount** so that the container uses the host project folder as its `/app` directory. Any analysis scripts or code created under `/app` inside the container will be real files in the host repository.
 
-### 2. How the mount is defined in Docker Compose
+### 2. Command block & quick verification
+
+```powershell
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
+docker compose -f docker-compose.python.yml up -d
+docker compose -f docker-compose.python.yml ps
+docker compose -f docker-compose.python.yml exec app bash -lc "pwd; ls -1"
+```
+
+**Estimated runtime & success outputs**
+
+- Runtime: ~30 seconds when images are already built; add ~1 minute if Docker needs to build the Python image.
+- Success checklist:
+  - `docker compose ... up -d` finishes without errors and prints service names.
+  - `docker compose ... ps` lists both `${PROJECT_NAME}_python` and `${PROJECT_NAME}_postgres` with status `Up`.
+  - The `exec app bash` command prints `/app` followed by the repository listing (`data`, `docs`, `plan`, `src`, ...), proving that the bind mount works.
+
+### 3. How the mount is defined in Docker Compose
 
 In this project, the bind mount is already configured in the `docker-compose.python.yml` file. The relevant part for the `app` service is:
 
@@ -38,7 +55,7 @@ Key points:
 
 This setup matches the goal of the task: the container should work directly against the same files that are under version control on the host.
 
-### 3. Starting the stack with the project folder mounted
+### 4. Starting the stack with the project folder mounted
 
 To use the compose file and start both the Python CLI `app` service and the `postgres` service with the project folder mounted, I ran the following commands from a PowerShell terminal.
 
@@ -71,7 +88,7 @@ To use the compose file and start both the Python CLI `app` service and the `pos
    - `${PROJECT_NAME}_python` (the Python CLI container).
    - `${PROJECT_NAME}_postgres` (the PostgreSQL container).
 
-### 4. Inspecting the repository from inside the container shell
+### 5. Inspecting the repository from inside the container shell
 
 Once the services are running, I verify the mount by opening a shell inside the
 `app` container instead of using a browser-based UI.
@@ -98,7 +115,7 @@ Once the services are running, I verify the mount by opening a shell inside the
 This confirms that the bind mount is active and the container sees the exact same
 files that exist on the host.
 
-### 5. Creating and saving a test analysis script from inside the container
+### 6. Creating and saving a test analysis script from inside the container
 
 To explicitly verify that changes made in the container are persisted on the
 host, I created a small Python file using the same shell session.
@@ -118,7 +135,7 @@ Running the script prints the working directory (for example, `/app/docs`) and a
 listing of files in that folder, proving that the interpreter can access the
 project just like any other local code.
 
-### 6. Verifying the new analysis script on the host machine
+### 7. Verifying the new analysis script on the host machine
 
 The final step is to check that the newly created analysis script exists in the host repository, proving that the bind mount works both ways.
 
@@ -135,7 +152,7 @@ This confirms that:
 - The project folder is successfully mounted into the container.
 - Files created or modified inside the container are immediately visible on the host.
 
-### 7. Stopping the Docker stack when finished
+### 8. Stopping the Docker stack when finished
 
 Once I finished verifying the mount and the analysis script, I stopped the running services to free resources.
 
@@ -151,7 +168,7 @@ This command:
 - Removes the stopped containers and the default network created for this compose file.
 - Leaves the named volume `postgres_data` intact, so the PostgreSQL data persists across runs.
 
-### 8. How to repeat this task in the future
+### 9. How to repeat this task in the future
 
 To repeat this workflow on another machine or in the future:
 

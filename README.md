@@ -1,297 +1,190 @@
-## Comparar SQL vs pandas (Fase 05 · Step 03)
-
-Este paso verifica que los análisis SQL de la fase 05 coinciden con los CSV generados en pandas (fase 04).
-
-### Ejecución rápida (recomendada)
-
-````powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Phase05ComparisonRefresh.ps1
-
-### Pasos manuales
-
-1. **Levanta los contenedores**
-
-2. **Carga el dataset curado a PostgreSQL** (solo cuando `books_clean` cambie)
-
-   ```powershell
-   docker compose -f docker-compose.python.yml run --rm app `
-   	python -m src.load_books_clean_to_postgres `
-   	--csv-path data/derived/books_clean.csv `
-   	--table books_clean
-````
-
-3. **Ejecuta el comparador SQL vs pandas**
-
-   ```powershell
-   docker compose -f docker-compose.python.yml run --rm app `
-   	python -m src.analyses.portfolio.p04_sql_vs_pandas_compare `
-   	--output-dir outputs/phase05_step03_task01
-   ```
-
-Resultados clave:
-
-...
-
-### Solución de problemas rápida
-
-1. `*_differences.csv` presente → inspecciona el archivo correspondiente en `outputs/phase05_step03_task01/` para ver filas divergentes.
-
-2. Vuelve a cargar `books_clean` con `scripts/Invoke-Phase05ComparisonRefresh.ps1` (o el paso manual 2) para garantizar que Postgres usa el CSV curado más reciente.
-
-3. Ejecuta de nuevo el comparador; si la discrepancia persiste, revisa los SQL involucrados y actualiza la lógica en `src/analyses/sql_vs_pandas_compare.py`.
-
----
-
-## SQL Portfolio Spotlight (Fase 05)
-
-Durante Step 03 consolidamos todo el trabajo SQL dentro del flujo de Python/Docker para que cualquier reclutador pueda reproducirlo sin abrir notebooks. El guion es el siguiente:
-
-- **Narrativa** -> Partimos de los CSV generados en pandas (Fase 04), los cargamos en PostgreSQL con `src.load_books_clean_to_postgres`, y luego usamos `src.analyses.portfolio.p04_sql_vs_pandas_compare` para demostrar que ambas capas responden las mismas preguntas de negocio.
-
-### Capacidades SQL practicadas
-
-| Activo                                                          | Descripción                                               | Cómo regenerarlo                                                                                                       |
-| --------------------------------------------------------------- | --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `outputs/phase05_step03_task01/comparison_summary.{csv,md,png}` | Evidencia cuantitativa y visual del parity SQL vs pandas. | `docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.portfolio.p04_sql_vs_pandas_compare`. |
-
 # goodreads-books-analytics
 
-Proyecto de análisis del dataset de libros de Goodreads con Python, PostgreSQL y Docker.
+End-to-end analysis of the public Goodreads Books dataset using Python CLI modules, PostgreSQL, and Docker. The repository bundles reproducible scripts, phase-by-phase notes, and portfolio-ready artifacts (CSV, PNG, PPTX).
 
-Este repositorio incluye:
+## Project Snapshot & Outcomes
 
-- Scripts de limpieza y carga de datos en `src/`.
-- Tests básicos en `tests/`.
-- Documentación de apoyo en `docs/` (pandas, SQL, Docker, PostgreSQL).
-- Un entorno de base de datos basado en Docker Compose para PostgreSQL.
+- Curated dataset `books_clean.csv` plus a PostgreSQL schema ready for repeat loads.
+- CLI coverage for EDA/QA (`p01`, `p02`), KPI generation (`p03`), and SQL vs pandas parity checks (`p04`) with versioned outputs.
+- Dedicated SQL suite under `sql/` and Postgres validation helpers (`support/validation`) to prove pandas ↔ SQL alignment.
+- Full documentation spine: README, phase plan, FAQs, glossaries, and storytelling deliverables (Phase 06).
 
-## Start Here Map
+## Stack Highlights
 
-Sigue las fases en orden; cada paso enlaza a sus notas y te recuerda los prerequisitos antes de ejecutar nada.
+- Python 3.10 CLI modules running inside Docker · pandas · seaborn · matplotlib.
+- PostgreSQL 17 orchestrated with Docker Compose (`docker-compose.python.yml`, `docker-compose.postgresql.yml`).
+- PowerShell wrappers (in `scripts/`) to run loads, comparisons, and slide exports end-to-end.
+- GitHub Actions CI pipeline plus sanity tests in `tests/`.
+
+## Quick Links
+
+- Start Here Map (phases, prerequisites, notes): ↓
+- SQL Portfolio Spotlight: `docs/phase-05-step-03-task-02-notes.md` and `docs/phase-05-step-03-task-01-slide.pptx`.
+- Phase 06 restructure log: `docs/phase6-step1-task3-notes.md`.
+- FAQs & glossaries: `docs/data-faq.md`, `docs/phase-05-glossary.md`, `docs/phase-06-glossary.md`.
+
+## Start Here Map (Step-by-Step)
+
+Follow the phases in order. Each step links to its detailed notes and lists the prerequisites you must satisfy before running commands.
 
 1. **Phase 01 – Project Setup and Environment**
 
-   - [Step 01 – Understand Repository and Tools](plan/phase-01-project-setup-and-environment/steps/step-01-understand-repo-and-tools/) — Recorrido guiado por la estructura del repo y checklist de utilidades básicas. _Prereqs: repo clonado, Git + VS Code instalados._ Notas: [T1](docs/phase-01-step-01-task-01-notes.md) · [T2](docs/phase-01-step-01-task-02-notes.md) · [T3](docs/phase-01-step-01-task-03-notes.md)
-   - [Step 02 – Design Python CLI Docker Environment](plan/phase-01-project-setup-and-environment/steps/step-02-design-python-docker-environment/) — Define la imagen/base de dependencias y variables necesarias para los contenedores de análisis. _Prereqs: Step 01 completado, Docker Desktop instalado._ Notas: [T1](docs/phase-01-step-02-task-01-notes.md) · [T2](docs/phase-01-step-02-task-02-notes.md) · [T3](docs/phase-01-step-02-task-03-notes.md)
-   - [Step 03 – Implement and Test Docker Setup](plan/phase-01-project-setup-and-environment/steps/step-03-implement-and-test-docker-setup/) — Construye y prueba los contenedores de Python/PostgreSQL con comandos reproducibles. _Prereqs: Step 02 configurado, `.env` inicializado._ Notas: [T1](docs/phase-01-step-03-task-01-notes.md) · [T2](docs/phase-01-step-03-task-02-notes.md) · [T3](docs/phase-01-step-03-task-03-notes.md)
+   - [Step 01 – Understand Repository and Tools](plan/phase-01-project-setup-and-environment/steps/step-01-understand-repo-and-tools/) — Guided tour of folders and tooling checklist. _Prereqs: repo cloned locally, Git and VS Code installed._ Notes: [T1](docs/phase-01-step-01-task-01-notes.md) · [T2](docs/phase-01-step-01-task-02-notes.md) · [T3](docs/phase-01-step-01-task-03-notes.md)
+   - [Step 02 – Design Python CLI Docker Environment](plan/phase-01-project-setup-and-environment/steps/step-02-design-python-docker-environment/) — Define the base image, dependencies, and env vars. _Prereqs: Step 01 complete, Docker Desktop running._ Notes: [T1](docs/phase-01-step-02-task-01-notes.md) · [T2](docs/phase-01-step-02-task-02-notes.md) · [T3](docs/phase-01-step-02-task-03-notes.md)
+   - [Step 03 – Implement and Test Docker Setup](plan/phase-01-project-setup-and-environment/steps/step-03-implement-and-test-docker-setup/) — Build and validate the Python + Postgres containers. _Prereqs: Step 02 configured, `.env` initialized._ Notes: [T1](docs/phase-01-step-03-task-01-notes.md) · [T2](docs/phase-01-step-03-task-02-notes.md) · [T3](docs/phase-01-step-03-task-03-notes.md)
 
 2. **Phase 02 – Data Loading and Initial Exploration**
 
-   - [Step 01 – Inspect Dataset with pandas](plan/phase-02-data-loading-and-initial-exploration/steps/step-01-inspect-dataset-with-pandas/) — Abre `books.csv`, genera `.info()`/`.describe()` y detecta columnas clave. _Prereqs: Phase 01 entorno activo, archivo `data/books.csv` disponible._ Notas: [T1](docs/phase-02-step-01-task-01-notes.md) · [T2](docs/phase-02-step-01-task-02-notes.md) · [T3](docs/phase-02-step-01-task-03-notes.md)
-   - [Step 02 – Design PostgreSQL Schema](plan/phase-02-data-loading-and-initial-exploration/steps/step-02-design-postgres-schema/) — Propone tablas/campos y define tipos para la futura carga. _Prereqs: Step 01 resuelto, conexión a PostgreSQL lista._ Notas: [T1](docs/phase-02-step-02-task-01-notes.md) · [T2](docs/phase-02-step-02-task-02-notes.md) · [T3](docs/phase-02-step-02-task-03-notes.md)
-   - [Step 03 – Load Data into PostgreSQL](plan/phase-02-data-loading-and-initial-exploration/steps/step-03-load-data-into-postgres/) — Ejecuta la primera carga `books.csv → postgres` y documenta comandos `COPY`/Python. _Prereqs: Step 02 aprobado, contenedor postgres encendido._ Notas: [T1](docs/phase-02-step-03-task-01-notes.md) · [T2](docs/phase-02-step-03-task-02-notes.md) · [T3](docs/phase-02-step-03-task-03-notes.md)
+   - [Step 01 – Inspect Dataset with pandas](plan/phase-02-data-loading-and-initial-exploration/steps/step-01-inspect-dataset-with-pandas/) — Run `.info()`, `.describe()`, and capture first observations. _Prereqs: Phase 01 environment running, `data/books.csv` present._ Notes: [T1](docs/phase-02-step-01-task-01-notes.md) · [T2](docs/phase-02-step-01-task-02-notes.md) · [T3](docs/phase-02-step-01-task-03-notes.md)
+   - [Step 02 – Design PostgreSQL Schema](plan/phase-02-data-loading-and-initial-exploration/steps/step-02-design-postgres-schema/) — Map columns to table structures and data types. _Prereqs: Step 01 complete, Postgres reachable._ Notes: [T1](docs/phase-02-step-02-task-01-notes.md) · [T2](docs/phase-02-step-02-task-02-notes.md) · [T3](docs/phase-02-step-02-task-03-notes.md)
+   - [Step 03 – Load Data into PostgreSQL](plan/phase-02-data-loading-and-initial-exploration/steps/step-03-load-data-into-postgres/) — Execute the first `books.csv → postgres` load. _Prereqs: Step 02 approved, Postgres container up._ Notes: [T1](docs/phase-02-step-03-task-01-notes.md) · [T2](docs/phase-02-step-03-task-02-notes.md) · [T3](docs/phase-02-step-03-task-03-notes.md)
 
-3. **Phase 03 – EDA and Data Quality Assessment**
+3. **Phase 03 – EDA and Data Quality**
 
-   - [Step 01 – Univariate EDA](plan/phase-03-eda-and-data-quality/steps/step-01-univariate-eda/) — Explora distribuciones y outliers clave. _Prereqs: Phase 02 outputs (`books_clean` preliminar) listos._ Notas: [T1](docs/phase-03-step-01-task-01-notes.md) · [T2](docs/phase-03-step-01-task-02-notes.md) · [T3](docs/phase-03-step-01-task-03-notes.md)
-   - [Step 02 – Bivariate and Relationships](plan/phase-03-eda-and-data-quality/steps/step-02-bivariate-eda/) — Cruza métricas (p.ej., rating vs. páginas) y registra hallazgos. _Prereqs: Step 01 gráficos/CSV exportados._ Notas: [T1](docs/phase-03-step-02-task-01-notes.md) · [T2](docs/phase-03-step-02-task-02-notes.md) · [T3](docs/phase-03-step-02-task-03-notes.md)
-   - [Step 03 – Data Quality + Cleaning Rules](plan/phase-03-eda-and-data-quality/steps/step-03-data-quality-and-cleaning-rules/) — Define reglas de limpieza y documenta decisiones sobre nulos, duplicados y formatos. _Prereqs: Step 02 insights, `docs/dataset-notes.md` abierto._ Notas: [T1](docs/phase-03-step-03-task-01-notes.md) · [T2](docs/phase-03-step-03-task-02-notes.md) · [T3](docs/phase-03-step-03-task-03-notes.md)
+   - [Step 01 – Univariate EDA](plan/phase-03-eda-and-data-quality/steps/step-01-univariate-eda/) — Check distributions, outliers, and summary tables. _Prereqs: Phase 02 outputs available._ Notes: [T1](docs/phase-03-step-01-task-01-notes.md) · [T2](docs/phase-03-step-01-task-02-notes.md) · [T3](docs/phase-03-step-01-task-03-notes.md)
+   - [Step 02 – Bivariate & Relationships](plan/phase-03-eda-and-data-quality/steps/step-02-bivariate-eda/) — Correlate metrics (rating vs pages, etc.). _Prereqs: Step 01 charts saved._ Notes: [T1](docs/phase-03-step-02-task-01-notes.md) · [T2](docs/phase-03-step-02-task-02-notes.md) · [T3](docs/phase-03-step-02-task-03-notes.md)
+   - [Step 03 – Data Quality & Cleaning Rules](plan/phase-03-eda-and-data-quality/steps/step-03-data-quality-and-cleaning-rules/) — Document null, duplicate, and formatting decisions. _Prereqs: Step 02 findings, `docs/dataset-notes.md` open._ Notes: [T1](docs/phase-03-step-03-task-01-notes.md) · [T2](docs/phase-03-step-03-task-02-notes.md) · [T3](docs/phase-03-step-03-task-03-notes.md)
 
-4. **Phase 04 – Business Analysis and Visualizations**
+4. **Phase 04 – Business Analysis & Visualizations**
 
-   - [Step 01 – Implement Cleaning in Python](plan/phase-04-business-analysis-and-visualizations/steps/step-01-implement-cleaning-in-python/) — Aplica reglas de Phase 03 para producir `books_clean.csv`. _Prereqs: data-quality plan cerrado._ Notas: [T1](docs/phase-04-step-01-task-01-notes.md)
-   - [Step 02 – Define Metrics and Visuals](plan/phase-04-business-analysis-and-visualizations/steps/step-02-define-and-compute-metrics/) — Calcula KPIs y prototipa visualizaciones base. _Prereqs: Step 01 dataset limpio, métricas en `src/metrics/core_metrics.py`._ Notas: [T1](docs/phase-04-step-02-task-01-notes.md) · [T2](docs/phase-04-step-02-task-02-notes.md)
+   - [Step 01 – Implement Cleaning in Python](plan/phase-04-business-analysis-and-visualizations/steps/step-01-implement-cleaning-in-python/) — Produce `books_clean.csv`. _Prereqs: Data-quality playbook finalized._ Notes: [T1](docs/phase-04-step-01-task-01-notes.md)
+   - [Step 02 – Define Metrics and Visuals](plan/phase-04-business-analysis-and-visualizations/steps/step-02-define-and-compute-metrics/) — Calculate KPIs and prototype visuals. _Prereqs: Clean dataset plus `src/metrics/core_metrics.py` ready._ Notes: [T1](docs/phase-04-step-02-task-01-notes.md) · [T2](docs/phase-04-step-02-task-02-notes.md)
+   - [Step 03 – Build Insightful Visualizations](plan/phase-04-business-analysis-and-visualizations/steps/step-03-build-visualizations/) — Assemble charts and narrative (see plan folder).
 
 5. **Phase 05 – SQL Analysis in PostgreSQL**
 
-   - [Step 01 – Validate Data in PostgreSQL](plan/phase-05-sql-analysis-in-postgres/steps/step-01-validate-data-in-postgres/) — Ejecuta CLIs de validación para comprobar schema/filas. _Prereqs: Docker stack (`python` + `postgresql`) operativo._ Notas: [T1](docs/phase-05-step-01-task-01-notes.md) · [T2](docs/phase-05-step-01-task-02-notes.md) · [T3](docs/phase-05-step-01-task-03-notes.md)
-   - [Step 02 – Implement Core SQL Queries](plan/phase-05-sql-analysis-in-postgres/steps/step-02-implement-analysis-queries/) — Redacta queries con CTEs, window functions y tablas canónicas. _Prereqs: Step 01 parity checks verdes._ Notas: [T1](docs/phase-05-step-02-task-01-notes.md) · [T2](docs/phase-05-step-02-task-02-notes.md) · [T3](docs/phase-05-step-02-task-03-notes.md)
-   - [Step 03 – SQL vs pandas Comparison](plan/phase-05-sql-analysis-in-postgres/steps/step-03-sql-vs-pandas-comparison/) — Corre `p04_sql_vs_pandas_compare` y documenta evidencias para portafolio. _Prereqs: Step 02 queries almacenadas, métricas de Phase 04._ Notas: [T1](docs/phase-05-step-03-task-01-notes.md) · [T2](docs/phase-05-step-03-task-02-notes.md)
+   - [Step 01 – Validate Data in PostgreSQL](plan/phase-05-sql-analysis-in-postgres/steps/step-01-validate-data-in-postgres/) — Run validation CLIs under `support/validation`. _Prereqs: Docker stack running._ Notes: [T1](docs/phase-05-step-01-task-01-notes.md) · [T2](docs/phase-05-step-01-task-02-notes.md) · [T3](docs/phase-05-step-01-task-03-notes.md)
+   - [Step 02 – Implement Core SQL Queries](plan/phase-05-sql-analysis-in-postgres/steps/step-02-implement-analysis-queries/) — Write CTEs, windows, and canonical tables. _Prereqs: Step 01 parity checks green._ Notes: [T1](docs/phase-05-step-02-task-01-notes.md) · [T2](docs/phase-05-step-02-task-02-notes.md) · [T3](docs/phase-05-step-02-task-03-notes.md)
+   - [Step 03 – SQL vs pandas Comparison](plan/phase-05-sql-analysis-in-postgres/steps/step-03-sql-vs-pandas-comparison/) — Execute `p04_sql_vs_pandas_compare`. _Prereqs: Step 02 SQL stored, Phase 04 metrics exported._ Notes: [T1](docs/phase-05-step-03-task-01-notes.md) · [T2](docs/phase-05-step-03-task-02-notes.md)
 
 6. **Phase 06 – Documentation and Storytelling**
 
-   - [Step 01 – Organize Portfolio Scripts](plan/phase-06-documentation-and-storytelling/steps/step-01-organize-src/analyses/) — Reestructura `src/analyses/` en portfolio/support/archive y agrega docstrings. _Prereqs: Phase 05 artefactos generados, pruebas básicas verdes._ Notas: [T1](docs/phase6-step1-task1-notes.md) · [T2](docs/phase6-step1-task2-notes.md) · [T3](docs/phase6-step1-task3-notes.md)
+   - [Step 01 – Organize Portfolio Scripts](plan/phase-06-documentation-and-storytelling/steps/step-01-organize-src/analyses/) — Restructure `src/analyses/` into portfolio/support/archive and add docstrings. _Prereqs: Phase 05 artifacts generated._ Notes: [T1](docs/phase6-step1-task1-notes.md) · [T2](docs/phase6-step1-task2-notes.md) · [T3](docs/phase6-step1-task3-notes.md)
+   - [Step 02 – Write and Polish README](plan/phase-06-documentation-and-storytelling/steps/step-02-write-readme/) — Improve the main narrative. _Prereqs: Step 01 finished._
+   - [Step 03 – Create Summary Narrative or Slides](plan/phase-06-documentation-and-storytelling/steps/step-03-create-summary-narrative/) — Produce the slide/story package (see `docs/phase-05-step-03-task-01-slide.pptx`).
+   - [Step 04 – Polish Analysis Scripts and Visuals](plan/phase-06-documentation-and-storytelling/steps/step-04-polish-analysis-scripts-and-visuals/) — Final pass on docstrings, annotations, charts.
+   - [Step 05 – Prepare Sharing and Next Notes](plan/phase-06-documentation-and-storytelling/steps/step-05-prepare-sharing-and-next-notes/) — Update FAQs, glossaries, and next steps.
 
 7. **Phase 07 – Production Readiness and Next Steps**
-   - [Step 01 – Refine Docker Setup](plan/phase-07-production-readiness-and-next-steps/steps/step-01-refine-docker-setup/) — Consolida los archivos de orquestación para compartir el entorno. _Prereqs: Fases 01–06 consolidadas._
-   - [Step 02 – Document End-to-End Run Instructions](plan/phase-07-production-readiness-and-next-steps/steps/step-02-document-run-instructions/) — Redacta guías rápidas para reclutadores o colaboradores. _Prereqs: Step 01 contenedores listos._
-   - [Step 03 – Define Cloud + Extension Roadmap](plan/phase-07-production-readiness-and-next-steps/steps/step-03-define-next-steps/) — Lista mejoras futuras (deploy cloud, dashboards, jobs). _Prereqs: Runbook del Step 02 publicado._
+   - [Step 01 – Refine Docker Setup](plan/phase-07-production-readiness-and-next-steps/steps/step-01-refine-docker-setup/) — Consolidate orchestration artifacts. _Prereqs: Phases 01–06 stabilized._
+   - [Step 02 – Document End-to-End Run Instructions](plan/phase-07-production-readiness-and-next-steps/steps/step-02-document-run-instructions/) — Write a runbook for collaborators/interviewers. _Prereqs: Step 01 containers tuned._
+   - [Step 03 – Define Cloud + Extension Roadmap](plan/phase-07-production-readiness-and-next-steps/steps/step-03-define-next-steps/) — Outline cloud deployment, dashboards, jobs.
 
 ---
 
-## Requisitos previos
+## Environment Prerequisites
 
-- Python 3.10+ (se recomienda usar un entorno virtual).
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows/macOS) o Docker Engine (Linux).
+- Python 3.10+ (use `.venv` if running outside Docker).
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) or Docker Engine.
+- PowerShell 5.1 (repo default shell).
 
----
+### Step-by-Step: Configure `.env`
 
-## Configurar el entorno `.env`
+1. Copy the template: `Copy-Item .env.example .env`.
+2. Edit `POSTGRES_*`, `PROJECT_NAME`, and optionally `DATABASE_URL`.
+3. Save the file; all CLIs read these variables automatically.
 
-En la raíz del proyecto hay un archivo de ejemplo de variables de entorno:
-
-```bash
-.env.example
-```
-
-En Windows PowerShell, crea tu archivo `.env` copiando el ejemplo:
+### Step-by-Step: Start PostgreSQL Only
 
 ```powershell
-Copy-Item .env.example .env
-```
-
-Luego edita `.env` y revisa especialmente:
-
-- `PROJECT_NAME`: prefijo para el nombre del contenedor.
-- `POSTGRES_VERSION`: versión de la imagen de PostgreSQL (por ejemplo `17`).
-- `POSTGRES_DB`: nombre de la base de datos.
-- `POSTGRES_USER`: usuario.
-- `POSTGRES_PASSWORD`: contraseña (cámbiala por algo seguro).
-- `POSTGRES_PORT`: puerto en tu máquina (por defecto `5432`).
-- `POSTGRES_HOST`: host que usarán los scripts de Python para conectarse (normalmente `localhost`).
-
-Opcionalmente, puedes definir también `DATABASE_URL`. Si existe, tendrá prioridad sobre las demás variables de conexión.
-
----
-
-## Levantar PostgreSQL con Docker Compose
-
-El servicio de base de datos se define en `docker-compose.postgresql.yml`.
-
-Desde la raíz del proyecto:
-
-```powershell
+cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics
 docker compose -f docker-compose.postgresql.yml up -d
 ```
 
-Comandos útiles:
+4. Check status: `docker compose -f docker-compose.postgresql.yml ps`.
+5. Tail logs if needed: `docker compose -f docker-compose.postgresql.yml logs -f postgres`.
+6. Stop services: `docker compose -f docker-compose.postgresql.yml down` (add `-v` to drop volumes).
+
+### Step-by-Step: Run the Python Pipeline Locally (optional)
 
 ```powershell
-# Ver estado de los servicios
-docker compose -f docker-compose.postgresql.yml ps
-
-# Ver logs de PostgreSQL
-docker compose -f docker-compose.postgresql.yml logs -f postgres
-
-# Detener servicios (manteniendo datos)
-docker compose -f docker-compose.postgresql.yml down
-
-# Detener servicios y borrar volúmenes (borra datos)
-docker compose -f docker-compose.postgresql.yml down -v
+.venv\Scripts\python.exe -m src.load_books_to_postgres --table books
+.venv\Scripts\python.exe -m src.run_full_pipeline
+.venv\Scripts\python.exe -m src.run_full_pipeline --load-to-postgres
 ```
 
-Más detalles en:
+Docker-first runs remain the recommended approach for reproducibility, but these commands help for quick local checks.
 
-- `docs/docker/intro-docker-y-docker-compose.md`
-- `docs/docker/uso-entorno-postgresql-con-docker.md`
-- `docs/postgresql/intro-postgresql.md`
+## Repository Structure (Phase 06 Layout)
 
----
+- `src/analyses/portfolio/`
+  - `p01_initial_inspection_books.py` – Phase 02 sanity checks.
+  - `p02_deep_dive_eda.py` – Phase 03 EDA coverage.
+  - `p03_core_metrics_suite.py` – Phase 04 KPI automation.
+  - `p04_sql_vs_pandas_compare.py` – Phase 05 SQL parity CLI.
+- `src/analyses/support/`
+  - `validation/` – Postgres schema/profile/parity CLIs.
+  - `storytelling/` – `plot_comparison_summary.py`, `export_phase05_slide.py`.
+  - `documentation/metrics_catalog.py` – Markdown metrics catalog generator.
+- `src/analyses/archive/` – Legacy scripts (see `docs/phase6-step1-task3-notes.md`).
 
-## Ejecutar el pipeline de datos
+## Key Portfolio Artifacts
 
-Se asume que ya tienes el entorno virtual configurado en `.venv` y las dependencias instaladas.
+| Artifact               | Location                                                        | How to regenerate                                                                                                     |
+| ---------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Clean dataset          | `data/derived/books_clean.csv`                                  | `python -m src.run_full_pipeline`                                                                                     |
+| Phase 03 EDA outputs   | `outputs/phase03_*`                                             | `python -m src.analyses.portfolio.p02_deep_dive_eda`                                                                  |
+| Phase 04 metrics suite | `outputs/phase04_core_metrics/*.csv`                            | `python -m src.analyses.portfolio.p03_core_metrics_suite`                                                             |
+| SQL comparison summary | `outputs/phase05_step03_task01/comparison_summary.{csv,md,png}` | `docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.portfolio.p04_sql_vs_pandas_compare` |
+| Slide deck             | `docs/phase-05-step-03-task-01-slide.pptx`                      | `powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Phase05ComparisonRefresh.ps1 -ExportSlide`                 |
 
-### 1. Cargar `books.csv` directamente en PostgreSQL
+## Phase 05 · Step 03 Runbook (SQL vs pandas)
+
+### Fast Path
 
 ```powershell
-C:/Users/Pamela/Documents/GitHub/goodreads-books-analytics/.venv/Scripts/python.exe -m src.load_books_to_postgres --table books
+cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics
+powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Phase05ComparisonRefresh.ps1 -ExportSlide
 ```
 
-El script leerá la conexión desde `DATABASE_URL` o, si no existe, desde las variables `POSTGRES_*` definidas en `.env`.
+This wrapper lifts the stack, reloads `books_clean`, runs `p04_sql_vs_pandas_compare`, saves `comparison_summary.{csv,md,png}`, and exports the PPTX. Use `-Cases` to limit metrics or `-SkipChart` to skip the PNG.
 
-### 2. Ejecutar el pipeline completo y (opcionalmente) cargar en PostgreSQL
+### Manual Step-by-Step
 
-```powershell
-# Solo limpiar y guardar CSV limpio
-C:/Users/Pamela/Documents/GitHub/goodreads-books-analytics/.venv/Scripts/python.exe -m src.run_full_pipeline
-
-# Limpiar, guardar CSV limpio y cargarlo a PostgreSQL
-C:/Users/Pamela/Documents/GitHub/goodreads-books-analytics/.venv/Scripts/python.exe -m src.run_full_pipeline --load-to-postgres
-```
-
----
-
-## Comparar SQL vs pandas (Fase 05 · Step 03)
-
-Este paso verifica que los análisis SQL de la fase 05 coinciden con los CSV generados en pandas (fase 04).
-
-### Ejecución rápida (recomendada)
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Phase05ComparisonRefresh.ps1
-```
-
-El script anterior levanta los contenedores, recarga `books_clean`, ejecuta el comparador y regenera el gráfico `comparison_summary.png`. Usa `-Cases` para limitar métricas o `-SkipChart` si no necesitas el PNG.
-
-### Pasos manuales
-
-1. **Levanta los contenedores**
-
+1. **Start the stack**
    ```powershell
    docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
    ```
-
-2. **Carga el dataset curado a PostgreSQL** (solo cuando `books_clean` cambie)
-
+2. **Reload the curated dataset (only if `books_clean` changed)**
    ```powershell
-   docker compose -f docker-compose.python.yml run --rm app `
-   	python -m src.load_books_clean_to_postgres `
-   	--csv-path data/derived/books_clean.csv `
-   	--table books_clean
+   docker compose -f docker-compose.python.yml run --rm app \
+     python -m src.load_books_clean_to_postgres \
+     --csv-path data/derived/books_clean.csv \
+     --table books_clean
+   ```
+3. **Run the comparator**
+   ```powershell
+   docker compose -f docker-compose.python.yml run --rm app \
+     python -m src.analyses.portfolio.p04_sql_vs_pandas_compare \
+     --output-dir outputs/phase05_step03_task01
+   ```
+4. **Generate visuals and slide**
+   ```powershell
+   docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.support.storytelling.plot_comparison_summary
+   docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.support.storytelling.export_phase05_slide
    ```
 
-3. **Ejecuta el comparador SQL vs pandas**
+### Expected Results
 
-   ```powershell
-   docker compose -f docker-compose.python.yml run --rm app `
-   	python -m src.analyses.sql_vs_pandas_compare `
-   	--output-dir outputs/phase05_step03_task01
-   ```
+- `comparison_summary.csv` / `.md` with all metrics marked `Match`.
+- `comparison_summary.png` ready for recruiters or presentations.
+- Updated PPTX at `docs/phase-05-step-03-task-01-slide.pptx`.
+- Logs matching the snippets archived in `docs/phase-05-step-03-task-02-notes.md`.
 
-Resultados clave:
+### Troubleshooting Checklist
 
-- `outputs/phase05_step03_task01/comparison_summary.csv` y `.md` muestran métricas, filas y estado (`Match`).
-- `outputs/phase05_step03_task01/comparison_summary.png` brinda un gráfico listo para presentaciones.
-- Archivos `*_differences.csv` solo aparecen cuando existen discrepancias; si quieres reiniciar la evidencia, elimina esos archivos y vuelve a correr el comando.
-- Documentación extendida: `docs/phase-05-step-03-task-01-notes.md`.
+1. **`*_differences.csv` appears** – Inspect the file under `outputs/phase05_step03_task01/`. If parity was expected, rerun step 2 (reload `books_clean`) and rerun step 3.
+2. **Stack drift** – Re-run `scripts/Invoke-Phase05ComparisonRefresh.ps1` to enforce the full sequence (containers → load → comparator → storytelling).
+3. **Storytelling helper errors** – Execute `python -m src.analyses.support.storytelling.plot_comparison_summary` or `export_phase05_slide` directly to debug paths and dependencies.
+4. **New SQL features to showcase** – Link the relevant `.sql` files in `sql/` plus cite the commit hash in README/FAQ to prove the capabilities you mention.
 
-### Solución de problemas rápida
+## Additional Documentation
 
-1. `*_differences.csv` presente → inspecciona el archivo correspondiente en `outputs/phase05_step03_task01/` para ver filas divergentes.
-2. Vuelve a cargar `books_clean` con `scripts/Invoke-Phase05ComparisonRefresh.ps1` (o el paso manual 2) para garantizar que Postgres usa el CSV curado más reciente.
-3. Ejecuta de nuevo el comparador; si la discrepancia persiste, revisa los SQL involucrados y actualiza la lógica en `src/analyses/sql_vs_pandas_compare.py`.
+- `docs/dataset-notes.md` – Dataset context and caveats.
+- `docs/data-faq.md` – Frequently asked questions (Docker, SQL, storytelling tips).
+- `docs/phase-05-step-03-task-02-notes.md` – Full SQL portfolio narrative.
+- `docs/phase-05-glossary.md`, `docs/phase-06-glossary.md` – Phase-specific terminology.
+- `docs/sql-cheatsheet.md`, `docs/pandas-cheatsheet.md` – Quick-reference sheets.
+- `plan/` – Phase/step/task guides with checklists.
 
----
-
-## SQL Portfolio Spotlight (Fase 05)
-
-Durante Step 03 consolidamos todo el trabajo SQL dentro del flujo de Python/Docker para que cualquier reclutador pueda reproducirlo sin abrir notebooks. El guion es el siguiente:
-
-- **Narrativa** → Partimos de los CSV generados en pandas (Fase 04), los cargamos en PostgreSQL con `src.load_books_clean_to_postgres`, y luego usamos `src.analyses.sql_vs_pandas_compare` para demostrar que ambas capas responden las mismas preguntas de negocio.
-- **Preguntas respondidas** → Rankings de autores/libros, evolución temporal de ratings, idiomas/publishers más sólidos, duplicados, engagement percentiles y rolling windows.
-- **Entrega visual** → `scripts/Invoke-Phase05ComparisonRefresh.ps1 -ExportSlide` refresca métricas, genera `comparison_summary.png` y exporta una diapositiva (`outputs/phase05_step03_task01/phase05_sql_vs_pandas.pptx`) lista para portfolios o entrevistas.
-
-### Capacidades SQL practicadas
-
-- Agrupaciones con `GROUP BY`, filtros con `HAVING` y cláusulas `WHERE` parametrizadas vía CTEs.
-- Ventanas (`ROW_NUMBER`, `PERCENTILE_CONT`, frames de 3 años) para rankings por autor y métricas rolling.
-- Combinación de vistas canonicalizadas + staging (`book_authors_stage`) para evitar duplicados en los KPIs.
-- Exportación repetible desde Python (sin Jupyter) usando Docker Compose para garantizar el mismo entorno en cualquier máquina.
-
-### Activos para mostrar en el portfolio
-
-| Activo                                                          | Descripción                                                    | Cómo regenerarlo                                                                                           |
-| --------------------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `README.md` · sección “SQL Portfolio Spotlight”                 | Resumen ejecutivo en tono profesional, listo para recruiters.  | Actual archivo (sin pasos adicionales).                                                                    |
-| `docs/phase-05-step-03-task-02-notes.md`                        | Bitácora detallada (paso a paso, comandos PowerShell).         | `powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Phase05ComparisonRefresh.ps1` + seguir la nota. |
-| `outputs/phase05_step03_task01/comparison_summary.{csv,md,png}` | Evidencia cuantitativa y visual del parity SQL vs pandas.      | `docker compose -f docker-compose.python.yml run --rm app python -m src.analyses.sql_vs_pandas_compare`.   |
-| `docs/phase-05-step-03-task-01-slide.pptx`                      | Diapositiva con storytelling (ingresa directo en portafolios). | `scripts/Invoke-Phase05ComparisonRefresh.ps1 -ExportSlide`.                                                |
-
-Toda la fase opera con `docker compose` y módulos de Python; evita notebooks para mantener trazabilidad y favorecer automatización/CI. Para más contexto, revisa las notas del Task 02 (`docs/phase-05-step-03-task-02-notes.md`).
-
----
-
-## Documentación adicional
-
-- `docs/dataset-notes.md`: notas sobre el dataset de Goodreads.
-- `docs/pandas-cheatsheet.md`: recordatorio rápido de pandas.
-- `docs/sql-cheatsheet.md`: recordatorio rápido de SQL.
-- `docs/repo-notes.md`: notas generales sobre el repositorio y el plan del proyecto.
-
-La carpeta `plan/` contiene una guía fase por fase para ir desarrollando el proyecto de forma estructurada.
-
-### Ayudas rápidas (Fase 05 · SQL)
-
-- `sql/README.md` describe el flujo completo para ejecutar scripts con Docker y `psql`.
-- `scripts/Invoke-Task03Run.ps1` ejecuta los tres análisis avanzados de la Fase 05 · Step 02 · Task 03 sin reescribir los comandos (`powershell -ExecutionPolicy Bypass -File .\scripts\Invoke-Task03Run.ps1 -Script all`).
+Contributions: open an issue/PR summarizing the change, attach relevant outputs (`comparison_summary.*`, screenshots), and run the appropriate tests before submitting.

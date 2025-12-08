@@ -21,6 +21,20 @@ This draft becomes the foundation for later refinement and integration with Dock
 
 ## 2. Creating the Docker folder structure
 
+### Command block (copy/paste)
+
+```powershell
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
+New-Item -ItemType Directory -Path docker\python -Force | Out-Null
+New-Item -ItemType File -Path docker\python\Dockerfile -Force | Out-Null
+code docker\python\Dockerfile
+```
+
+### Estimated runtime & success outputs
+
+- **Runtime:** ~15 seconds including opening the Dockerfile in VS Code.
+- **Success checklist:** - Folder `docker/python/` exists with a `Dockerfile` inside. - VS Code opens the Dockerfile so you can start pasting the base image + RUN blocks. - `git status` now shows `docker/python/Dockerfile` as a tracked file.
+
 The task suggests creating a dedicated folder such as `docker/python/` to hold the Dockerfile.
 
 In this project:

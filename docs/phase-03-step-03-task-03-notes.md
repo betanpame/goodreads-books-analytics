@@ -8,7 +8,9 @@
 
 ## 2. How to run this analysis script
 
-Same CLI one-liner continues to regenerate every artifact supporting the rules:
+Same CLI one-liner continues to regenerate every artifact supporting the rules.
+
+### Command block (copy/paste)
 
 ```powershell
 cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
@@ -21,6 +23,14 @@ Optional local run:
 ```powershell
 C:/Users/shady/Documents/GITHUB/goodreads-books-analytics/.venv/Scripts/python.exe -m src.analyses.eda_books --output-dir outputs/phase03_univariate --verbose
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈5 minutes via Docker; ≈4 minutes with the local venv.
+- **Success checklist:**
+  - CLI log ends with `Documented cleaning decisions live in docs/data-cleaning-rules.md ...`.
+  - `docs/data-cleaning-rules.md` exists and shows the refreshed timestamp.
+  - Upstream artifacts (`step03_task01_missing_duplicates/`, `step03_task02_outliers/`) remain in place since Task 03 references them.
 
 ## 3. Environment recap
 

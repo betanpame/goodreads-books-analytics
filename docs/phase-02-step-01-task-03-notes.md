@@ -18,29 +18,25 @@ Per `plan/phase-02-data-loading-and-initial-exploration/steps/step-01-inspect-da
 
 ## 2. How to run this analysis script
 
-Use the same reproducible command sequence every time you revisit this task:
+Use the same reproducible command sequence every time you revisit this task.
 
-1. **Move into the repository**
+### Command block (copy/paste)
 
 ```powershell
 cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
-```
-
-2. **Start (or verify) Docker services** so the Python CLI container and Postgres are online:
-
-```powershell
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
+docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.initial_inspection_books --sample-size 1000 --verbose
 ```
 
-3. **Run the scripted inspection** inside the Python container with the same flags I documented for Tasks 01 and 02:
+### Estimated runtime & success checks
 
-```powershell
-docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.portfolio.p01_initial_inspection_books --sample-size 1000 --verbose
-```
+- **Runtime:** ≈2 minutes when containers need to start, ≈30 seconds when they are already running.
+- **Success checklist:**
+  - `docker compose ... up -d` exits cleanly and `docker compose ps` (optional) shows both services healthy.
+  - Terminal log contains the Task 03 banner (`Exploring key columns and types (Task 03 focus)`) plus ten consecutive `Column ...` lines.
+  - `publication_date parsing success: 100.00% (1000/1000 rows)` (or similar) prints, and the helper CSVs in `outputs/initial_inspection/` carry new timestamps.
 
-This command emits all Task 03 metrics to the terminal and refreshes the helper CSV files under `outputs/initial_inspection/` so reviewers can diff results over time.
-
-Use the same trio of commands whenever you document a new Phase 02 → Step 01 task so readers never have to guess how to reproduce your run.
+This command trio emits all Task 03 metrics to the terminal and refreshes the helper CSV files under `outputs/initial_inspection/` so reviewers can diff results over time. Lean on the same flow whenever you document a new Phase 02 → Step 01 task so readers never have to guess how to reproduce your run.
 
 ---
 

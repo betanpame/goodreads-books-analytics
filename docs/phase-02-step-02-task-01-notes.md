@@ -17,13 +17,23 @@ Per `plan/phase-02-data-loading-and-initial-exploration/steps/step-02-design-pos
 
 ## 2. How to run this analysis script
 
-Use the same reproducible command sequence we established in Step 01 any time you need to inspect the dataset:
+Use the same reproducible command sequence we established in Step 01 any time you need to inspect the dataset.
+
+### Command block (copy/paste)
 
 ```powershell
 cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.initial_inspection_books --sample-size 1000 --verbose
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈2 minutes when the containers are cold; ≈30 seconds after the first run.
+- **Success checklist:**
+  - Docker reports the `app` and `postgres` services as `Running` after the `up -d` command.
+  - Terminal output includes dtype summaries plus `Loaded shape: (rows=1000, columns=12)`.
+  - `outputs/initial_inspection/books_sample_preview.csv` and `books_numeric_summary.csv` show updated timestamps, proving the script finished.
 
 Those commands refresh the CLI log and the helper CSVs in `outputs/initial_inspection/`, so you can always confirm that pandas still reads the file before looking at SQL mappings.
 

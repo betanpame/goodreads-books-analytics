@@ -20,6 +20,8 @@ Required evidence:
 
 All commands run from the project root.
 
+### Command block (copy/paste)
+
 ```powershell
 # Launch services if needed
 cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
@@ -37,6 +39,14 @@ docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exe
     bash -lc "PGOPTIONS='--pset=pager=off' psql -U goodreads_user -d goodreads \
         -c \"SELECT book_id, title, authors, publication_date FROM books ORDER BY book_id LIMIT 5;\""
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈2 minutes (service check plus two row-count queries; add ~30 seconds if you include the sample query).
+- **Success checklist:**
+  - `books_rows` result equals the pandas count from the loader log (currently 11,119) and `author_stage_rows` equals ~19k.
+  - Sample query returns readable titles with normalized author strings and ISO dates—matching the pandas `head()` output.
+  - Using `PGOPTIONS='--pset=pager=off'` suppresses the pager, so results print immediately; if you still see `--More--`, re-run with the flag applied.
 
 (Use the same `PGOPTIONS` trick for any additional sample queries to avoid the default pager.)
 

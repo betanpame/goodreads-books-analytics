@@ -17,13 +17,23 @@ According to `plan/phase-02-data-loading-and-initial-exploration/steps/step-02-d
 
 ## 2. How to run this analysis script (context refresher)
 
-While this task is mostly DDL design, I still start with the standard commands so the dataset and container are ready if I need to double-check anything:
+Even though this task focuses on SQL design, start with the shared command block so the dataset and containers are ready for any quick checks.
+
+### Command block (copy/paste)
 
 ```powershell
 cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
-docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.portfolio.p01_initial_inspection_books --sample-size 1000 --verbose
+docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.initial_inspection_books --sample-size 1000 --verbose
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈2 minutes on a fresh boot, ≈30 seconds when containers are already running.
+- **Success checklist:**
+  - `docker compose ... up -d` exits without errors and `docker compose ps` shows healthy `app`/`postgres` services.
+  - The CLI log prints dtype summaries for all 12 columns plus `Loaded shape: (rows=1000, columns=12)`.
+  - Helper CSVs under `outputs/initial_inspection/` refresh, proving pandas can still read `data/books.csv` before you edit SQL.
 
 Those commands verify that pandas can still read `data/books.csv` and that our profiling from Task 01 remains accurate.
 

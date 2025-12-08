@@ -21,29 +21,25 @@ This note follows those instructions exactly so another beginner can reproduce t
 
 ## 2. How to run this analysis script
 
-Follow these repeatable steps anytime you need to reproduce the outputs:
+Follow the repeatable three-command flow so anyone can regenerate the Task 02 outputs.
 
-1. **Open the repository**
+### Command block (copy/paste)
 
-   ```powershell
-   cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
-   ```
+```powershell
+cd C:\Users\shady\documents\GITHUB\goodreads-books-analytics
+docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
+docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.initial_inspection_books --sample-size 1000 --verbose
+```
 
-2. **Start (or confirm) the Docker services** so Python and Postgres are running:
+### Estimated runtime & success checks
 
-   ```powershell
-   docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
-   ```
+- **Runtime:** Typically <2 minutes end to end (containers warm start in ~30 seconds; script finishes in ~20 seconds).
+- **Success checklist:**
+  - `docker compose ... up -d` shows the `app` and `postgres` services as `Running`.
+  - Terminal output includes `head()`, `tail()`, `.info()`, and `.describe()` plus `Loaded shape: (rows=1000, columns=12)`.
+  - `outputs/initial_inspection/books_sample_preview.csv` and `books_numeric_summary.csv` have timestamps that match your run.
 
-3. **Execute the CLI analysis** inside the Python container. The sample size and verbosity flags match the task requirements, but you can tweak them later if needed:
-
-   ```powershell
-   docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml exec app python -m src.analyses.initial_inspection_books --sample-size 1000 --verbose
-   ```
-
-Each run refreshes the logs and the helper CSV files in `outputs/initial_inspection/`, so reviewers can always trace the exact commands that produced the artifacts.
-
-This three-command flow is now the canonical template for every Phase 02 → Step 01 task note—reuse it whenever you document a new deliverable so readers always know how to reproduce your run.
+Each run refreshes the logs and the helper CSV files in `outputs/initial_inspection/`, so reviewers can always trace the exact commands that produced the artifacts. This three-command flow is now the canonical template for every Phase 02 → Step 01 task note—reuse it whenever you document a new deliverable so readers always know how to reproduce your run.
 
 ---
 
