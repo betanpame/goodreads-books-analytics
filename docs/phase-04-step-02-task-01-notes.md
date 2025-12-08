@@ -6,6 +6,10 @@ Translate the Phase 04 charter into a portfolio-ready list of business questions
 
 ## 2. How to run this analysis script
 
+Run the metrics-catalog CLI from the repo root so each rerun shares the same Docker image.
+
+### Command block (copy/paste)
+
 ```powershell
 cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
@@ -14,6 +18,15 @@ docker compose --env-file .env.example -f docker-compose.python.yml run --no-dep
   --books-csv data/derived/books_clean.csv `
   --output-markdown outputs/phase04_metrics_catalog.md
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈3 minutes (container spin-up + catalog generation). Warm-container reruns usually finish in ~90 seconds.
+- **Success checklist:**
+
+  - Logs include `Loaded 11,127 rows and 27 columns` and `All 17 required columns are present`.
+  - Coverage snapshot prints (`Duplicate share: 0.14%`) followed by `Metrics catalog written to outputs/phase04_metrics_catalog.md`.
+  - File `outputs/phase04_metrics_catalog.md` updates with the latest timestamp and lists 12 metrics.
 
 - `--no-deps` keeps the workflow Python-only; drop it if you also need PostgreSQL running.
 - The script validates required columns, logs coverage stats, and writes a Markdown table for reuse in docs/dashboards.

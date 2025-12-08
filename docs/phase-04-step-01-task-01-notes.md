@@ -6,6 +6,10 @@ Paraphrasing the plan: convert the Phase 03 cleaning rulebook into executable Py
 
 ## 2. How to run this analysis script
 
+Run the cleaning pipeline from the repository root so every environment uses the same Docker image.
+
+### Command block (copy/paste)
+
 ```powershell
 cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics
 docker compose -f docker-compose.python.yml -f docker-compose.postgresql.yml up -d
@@ -15,6 +19,15 @@ docker compose --env-file .env.example -f docker-compose.python.yml run --no-dep
   --mapping-csv data/derived/duplicate_bookid_mapping.csv `
   --output-csv data/derived/books_clean.csv
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈5 minutes end-to-end (container start + cleaning run). Subsequent runs with warm containers finish in ~3 minutes.
+- **Success checklist:**
+
+  - CLI logs `Loaded 11,127 rows (4 repaired author rows)` and `Loaded 16 duplicate pairs`.
+  - Validation lines appear (`Validation engagement_caps passed`, etc.) before the script exits.
+  - Final log reads `Wrote cleaned dataset to data/derived/books_clean.csv`, and the file timestamp updates.
 
 - Keep execution inside Docker so the same Python 3.14 + requirements stack runs everywhere.
 - `--no-deps` skips PostgreSQL when you only need the CSV; drop the flag if you also plan to load the database.

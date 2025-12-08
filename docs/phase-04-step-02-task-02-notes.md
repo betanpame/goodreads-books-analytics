@@ -6,6 +6,10 @@ Implement reproducible Python/Docker functions that compute the core metrics (M1
 
 ## 2. How to run this analysis script
 
+Run the core-metrics suite from the repo root so all executions share the same Docker image.
+
+### Command block (copy/paste)
+
 ```powershell
 cd C:\Users\shady\Documents\GITHUB\goodreads-books-analytics
 # Option A – direct command
@@ -17,6 +21,15 @@ docker compose --env-file .env.example -f docker-compose.python.yml run --no-dep
 # Option B – one-command wrapper
 make core-metrics
 ```
+
+### Estimated runtime & success checks
+
+- **Runtime:** ≈4 minutes (Docker) or ≈3 minutes with warm containers.
+- **Success checklist:**
+
+  - Logs show `Loaded 11,127 rows and 27 columns` before metric generation kicks off.
+  - Eight `Wrote ...` lines appear (one per metric CSV) followed by `Generated 8 metric tables`.
+  - `outputs/phase04_core_metrics/` contains refreshed CSVs with timestamps matching the run.
 
 - `--no-deps` keeps the execution limited to the Python container (no PostgreSQL).
 - CLI flags expose thresholds (`--author-min-ratings`, `--books-top-n`, `--language-min-books`, `--min-year`).
