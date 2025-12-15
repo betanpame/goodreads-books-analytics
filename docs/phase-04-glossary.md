@@ -32,10 +32,17 @@ Beginner-friendly definitions for the concepts introduced while operationalizing
 - **Dry-run limit (`--limit`)** – Optional CLI argument that processes only the first _n_ rows. Handy for fast debugging without touching the full CSV.
 - **Core metrics CLI** – `python -m src.analyses.portfolio.p03_core_metrics_suite` (or `make core-metrics`) loads `books_clean.csv`, executes the M1/M3/M4/M5/M7/M8/M9/M11 functions, and writes CSVs into `outputs/phase04_core_metrics/` so reviewers have concrete artifacts.
 
+## Visualization & Portfolio Terms
+
+- **Visualization plan** – The structured mapping of business questions to chart types, datasets, and axes. Guides the creation of reproducible, portfolio-ready figures.
+- **Figure** – A saved image file (PNG/SVG) representing a chart or plot generated from the analysis scripts. Figures are stored in `outputs/phase04_visualizations/` or `figures/`.
+- **Caption** – A short description under each chart explaining its meaning, business relevance, and how to interpret the data. Captions are included in the notes and documentation for clarity.
+- **Portfolio-ready** – Charts and notes formatted for clarity, reproducibility, and professional presentation. All steps, commands, and outputs are documented so beginners can follow and reproduce the work.
+
 ## Documentation Cross-links
 
 - **Task notes** – `docs/phase-04-step-01-task-01-notes.md` documents every CLI execution (commands, metrics, evidence) following the Phase 02 template so recruiters can trace the work.
 - **FAQ bridge** – Whenever you need a “how-to” answer (rerunning the CLI, troubleshooting the mapping, interpreting flags), jump to `docs/data-faq.md` → _Phase 04 cleaning pipeline_. This glossary intentionally stays definition-first so the FAQ can focus on procedures.
 - **Make targets** – `make metrics-catalog` and `make core-metrics` wrap the Docker commands so reproducing artifacts during reviews only takes one shell instruction.
 
-Keep this glossary updated as Phase 04 introduces new KPIs or derived features (for example, reader engagement bands or publisher cohorts). Linking definitions here keeps the main task notes concise while ensuring beginners have a clear reference.
+Keep this glossary updated as Phase 04 introduces new KPIs, visualization assets, or storytelling features. Linking definitions here keeps the main task notes concise while ensuring beginners have a clear reference.

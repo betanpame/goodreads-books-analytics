@@ -180,6 +180,27 @@ You should also open `data/derived/books_clean.csv` and verify that it contains 
 
 **How do I compute all core metrics at once?** – Run the command block in Task 02 notes or, more simply, `make core-metrics`. Both execute `python -m src.analyses.run_core_metrics` inside Docker and refresh `outputs/phase04_core_metrics/`.
 
+## Phase 04 visualization FAQ
+
+**How do I rerun the visualization scripts?** – From the repo root, use Docker to run the plotting CLI or script for each chart. Example:
+
+```powershell
+docker compose --env-file .env.example -f docker-compose.python.yml run --no-deps --rm app python -m src.analyses.plot_phase04_visualizations --input-dir outputs/phase04_core_metrics --output-dir outputs/phase04_visualizations
+```
+
+Or run individual chart scripts as documented in the visualization plan note.
+
+**Where are the figures saved?** – All charts are saved under `outputs/phase04_visualizations/` (or `figures/` if specified). Each file is named for its metric and chart type (e.g., `M1_top_authors_by_weighted_rating.png`).
+
+**What if a chart fails to render?** –
+
+- Check that the input CSVs exist and paths are correct.
+- Ensure required Python packages (`matplotlib`, `seaborn`, etc.) are installed in the Docker container.
+- Review CLI logs for error messages about missing columns or data.
+- If the error persists, rerun the metric generation CLI to refresh the source CSVs.
+
+**How do I interpret the chart captions?** – Each figure includes a caption in the notes explaining the business question, metric, and what the chart shows. Refer to `docs/phase-04-step-03-task-01-notes.md` for mapping.
+
 **What files should appear afterward?** – Expect eight CSVs named `M*_*.csv` (top authors, top books by ratings, top books by text reviews, page-length median ratings, average rating by year, median ratings_count by year, language summary, duplicate share). Each file is logged during the run.
 
 **Can I change thresholds for reviews, author minimums, or language coverage?** – Yes. The CLI exposes `--author-min-ratings`, `--author-top-n`, `--books-top-n`, `--language-min-books`, and `--min-year`. Combine them with `make core-metrics FLAGS="--author-min-ratings 10000 --books-top-n 50"` if you want a one-liner.
