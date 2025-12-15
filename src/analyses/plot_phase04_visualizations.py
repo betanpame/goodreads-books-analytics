@@ -19,8 +19,10 @@ CHARTS = [
         "title": "Top Authors by Weighted Rating",
         "caption": "Shows the 15 highest-rated authors (weighted by ratings count, min 5,000 ratings)",
         "type": "barh",
-        "x": "Weighted rating",
-        "y": "Author",
+        "x_col": "weighted_average_rating",
+        "y_col": "author_name",
+        "x_label": "Weighted average rating",
+        "y_label": "Author",
         "filter": lambda df: df.head(15),
         "filename": "M1_top_authors_by_weighted_rating.png"
     },
@@ -29,8 +31,10 @@ CHARTS = [
         "title": "Top Books by Ratings Count (Capped)",
         "caption": "Highlights the 20 most-rated books (capped at 597,244)",
         "type": "barh",
-        "x": "Ratings count (capped)",
-        "y": "Book title",
+        "x_col": "ratings_count_capped",
+        "y_col": "title",
+        "x_label": "Ratings count (capped)",
+        "y_label": "Book title",
         "filter": lambda df: df.head(20),
         "filename": "M3_top_books_by_ratings_count.png"
     },
@@ -39,8 +43,10 @@ CHARTS = [
         "title": "Top Books by Text Reviews (Capped)",
         "caption": "Highlights the 20 books with the most text reviews (capped at 14,812)",
         "type": "barh",
-        "x": "Text reviews count (capped)",
-        "y": "Book title",
+        "x_col": "text_reviews_count_capped",
+        "y_col": "title",
+        "x_label": "Text reviews count (capped)",
+        "y_label": "Book title",
         "filter": lambda df: df.head(20),
         "filename": "M4_top_books_by_text_reviews.png"
     },
@@ -48,9 +54,11 @@ CHARTS = [
         "csv": "M5_median_rating_by_page_length.csv",
         "title": "Median Rating by Page Length Bucket",
         "caption": "Compares median ratings across page length buckets (short, zero/audio, multi-volume)",
-        "type": "box",
-        "x": "Page length bucket",
-        "y": "Median rating",
+        "type": "bar",
+        "x_col": "page_length_bucket",
+        "y_col": "median_rating",
+        "x_label": "Page length bucket",
+        "y_label": "Median rating",
         "filter": None,
         "filename": "M5_median_rating_by_page_length.png"
     },
@@ -59,8 +67,10 @@ CHARTS = [
         "title": "Average Rating by Publication Year",
         "caption": "Shows average rating trends from 1900 to 2012",
         "type": "line",
-        "x": "Publication year",
-        "y": "Average rating",
+        "x_col": "publication_year",
+        "y_col": "average_rating",
+        "x_label": "Publication year",
+        "y_label": "Average rating",
         "filter": None,
         "filename": "M7_average_rating_by_year.png"
     },
@@ -69,8 +79,10 @@ CHARTS = [
         "title": "Median Ratings Count by Publication Year",
         "caption": "Shows median ratings count trends from 1900 to 2012",
         "type": "line",
-        "x": "Publication year",
-        "y": "Median ratings count (capped)",
+        "x_col": "publication_year",
+        "y_col": "median_ratings_count_capped",
+        "x_label": "Publication year",
+        "y_label": "Median ratings count (capped)",
         "filter": None,
         "filename": "M8_median_ratings_count_by_year.png"
     },
@@ -79,8 +91,10 @@ CHARTS = [
         "title": "Average Rating by Language",
         "caption": "Ranks languages with at least 50 canonical books by average rating",
         "type": "bar",
-        "x": "Language code",
-        "y": "Average rating",
+        "x_col": "language_code",
+        "y_col": "average_rating",
+        "x_label": "Language code",
+        "y_label": "Average rating",
         "filter": None,
         "filename": "M9_language_rating_summary.png"
     },
@@ -89,12 +103,15 @@ CHARTS = [
         "title": "Duplicate Share of Catalog",
         "caption": "Pie chart showing the proportion of canonical vs duplicate rows",
         "type": "pie",
-        "x": "Duplicate status",
-        "y": "Share (%)",
+        "x_col": "duplicate_status",
+        "y_col": "share_pct",
+        "x_label": "Duplicate status",
+        "y_label": "Share (%)",
         "filter": None,
         "filename": "M11_duplicate_share.png"
     }
 ]
+ 
 
 def plot_barh(df, x, y, title, caption, out_path):
     plt.figure(figsize=(10, 6))
@@ -160,16 +177,38 @@ def main(input_dir, output_dir):
         if chart["filter"]:
             df = chart["filter"](df)
         out_path = os.path.join(output_dir, chart["filename"])
+        # Special-case: duplicate share CSV contains totals; build pie data
+        if chart["csv"] == "M11_duplicate_share.csv":
+            # expect columns: total_rows, duplicate_rows, duplicate_share_pct
+            if {"total_rows", "duplicate_rows"}.issubset(df.columns):
+                total = int(df.loc[0, "total_rows"])
+                dup = int(df.loc[0, "duplicate_rows"])
+                labels = ["Canonical", "Duplicate"]
+                values = [total - dup, dup]
+                pie_df = pd.DataFrame({"label": labels, "value": values})
+                plot_pie(pie_df, "label", "value", chart["title"], chart["caption"], out_path)
+            else:
+                print(f"M11 CSV missing expected columns: {csv_path}")
+            continue
+
+        x = chart.get("x_col")
+        y = chart.get("y_col")
+        # Validate columns exist
+        if x not in df.columns or y not in df.columns:
+            print(f"Missing expected columns for {chart['csv']}: {x} or {y} not in {list(df.columns)}")
+            continue
+
         if chart["type"] == "barh":
-            plot_barh(df, chart["x"], chart["y"], chart["title"], chart["caption"], out_path)
+            # ensure categorical y ordering preserved
+            plot_barh(df, x, y, chart["title"], chart["caption"], out_path)
         elif chart["type"] == "bar":
-            plot_bar(df, chart["x"], chart["y"], chart["title"], chart["caption"], out_path)
+            plot_bar(df, x, y, chart["title"], chart["caption"], out_path)
         elif chart["type"] == "box":
-            plot_box(df, chart["x"], chart["y"], chart["title"], chart["caption"], out_path)
+            plot_box(df, x, y, chart["title"], chart["caption"], out_path)
         elif chart["type"] == "line":
-            plot_line(df, chart["x"], chart["y"], chart["title"], chart["caption"], out_path)
+            plot_line(df, x, y, chart["title"], chart["caption"], out_path)
         elif chart["type"] == "pie":
-            plot_pie(df, chart["x"], chart["y"], chart["title"], chart["caption"], out_path)
+            plot_pie(df, x, y, chart["title"], chart["caption"], out_path)
         else:
             print(f"Unknown chart type: {chart['type']}")
 
