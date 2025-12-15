@@ -22,6 +22,12 @@ from src.metrics.core_metrics import (
     compute_top_authors_by_weighted_rating,
     compute_top_books_by_ratings_count,
     compute_top_books_by_text_reviews,
+        compute_author_engagement_index,
+        compute_publisher_engagement,
+        compute_page_length_engagement_delta,
+        compute_engagement_uplift_canonical,
+        compute_publisher_language_rankings,
+        compute_publication_year_rolling_stats,
 )
 
 LOGGER = logging.getLogger(__name__)
@@ -135,7 +141,14 @@ def run(args: argparse.Namespace) -> None:
             df_clean,
             min_books=args.language_min_books,
         ),
-        "M11_duplicate_share": compute_duplicate_share(df_clean),
+            "M11_duplicate_share": compute_duplicate_share(df_clean),
+            # Optional / extras metrics
+            "M2_author_engagement_index": compute_author_engagement_index(df_clean),
+            "M6_page_length_engagement_delta": compute_page_length_engagement_delta(df_clean),
+            "M10_publisher_engagement": compute_publisher_engagement(df_clean),
+            "M12_engagement_uplift_canonical": compute_engagement_uplift_canonical(df_clean),
+            "M13_publisher_language_rankings": compute_publisher_language_rankings(df_clean),
+            "M14_publication_year_rolling_stats": compute_publication_year_rolling_stats(df_clean),
     }
 
     for metric_name, table in tables.items():

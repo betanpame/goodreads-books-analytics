@@ -1,6 +1,2924 @@
-publisher,average_rating
-Penguin Random House,4.12
-HarperCollins,4.05
-Simon & Schuster,3.98
-Hachette,4.00
-Macmillan,4.08
+publisher,language_code,average_rating,p75_ratings_count,book_count
+Square One Publishers,eng,5.0,5.0,1
+Vantage Press,eng,5.0,4.0,1
+Chartwell Books,eng,5.0,2.0,1
+Courage Books,eng,5.0,2.0,1
+Academica Press,eng,5.0,1.0,1
+Boosey & Hawkes Inc,eng,5.0,1.0,1
+Schirmer Mosel,eng,5.0,1.0,1
+T&T Clark Int'l,eng,5.0,1.0,1
+University Press of New England,eng,5.0,1.0,1
+Y Lolfa,wel,5.0,1.0,1
+Oxford University Press  USA,grc,5.0,0.0,1
+Raintree,eng,5.0,0.0,1
+Texas A&M University Press,eng,5.0,0.0,1
+Lulu.com,eng,4.91,11.0,1
+Welcome Books,en-US,4.88,8.0,1
+Teacher's Pet Publications,eng,4.86,5.0,1
+Universe Publishing(NY),eng,4.83,6.0,1
+F. Meiner,ger,4.78,0.0,1
+Skinner House Books,eng,4.75,8.0,1
+Steidl,eng,4.73,144.0,1
+Phaidon Press,en-GB,4.72,102.0,1
+Four Ninety-Eight Productions,eng,4.72,29.0,1
+Zondervan Publishing House,eng,4.7,4166.0,1
+Boston Common Press,eng,4.69,26.0,1
+Harrison House,eng,4.67,9.0,1
+Servant Publications,eng,4.67,6.0,1
+Multnomah,eng,4.65,15.5,2
+Time Warner Books UK,eng,4.63,303.0,1
+Western Publishing Company  Golden Books,eng,4.62,23.0,1
+Pearson Education,eng,4.62,17.0,1
+Library of America (NY),eng,4.61,1495.0,1
+Veritas Publishing,en-US,4.61,186.0,1
+Addison Wesley Publishing Company,en-US,4.6,78.0,1
+Fellowship for the Performance,eng,4.6,28.0,1
+Collins Modern Classics,eng,4.59,141.0,1
+Island Press,eng,4.59,16.0,1
+Penguin Classics Deluxe Edition,eng,4.58,18874.0,1
+Longmeadow Press,en-US,4.58,433.0,1
+Rufus Publications,eng,4.58,38.0,1
+Readers Digest,eng,4.58,12.0,1
+Barbour Books,eng,4.58,8.0,1
+Loeb Classical Library 307,grc,4.57,14.0,1
+皇冠文化出版有限公司,zho,4.5649999999999995,87.0,2
+Bloomsbury UK,eng,4.56,3141.0,1
+Dhv der Hörverlag,ger,4.56,313.0,1
+Black Classic Press,eng,4.56,157.0,3
+東立,zho,4.55625,5.25,8
+Russell Enterprises,eng,4.55,161.0,1
+ガンガンコミックス,jpn,4.548,22.0,5
+Twin Palms Publishers,eng,4.54,58.0,1
+CRC Press,en-US,4.53,15.0,1
+Harvest House Publishers,en-GB,4.53,14.0,1
+Loeb Classical Library 443,eng,4.52,27.0,1
+Abdo Publishing Company,en-US,4.51,33.0,1
+Canadian Broadcasting Corporation (CBC Audio),eng,4.505,58.5,2
+Arden Shakespeare,eng,4.5,122.0,1
+St. Augustines Press,eng,4.5,26.0,1
+A K PETERS,eng,4.5,17.0,1
+Collection of Historical Scientific Instruments,eng,4.5,10.0,1
+University of California Press,en-GB,4.5,10.0,1
+Aris and Phillips,grc,4.5,4.0,1
+Booklocker.com  Inc.,eng,4.5,2.0,1
+Bryn Mawr Commentaries,eng,4.5,2.0,1
+Lone Oak Press,eng,4.5,2.0,1
+Michael Joseph Ltd./Penguin Books Ltd.,eng,4.5,1.0,1
+Crossing Press,en-GB,4.49,12105.0,1
+Emece Editores,spa,4.49,5637.0,1
+FaithWords,eng,4.49,718.0,1
+Liguori Publications,eng,4.49,29.0,1
+VIZ Media,eng,4.480769230769231,1776.0,13
+Ignatius Press,en-US,4.48,585.25,2
+Peerage Books,eng,4.48,293.0,1
+Hakusen Sha,jpn,4.48,19.0,1
+Hal Leonard Publishing Corporation,eng,4.475,52.0,2
+Triple Crown Publications,eng,4.47,499.0,1
+Bloomsbury,lat,4.47,195.0,1
+Thorndike Press Large Print,eng,4.47,147.0,1
+Smithsonian Books,eng,4.47,41.0,1
+Westholme Publishing,eng,4.47,22.0,1
+Bloomsbury USA Childrens,gla,4.47,11.0,1
+Grove Weidenfeld,en-US,4.46,5018.0,1
+America's Test Kitchen,eng,4.46,154.0,2
+Viking Books for Young Readers,eng,4.46,129.0,1
+Sovereign World,eng,4.46,34.0,1
+MIT Press,en-US,4.45,3654.0,1
+Our Daily Bread Publishing,eng,4.45,1372.0,1
+AA World Services,en-US,4.45,495.0,1
+Dabel Brothers Productions,eng,4.45,276.0,1
+Voyageur Press,eng,4.45,115.75,2
+Fab Press,eng,4.45,114.0,1
+Ash Tree Publishing,eng,4.45,113.0,1
+BCP/Duckworth Publishing,spa,4.45,90.0,1
+Backstage Books,eng,4.45,53.0,1
+Random House Inc.,eng,4.45,24.0,1
+Alcoholics Anonymous World Services Inc,eng,4.45,22.0,1
+Andrews McMeel Publishing,eng,4.445454545454545,22091.5,11
+Veritas Publishing,eng,4.445,679.25,2
+Penguin Signet,eng,4.44,207869.0,1
+Modern Library (NY),eng,4.44,1464.0,1
+Material World,eng,4.44,1455.0,1
+Hazelden Publishing,en-US,4.44,955.0,1
+Gun Digest Books,en-US,4.44,38.0,1
+Mikaya Press,eng,4.44,37.0,1
+Fireside Books,spa,4.44,9.0,1
+Disney Editions,eng,4.44,7.0,1
+Johnson Publishing Company (IL),eng,4.44,6.0,1
+Self-Realization Fellowship Publishers,spa,4.44,0.0,1
+DK,eng,4.4399999999999995,929.25,2
+Starfire,eng,4.43,98611.0,1
+Simon & Schuster; Media Tie-In edition,eng,4.43,82525.0,1
+Tanglewood,en-GB,4.43,57737.0,1
+Bollingen/Princeton University Press (NJ),eng,4.43,2318.0,1
+Golden Books,en-US,4.43,1304.0,1
+Triple Crown Publications,en-US,4.43,976.0,1
+Seal Press,eng,4.43,42.0,1
+SCM Press,eng,4.43,27.0,1
+Possibilities,en-US,4.43,7.0,1
+Praeger,eng,4.43,6.0,1
+Arthur A. Levine Books / Scholastic Inc.,eng,4.42,597244.0,1
+Yapı Kredi Yayınları,tur,4.42,1000.0,1
+William Heinemann Ltd.,eng,4.42,808.0,1
+Little  Brown & Company,en-US,4.42,335.0,1
+National Park Service,eng,4.42,239.0,1
+Bloomsbury USA Children's Books,lat,4.42,86.0,1
+Plexus Publishing Ltd,eng,4.42,62.0,1
+BBC Physical Audio,eng,4.4159999999999995,17.0,5
+Ullstein Tb,ger,4.415,7.75,2
+Blackstone Audiobooks,en-GB,4.41,3598.0,1
+North Atlantic Books,en-US,4.41,2948.0,1
+Limelight Editions,eng,4.41,2006.0,1
+Chosen Books,eng,4.41,698.25,2
+Bright Sky Press,eng,4.41,602.0,1
+George Braziller Inc.,eng,4.41,17.0,1
+Ullstein Buchverlage GmbH & Co. KG / Ullstein Tas,ger,4.41,6.0,1
+Miramax Books,eng,4.404999999999999,4474.0,2
+Arthur A. Levine,eng,4.4,11515.0,1
+Viking Adult,en-US,4.4,70.0,1
+聯經出版事業股份有限公司,zho,4.4,25.5,2
+A & C Black (Childrens books),eng,4.4,5.0,1
+North Atlantic Books,eng,4.3999999999999995,194.5,3
+Harvest House Publishers,en-US,4.395,1119.5,2
+Banner of Truth,eng,4.390000000000001,7130.0,2
+University of Texas Press,eng,4.39,12613.0,1
+One World/Ballantine,eng,4.39,2623.0,1
+Bulfinch,eng,4.39,1885.0,1
+William Morrow & Company  Inc.,eng,4.39,1004.0,1
+Van Patten Publishing,eng,4.39,431.0,1
+Harper Audio,eng,4.39,289.0,1
+Piatkus Books,en-US,4.39,142.0,1
+Avenel Books,eng,4.39,116.0,1
+Yoruba Theological Archministry,eng,4.39,39.0,1
+HarperTorch,spa,4.39,0.0,1
+Doubleday & Company  Inc.,eng,4.38,183869.0,1
+Book Publishing Company (TN),eng,4.38,5166.0,1
+Encounter Books,eng,4.38,2579.0,1
+Dafina Books,en-US,4.38,1763.0,1
+Liveright Publishing Corp.,eng,4.38,1206.0,1
+Abstract Studio,eng,4.38,999.0,1
+Urban Books,en-US,4.38,971.0,1
+Wordsworth Classics,eng,4.38,96.0,1
+Actes Sud,fre,4.38,21.0,1
+Reader's Digest Association,eng,4.38,13.0,1
+Gaia Books,spa,4.38,6.0,1
+Stonewall Inn Editions,eng,4.37,19747.0,1
+Dark Horse Manga,en-US,4.37,4831.0,1
+Orbis Books,en-US,4.37,1311.0,1
+Hearst Communications,eng,4.37,1160.0,1
+Taunton Press,eng,4.37,996.0,2
+Wiley (TP),eng,4.37,660.0,1
+LSU Press,eng,4.37,173.0,1
+Lodestar Books,eng,4.37,112.0,1
+School Specialty Publishing,eng,4.37,89.0,1
+Salani,ita,4.37,36.0,1
+ビブロス,jpn,4.37,4.0,1
+Ace Hardcover,eng,4.36,50427.0,1
+Purple House Press,eng,4.36,20235.0,1
+Feiwel & Friends,en-US,4.36,12837.0,1
+Geddes & Grosset,eng,4.36,5906.0,1
+Broadway,eng,4.36,5362.0,1
+Rider,eng,4.36,1959.0,1
+Beacon Press (Boston),eng,4.36,391.0,1
+Overeaters Anonymous  Incorporated,en-US,4.36,213.0,1
+Semiotext(e),eng,4.36,124.0,1
+Ballantine Books,ale,4.36,102.0,1
+Wayne State University Press,en-US,4.36,78.0,1
+Aurum Press,eng,4.36,22.0,1
+Fleming H. Revell Company,eng,4.36,20.0,1
+Cartago,eng,4.36,4.0,1
+William Morrow,en-GB,4.355,5757.0,2
+Liveright/W.W. Norton & Company  Inc.,eng,4.35,19542.0,1
+Vintage Books a division of Random House,eng,4.35,4022.0,1
+Regal Books,eng,4.35,767.0,1
+Dover Publications,fre,4.35,569.0,1
+Futura,en-GB,4.35,188.0,1
+Morpheus International,eng,4.35,115.0,1
+Vida,spa,4.35,26.0,1
+McGraw-Hill Medical Publishing,eng,4.35,23.0,1
+BBC Audiobooks Ltd,eng,4.35,17.0,1
+Redleaf Press,eng,4.35,16.0,1
+Shueisha,jpn,4.346666666666667,426.0,3
+Gemstone Publishing,eng,4.343333333333334,1713.0,3
+Be Beautiful,eng,4.343333333333334,497.5,3
+Harpercollins Childrens Books,eng,4.34,349247.0,1
+Golden Books,eng,4.34,85990.0,2
+Bantam Books  Inc.,eng,4.34,85927.0,1
+Bloomsbury Publishing,eng,4.34,10376.5,2
+Crossroad,en-US,4.34,8228.0,1
+Tyndale Momentum,eng,4.34,6861.0,1
+New Press (NY),eng,4.34,718.0,1
+University Of Minnesota Press,eng,4.34,641.0,1
+Bastei Lübbe,ger,4.34,256.0,1
+Douglas & McIntyre,eng,4.34,256.0,1
+Gramercy,eng,4.34,239.5,3
+Plaza & Janes Editores Sa,spa,4.34,64.0,1
+Cook's Illustrated,eng,4.335,30.0,2
+Little Simon,en-US,4.33,21875.0,1
+Phoenix Press (UK),eng,4.33,1552.0,1
+Everyman's Library Classics,eng,4.33,607.0,1
+Mirrorstone,eng,4.33,577.0,1
+Destiny Image Incorporated,eng,4.33,545.0,1
+Edimat Libros,eng,4.33,116.0,1
+Acropolis Books (NY),eng,4.33,80.0,1
+Saunders,en-US,4.33,55.0,1
+Emecé Editores,spa,4.33,39.0,2
+Barn Owl Books,eng,4.33,35.0,1
+Ivan R. Dee  Publisher,en-GB,4.33,16.0,1
+Mayfield Publishing Company (NY),eng,4.33,9.0,1
+University of Pittsburgh Press,eng,4.33,9.0,1
+Checkmark Books,eng,4.33,8.0,1
+Cherry Lane Music Company,eng,4.33,6.0,1
+Cambridge University Press,en-GB,4.33,5.0,1
+Random House  for Young Readers,eng,4.33,3.0,1
+Manchester University Press,eng,4.33,0.0,1
+Métailié,fre,4.33,0.0,1
+University of Washington Press,en-US,4.324999999999999,70.5,2
+Dutton Children's Books,eng,4.32,6926.0,2
+Simon Publications,eng,4.32,3146.0,1
+Holloway House,en-US,4.32,1493.0,1
+Columbia Pictures Pubns,eng,4.32,1436.0,1
+TokyoPop,en-GB,4.32,562.0,1
+Basic Books (AZ),eng,4.32,328.0,1
+Birlinn Ltd,eng,4.32,318.0,1
+Tougher Disguises,eng,4.32,69.0,1
+Child's Play International,en-US,4.32,65.0,1
+Disney Enterprises,eng,4.32,34.0,1
+Edaf S.A.,spa,4.32,30.0,1
+Urion Press,eng,4.32,19.0,1
+Hovel Audio,eng,4.32,15.75,2
+Webster's New World,en-US,4.32,14.0,1
+Paul Dry Books,eng,4.318,63.0,5
+Whitaker House,eng,4.3149999999999995,1401.75,2
+Christian Classics,eng,4.3100000000000005,2051.25,2
+Presidio Press,eng,4.31,21876.0,1
+Conari Press,eng,4.31,5495.0,1
+Mariner Books,fre,4.31,3045.0,1
+Windsor Golden Series,eng,4.31,406.0,1
+Open Heaven Publications,eng,4.31,126.0,1
+Doubleday Books for Young Readers,en-US,4.31,125.0,1
+Southern Methodist University Press,eng,4.31,67.0,1
+Orbis Books,eng,4.31,62.0,1
+Festival Books,eng,4.31,56.0,1
+Batsford,eng,4.31,51.0,1
+Rux Martin/Houghton Mifflin Harcourt,eng,4.31,34.0,1
+Teaching Resources,eng,4.31,9.5,3
+Puffin Audiobooks,eng,4.31,6.0,1
+Planeta,spa,4.305,3843.75,2
+Little Bookroom,eng,4.3,5379.0,1
+Del Rey Ballantine Random House,eng,4.3,3875.0,1
+Plaza y Janes,eng,4.3,1120.0,1
+Ave Maria Press,en-US,4.3,782.0,1
+Lulu Press,eng,4.3,493.0,1
+The Modern Library New York,eng,4.3,451.0,1
+Universe,eng,4.3,450.0,1
+Oberlin College Press,eng,4.3,169.0,1
+Festival,eng,4.3,150.0,1
+The Crossroad Publishing Company,eng,4.3,98.0,1
+East Bay Municipal Utility District,en-US,4.3,47.0,1
+Эксмо,rus,4.3,10.0,1
+Celestial Arts,eng,4.295,658.5,2
+Harvard University Press (Cambridge),eng,4.295,94.0,2
+Library of America,eng,4.2919148936170215,526.5,47
+Lama Foundation (San Cristobal  NM),en-US,4.29,20343.0,1
+Little  Brown & Company (Boston/Toronto),eng,4.29,7867.75,2
+Tom Doherty Associates/Orb Books,eng,4.29,4150.0,1
+Penguin Books (NY),eng,4.29,1505.0,1
+Harbor Press,en-US,4.29,792.0,1
+Nonpareil Books,eng,4.29,489.0,1
+Smithmark Publishers,en-US,4.29,476.0,1
+Universe,en-GB,4.29,385.0,1
+VeloPress,eng,4.29,282.0,1
+McGraw-Hill Professional Publishing,eng,4.29,138.75,2
+Minnesota Heritage Publishing,eng,4.29,58.0,1
+Healing Arts Press,eng,4.29,52.0,1
+Bantam Press,en-GB,4.29,20.0,1
+Applause Books,en-US,4.29,17.0,1
+Center Point,eng,4.29,10.0,1
+Ivan R. Dee,en-US,4.29,7.0,1
+HarperCollins (SanFrancisco),eng,4.29,4.0,1
+Lippincott Williams & Wilkins,eng,4.29,3.0,1
+Workman Publishing Company,en-US,4.285,15958.75,2
+Warne,eng,4.285,3994.25,6
+New Directions Publishing Corporation,mul,4.285,3429.5,2
+HarperTeen,en-US,4.283333333333333,1140.0,3
+講談社,jpn,4.283333333333333,6.0,6
+VIZ Media LLC,eng,4.282105263157895,10455.0,76
+Simon Pulse,en-US,4.28,72386.0,1
+Crossroad,eng,4.28,7551.0,1
+Taylor Productions Ltd,eng,4.28,5702.0,1
+Middleway Press,eng,4.28,732.0,1
+iUniverse,eng,4.28,591.0,3
+Marlowe & Company,eng,4.28,553.0,1
+Inner Traditions International,eng,4.28,330.0,1
+Schirmer/Mosel,eng,4.28,303.0,1
+Puffin Books (Penguin Books),eng,4.28,266.0,1
+New World Library,eng,4.279999999999999,119998.5,2
+University Press of Florida,eng,4.279999999999999,396.75,2
+Omnibus Press,eng,4.279999999999999,10.75,2
+Tyndale House Publishers,eng,4.278235294117647,15869.0,17
+Carlsen,ger,4.2775,27.0,4
+Image Comics,eng,4.275,28034.75,4
+Crossway Books,eng,4.273333333333333,6164.0,9
+IDW Publishing,eng,4.2700000000000005,8717.5,3
+HarperPrism,eng,4.27,46139.0,1
+Owl Books,eng,4.27,12861.0,2
+Klincksieck,fre,4.27,2122.0,1
+Howard University Press,eng,4.27,2088.0,1
+Abingdon Press,eng,4.27,1967.0,1
+MacMillan UK,eng,4.27,913.0,1
+Ballantine,en-US,4.27,413.0,1
+Large Print Press,eng,4.27,276.0,1
+Regnery History,eng,4.27,242.0,1
+Do-Not Press,eng,4.27,63.0,1
+Ignatius Press,en-GB,4.27,51.0,1
+RH Audio,eng,4.27,15.0,1
+Recorded Books  Inc.,eng,4.268,151.0,5
+Castle Books,eng,4.26,40147.5,3
+Darton  Longman & Todd,eng,4.26,8024.0,1
+Phoenix Press,eng,4.26,6726.0,1
+New Falcon Publications,eng,4.26,5394.0,1
+Re/Search Publications,eng,4.26,1290.0,1
+Drawn and Quarterly,eng,4.26,705.0,2
+Bureau of Public Secrets,eng,4.26,678.0,1
+Yearling,en-US,4.26,518.5,2
+Harcourt  Brace  Jovanovich,eng,4.26,460.0,1
+Hippo/Scholastic,eng,4.26,341.0,1
+Scribner Classics,en-US,4.26,219.0,1
+Scribner Classics,eng,4.26,113.0,1
+RH Audio,en-US,4.26,77.0,1
+Avenel Books,en-US,4.26,66.0,1
+Taschen,spa,4.26,56.0,1
+Charnwood,eng,4.26,18.0,1
+Moody Publishers,eng,4.258,165.25,6
+Basic Books,en-US,4.255833333333333,3243.5,12
+Paulist Press,eng,4.255,1016.5,2
+Arkana/Penguin,en-US,4.255,626.0,2
+William Morrow / HarperCollins / Harper Perennial,eng,4.25,135109.0,1
+William Morrow / Harper,eng,4.25,5036.0,1
+Arcade Publishing,eng,4.25,1771.0,1
+Simon & Schuster Children's Publishing,eng,4.25,367.0,1
+Everyman Chess,eng,4.25,336.25,2
+Timeless Texts,eng,4.25,317.0,1
+Quality Paperback Book Club,eng,4.25,274.75,2
+Exact Change,eng,4.25,261.0,1
+Oxford University Press,en-GB,4.25,217.0,1
+Robert Rose,eng,4.25,155.0,1
+Thorndike Press Large Print,en-US,4.25,139.0,1
+Norma Editorial,spa,4.25,104.0,1
+Faber & Faber Ltd.,eng,4.25,85.0,1
+Recorded Books  Inc.,en-US,4.25,69.0,1
+Audiogo,en-GB,4.25,48.0,1
+That Patchwork Place,en-US,4.25,24.0,1
+Sidran Press,en-US,4.25,12.0,1
+Allen Lane,en-GB,4.25,7.0,1
+Chelsea House Publishers,eng,4.25,4.0,1
+Pavement Saw Press,eng,4.25,4.0,1
+Disney Hyperion Books,eng,4.245,450570.75,2
+Atheneum,eng,4.245,1715.0,2
+Wings Books,eng,4.243333333333333,1918.5,3
+Newmarket Press,eng,4.242,155.0,5
+Tom Doherty Tor Fantasy,eng,4.24,148074.0,1
+Black Sparrow Press,eng,4.24,12358.0,1
+Hartley & Marks Publishers,en-US,4.24,7564.0,1
+Multnomah Books,eng,4.24,4828.0,2
+Avalon Travel,eng,4.24,3569.0,1
+The Putnam & Grosset Group,eng,4.24,1599.0,1
+Nelson Current,eng,4.24,1069.0,1
+Birlinn,eng,4.24,844.0,1
+Hal Leonard Pub Corp,eng,4.24,191.0,1
+Harper Design,eng,4.24,150.0,1
+Grand Central Life & Style,eng,4.24,69.0,1
+Montlake Romance,eng,4.24,20.0,1
+Rick Steves,eng,4.24,12.0,1
+Arléa,fre,4.24,6.0,1
+New American Library,eng,4.239999999999999,1531.5,3
+集英社,jpn,4.2375,283.75,12
+Gramercy Books,eng,4.235454545454545,39140.0,11
+David R. Godine,eng,4.234999999999999,249.25,2
+Gramercy,en-US,4.234999999999999,156.5,2
+Glénat,fre,4.234999999999999,36.0,8
+小学館,jpn,4.232666666666667,15.0,15
+Rupa & Co,eng,4.23,184293.0,1
+Virago Press (UK),en-US,4.23,179639.0,1
+FaithWords,en-US,4.23,20526.0,2
+Blackwell Publishing  Inc.,eng,4.23,11067.0,1
+Ulysses Press,en-GB,4.23,9023.0,1
+Pomegranate Communications,eng,4.23,2552.0,1
+Artisan,eng,4.23,563.0,2
+The Harvill Press,eng,4.23,509.75,2
+Henry Holt and Company,eng,4.23,503.75,2
+Readers Digest.,eng,4.23,420.0,1
+Gibbs Smith Publishers,eng,4.23,147.0,1
+Pimsleur,eng,4.23,58.0,1
+Monolith Graphics,en-US,4.23,54.0,1
+Troll Communications,en-US,4.23,23.0,1
+Benziger,ger,4.23,9.0,1
+Motilal Banarsidass,eng,4.23,9.0,1
+Dervy,fre,4.23,1.0,1
+Random House for Young Readers,eng,4.226,659.0,5
+Copper Canyon Press,eng,4.225,1806.25,2
+Gallimard Jeunesse,fre,4.225,274.5,2
+New York Review of Books,eng,4.2219999999999995,1895.0,5
+The Monacelli Press,eng,4.220000000000001,15.5,2
+New English Library (Hodder & Stoughton),eng,4.22,597244.0,1
+Vertigo,eng,4.22,33597.0,34
+Griffin,eng,4.22,31801.5,2
+Liveright,eng,4.22,12438.0,1
+Harvest / Harcourt,eng,4.22,5325.0,1
+MTV Books,en-US,4.22,2762.0,1
+Belknap Press of Harvard University Press,eng,4.22,2090.5,2
+New Directions Publishing,eng,4.22,981.0,1
+New World Library,en-GB,4.22,971.0,1
+Del Rey Books (NY),eng,4.22,622.0,1
+HarperOne,spa,4.22,409.0,1
+Perigee Trade,en-US,4.22,148.0,1
+Fleming H Revell Co,en-US,4.22,96.0,1
+Museum of Modern Art,eng,4.22,70.0,1
+Critica (Grijalbo Mondadori),spa,4.22,64.0,1
+Princeton Architectural Press,eng,4.22,56.0,1
+Fount,en-US,4.22,52.0,1
+Black Lizard Books,eng,4.22,34.0,1
+英文漢聲出版股份有限公司,zho,4.22,27.0,1
+Motorbooks International,eng,4.22,22.0,1
+BBC Worldwide,eng,4.22,10.0,1
+Harvard University Press,mul,4.217142857142857,311.0,7
+The Overlook Press,eng,4.215,11973.25,2
+Keep It Simple Books,eng,4.215,1286.75,2
+Thomas Nelson,en-US,4.214,1094.0,5
+Loeb Classical Library,mul,4.212000000000001,30.0,5
+Viz Media,eng,4.211666666666667,2802.25,12
+Houghton Mifflin Harcourt,eng,4.210333333333334,7325.75,30
+Bantam Spectra (NY),eng,4.21,20051.0,1
+Albury Publishing,eng,4.21,19217.0,1
+Holt McDougal,eng,4.21,10659.75,6
+Dover Publications,rus,4.21,8944.0,1
+Tyndale House Publishers,en-US,4.21,5870.0,4
+HarperOne,en-CA,4.21,5236.0,1
+Philomel Books,eng,4.21,3225.5,3
+Elloras Cave,eng,4.21,2128.0,1
+Science Fiction Book Club,en-US,4.21,1585.0,1
+Egmont Books Ltd,eng,4.21,1432.0,1
+The New York Review Children's Collection,en-GB,4.21,900.0,1
+Bold Strokes Books,eng,4.21,820.0,2
+Rba Libros,spa,4.21,713.0,1
+Wisdom Publications,eng,4.21,554.0,4
+Kent State University Press,eng,4.21,131.0,1
+Penguin Group(CA),en-GB,4.21,101.0,1
+Thomas Y. Crowell Company,eng,4.21,70.0,1
+Stanford University Press (Stanford  CA),en-US,4.21,64.0,1
+Hay House,en-GB,4.21,61.0,1
+Harvard University Press,grc,4.21,58.0,1
+Summit University Press,en-GB,4.21,55.0,1
+William B. Eerdmans Publishing Company,en-US,4.21,44.0,1
+Interlink Publishing Group,eng,4.21,35.0,1
+Norton and Co.,eng,4.21,34.0,1
+Abacus Books,en-GB,4.21,29.0,1
+Anchor Canada,eng,4.21,28.0,1
+Acento Editorial,spa,4.21,5.0,1
+Hachette Jeunesse,fre,4.21,3.0,1
+Barefoot Books,eng,4.21,1.0,1
+HarperCollinsChildren’sBooks,eng,4.2075,20500.5,4
+Abdo Publishing Company,eng,4.205,372.25,2
+Schocken Books,eng,4.203333333333333,2127.0,3
+Little  Brown & Company,eng,4.202857142857143,1131.5,7
+Hyperion Books,eng,4.2,456009.75,2
+DAW Fantasy,eng,4.2,20025.0,1
+Pocket Books/Simon & Schuster (NY),eng,4.2,17025.0,1
+Addison-Wesley Professional,eng,4.2,10979.0,3
+Vertigo,en-GB,4.2,2583.0,1
+Two Plus Two Publishing LLC,eng,4.2,1815.25,2
+Miramax,en-US,4.2,1459.5,2
+University of Arkansas Press,eng,4.2,542.0,1
+Sterling,en-GB,4.2,500.0,1
+Holloway House,eng,4.2,474.0,1
+Union Square Press,eng,4.2,372.0,1
+Headline Book Pub Ltd,eng,4.2,237.0,1
+Kregel Publications,en-US,4.2,225.0,1
+Peter Owen Ltd,eng,4.2,175.0,1
+Hub City Press,eng,4.2,155.0,1
+Ave Maria Press,eng,4.2,122.0,1
+Penguin UK,en-GB,4.2,116.0,1
+Melodrama Publishing,en-US,4.2,110.0,1
+Praeger Publishers,eng,4.2,106.0,1
+Bradford Book,en-US,4.2,10.0,1
+Clarity Press,eng,4.2,10.0,1
+Malhavoc Press,eng,4.2,5.0,1
+Aris & Phillips,eng,4.2,4.0,1
+Nelson Reference & Electronic Publishing,en-US,4.2,3.0,1
+Howard Books,eng,4.199999999999999,1299.5,2
+Bantam Skylark,eng,4.199999999999999,185.25,2
+Princeton University Press (NJ),eng,4.195,616.5,2
+Addison Wesley Publishing Company,eng,4.1925,135764.5,4
+W.W. Norton & Company (NYC),eng,4.19,388782.0,1
+Rizzoli,eng,4.19,24143.0,3
+Shambhala Publications,eng,4.19,21673.0,1
+Onyx Books,en-US,4.19,1196.0,1
+Penguin Books Canada,eng,4.19,924.0,1
+Kids Can Press,eng,4.19,645.0,1
+Park Street Press,eng,4.19,404.0,1
+University of Texas Press,en-US,4.19,337.0,1
+MacMillan Publishing Company,en-US,4.19,217.0,1
+Cedar Books,en-US,4.19,210.0,1
+Civitas Books,eng,4.19,153.0,1
+Princeton University Press,fre,4.19,134.0,1
+Blackstone Publishing,eng,4.19,60.0,1
+Steerforth Press,eng,4.19,48.0,1
+OUP Oxford,en-GB,4.19,15.0,1
+Microsoft Press,eng,4.1899999999999995,3728.0,2
+Vintage Classics,en-US,4.1850000000000005,5556.25,2
+Penguin (Business),eng,4.18,60946.0,1
+Houghton Mifflin,enm,4.18,7760.0,1
+Apress,eng,4.18,2236.75,2
+HarperResource,eng,4.18,2072.0,1
+Mariner Books,en-GB,4.18,1097.0,1
+Providence Forum Press,eng,4.18,694.0,1
+Lectorum,spa,4.18,451.0,1
+Harcourt Brace & Company,eng,4.18,296.0,1
+Jump At The Sun,eng,4.18,222.0,1
+1st World Library,eng,4.18,215.0,1
+Dominion Press,eng,4.18,120.0,1
+BradyGames,eng,4.18,116.0,8
+De Boekerij,nl,4.18,67.0,1
+Titan,en-GB,4.18,61.0,1
+High Roads Media,eng,4.18,48.0,1
+Princeton University Press,en-US,4.18,39.5,2
+Lectorum Publications,spa,4.18,29.0,1
+Pi Press,en-US,4.18,24.0,1
+Warne,en-US,4.18,19.0,1
+Casa Creacion,spa,4.18,13.0,1
+Kindle,eng,4.18,9.0,1
+Folio,fre,4.175000000000001,168.5,2
+Quest Books,en-US,4.175000000000001,72.0,2
+Harper Trophy,eng,4.17,122386.25,2
+Noonday Press,eng,4.17,60656.0,1
+Hampton Roads Publishing Company,eng,4.17,19995.75,2
+New York: Random House,eng,4.17,8967.0,1
+Mariner Books,en-CA,4.17,5106.0,1
+Serpents Tail,eng,4.17,3158.0,1
+Bantam Classics,en-US,4.17,1464.0,1
+Routledge Taylor & Francis Books Ltd imprint,eng,4.17,1437.0,1
+Scholastic  Inc.,en-GB,4.17,1425.0,1
+Eos,en-US,4.17,1312.0,1
+Scribner,en-CA,4.17,1024.0,1
+Prometheus Books,en-US,4.17,938.0,2
+Zondervan Publishing Company,en-US,4.17,811.0,1
+Cleis Press,eng,4.17,569.75,4
+Kyle Books,eng,4.17,206.75,2
+South End Press,eng,4.17,190.0,1
+Gauntlet Press,eng,4.17,149.25,2
+Sholom Aleichem Family Publications,eng,4.17,146.0,1
+Galahad Books,eng,4.17,111.0,1
+J'AI LU,fre,4.17,105.0,1
+The Bodley Head Ltd,eng,4.17,97.0,1
+Harvill Press,en-GB,4.17,80.0,1
+Bolchazy-Carducci Publishers,lat,4.17,63.0,1
+Random House Value Publishing/TheViking Press,eng,4.17,20.0,1
+dtv,ger,4.17,16.0,1
+l'ecole des loisirs,fre,4.17,13.0,1
+Collins,eng,4.17,5.0,1
+Blanvalet Taschenbuch,ger,4.17,3.0,1
+Turtleback Books Distributed by Demco Media,eng,4.17,3.0,1
+University of California Press,en-US,4.168,228.0,5
+J'ai lu,fre,4.16625,85.0,8
+Henry Holt and Co. (BYR),en-US,4.165,4668.75,2
+Penguin Workshop,eng,4.165,1637.75,2
+Potomac Books,eng,4.165,1440.25,2
+HarperCollins Leadership,eng,4.165,1284.5,2
+DK Publishing,eng,4.165,99.75,2
+Sarah Crichton Books,eng,4.16,147820.0,1
+Riverhead Hardcover,eng,4.16,80161.0,1
+Harpercollins Children's Books,eng,4.16,37851.0,1
+InterVarsity Press,en-US,4.16,9632.0,1
+Sasquatch Books,en-GB,4.16,7703.0,1
+Chelsea House Publications,eng,4.16,3763.0,6
+Harpperen,en-US,4.16,1779.0,1
+El Paso Norte Press,eng,4.16,333.5,2
+Random House Audio,en-GB,4.16,267.0,1
+Verso,en-GB,4.16,221.0,1
+Addison-Wesley Professional,en-GB,4.16,140.0,1
+Simon & Schuster Libros en Español,spa,4.16,129.0,1
+Random House Children's Books,eng,4.16,112.0,1
+Wiley-Blackwell,en-US,4.16,75.0,1
+Macmillan Audio,en-US,4.16,68.0,1
+US Naval Institute Press,eng,4.16,56.0,1
+Secker,eng,4.16,48.0,1
+Pavilion Press (Wi),en-US,4.16,42.0,1
+Grijalbo,spa,4.16,7.0,1
+Knopf Books for Young Readers,eng,4.156000000000001,46753.0,5
+American Girl Publishing Inc,en-US,4.154999999999999,146.75,2
+Everyman's Library,eng,4.154444444444445,1999.25,36
+Harmony,en-US,4.154,616.0,5
+Beacon Press,eng,4.153333333333333,3023.0,9
+Chicago Review Press,eng,4.152,10640.0,5
+Bloomsbury Childrens Books,eng,4.15,81090.0,1
+Arrow Books Ltd,eng,4.15,50816.0,1
+Tor,eng,4.15,15208.5,4
+Houghton Mifflin/Seymour Lawrence,eng,4.15,8721.0,1
+Renaissance Books,en-US,4.15,6471.0,1
+Microsoft Press,en-US,4.15,5376.25,2
+Tyndale House Publishers,en-GB,4.15,2855.0,1
+Graphics Press LLC,eng,4.15,2045.0,1
+Laurel Press,en-US,4.15,1045.0,1
+Little Simon,eng,4.15,434.0,1
+Winter on the Farm (My First Little House),eng,4.15,424.0,1
+McGraw-Hill Science/Engineering/Math,eng,4.15,188.0,1
+Owlet Paperbacks,en-US,4.15,79.0,1
+Lark Books,eng,4.15,76.25,2
+British Library,eng,4.15,13.0,1
+Bantam Spectra,eng,4.1499999999999995,64636.25,6
+Pantheon,eng,4.149230769230769,14654.0,13
+HarperTrophy,en-US,4.1466666666666665,4504.0,3
+Prima Games,eng,4.146,57.0,5
+HarperFestival,eng,4.1450000000000005,568.0,4
+HJ Kramer,en-US,4.145,29999.25,2
+Ignatius Press,eng,4.145,459.5,6
+HarperCollins Publishers Ltd,en-US,4.14,34681.0,1
+Harcourt  Inc.(Harvest Book),eng,4.14,30358.0,1
+Lucas Books,eng,4.14,11804.0,1
+Business Plus,eng,4.14,5354.0,1
+Image,en-US,4.14,2987.0,1
+Harper & Row (NYC et al.),en-US,4.14,2027.0,1
+Tor Classics,eng,4.14,1532.0,1
+Island Books,eng,4.14,1193.0,1
+American Girl Publishing Inc,en-GB,4.14,536.0,1
+Corgi Books (Adult),eng,4.14,453.0,1
+Sophia Institute Press,eng,4.14,213.0,1
+Viking UK,eng,4.14,74.0,1
+Inter-Varsity Press,en-US,4.14,65.0,1
+Rowohlt Tb.,ger,4.14,61.0,1
+Clarkson Potter,en-GB,4.14,48.0,1
+Diamond/Charter,eng,4.14,38.0,1
+Barnes & Noble Books,en-US,4.14,17.0,1
+Imprint Academic,eng,4.14,14.0,1
+Arthur A. Levine Books,spa,4.14,9.0,1
+Possibilities,eng,4.14,7.0,1
+Octopus Books (London),eng,4.14,4.0,1
+Berlitz Kids,fre,4.14,1.0,1
+Berlitz Kids,ger,4.14,1.0,1
+IndyPublish.com,eng,4.14,1.0,1
+Berlitz Kids,spa,4.14,0.0,1
+TokyoPop,eng,4.136666666666667,1210.5,12
+Blu,eng,4.135000000000001,722.25,6
+Schocken,en-US,4.135,416.75,2
+Harvest House Publishers,eng,4.13125,492.75,8
+Children's Classics,eng,4.13,597244.0,1
+William Morrow; 1ST edition,eng,4.13,414947.0,1
+City Lights,eng,4.13,85143.0,1
+Hartorch,eng,4.13,72785.0,1
+Berkley Hardcover,en-US,4.13,59524.0,1
+Bantem Press,eng,4.13,33678.0,1
+Replica Books,eng,4.13,11468.0,1
+Countryman Press,eng,4.13,4866.0,1
+Hay House,en-US,4.13,3818.0,3
+Philomel Books,en-US,4.13,2288.0,1
+SaltRiver,eng,4.13,1347.0,1
+Viking; G. P. Putnam & Sons,eng,4.13,1259.0,1
+Grosset & Dunlap,en-US,4.13,371.0,1
+ECW Press,en-US,4.13,338.0,1
+John Wiley & Sons,en-US,4.13,228.0,1
+Dragonfly Books,en-US,4.13,198.0,1
+Collins Reference,eng,4.13,166.5,2
+River City Publishing,en-US,4.13,145.0,1
+Adventures Unlimited Press,eng,4.13,102.0,1
+Editorial Juventud,spa,4.13,85.0,1
+Atelos Press,eng,4.13,67.0,1
+DAW Hardcover,en-US,4.13,54.0,1
+Rizzoli,ita,4.13,45.0,1
+Panamericana Editorial,spa,4.13,36.0,1
+Delcourt,fre,4.13,15.0,2
+Mark Cahill Ministries,spa,4.13,15.0,1
+Puffin,en-GB,4.13,11.0,1
+Aladdin Paperbacks,en-US,4.13,7.0,1
+Macmillan Publ. Co.,eng,4.13,6.0,1
+Orion Publishing Co,eng,4.13,0.0,1
+University Of Chicago Press,eng,4.12875,1042.5,8
+DAW Books Inc,eng,4.128,18764.0,5
+DAW,en-GB,4.125,10608.0,2
+Viz Media,en-US,4.125,488.25,8
+MacMillan,eng,4.125,14.5,2
+Shambhala,eng,4.1242857142857146,1587.0,14
+DK Publishing (Dorling Kindersley),eng,4.124285714285714,105.0,7
+Simon & Schuster,en-US,4.1240000000000006,1852.0,5
+British Film Institute,eng,4.124,725.0,5
+Harvest Books,eng,4.12,337596.0,1
+Atheneum Books for Young Readers,eng,4.12,36902.5,4
+Devil's Due Publishing,eng,4.12,35536.0,1
+Houghton Mifflin Company,eng,4.12,26825.5,7
+Grove Press (NYC),eng,4.12,15468.0,1
+Applause Books,eng,4.12,6963.75,2
+Avon,en-GB,4.12,5628.0,1
+Watson-Guptill,eng,4.12,3686.0,1
+Farrar  Straus and Giroux (BYR),eng,4.12,3014.0,1
+Omohundro Institute and University of North Carolina Press,eng,4.12,1792.0,1
+Thames & Hudson,eng,4.12,1205.75,2
+US Green Building Council,eng,4.12,792.0,1
+Sterling Publishing Co.  Inc.,eng,4.12,514.0,1
+Shaw Books,eng,4.12,496.0,1
+Zeta Bolsillo,spa,4.12,493.0,1
+Manesse Verlag,ger,4.12,432.0,1
+Caedmon,en-US,4.12,241.0,3
+Parker Publishing Llc,en-US,4.12,195.0,1
+Heinemann,en-US,4.12,190.0,1
+University of Minnesota Press,eng,4.12,180.0,1
+Cooper Square Press,eng,4.12,156.75,2
+Gingko Press,en-US,4.12,120.0,1
+Pygmalion Editions,fre,4.12,79.0,1
+Doubleday Books,en-US,4.12,58.0,2
+Stenhouse Publishers,eng,4.12,57.0,1
+Capstone Press,eng,4.12,25.25,2
+Scholastic Nonfiction,eng,4.12,24.0,1
+Pluto Press,eng,4.12,8.0,1
+Teaching Resources,en-US,4.12,8.0,1
+Grafton,eng,4.12,2.0,1
+Omnibus Hc Bei Bertelsmann,ger,4.12,1.0,1
+BBC Books,eng,4.119999999999999,1530.75,2
+Ballantine,eng,4.119999999999999,397.0,2
+Blackstone Audiobooks,eng,4.11875,176.25,8
+New Directions Publishing Corporation,eng,4.1175,2581.75,4
+Berkley Hardcover,eng,4.115,63261.25,2
+Random House  Inc.,eng,4.115,2422.75,2
+Delacorte Books for Young Readers,eng,4.115,1451.75,4
+Barnes & Noble,eng,4.114999999999999,2026.5,6
+Pantheon Books,en-US,4.113333333333333,5662.5,3
+Brilliance Audio,en-US,4.112,124.0,5
+Random House Large Print Publishing,eng,4.11,597244.0,1
+Viking Books for Young Readers,en-US,4.11,15193.0,1
+Peter Smith Publisher,eng,4.11,14739.0,1
+HarperVoyager,eng,4.11,1416.0,1
+PerfectBound (HarperCollins),eng,4.11,1211.0,1
+NAL Books,eng,4.11,1098.0,1
+Wenner Books,eng,4.11,1097.0,1
+University of Georgia Press,en-US,4.11,725.0,1
+Sage Publications Ltd,eng,4.11,698.0,1
+Association for Supervision & Curriculum Development,eng,4.11,592.0,1
+Heinemann Library,en-GB,4.11,529.0,1
+Virago Press Ltd,eng,4.11,400.0,1
+William Morrow & Company (NYC),eng,4.11,311.0,1
+Beach Lane Books,eng,4.11,310.5,3
+Basil Blackwell (Cambridge  MA/Oxford),eng,4.11,265.0,1
+Owl Books (NY),eng,4.11,259.0,1
+Hamish Hamilton,eng,4.11,251.0,1
+Barricade Books,eng,4.11,160.0,2
+Konemann,en-US,4.11,126.0,1
+MetroBooks (NY),eng,4.11,104.0,1
+Reclam,ger,4.11,103.0,1
+Penguin Classic,eng,4.11,91.0,1
+Warner Adult,eng,4.11,75.0,1
+Alpha,en-US,4.11,64.0,1
+Marshall Cavendish Editions,msa,4.11,28.0,1
+MJF Books,eng,4.11,19.0,1
+Cybereditions Corp,eng,4.11,18.0,1
+Sensory Resources,eng,4.11,18.0,1
+Abradale Books/Harry N. Abrams,en-US,4.11,10.0,1
+Hachette Littérature,fre,4.11,1.0,1
+Live Oak Media,eng,4.11,0.0,1
+Waterbrook Press,eng,4.109999999999999,11159.75,2
+Corgi,en-GB,4.109999999999999,5641.75,2
+Llewellyn Publications,eng,4.109999999999999,1017.25,2
+American Girl Publishing Inc,eng,4.109999999999999,690.25,2
+Penguin Global,eng,4.109999999999999,484.75,2
+LWW,eng,4.109999999999999,185.0,2
+Brilliance Audio,eng,4.109375,141.5,13
+Square Fish,eng,4.106,48088.0,5
+B&H Publishing Group,eng,4.105,1235.25,2
+University of Oklahoma Press,eng,4.10375,239.5,8
+Scholastic Press,eng,4.103333333333333,961.0,6
+HarperCollins Publishers,en-US,4.102857142857142,386.0,7
+Farrar  Straus and Giroux,eng,4.102666666666667,2595.75,30
+Harvard University Press,eng,4.1024,813.0,25
+Houghton Mifflin,eng,4.102142857142857,3691.75,14
+Golden/Disney,eng,4.1000000000000005,17242.5,3
+Health Communications Inc,eng,4.1,52028.0,1
+Dell Laurel-Leaf,eng,4.1,38411.0,1
+Transworld Publishers Ltd,eng,4.1,19790.0,1
+Marsilio Publishers,eng,4.1,3852.0,1
+Element,eng,4.1,3618.0,1
+Fontana Press,eng,4.1,3209.0,1
+W.W. Norton & Company (NY),eng,4.1,1730.0,1
+Joshua Odell Editions,en-US,4.1,909.0,1
+Sterling,en-US,4.1,731.75,2
+Crown Publishing Group (NY),en-US,4.1,717.0,1
+Sierra Club Books,eng,4.1,679.0,1
+Tin House Books,en-GB,4.1,490.0,1
+Weiser Books,eng,4.1,466.0,1
+Limelight,eng,4.1,291.0,1
+Fantagraphics Books,eng,4.1,177.0,1
+Vision Forum,eng,4.1,137.0,1
+Pen & Sword Military,en-US,4.1,82.0,1
+Destiny Books,eng,4.1,65.0,1
+Meisha Merlin Publishing,en-US,4.1,62.0,1
+Running Press Kids,eng,4.1,58.0,1
+Rebel Press,eng,4.1,30.0,1
+Inner Traditions,eng,4.1,28.0,1
+Audio Literature,en-US,4.1,13.0,1
+University of Pennsylvania Press,en-GB,4.1,12.0,1
+Quarry Press,eng,4.1,10.0,1
+Gallimard,eng,4.1,9.0,1
+Clarendon Press,grc,4.1,6.0,1
+French & European Pubns,fre,4.1,3.0,1
+Holt Paperbacks,eng,4.096,1987.0,5
+Overlook TP,en-US,4.095000000000001,7966.25,2
+Everyman's Library,en-US,4.095000000000001,1011.5,2
+New Riders Publishing,en-US,4.095,5951.75,2
+Main Street Books,eng,4.095,250.25,2
+Everyman,eng,4.095,138.25,8
+J'ai Lu,fre,4.093999999999999,120.25,10
+Voyager,eng,4.0920000000000005,7908.0,5
+Orchard Books,eng,4.091428571428572,3960.0,7
+Gallery / Saga Press,eng,4.09,73161.0,1
+La factoría de ideas,spa,4.09,63422.0,1
+Seuil,fre,4.09,59077.0,1
+PublicAffairs,eng,4.09,7776.0,1
+Leete's Island Books,eng,4.09,6674.0,1
+Berkley Publishing,eng,4.09,3709.0,1
+Macmillan Publishing Company/Collier Books,eng,4.09,2977.0,1
+Puffin Group,eng,4.09,2630.0,1
+Whitaker House,en-US,4.09,1598.0,1
+Jonathan Cape,en-US,4.09,1411.0,1
+Wesleyan University Press,eng,4.09,941.0,1
+DK Children,eng,4.09,586.0,10
+Alfred A. Knopf Books for Young Readers,en-US,4.09,562.0,1
+B Books,en-US,4.09,283.0,1
+Routledge/Taylor & Francis Ltd.,eng,4.09,202.0,1
+Candlewick,en-US,4.09,177.0,1
+Candlewick Press (MA),en-US,4.09,165.0,1
+Walker Books,en-US,4.09,163.0,1
+Health Communications Inc,en-US,4.09,152.0,1
+Fawcett,en-GB,4.09,66.0,1
+Samuel French Ltd,en-GB,4.09,65.0,1
+Droemer Knaur,ger,4.09,38.0,1
+Random House Para Ninos,spa,4.09,33.0,1
+Heinemann Library,eng,4.09,20.0,1
+Nova Audio Books,eng,4.09,16.0,1
+Inkling Books,eng,4.09,11.0,1
+Dedalus,eng,4.09,10.0,1
+Soundings,eng,4.09,6.25,2
+Hiperión,spa,4.09,6.0,1
+Krause Publications,eng,4.09,5.0,1
+New English Library,eng,4.086666666666667,269820.5,3
+Meisha Merlin Publishing,eng,4.086666666666667,385.5,3
+BBC Audiobooks,eng,4.085555555555555,52.0,9
+Black Dog & Leventhal,eng,4.085,27055.5,2
+Pocket Books,en-GB,4.085,6855.0,2
+Time Warner Paperbacks,eng,4.085,3207.25,2
+Warner,eng,4.085,2808.25,2
+Candlewick Press (MA),eng,4.085,2612.5,2
+Bolchazy-Carducci Publishers,eng,4.085,54.5,2
+HarperCollins Publishers Ltd,eng,4.0840000000000005,2357.0,5
+HarperOne,eng,4.083600000000001,7665.0,25
+Penguin Group (USA),eng,4.083333333333333,320304.0,3
+Greenwillow Books,eng,4.083076923076923,7764.0,13
+Grosset & Dunlap,eng,4.0811111111111105,529.0,9
+Random House: Modern Library,eng,4.08,597244.0,1
+Henry Holt and Co.,eng,4.08,213538.0,1
+Millenium,eng,4.08,52505.75,2
+Hackett Publishing Company,eng,4.08,26252.0,1
+Taplinger Publishing,eng,4.08,17485.0,1
+Coronet Books (GB),eng,4.08,16027.25,2
+Hqn,eng,4.08,7937.5,2
+rbooks,eng,4.08,3526.0,1
+Poorhouse Press,en-US,4.08,1789.0,1
+Basic Books,en-GB,4.08,1459.0,1
+Baronet Books,eng,4.08,1379.0,1
+Viking Children's Books,en-US,4.08,1246.0,1
+Graphics Press,en-US,4.08,924.0,1
+Collins Design,en-US,4.08,806.0,1
+Waveland Press,en-US,4.08,531.0,1
+Phaidon Press,eng,4.08,361.0,3
+Watkins,eng,4.08,354.0,1
+Orion Paperbacks,en-US,4.08,267.0,1
+Express Publishing,eng,4.08,85.0,1
+Mestas Ediciones,spa,4.08,43.0,1
+Glénat,spa,4.08,38.0,1
+Wayne State University Press,eng,4.08,12.0,1
+Ryland Peters & Small,eng,4.08,8.0,1
+Listening Library,eng,4.079999999999999,64.5,3
+Little  Brown and Company,en-US,4.078,4254.0,5
+Little  Brown Book Group,eng,4.077692307692308,330.0,13
+Scholastic Inc.,eng,4.0775,159802.0,12
+Marvel Comics,eng,4.076666666666667,12643.5,3
+Ecco Press,eng,4.076666666666667,3906.5,3
+Putnam Publishing Group,eng,4.076666666666667,2154.0,3
+Simon and Schuster,eng,4.075,47517.25,4
+Barnes  Noble Classics,en-US,4.075,21836.5,4
+Cornell University Press,eng,4.074999999999999,105.75,2
+HarperCollins,en-US,4.071,2426.5,20
+Ecco/Harper Perennial,eng,4.07,183882.0,1
+Alfred A. Knopf Borzoi Books,eng,4.07,110898.0,1
+Harcourt Brace,eng,4.07,35670.5,2
+Simon & Schuster Aladddin Paperbacks,eng,4.07,28120.0,1
+Legend,eng,4.07,17911.0,1
+Macmillan Children's Books,eng,4.07,9375.0,1
+Feminist Press,eng,4.07,2466.0,1
+Fontana,eng,4.07,2043.0,1
+Pinter & Martin Ltd,eng,4.07,1473.0,1
+Signet Classic,eng,4.07,1230.0,1
+Digital Manga Publishing / Dark Horse,en-US,4.07,1101.75,4
+Sudamericana,spa,4.07,546.75,2
+Bloomsbury Academic,en-US,4.07,489.5,2
+Del Rey,en-GB,4.07,467.0,1
+Faber & Faber,en-US,4.07,287.0,1
+Bloomsbury / Continuum,eng,4.07,285.0,1
+A Harvest Book/Harcourt  Inc.,eng,4.07,244.0,1
+Avon Books (P),eng,4.07,237.0,1
+Orion Children's Books,eng,4.07,210.0,1
+Lawrence Hill Books,eng,4.07,106.0,1
+Severn House Publishers,en-GB,4.07,102.0,1
+University of Michigan Press,en-US,4.07,96.5,2
+Loeb Classical Library/Harvard University Press,grc,4.07,69.0,1
+French & European,spa,4.07,63.0,1
+Mountaineers Books,eng,4.07,43.0,1
+BBC Audiobooks America,eng,4.07,38.0,1
+History Press Ltd,eng,4.07,38.0,1
+Xlibris Corporation,eng,4.07,10.0,1
+Bethany House Publishers,eng,4.0675,997.75,8
+Springer,eng,4.0675,49.0,5
+Hachette Audio,eng,4.066666666666666,137.0,3
+Touchstone Books,eng,4.065,41644.0,6
+Arrow,en-GB,4.065,449.0,2
+Gramercy Books,en-US,4.0649999999999995,3329.0,2
+Samuel French  Inc.,eng,4.0649999999999995,79.25,2
+Cemetery Dance Publications,eng,4.064,221.0,5
+Scholastic  Inc.,en-US,4.0633333333333335,5832.5,3
+North Point Press,eng,4.0633333333333335,1734.25,6
+Thames  Hudson,eng,4.0633333333333335,909.5,3
+Puffin Books,en-US,4.0633333333333335,830.0,9
+Anchor,en-US,4.062857142857142,1886.0,7
+Princeton University Press,eng,4.062666666666667,1805.0,30
+Vermilion,eng,4.0625,79240.5,4
+Chatto & Windus,eng,4.0625,1261.5,4
+Random House Books for Young Readers,en-US,4.061,1202.0,10
+Harvill Press,eng,4.0600000000000005,10448.75,2
+W.W. Norton,eng,4.0600000000000005,3274.25,2
+Bantam Press,eng,4.0600000000000005,2797.5,4
+Golden Gryphon Press,eng,4.0600000000000005,371.25,2
+Barnes  Noble,eng,4.0600000000000005,46.75,2
+The Guilford Press,eng,4.0600000000000005,18.0,2
+Simon & Schuster Paperbacks,eng,4.06,282649.0,1
+Warner Books (NY),en-US,4.06,7464.5,3
+Charles Scribner's Sons,en-US,4.06,6115.0,1
+Michael Joseph,eng,4.06,3092.0,1
+Dover Publications (NY),eng,4.06,1022.0,1
+Nonsuch Publishing,eng,4.06,911.0,1
+Yale University Press,en-GB,4.06,311.0,1
+Insight International,eng,4.06,178.0,1
+Your Coach Digital,eng,4.06,117.0,1
+Paul Mellon Centre BA,eng,4.06,79.0,1
+Wings,en-GB,4.06,64.0,1
+Watson-Guptill Publications,eng,4.06,31.0,1
+Stanford University Press,en-US,4.06,17.0,1
+Challenge Press  Inc./Challcrest Press,eng,4.06,15.0,1
+Motorbooks,eng,4.06,15.0,1
+Clarendon Press,eng,4.06,9.0,1
+Jones & Bartlett Publishers,eng,4.06,4.0,1
+Reclam  Leipzig,ger,4.06,2.0,1
+Hodder Wayland,eng,4.06,0.0,1
+小学館 [Shōgakukan],jpn,4.06,0.0,1
+Harper Perennial Modern Classics,eng,4.056923076923077,15860.25,26
+Arcadia Publishing,eng,4.056666666666667,2.5,3
+Corgi,eng,4.05625,52965.0,16
+Corgi Childrens,eng,4.055,38718.75,2
+Archaia,eng,4.055,194.5,2
+University Press of Mississippi,en-US,4.055,84.0,2
+HarperCollins Espanol,spa,4.054,1099.0,5
+Da Capo Press,en-US,4.0525,315.75,4
+Random House Audio Publishing Group,eng,4.051666666666667,17773.75,6
+Top Shelf Productions,eng,4.05,86159.0,1
+Candlewick Press,en-CA,4.05,4359.0,1
+Power Press,eng,4.05,2955.0,1
+Wizarding World Press,en-US,4.05,2774.0,1
+Jossey-Bass,eng,4.05,2677.0,5
+HarperPaperbacks,eng,4.05,1738.0,1
+New Harbinger Publications,eng,4.05,1506.0,1
+Editorial RM,spa,4.05,1386.0,1
+Newmarket,eng,4.05,621.0,1
+P & R Publishing,eng,4.05,534.0,1
+Crown Publishing Group,eng,4.05,495.0,1
+Fontana Books,eng,4.05,275.0,1
+Routledge,en-GB,4.05,270.0,1
+Lasser Press,spa,4.05,176.0,1
+Alfaguara Infantil,spa,4.05,174.0,1
+Fantasy Flight Games,eng,4.05,140.0,1
+University of Michigan Press,eng,4.05,61.0,3
+University of Nebraska Press,en-GB,4.05,54.0,1
+Weidenfeld & Nicolson,eng,4.05,25.0,1
+Octopus Books,eng,4.05,8.0,1
+Pfeiffer & Company,eng,4.05,0.0,1
+Random House Audio Publishing Group,en-US,4.048,29.0,5
+Not Avail,eng,4.0475,1026.75,4
+University of Chicago Press,eng,4.047058823529412,1056.25,34
+G.P. Putnam's Sons Books for Young Readers,eng,4.046666666666667,876.5,3
+Faber and Faber,en-GB,4.045,26.5,2
+Del Rey,eng,4.043749999999999,6268.0,72
+NAL,en-US,4.043333333333334,1012.0,3
+Disney Press,eng,4.043333333333334,166.25,12
+Black Dog & Leventhal Publishers,eng,4.043,63968.0,10
+Starscape,eng,4.0424999999999995,35062.0,4
+Orbit,eng,4.042222222222223,39692.0,9
+Warners Visions Books,eng,4.04,41611.0,1
+Alan Rodgers Books,eng,4.04,19091.0,1
+Harper Perennial (HarperCollins),eng,4.04,13491.0,1
+Hachette Books,en-US,4.04,4961.0,4
+William B. Eerdmans Publishing Company,eng,4.04,4707.0,2
+Wildstorm,eng,4.04,3551.25,2
+W Publishing Group,en-US,4.04,808.0,1
+Yearling Books,en-US,4.04,512.0,1
+Indiana University Press,en-US,4.04,401.25,2
+Free Spirit Publishing,eng,4.04,309.0,1
+Alianza Editorial,spa,4.04,233.0,1
+Suhrkamp,ger,4.04,213.0,4
+Prentice Hall/Library of Liberal Arts,en-US,4.04,201.0,1
+Delmar Thomson Learning,en-US,4.04,147.0,1
+McGraw-Hill Education,en-US,4.04,126.0,1
+Pan Publishing,en-GB,4.04,110.0,1
+Prometheus Books,eng,4.04,66.5,3
+Kent State University Press (OH),en-GB,4.04,51.0,1
+Aivia Press,eng,4.04,29.0,1
+Living Books,eng,4.04,28.0,1
+Stone Bridge Press,eng,4.04,25.0,1
+Knopf,fre,4.04,17.0,1
+Pantheon Books (NY),eng,4.04,15.0,1
+Random house,eng,4.04,15.0,1
+ComicsLit,eng,4.04,14.0,1
+Thames & Hudson Ltd,eng,4.04,3.0,1
+Grijalbo Mondadori Sa,spa,4.04,2.0,1
+New Directions,eng,4.0385,2812.0,20
+Sterling,eng,4.038333333333333,1543.5,12
+ADV Manga,eng,4.038,402.75,10
+Souvenir Press,eng,4.036666666666666,1206.0,3
+Bradford Book,eng,4.036666666666666,90.5,3
+Robert Laffont,fre,4.036666666666666,18.0,3
+HarperCollins,eng,4.036222222222222,8394.0,90
+Zondervan,eng,4.035454545454545,2281.5,11
+Workman Publishing Company,eng,4.035,17923.5,4
+Random House,eng,4.034230769230769,24845.75,26
+Daw Books,eng,4.0337499999999995,22404.5,8
+Tachyon Publications,eng,4.033333333333333,1948.5,3
+TarcherPerigee,en-US,4.033333333333333,635.0,3
+University of Georgia Press,eng,4.033333333333333,139.5,3
+Nick Hern Books,eng,4.033333333333332,48.5,3
+Vintage,en-US,4.031875,2203.5,16
+Holt Paperbacks,en-US,4.03,8614.0,1
+Vintage/Random House (NY),eng,4.03,6464.5,3
+City Lights Publishers,eng,4.03,4316.25,6
+Harmony,eng,4.03,3588.0,7
+Vintage,spa,4.03,3205.0,1
+Library of Liberal Arts/Bobb-Merrill (Indianapolis  IN),eng,4.03,2335.0,1
+Amistad Press,eng,4.03,2228.0,1
+Alfred A.Knopf,eng,4.03,2094.0,1
+Regnery Publishing,en-US,4.03,1604.0,1
+Cooper Square Publishers,eng,4.03,1396.0,1
+btb,ger,4.03,1254.0,1
+John Wiley,eng,4.03,524.0,1
+Random House Books for Young Readers,en-GB,4.03,466.0,1
+Orchard,eng,4.03,241.0,1
+Eerdmans,eng,4.03,238.0,1
+Atheneum Books for Young Readers,en-US,4.03,122.0,3
+Thomas Publications (PA),eng,4.03,111.0,1
+Penguin/Viking Compass (Non-Classics),en-GB,4.03,85.0,1
+Prestel Publishing,eng,4.03,32.0,1
+Geoplaneta,spa,4.03,0.0,1
+Penguin Books Australia Ltd.,eng,4.029999999999999,7325.75,2
+Recorded Books,eng,4.029999999999999,234.5,4
+Audiogo,eng,4.029999999999999,172.75,2
+Schocken,eng,4.029,7463.0,10
+Hard Press,eng,4.0275,2276.25,4
+Scholastic Books,eng,4.026666666666666,183698.5,3
+Plume,en-US,4.026,1730.0,5
+Anagrama,spa,4.025714285714286,1024.5,7
+Dial Press Trade Paperback,eng,4.025454545454545,42089.5,11
+Atlantic Monthly Press,eng,4.025,2599.25,2
+Oxford University Press  USA,en-GB,4.025,269.0,4
+Indiana University Press,eng,4.023999999999999,224.0,5
+Le Livre de Poche,fre,4.02375,628.75,8
+Atheneum Books,eng,4.023333333333333,22.5,3
+Simon & Schuster Childrens Books,eng,4.022,1582.0,5
+W. W. Norton  Company,eng,4.021929824561403,3272.0,57
+McClelland & Stewart,eng,4.0200000000000005,957.5,2
+Buccaneer Books,eng,4.0200000000000005,320.0,3
+Oxford University Press  USA,ita,4.02,15675.0,1
+Night Shade Books,eng,4.02,15363.0,1
+Diogenes,ger,4.02,9674.0,1
+Sceptre,eng,4.02,6985.0,1
+The Berkley Publishing Group,eng,4.02,3001.0,1
+TSR Inc./Wizards of the Coast,eng,4.02,2909.0,1
+Warner Books,en-GB,4.02,1827.0,1
+Aurum,eng,4.02,1583.0,1
+Digital Manga Publishing / Dark Horse,eng,4.02,1506.0,1
+Crown Business,eng,4.02,1373.0,1
+Univ Of Minnesota Press,eng,4.02,1287.0,9
+Paris Press,eng,4.02,1083.0,1
+Yale University Press (New Haven  CT),en-US,4.02,865.0,1
+Fourth Estate,en-US,4.02,850.0,1
+Simon  Schuster/Paula Wiseman Books,en-US,4.02,625.0,1
+Daimon Verlag,eng,4.02,405.0,1
+Bloomsbury Publishing PLC,en-GB,4.02,256.0,1
+Collier Books,eng,4.02,255.0,1
+Library of American Comics,eng,4.02,168.0,1
+Hill & Wang Publ. (NY),eng,4.02,164.0,1
+Cambridge University Press/The New Cambridge Shakespeare,eng,4.02,149.0,1
+AvonEos,en-US,4.02,131.0,1
+Doubleday,en-GB,4.02,131.0,1
+Holt  Rinehart and Winston  Inc.,eng,4.02,92.0,1
+Sagebrush,en-US,4.02,85.0,1
+Prima Lifestyles,eng,4.02,66.0,1
+Simon & Schuster Audio,en-US,4.02,56.0,1
+Plaza & Janes Editores  S.A.,spa,4.02,16.0,1
+Éditions 10/18,fre,4.02,6.0,1
+Signet Book,eng,4.01875,172949.0,8
+Simon Pulse,eng,4.015714285714286,73574.25,14
+Del Rey,en-US,4.015714285714286,6657.0,7
+Grand Central Publishing,en-GB,4.015000000000001,2523.0,2
+HarperCollinsPublishers,eng,4.015,447983.75,2
+Viking Juvenile,eng,4.015,1851.75,2
+Belknap Press,eng,4.015,366.75,6
+Candlewick Press,eng,4.0145,7895.75,20
+Montena,spa,4.013333333333333,19.0,3
+Wings,eng,4.0128571428571425,2170.0,7
+Turtleback Books,spa,4.0125,61.75,4
+Harcourt,eng,4.011111111111111,6666.0,9
+Citadel,eng,4.010833333333333,4133.0,12
+University of Chicago Press,en-US,4.010000000000001,297.5,6
+McGraw-Hill Humanities/Social Sciences/Languages,eng,4.010000000000001,201.5,3
+Ace Book,eng,4.01,164740.0,1
+Vintage Crime,eng,4.01,103400.0,1
+Bantam Classics,eng,4.01,42181.5,10
+Viking Children's Books,eng,4.01,22378.0,1
+Daw Books,en-US,4.01,10429.0,5
+Penguin (Non-Classics),eng,4.01,6328.5,2
+London : Collins  2004.,eng,4.01,5868.0,1
+Fantagraphics,eng,4.01,5148.75,2
+Grove Press,en-US,4.01,2762.0,1
+Viking Press,eng,4.01,1719.0,1
+Everyman Library / Overlook Press,en-US,4.01,1497.0,1
+Macmillan,eng,4.01,1057.5,2
+Hodder & Stoughton,en-GB,4.01,988.0,1
+Polyface,eng,4.01,292.0,1
+Belknap Press,en-US,4.01,222.0,1
+Sentient Publications,eng,4.01,194.0,1
+Ace/SFBC,eng,4.01,172.0,1
+Oregon State University Press,eng,4.01,160.0,1
+Delacorte Books for Young Readers,en-US,4.01,76.0,1
+Greenwood,en-US,4.01,64.0,1
+Random House Mondadori,spa,4.01,36.5,2
+Verso,en-US,4.01,24.0,1
+Laffont,fre,4.01,18.0,1
+Puffin Books,eng,4.0097499999999995,20051.75,40
+Mariner Books,en-US,4.008076923076923,3285.75,26
+Vintage Classics,eng,4.007894736842106,5558.0,19
+HMH Books for Young Readers,en-US,4.007777777777778,2114.0,9
+Basic Books,eng,4.0056666666666665,2575.5,30
+HarperTorch,en-US,4.005,29478.25,4
+Oxford University Press,en-US,4.005,2570.25,2
+Alfred A. Knopf,en-US,4.005,486.25,4
+University of North Carolina Press,eng,4.005,163.0,2
+Farrar  Straus and Giroux,en-US,4.004444444444444,3498.0,9
+University Press of Mississippi,eng,4.004166666666666,75.25,12
+DC Comics Vertigo,en-US,4.003333333333334,3599.0,3
+Holiday House,en-US,4.003333333333333,153.0,3
+The New Press,eng,4.002727272727273,1122.5,11
+Thomas Nelson,eng,4.002666666666666,11132.5,15
+Editorial Presença,por,4.001666666666667,214.0,6
+Harper Voyager,eng,4.001578947368421,28496.5,19
+HarperTrophy,eng,4.000625,49254.25,16
+Pocket,eng,4.0,369777.0,3
+Wyatt Book,eng,4.0,65013.0,1
+TIme Warner Books,eng,4.0,52093.0,1
+Putnam Adult,eng,4.0,18006.0,7
+L.A. Weekly Books,eng,4.0,13622.0,1
+Listening Library (Audio),eng,4.0,13017.0,4
+Oddysey/Harcourt Young Classics,eng,4.0,9334.0,1
+EOS,eng,4.0,9291.0,1
+St. Martin's Press,en-US,4.0,9285.0,9
+Laurel Leaf Library,en-US,4.0,4900.0,2
+Chatto  Windus,eng,4.0,4230.0,1
+MIT Press (MA),eng,4.0,1027.0,1
+Dragon Door Publications,en-US,4.0,908.0,1
+Thames  Hudson,en-US,4.0,675.0,1
+Farrar  Straus and Giroux,mul,4.0,657.0,1
+Crown Forum,eng,4.0,481.0,1
+Arkana,eng,4.0,472.0,1
+Puffin Books,en-GB,4.0,344.0,1
+Annick Press,eng,4.0,219.0,1
+Time Life Books,eng,4.0,199.0,1
+Minnesota Historical Society Press,en-US,4.0,100.0,1
+Ann Arbor Media,en-US,4.0,83.0,1
+Napoleon and Co,eng,4.0,63.0,1
+Firelight Press,eng,4.0,59.0,1
+Teachers College Press,eng,4.0,54.0,1
+Everyman's Library,en-GB,4.0,50.0,1
+Little  Brown & Company,en-GB,4.0,49.0,1
+Ulysses Press,eng,4.0,46.0,1
+MetroBooks (NY),en-US,4.0,42.0,1
+Bookclub-In-A-Box,eng,4.0,39.0,1
+EMC/Paradigm Publishing,eng,4.0,36.0,1
+Teacher Created Resources,eng,4.0,31.25,2
+Weidenfeld & Nicolson,en-GB,4.0,30.0,1
+Anchor Bible,eng,4.0,20.0,2
+Princeton Architectural Press,en-US,4.0,19.0,1
+Lantern Books,eng,4.0,15.0,1
+Ash-Tree Press,eng,4.0,10.0,1
+Spark Publishing,eng,4.0,10.0,1
+Roxford Books,eng,4.0,9.0,1
+Mongoose Publishing,eng,4.0,8.0,1
+CQ Press,eng,4.0,7.0,1
+Barron's Educational Series,en-US,4.0,5.0,1
+TSR Inc.,eng,4.0,5.0,1
+Jessica Kingsley Publishers,eng,4.0,4.0,1
+Lawbook Exchange  Ltd.,eng,4.0,4.0,1
+McGraw-Hill/Glencoe,ger,4.0,4.0,1
+Harlequin American Romance,eng,4.0,3.0,1
+Helen Marx Books,eng,4.0,3.0,1
+Oberon Books,en-GB,4.0,3.0,1
+Universal Publishers,eng,4.0,3.0,1
+Xulon Press,eng,4.0,3.0,1
+Cosimo Classics,ger,4.0,1.0,1
+Course Technology,eng,4.0,1.0,1
+Loyola Press (Chicago),eng,4.0,1.0,1
+Saddleback Educational Publishing  Inc.,eng,4.0,1.0,1
+Twenty-First Century Books (CT),eng,4.0,1.0,1
+Academic Press,eng,4.0,0.0,1
+University of Arizona Press,eng,4.0,0.0,1
+VIZ Media LLC,en-US,3.9990909090909095,908.0,11
+Vintage Books USA,eng,3.999,21522.75,10
+Marvel Comics Group,eng,3.9971428571428573,2204.0,7
+Red Fox,eng,3.9966666666666666,47145.5,3
+Bloomsbury U.S.A. Children's Books,eng,3.9966666666666666,10844.0,3
+Pimlico,eng,3.9966666666666666,2486.0,3
+Library of America,en-US,3.996,128.0,5
+Puffin,en-US,3.995,1767.75,2
+Pragmatic Bookshelf,en-US,3.995,1392.75,2
+New City Press,eng,3.995,174.25,4
+Psychology Press,eng,3.995,106.5,2
+Roca Editorial,spa,3.995,28.75,2
+Chatto and Windus,eng,3.995,16.0,2
+Penguin,eng,3.9940425531914894,18021.0,47
+Dey Street Books,eng,3.9933333333333336,14427.5,3
+NAL Trade,eng,3.9933333333333336,7884.0,3
+Odonian Press,eng,3.9933333333333336,1306.5,3
+Headline Book Publishing,eng,3.9924999999999997,1424.5,4
+Caedmon,eng,3.9924999999999997,367.75,4
+AudioGO,eng,3.9922222222222223,5473.0,9
+Moyer Bell and its subsidiaries,eng,3.992,3238.0,5
+Vintage Crime/Black Lizard,eng,3.9915384615384615,13233.0,13
+HarperPerennial / Perennial Classics,eng,3.99,597244.0,1
+Arthur A. Levine Books,eng,3.99,259399.0,1
+Deodand,eng,3.99,196377.0,1
+Square Fish,en-US,3.99,64278.0,1
+Orion Publishing Group,en-GB,3.99,35964.0,1
+Pocket Books: Gallery Books,eng,3.99,11800.0,1
+Ten Speed Press,eng,3.99,7456.75,2
+Phébus,fre,3.99,3840.0,1
+HQN,en-US,3.99,2221.0,1
+Berkley Sensation,en-US,3.99,1335.0,1
+Loose Id  LLC,en-US,3.99,564.0,1
+St. Martin's Paperbacks,en-US,3.99,306.75,2
+Health Communications,eng,3.99,265.0,1
+Harlequin,en-US,3.99,249.0,1
+Cherry Red Books,eng,3.99,206.0,1
+Focus,eng,3.99,202.0,2
+Companhia das Letras,por,3.99,152.0,1
+Doubleday Books for Young Readers,eng,3.99,143.0,1
+Everyman's Library 234,en-US,3.99,132.0,1
+Worth Publishers,eng,3.99,120.0,1
+Nostalgia Ventures,eng,3.99,95.0,1
+Rowohlt Verlag,ger,3.99,40.5,3
+Paul S. Eriksson,eng,3.99,11.0,1
+Ediciones Glénat España,spa,3.99,10.0,1
+Modern Library Classics,eng,3.9899999999999998,29594.0,2
+Clarkson Potter Publishers,eng,3.9899999999999998,1138.25,2
+Hodder & Stoughton,eng,3.9883333333333333,3816.75,6
+William Morrow & Company,eng,3.9880000000000004,516.0,5
+St. Martin's Press,eng,3.9874285714285715,93342.5,35
+Scholastic,eng,3.986785714285714,6473.25,28
+HarperTempest,eng,3.986666666666667,30754.5,3
+Heyne,ger,3.98625,60.5,8
+Lübbe,ger,3.9859999999999998,7.0,5
+Delta,eng,3.9858620689655173,97474.0,29
+Barnes  Noble Classics,eng,3.9855555555555555,981.5,27
+Luna Books,eng,3.985555555555555,6435.0,9
+Little  Brown,eng,3.9850000000000003,1545.5,2
+Phoenix Audio,eng,3.9850000000000003,147.25,2
+Shadow Mountain,eng,3.985,88437.25,2
+Random House (NY),eng,3.985,4823.0,4
+Viking,eng,3.985,2416.0,8
+W.W. Norton & Company,eng,3.9840000000000004,6654.25,10
+HarperPerennial,eng,3.9825,13110.5,4
+Harper Paperbacks,eng,3.981666666666667,25409.75,6
+Mira,eng,3.9800000000000004,10246.5,3
+Crystal Clarity Publishers,eng,3.9800000000000004,239.75,2
+Duke University Press Books,eng,3.9800000000000004,226.5,3
+Howard Publishing Co,eng,3.98,200744.0,1
+Random House Anchor,eng,3.98,33028.0,1
+BantamSpectra,eng,3.98,19537.0,1
+Villard,en-US,3.98,8009.0,1
+Touchstone,en-CA,3.98,6256.0,1
+HarperCollinsPublishers,en-US,3.98,5891.0,1
+Chicago Review Press,en-US,3.98,3907.75,2
+New Directions,en-US,3.98,3458.0,1
+St. Martin's Paperbacks,en-GB,3.98,2241.0,1
+Warner Forever,en-US,3.98,1740.0,1
+Graywolf Press,eng,3.98,1311.25,2
+Grove Press  Black Cat,eng,3.98,1000.0,1
+Scholastic Press,en-GB,3.98,836.0,1
+Ecco / HarperCollins,eng,3.98,747.0,1
+Editions Gallimard,fre,3.98,688.0,1
+New Press  The,eng,3.98,659.0,1
+National Geographic Children's Books,eng,3.98,254.0,1
+Shaw,eng,3.98,235.0,1
+Vince Emery Productions,eng,3.98,201.0,1
+Fontana,en-GB,3.98,174.0,1
+Wizards of the Coast,en-GB,3.98,164.0,1
+Edimat Libros,spa,3.98,134.5,3
+Piemme,ita,3.98,83.0,1
+Lumen,eng,3.98,47.0,1
+University Press of America,eng,3.98,21.0,1
+Bradygames,eng,3.98,19.75,2
+Schocken,ger,3.98,2.0,1
+Egmont Children's Books,eng,3.98,1.0,1
+Heinemann-Octopus,eng,3.98,0.0,1
+Harcourt,en-US,3.9799999999999995,6910.5,2
+Columbia University Press,eng,3.9799999999999995,158.25,10
+Laurel Leaf,eng,3.9783333333333335,19081.5,6
+Harry N. Abrams,eng,3.978292682926829,1370.0,41
+Knopf,eng,3.978181818181818,3252.5,11
+Yale University Press,eng,3.978181818181818,726.0,22
+Bloomsbury Academic,en-GB,3.9766666666666666,604.5,3
+National Geographic,eng,3.9766666666666666,23.0,3
+Bristol Classical Press,eng,3.9766666666666666,17.5,3
+Pocket,fre,3.9764285714285714,68.0,14
+Eminent Lives,eng,3.975,1530.0,2
+Harper,en-US,3.975,679.5,8
+Random House Audio,en-US,3.975,103.5,2
+Anchor Books,en-US,3.9749999999999996,49081.5,2
+Simon & Schuster Books for Young Readers,eng,3.9749999999999996,18205.25,2
+Houghton Mifflin Harcourt P,eng,3.9749999999999996,533.5,2
+Baen,eng,3.974444444444444,2774.0,9
+Modern Library,eng,3.9743421052631582,5370.0,76
+Cambridge University Press,en-US,3.974,425.0,5
+Penguin Classics,en-GB,3.97375,5367.0,8
+Digital Manga Publishing,eng,3.97375,1078.75,8
+Clarkson Potter,eng,3.973333333333333,25117.5,6
+Little  Brown Books for Young Readers,eng,3.972666666666667,11020.5,15
+Hyperion,eng,3.9725,138334.0,4
+Alfred A. Knopf Books for Young Readers,eng,3.9725,34131.0,4
+O'Reilly Media,en-US,3.972,961.0,5
+University of Pennsylvania Press,eng,3.972,29.0,5
+W. W. Norton & Company,eng,3.970277777777778,1583.5,36
+Perfection Learning,eng,3.97,120383.0,1
+Random House Vintage,eng,3.97,50103.0,1
+Penguin Classics Deluxe Editions,eng,3.97,37620.0,1
+Walker Books,eng,3.97,35634.5,2
+Warner Forever,eng,3.97,16024.0,1
+Abacus,eng,3.97,10771.0,5
+Villard Books,en-US,3.97,9648.0,1
+Broadway Business,eng,3.97,6412.0,1
+William Morrow & Company,en-US,3.97,2592.0,1
+Dalkey Archive Press,en-GB,3.97,2430.0,1
+Metropolitan Books/Henry Holt & Co. (NY),eng,3.97,1776.0,1
+Vintage Books/Vintage Classics,eng,3.97,1344.0,1
+MacAdam/Cage,eng,3.97,1005.0,1
+Simon & Schuster Childrens Books,en-GB,3.97,728.0,1
+P. F. Collier and Sons,eng,3.97,365.0,1
+Harlequin Readers' Choice,eng,3.97,134.0,1
+Orbit Books,eng,3.97,72.0,1
+Fawcett Crest,en-GB,3.97,64.0,1
+Fischer (Tb.),ger,3.97,61.0,1
+Focus,en-US,3.97,57.0,1
+Here's Life Publishers,eng,3.97,28.0,1
+Signet Books (NY),eng,3.97,8.0,1
+Sticker Design (DC Comics),spa,3.97,7.0,1
+MTV Books,eng,3.9699999999999998,8033.5,2
+Avery Publishing Group,eng,3.9699999999999998,3391.75,2
+Pinnacle,eng,3.9699999999999998,600.0,7
+Dover Publications  Inc.,eng,3.9699999999999998,282.0,2
+Nymphenburger,ger,3.9699999999999998,8.75,2
+Random House Audio,eng,3.9686666666666666,219.75,30
+No Exit Press,eng,3.968,54516.0,5
+Writer's Digest Books,eng,3.9675,3676.0,4
+Routledge,en-US,3.9666666666666663,43.5,3
+Dover Publications,eng,3.966438356164384,3058.0,73
+Faber  Faber,eng,3.9659999999999997,1307.5,10
+Cavendish Square Publishing,eng,3.9659999999999997,3.0,5
+Scribner Book Company,en-US,3.965,11058.5,2
+Bantam,en-US,3.965,3989.5,10
+Jossey-Bass,en-US,3.965,866.5,2
+Collector's Library,eng,3.965,78.25,2
+Payot,fre,3.965,14.0,2
+Pan MacMillan,eng,3.9625000000000004,513.75,4
+Wheeler Publishing,eng,3.9625,80.75,4
+Roc,eng,3.9614285714285713,15534.0,7
+NYRB Classics,eng,3.9608333333333334,936.25,12
+Signet,eng,3.960175438596491,18590.0,56
+Berkley Heat,en-US,3.96,22055.0,1
+Dell Publishing Company,en-US,3.96,18206.0,2
+Contemporary French Fiction,fre,3.96,15174.0,1
+Harper Voyager,en-US,3.96,9698.0,1
+Hodder,eng,3.96,6881.0,5
+Little  Brown Books for Young Readers,en-GB,3.96,5717.0,1
+Aladdin Paperbacks,eng,3.96,3502.75,10
+Random House Vintage Books,eng,3.96,2940.0,1
+Fulcrum Publishing,en-US,3.96,1052.0,1
+St. Martin's,eng,3.96,755.0,1
+Starscape,en-US,3.96,720.0,1
+David C Cook,eng,3.96,715.0,1
+Condor Books,eng,3.96,696.0,1
+Sams,en-US,3.96,590.0,1
+Pan Books,eng,3.96,572.0,1
+Silhouette Special Edition,eng,3.96,557.0,2
+David C. Cook,en-US,3.96,542.0,1
+Rick Steves,en-US,3.96,448.0,1
+New American Library,en-US,3.96,429.0,1
+MIT Press (Cambridge  MA),eng,3.96,296.0,1
+Sams,eng,3.96,222.0,1
+Seven Stories Press,en-US,3.96,155.0,1
+Harcourt Brace Jovanovich (NY),eng,3.96,117.0,1
+University of Texas Press (Austin/London),eng,3.96,109.0,1
+Routledge Falmer,en-US,3.96,84.0,1
+Red Hen Pr,eng,3.96,69.0,1
+Penguin Audio UK,eng,3.96,50.0,1
+Rowohlt,ger,3.96,46.0,1
+Severn House,eng,3.96,41.0,1
+Longman Schools Division (a Pearson Education Company),eng,3.96,37.0,1
+Reaktion Books,eng,3.96,25.0,1
+Yosemite Conservancy,eng,3.96,23.0,1
+Rizzoli International Publications,eng,3.96,19.5,2
+Lerner Publications,en-US,3.96,19.0,1
+HighBridge Company,eng,3.96,18.0,1
+Penguin Books Ltd.,en-GB,3.96,17.0,1
+Folio histoire,fre,3.96,15.0,1
+Random House Value Publishing,eng,3.958888888888889,71.5,18
+Berkley Books,eng,3.9576470588235293,30437.25,34
+Berkley Sensation,eng,3.9569230769230765,4637.0,13
+Bantam Doubleday Dell Publishing Group,eng,3.956666666666667,9198.5,3
+Dodo Press,eng,3.956666666666667,3487.0,3
+Ediciones B,spa,3.9566666666666666,404.0,9
+St. Martins Press-3PL,en-US,3.9560000000000004,3507.0,5
+Da Capo Press,eng,3.9558823529411766,531.0,17
+St. Martin's Griffin,eng,3.9551428571428575,5519.5,35
+Norton,eng,3.955,475453.5,2
+Modern Library/Random House (NY),eng,3.955,1633.25,2
+Tommy Nelson,eng,3.955,104.5,2
+Marion Boyars Publishers,eng,3.955,80.75,2
+OUP Oxford,eng,3.955,63.0,2
+Orion,eng,3.9549999999999996,22047.75,14
+National Geographic Society,eng,3.9539999999999997,745.0,5
+Open Court,eng,3.9537500000000003,3117.5,8
+Digireads.com,eng,3.953333333333333,71166.0,3
+Macmillan Audio,eng,3.953333333333333,107.0,6
+Vintage Contemporaries,eng,3.9525,25249.0,4
+Firebird,eng,3.9515384615384614,8025.0,13
+Penguin Classics,eng,3.950377358490566,12178.0,159
+Pocket Books / Simon & Schuster  Inc.,eng,3.95,61330.0,1
+Dial Books,eng,3.95,27905.75,2
+Dodd Mead; 1st edition (September 1976),eng,3.95,19657.0,1
+Eos,eng,3.95,18863.5,4
+Luna,eng,3.95,13105.25,2
+Harpperen,eng,3.95,7084.0,1
+DAW Books,en-US,3.95,4922.0,1
+Firebird Books,eng,3.95,3852.0,2
+BenBella Books,eng,3.95,3568.0,1
+Candlewick,eng,3.95,3201.75,2
+Piper Verlag,ger,3.95,1806.0,1
+Hodder Mobius,eng,3.95,1615.0,1
+Riverhead Hardcover,en-US,3.95,1490.0,1
+Verso,eng,3.95,1433.0,13
+Serpent's Tail,eng,3.95,1259.75,2
+W. W. Norton & Company,enm,3.95,1149.0,1
+Pan Macmillan Ltd. (London),eng,3.95,1103.0,1
+Scholastic,en-GB,3.95,834.0,1
+High Point Media,eng,3.95,814.0,1
+Random House Trade,en-GB,3.95,666.0,1
+Wildside Press,en-US,3.95,337.0,1
+Firebrand Books,en-US,3.95,253.0,1
+Beacon Press,en-US,3.95,201.0,1
+Management Books 2000,eng,3.95,192.0,1
+Skylight Paths Publishing,eng,3.95,120.0,1
+Walker Books Ltd,eng,3.95,71.0,2
+Hackett Publ. Co Inc,eng,3.95,68.0,2
+Phoenix Books/University of Chicago Press (IL),eng,3.95,58.0,1
+Flamingo,eng,3.95,42.5,2
+Dutton Adult,eng,3.95,12.0,1
+New York University Press,eng,3.95,10.0,1
+Audio Renaissance,eng,3.95,5.0,1
+Norma,spa,3.95,3.0,1
+Baen Books,eng,3.9499999999999997,7108.75,6
+Touchstone,en-US,3.9499999999999997,2547.5,8
+TokyoPop,en-US,3.9499999999999997,1524.5,6
+Three Rivers Press (CA),eng,3.9499999999999997,1134.5,3
+Little  Brown and Company,eng,3.946666666666667,74082.25,18
+Avon Books,en-US,3.9466666666666668,11508.0,3
+Plaza y Janés,spa,3.946,737.0,5
+Minotaur Books,eng,3.9455555555555555,1889.0,9
+Doubleday Books,eng,3.945333333333333,4831.0,15
+Titan Books,eng,3.9450000000000003,28734.5,2
+It Books,eng,3.945,13476.0,4
+Dutton Juvenile,eng,3.945,95.75,2
+Gollancz,eng,3.9442857142857144,19663.5,7
+Scholastic  Inc.,eng,3.944,9256.0,5
+Vintage Books,eng,3.9438461538461533,7931.0,13
+Kingfisher,eng,3.9433333333333334,115199.25,6
+Dramatists Play Service,eng,3.942857142857143,1371.5,7
+Simon & Schuster,eng,3.942820512820513,5326.0,39
+Gallery Books,eng,3.9426666666666668,32598.5,15
+Oxford University Press  USA,eng,3.942622950819672,594.0,61
+Arrow Books,eng,3.9425000000000003,14129.75,4
+Baen,en-US,3.942,3289.0,5
+Knopf Publishing Group,en-US,3.942,1989.0,5
+Doubleday,eng,3.941818181818182,970.0,11
+Faber & Faber,eng,3.940714285714286,2332.0,14
+G.P. Putnam's Sons,eng,3.940294117647059,10768.5,34
+Harper Business,eng,3.94,53749.0,5
+House of Stratus,eng,3.94,28414.0,1
+Crossway Books,en-US,3.94,12789.0,1
+Gingko Press,eng,3.94,12098.0,1
+Penguin Books in association with Faber & Faber,eng,3.94,9258.0,1
+Putnam Publishing Group,en-US,3.94,6152.0,1
+Schwartz & Wade Books,eng,3.94,3983.0,1
+Arden Shakespeare,en-US,3.94,2820.0,1
+Paraglyph Press,en-CA,3.94,2113.0,1
+Cardoza,eng,3.94,2080.0,1
+Modern Library,en-US,3.94,1130.0,6
+Dark Horse Manga,eng,3.94,911.0,9
+Bookspan,eng,3.94,834.0,1
+Fantagraphics,en-US,3.94,740.0,1
+W. W. Norton & Company,en-US,3.94,663.0,6
+Archipelago Books,eng,3.94,491.0,1
+W.W. Norton & Company (NY/London),en-US,3.94,421.0,1
+Prentice Hall/Simon & Schuster Company (Englewood Cliffs  NJ),en-US,3.94,265.0,1
+Albert Whitman  Company,eng,3.94,262.25,2
+Faber and Faber & Penguin India,eng,3.94,83.0,1
+Paperback Library,eng,3.94,64.0,1
+John F. Blair  Publisher,eng,3.94,40.0,1
+Cisne,spa,3.94,32.0,1
+Citadel,en-US,3.94,31.0,1
+Secker and Warburg,eng,3.94,30.0,1
+Walker,eng,3.94,21.0,1
+Northeastern University Press,eng,3.94,18.0,1
+Edwin Mellen Press,eng,3.94,17.0,1
+Goldmann Verlag,ger,3.94,15.0,1
+Peripatetic Press,eng,3.94,13.0,1
+Orion Publishing Group  Ltd.,eng,3.94,7.0,1
+Fischer Taschenbuch Verlag,ger,3.94,2.0,1
+Granta Books,eng,3.94,2.0,1
+South End Press (Boston),en-US,3.94,2.0,1
+Signet Classics,en-US,3.936666666666667,243.5,3
+Thorndike Press,eng,3.935,22601.75,2
+Grove Press,en-GB,3.935,3226.75,2
+Schocken Books Inc,eng,3.935,390.25,2
+Chaosium,eng,3.935,73.25,12
+Bantam Books (NY),eng,3.9349999999999996,167.75,2
+Johns Hopkins University Press,eng,3.934285714285714,647.5,7
+Turtleback Books,eng,3.934090909090909,87.75,22
+Orion Publishing,eng,3.9333333333333336,634.0,3
+Plume Books,eng,3.933,6515.0,10
+William Morrow,eng,3.932,10615.25,20
+University of California Press,eng,3.9305,538.25,20
+HarperTorch,eng,3.9302325581395348,19151.0,43
+Griffin,en-US,3.93,191577.0,1
+Penguin Books Ltd. (London),eng,3.93,52522.0,1
+BALLANTINE BOOKS,eng,3.93,37996.0,1
+HarperCollins Perennial,eng,3.93,30872.0,1
+The Orion Publishing Group Ltd,eng,3.93,17624.0,1
+Routledge Classics,eng,3.93,10217.75,2
+AK Press,eng,3.93,4145.0,1
+Signet Book,en-US,3.93,2925.0,1
+New York Review Children's Collection,en-US,3.93,1476.0,1
+Pocket Books/Star Trek,eng,3.93,1181.0,1
+St. Martins Press-3PL,eng,3.93,828.5,4
+Chicken House,eng,3.93,534.0,1
+Penguin Books  Limited (UK),eng,3.93,455.5,3
+Cornerstone Press Chicago,eng,3.93,448.0,1
+Wasendorf & Associates Inc,eng,3.93,406.0,1
+Stone Bridge Press,en-US,3.93,317.0,1
+Baton Wicks,eng,3.93,256.0,1
+Dutton Books for Young Readers,en-US,3.93,254.0,1
+William Heinemann,eng,3.93,171.0,1
+British Film Institute,en-US,3.93,130.0,1
+Neil Wilson Publishing,eng,3.93,100.0,1
+Inter Varsity Press,eng,3.93,93.0,1
+Blu,en-GB,3.93,83.0,1
+Dramatists Play Service  Inc.,eng,3.93,42.0,1
+Rockport Publishers,eng,3.93,27.0,1
+Fischer TB,ger,3.93,26.0,1
+Inner City Books,eng,3.93,23.0,1
+Harvard University Press (Cambridge  MA)/Wm Heinemann Ltd. (London),mul,3.93,21.0,1
+Editions 10/18,fre,3.93,11.0,1
+Let's Go Publications,en-US,3.93,9.0,1
+Disney-Hyperion,eng,3.9299999999999997,23881.25,4
+Atlantic Books (UK),eng,3.9299999999999997,4715.25,2
+Aladdin,eng,3.9299999999999997,3431.75,16
+Sweet Valley,eng,3.9299999999999997,1082.25,2
+Backinprint.com,eng,3.9299999999999997,578.5,3
+University Press of Kentucky,eng,3.9299999999999997,396.5,2
+Blackstone Audiobooks,en-US,3.9299999999999997,34.5,2
+Hachette,fre,3.9299999999999997,5.5,2
+Carl Hanser,ger,3.9299999999999997,1.75,2
+DeBolsillo,spa,3.9285714285714284,186.5,7
+Atria Books,eng,3.928181818181818,106210.5,11
+Simon  Schuster,eng,3.9278181818181817,12388.5,55
+Dell,en-US,3.9275,11100.5,4
+St. Martin's Paperbacks,eng,3.927058823529412,10344.75,34
+Cambridge University Press,eng,3.926206896551724,402.25,58
+Pocket Star Books,eng,3.9259999999999997,2980.0,5
+Dial Press,eng,3.9258333333333333,57911.5,12
+Grand Central Publishing,eng,3.9258208955223886,42698.0,67
+Ecco,en-US,3.925,11956.5,2
+Harvard Common Press,eng,3.925,86.5,2
+Penguin Books,eng,3.924396551724138,12508.5,232
+Putnam,eng,3.9233333333333333,22217.5,3
+New Press,eng,3.9233333333333333,300.5,3
+Random House Trade Paperbacks,eng,3.9229999999999996,37168.0,20
+Chronicle Books,eng,3.9229999999999996,395.0,10
+Onyx,eng,3.9225,4407.25,8
+Wordsworth Editions,eng,3.9225,2710.0,8
+Little  Brown Books for Young Readers,en-US,3.9219999999999997,2566.0,5
+Lonely Planet,eng,3.9219999999999997,281.75,6
+Applewood Books,eng,3.921666666666667,7439.25,6
+Headline,eng,3.9215384615384616,6366.0,13
+Seven Stories Press,eng,3.9200000000000004,3070.0,5
+The Chicken House,eng,3.92,91475.0,1
+NAL Jam,eng,3.92,83997.0,1
+Virago,eng,3.92,52180.75,2
+Ballantine Books (NY),eng,3.92,42356.5,2
+Picador USA,eng,3.92,26047.75,26
+Puffin,eng,3.92,12077.5,18
+Piatkus Books,eng,3.92,9295.0,1
+Back Bay,eng,3.92,3590.0,1
+Multnomah,en-US,3.92,3088.5,2
+Jove Books,en-US,3.92,2790.0,1
+Millipede Press,eng,3.92,2243.0,1
+W. W. Norton  Company,en-US,3.92,1502.0,9
+Penguin Books Ltd,en-GB,3.92,1361.0,1
+Trine Day,eng,3.92,1023.0,1
+Dell Publishing,eng,3.92,884.0,1
+Farrar  Straus and Giroux,fre,3.92,698.0,1
+University Press of Florida,en-US,3.92,425.0,1
+Unwin Paperbacks,eng,3.92,368.0,1
+VIZ Media LLC,en-GB,3.92,343.0,1
+Peter Owen Publishers,eng,3.92,266.0,1
+Book of the Month Club,en-US,3.92,252.0,1
+Penguin Books (London),eng,3.92,226.0,1
+Llewellyn Publications,en-US,3.92,192.0,1
+Putnam Adult,en-US,3.92,186.0,1
+Suma,spa,3.92,162.0,1
+Vintage/Ebury,eng,3.92,147.0,1
+No Starch Press,eng,3.92,145.0,1
+Association for Scottish Literary Studies,eng,3.92,59.0,1
+Creation Books,eng,3.92,57.25,2
+Thomas Nelson,en-GB,3.92,46.0,1
+Chatto  Windus,en-GB,3.92,45.0,1
+Harvest Books/Harcourt,eng,3.92,42.0,1
+Sinauer Associates,eng,3.92,37.0,1
+MacMillan Children's Books,en-GB,3.92,28.0,1
+Catholic Book Publishing,eng,3.92,13.0,1
+Riverrun Press (New York  NY),eng,3.92,12.0,1
+Ohio State University Press,eng,3.92,11.0,1
+Blanvalet Verlag GmbH,ger,3.92,5.0,1
+Larousse,fre,3.92,4.0,1
+Pyramid Books,eng,3.92,3.0,1
+Spectra,eng,3.9181818181818184,27465.5,22
+Free Press,eng,3.917368421052632,10801.0,19
+Laurel Leaf Library,eng,3.917142857142857,7293.5,7
+Avon,eng,3.9170833333333337,6725.5,48
+Greenwillow Books,en-US,3.9166666666666665,10808.0,3
+Sourcebooks,eng,3.9166666666666665,1137.0,3
+DAW,en-US,3.91625,6655.75,8
+Del Rey Books,eng,3.916,5558.25,30
+Warner Books,eng,3.915,39400.75,20
+Harper Paperbacks,en-US,3.915,12163.25,2
+Lyons Press,eng,3.915,8893.5,2
+Penguin Press,eng,3.915,4180.25,2
+Tuttle Publishing,eng,3.915,1717.25,2
+Hyperion Books,en-US,3.915,1368.5,2
+Methuen Publishing,eng,3.915,242.5,2
+Collins Reference,en-US,3.915,93.25,2
+Routledge,eng,3.9144444444444444,348.0,29
+Bloomsbury Methuen Drama,eng,3.914,21339.0,5
+HMH Books for Young Readers,eng,3.9136363636363636,3658.0,22
+Orion Books,eng,3.9133333333333336,6815.5,3
+Hill and Wang,eng,3.9133333333333336,1979.5,6
+Public Square Books,spa,3.9133333333333336,45.5,3
+MIT Press,eng,3.912857142857143,651.5,7
+Jove,eng,3.9127777777777784,22566.75,18
+Pocket Books,eng,3.9124444444444446,10627.75,89
+Viking Adult,eng,3.9116666666666666,23542.25,6
+David R. Godine Publisher,eng,3.9116666666666666,1369.5,6
+Penguin Books,en-GB,3.9114285714285715,854.5,7
+Simon  Schuster,en-US,3.911,2865.0,10
+Hackett Publishing Company  Inc.,eng,3.910740740740741,1001.0,27
+Mariner Books,eng,3.910413223140496,6343.0,120
+Nelson Books,en-US,3.91,42509.0,1
+Berkley,en-US,3.91,16809.0,7
+Picador USA,en-US,3.91,13347.5,2
+Broadway/Crown Publishing Group,eng,3.91,10384.0,1
+Wizards of the Coast,en-US,3.91,7543.0,5
+Vintage Crime/Black Lizard,swe,3.91,5341.0,1
+Mariner Books / Harvest Books,en-US,3.91,4318.0,1
+Hodder and Stoughton,eng,3.91,3689.0,1
+Atlas Books/HarperCollins Publishers,eng,3.91,2319.0,1
+Farrar Straus Giroux,en-US,3.91,1607.0,2
+Leisure,eng,3.91,1274.0,1
+Henry Holt and Co. (BYR),eng,3.91,760.0,1
+Grove/Atlantic  Inc.,eng,3.91,650.0,1
+Zenith Press,eng,3.91,633.75,2
+Hesperus Press,eng,3.91,583.75,2
+W.W. Norton & Company,en-US,3.91,539.0,6
+Amereon Ltd,eng,3.91,149.0,1
+Stackpole Books,eng,3.91,85.0,1
+Archie Comics,eng,3.91,61.0,1
+Círculo de Lectores,spa,3.91,54.0,1
+Ace,en-GB,3.91,43.0,1
+Vintage/Random House Inc. (NYC),eng,3.91,36.0,1
+Wiley,en-GB,3.91,35.0,1
+Enitharmon Press,eng,3.91,25.0,1
+Wiley-Blackwell,eng,3.908,101.0,5
+Penguin Press HC  The,eng,3.9075,2749.75,4
+Northwestern University Press,eng,3.9075,706.75,4
+Barnes & Noble Classics,eng,3.9074999999999998,4484.25,4
+McSweeney's,eng,3.907272727272727,2546.5,11
+Wiley,eng,3.907058823529412,531.0,17
+Back Bay Books,eng,3.9066666666666667,45586.5,30
+Pearson,en-US,3.9066666666666667,26924.5,3
+Ace Books,eng,3.9066666666666667,18543.0,15
+Gardners Books,eng,3.9050000000000002,6043.5,2
+Disney Press,en-US,3.9050000000000002,1221.5,2
+Chronicle Books,en-US,3.9050000000000002,130.0,4
+Scholastic,en-US,3.905,277.5,4
+Seal Books,eng,3.9033333333333338,6479.5,3
+Penguin Group,eng,3.9033333333333338,3569.5,3
+Harper Perennial,eng,3.9007608695652176,16990.25,92
+Penguin Classics,en-US,3.900625,1690.25,16
+Amistad,eng,3.9000000000000004,29686.0,9
+Plaza y Janes,spa,3.9000000000000004,3303.0,12
+Sun and Moon Press,eng,3.9000000000000004,2250.5,2
+Houghton Mifflin Co. (Boston/NY),eng,3.9,197099.0,1
+Jove Books,eng,3.9,4299.0,6
+Arsenal Pulp Press,en-US,3.9,3833.0,1
+AHA! Process,eng,3.9,3690.0,1
+Zebra Books,eng,3.9,2949.0,1
+Headline,en-US,3.9,2440.0,1
+Del Rey Books,en-US,3.9,1858.0,3
+Simon & Schuster Childrens Books,en-US,3.9,1782.0,1
+Roc Hardcover,eng,3.9,1050.0,1
+ComicsOne Corporation,eng,3.9,805.25,2
+Random House Reference Publishing,eng,3.9,690.0,1
+Carroll & Graf,eng,3.9,564.0,1
+F & W Publications Inc.,eng,3.9,475.0,1
+Diogenes Verlag,ger,3.9,301.0,1
+Hay House,eng,3.9,295.5,3
+TusQuets,spa,3.9,227.5,3
+Editorial Diana,spa,3.9,90.0,1
+Porrua,spa,3.9,52.0,1
+MONDIAL,fre,3.9,50.0,1
+Orion (an Imprint of The Orion Publishing Group Ltd ),eng,3.9,44.0,1
+Tin House Magazine,eng,3.9,29.0,1
+Marion Boyars Publishers Ltd,en-GB,3.9,13.0,1
+Knopf Publishing Group,eng,3.899,32685.0,10
+Harper,eng,3.89875,9983.25,32
+Barrons Educational Series,eng,3.8979999999999997,157.0,5
+NAL,eng,3.897777777777778,26928.0,18
+Ballantine Books,en-US,3.8976470588235297,16178.0,17
+McGraw-Hill Education,eng,3.8971428571428572,761.0,7
+Hackett Publishing Company  Inc.,en-US,3.8966666666666665,635.0,3
+Books on Tape,eng,3.8966666666666665,325.25,6
+Harper Perennial,en-US,3.896111111111111,1161.75,18
+Wilhelm Goldmann Verlag  GmbH,ger,3.8950000000000005,237.0,2
+Pan Publishing,eng,3.895,70.5,2
+Fourth Estate,eng,3.893333333333333,286.0,3
+Harry N. Abrams,en-US,3.8925,585.25,4
+Prentice Hall,en-US,3.8925,140.25,4
+Berkley Trade,eng,3.8922222222222222,6368.0,9
+Fawcett,eng,3.8920000000000003,1245.5,15
+Harper Teen,eng,3.89,17135.0,1
+Farrar Straus and Giroux,en-US,3.89,8073.0,1
+Simon  Schuster/Paula Wiseman Books,eng,3.89,2829.0,3
+TarcherPerigee,eng,3.89,2246.0,1
+Dark Horse Comics,eng,3.89,1617.5,7
+FASA Corp.,eng,3.89,445.0,1
+Bloomsbury Academic,eng,3.89,402.25,14
+TEA,ita,3.89,333.0,1
+Byblos,spa,3.89,287.0,1
+Indigo,en-US,3.89,155.0,1
+International Publishers,eng,3.89,118.0,1
+Dial,eng,3.89,109.5,3
+Nova Fronteira,por,3.89,82.0,1
+Galahad Books,en-US,3.89,81.0,1
+Sky Books (NY),eng,3.89,74.0,1
+Quinteto,spa,3.89,70.0,1
+Lonely Planet,en-GB,3.89,66.0,1
+FonoLibro,spa,3.89,65.0,1
+Book Publishing Company,en-US,3.89,59.0,1
+Collectors Library,eng,3.89,52.0,1
+Gold Eagle,eng,3.89,44.25,4
+University of Illinois Press,en-US,3.89,38.0,1
+Kiepenheuer & Witsch,ger,3.89,36.0,3
+Haynes Manuals N. America  Inc.,eng,3.89,33.5,2
+Polychrome Publishing Corporation,eng,3.89,9.0,1
+Scholastic Reference,eng,3.89,4.0,1
+Doherty  Tom Associates  LLC,eng,3.89,3.0,1
+RH Audio Price-less,eng,3.89,2.0,1
+Pan,eng,3.8899999999999997,377.0,5
+Impact,eng,3.8899999999999997,63.0,2
+Oxford University Press,eng,3.8894285714285712,4719.75,70
+Scholastic Paperbacks,eng,3.8893023255813954,3130.0,43
+Yearling Books,eng,3.88875,1815.5,8
+Touchstone,eng,3.8881818181818177,2019.0,11
+Orb Books,eng,3.887857142857143,4822.25,14
+Simon & Schuster Audio,eng,3.887777777777778,357.0,8
+Vintage,eng,3.887559322033898,9431.5,295
+Three Rivers Press (CA),en-US,3.8866666666666667,2378.5,3
+Westminster John Knox Press,eng,3.8866666666666667,351.5,3
+Livre de Poche,fre,3.8866666666666667,53.0,3
+Babel,fre,3.8866666666666667,36.5,3
+Dabel Brothers Publishing,eng,3.885,12073.5,2
+Pelican Publishing,eng,3.885,488.5,2
+Prentice Hall,eng,3.885,138.5,16
+Berkley,eng,3.884936708860759,23978.5,79
+Bantam Books,eng,3.8848837209302327,8686.0,43
+Clarion Books,eng,3.8840000000000003,2018.0,5
+Denoël,fre,3.8840000000000003,78.0,5
+Simon Schuster,eng,3.8825000000000003,252886.75,4
+Signet,en-US,3.8825000000000003,1478.5,8
+Bantam,eng,3.8819,19475.75,100
+Wildside Press,eng,3.8816666666666664,452.0,6
+Planeta Publishing,spa,3.8815384615384616,98.0,13
+Random House Books for Young Readers,eng,3.8811111111111107,3005.5,27
+Penguin Books,en-US,3.880909090909091,1808.25,22
+Delacorte Press,eng,3.880625,19757.0,16
+Anchor,eng,3.880181818181818,17370.5,55
+Blackwell Publishers,eng,3.8800000000000003,1156.5,3
+Delta Publishing,eng,3.88,75494.0,1
+Arlington House,eng,3.88,21524.0,1
+Villard,en-GB,3.88,16133.0,1
+New York : Penguin Books,en-US,3.88,4715.0,1
+Crown,en-US,3.88,1225.0,1
+Jimmy Patterson,eng,3.88,862.0,1
+NYRB Classics,en-US,3.88,520.0,1
+One World (UK),eng,3.88,359.75,2
+Polygon,eng,3.88,332.0,1
+Benjamin Cummings,eng,3.88,159.0,1
+University of Calgary Press,eng,3.88,98.0,1
+San Val,eng,3.88,97.0,1
+Bloomsbury (NYC),en-US,3.88,89.0,1
+Farrar  Straus & Giroux,eng,3.88,82.25,2
+Hodder & Stoughton Ltd,eng,3.88,50.5,2
+Doubleday Canada,eng,3.88,34.0,1
+Sleeping Bear Press,eng,3.88,25.25,2
+Time-Life Books,eng,3.88,17.0,1
+OUP Oxford,en-US,3.88,4.0,1
+Insel  Frankfurt,ger,3.88,0.0,1
+Blanvalet Taschenbuch Verlag,ger,3.8799999999999994,44.5,3
+Fawcett Books,eng,3.8790909090909094,4444.0,11
+Three Rivers Press,eng,3.879,1155.25,10
+Pantheon Books,eng,3.8788888888888886,20290.0,9
+Broadway Books,eng,3.8785714285714286,8887.0,42
+HarperAudio,eng,3.8785714285714286,94.0,7
+Warner Books (NY),eng,3.8783333333333334,19988.5,18
+William Morrow,en-US,3.8783333333333334,6810.25,6
+Silhouette,eng,3.8783333333333334,5087.0,6
+Scribner,en-US,3.8783333333333334,1690.25,6
+Debolsillo,spa,3.8782352941176477,218.0,17
+Marvel,eng,3.878095238095238,8900.0,21
+O'Reilly Media,eng,3.878,403.0,5
+Hachette Books,eng,3.8777777777777778,29938.5,18
+Punto de Lectura,spa,3.8777777777777778,1266.0,9
+Firebird,en-US,3.876666666666667,21917.0,3
+W. W. Norton  Company,en-GB,3.875,2708.75,2
+Arkham House Publishers,eng,3.875,368.5,2
+Penguin Books  Limited (UK),en-GB,3.875,162.75,2
+Aspect,eng,3.873333333333333,2917.0,3
+G.P. Putnam's Sons,en-US,3.873333333333333,1989.0,6
+Yearling,eng,3.8731999999999998,2602.0,25
+Signet Classics,eng,3.8729999999999998,40645.75,20
+Warner Books,en-US,3.8724999999999996,11104.0,4
+Phoenix,eng,3.8716666666666666,3097.5,6
+Turtleback,eng,3.87,162276.5,2
+Portfolio,eng,3.87,22375.0,1
+Hill & Wang,eng,3.87,12576.0,1
+Kodansha International,eng,3.87,2799.5,2
+Dutton,en-US,3.87,1886.0,1
+Penguin Book Limited,eng,3.87,1570.0,1
+Classic Books,eng,3.87,693.0,1
+Penguin Essential Editions,en-US,3.87,397.0,1
+Stanford University Press,eng,3.87,236.0,2
+Transaction Publishers,eng,3.87,100.0,1
+Abacus Books (London),en-GB,3.87,65.0,1
+Audio Partners,eng,3.87,55.5,4
+Arbordale Publishing,eng,3.87,37.0,1
+Sage Publications  Inc,eng,3.87,37.0,1
+Findakly,fre,3.87,10.0,1
+Learning Matters,eng,3.87,1.0,1
+Ballantine Books,eng,3.868095238095238,12782.25,126
+Bloomsbury Arden Shakespeare,eng,3.867777777777778,1796.0,9
+University Press of Kansas,eng,3.8675,59.0,4
+Vertigo,en-US,3.867142857142857,3995.5,7
+University of Illinois Press,eng,3.8666666666666667,188.0,3
+Tor Books,eng,3.865576923076923,12375.25,52
+Europa Editions,eng,3.865,7808.0,2
+Poisoned Pen Press,eng,3.865,350.5,2
+Chalice Press,eng,3.865,164.5,2
+Penguin,en-GB,3.8649999999999998,719.0,4
+Grand Central Publishing,en-US,3.8642857142857143,6458.5,7
+Pocket Star,en-US,3.8633333333333333,1873.25,6
+Grove Press,eng,3.8630555555555555,15047.0,36
+Wizards of the Coast,eng,3.861304347826087,4898.5,23
+Penguin Books Ltd,eng,3.8607692307692307,10569.0,26
+Gallimard,fre,3.8606666666666665,3455.0,15
+University of Washington Press,eng,3.8600000000000003,207.25,2
+Rough Guides,eng,3.8600000000000003,34.0,5
+Island,eng,3.86,89014.0,1
+Simon & Schuster Books for Young Readers,en-US,3.86,10103.0,1
+Pocket Star,eng,3.86,1229.75,6
+Atlantic Monthly Press (NYC),eng,3.86,1088.0,1
+Onyx,en-US,3.86,423.75,2
+Penguin UK,eng,3.86,347.0,3
+Deutscher Taschenbuch Verlag,ger,3.86,330.0,2
+Poseidon Press,eng,3.86,127.0,1
+Limitless Corporation,eng,3.86,89.0,1
+Harper Perennial,ger,3.86,71.0,1
+Cold Spring Harbor Laboratory Press,en-US,3.86,63.0,1
+Knowledge Products,eng,3.86,57.0,1
+Kregel Academic & Professional,en-US,3.86,42.0,1
+Penguin-HighBridge,eng,3.86,42.0,1
+Peter Smith Publisher  Inc.,eng,3.86,1.0,1
+Anchor Books,eng,3.8597297297297297,12092.0,37
+Berkley Books,en-US,3.856666666666667,43475.0,9
+Vision,eng,3.8561538461538456,45274.0,13
+Plume,eng,3.856129032258065,10400.5,31
+Vintage International,eng,3.855294117647059,29486.0,17
+Harlequin Special Releases,eng,3.8550000000000004,430.0,2
+Gallimard Education,fre,3.855,1530.0,2
+Disinformation Company,eng,3.855,796.75,2
+B.E.S. Publishing,eng,3.855,617.75,2
+Gold Eagle,en-US,3.855,91.25,2
+Faber and Faber,eng,3.854,14776.5,10
+Harvard University Press,en-US,3.854,110.0,5
+Lerner Publications,eng,3.8533333333333335,116.0,3
+Simon & Schuster Simon Pulse,eng,3.85,211060.0,1
+Crown,eng,3.85,96725.5,6
+Ember,eng,3.85,93589.0,5
+Adams Media,en-US,3.85,9662.0,1
+Forge Books,en-GB,3.85,5618.0,1
+New York University Press,en-GB,3.85,3147.0,1
+Flamingo,en-GB,3.85,1551.75,2
+Douglas  McIntyre,en-US,3.85,893.0,1
+Taschen,mul,3.85,288.0,1
+Council Oak Books,eng,3.85,77.0,1
+Dorling Kindersley Children,eng,3.85,8.0,1
+Ullstein,ger,3.85,2.0,1
+Laurel Leaf,en-US,3.8499999999999996,21920.0,2
+MacMillan General Books,eng,3.8499999999999996,7885.0,3
+Scribner,eng,3.8493939393939396,12345.75,66
+Scholastic Paperbacks,en-US,3.8492307692307692,2263.0,13
+William Morrow Paperbacks,eng,3.848157894736842,37159.0,38
+Harper Collins,eng,3.846666666666667,1197.0,3
+Random House Trade Paperbacks,en-US,3.8466666666666662,42826.0,3
+Crown Publishing Group (NY),eng,3.8466666666666662,15393.0,3
+Augsburg Fortress Publishing,eng,3.8466666666666662,48.0,3
+HarperCollins Publishers,eng,3.84625,12169.25,40
+Oxford University Press  USA,en-US,3.845714285714286,542.5,7
+Atheneum/Richard Jackson Books,eng,3.845,219.5,2
+Harcourt Brace Jovanovich,eng,3.8449999999999998,4485.5,2
+DC Comics,eng,3.8444,6368.0,25
+Ace,eng,3.843125,7256.5,32
+Random House Trade,eng,3.8430769230769233,13361.0,13
+Spectra Books,eng,3.842,17985.25,10
+Atria Books,en-US,3.8408333333333338,2526.25,12
+Victor Gollancz,eng,3.84,51343.0,1
+Grand Central,eng,3.84,26040.0,1
+Harvard Business Review Press,eng,3.84,23967.0,3
+Pocket Books,en-US,3.84,12975.5,19
+Scholastic Inc.,en-US,3.84,4334.0,1
+Harper & Row,eng,3.84,3926.0,1
+Random House Large Print,en-US,3.84,3645.0,1
+St. Martins Press,eng,3.84,3007.75,2
+Doubleday Publishing (NY),eng,3.84,2780.0,1
+Joanna Cotler Books,eng,3.84,2449.0,1
+Walter de Gruyter,eng,3.84,609.0,1
+Barnes  Noble Classics,en-GB,3.84,301.0,1
+Wiley Publishing  Inc.,eng,3.84,285.0,1
+Times Books,en-US,3.84,248.0,1
+Focal Press,en-US,3.84,96.0,3
+Little  Brown Young Readers,en-GB,3.84,69.0,1
+Longman,eng,3.84,68.0,1
+Delta,en-US,3.84,60.0,1
+Night Shade,eng,3.84,46.0,1
+DEBOLS!LLO,spa,3.84,45.0,1
+Methuen Drama,eng,3.84,28.0,1
+Reclam  Ditzingen,ger,3.84,22.0,1
+Siloam,eng,3.84,21.0,1
+Prentice Hall/Scribner/Macmillan,en-US,3.84,19.0,1
+Healing Arts Press,en-US,3.84,17.0,1
+Tropismos,spa,3.84,8.0,1
+Time Life Medical,eng,3.839,83.0,10
+HarperOne,en-US,3.83875,3287.25,8
+Kensington Publishing Corporation,eng,3.8366666666666664,12006.5,3
+Leisure Books,eng,3.8366666666666664,2098.0,21
+Hodder Children's Books,eng,3.8366666666666664,1078.5,3
+IVP Academic,eng,3.8366666666666664,237.0,3
+Dutton Books,eng,3.836,8615.0,5
+HarperEntertainment,eng,3.836,652.0,5
+Black Swan,eng,3.8358333333333334,4444.0,12
+Steerforth,eng,3.835,500.75,2
+Simon  Schuster Books for Young Readers,eng,3.834285714285714,3603.5,7
+Dell Publishing Company,eng,3.833636363636364,217204.5,11
+Times Books,eng,3.8333333333333335,604.5,3
+Bloomsbury,eng,3.8322222222222226,7772.0,9
+Perennial / William Morrow / HarperCollins,eng,3.83,37206.0,1
+Harper Perennial Classics,eng,3.83,19668.0,1
+Headline Feature,eng,3.83,15666.0,1
+Del Rey/Ballantine Books,eng,3.83,10727.0,1
+Orion Publishing Group,eng,3.83,10334.75,2
+Morgan Road Books,eng,3.83,8655.0,1
+Luna Books,en-US,3.83,7756.0,1
+Warner Vision,eng,3.83,5073.0,1
+CMX,eng,3.83,3515.0,1
+Samuel French Ltd,eng,3.83,2813.0,1
+Virago UK,en-GB,3.83,2011.0,1
+Éditions de Minuit,fre,3.83,1751.0,1
+Vintage,en-GB,3.83,1480.75,6
+FT Press,eng,3.83,1456.0,1
+Owl Publishing Company,en-US,3.83,1397.0,1
+Bantam Starfire,en-US,3.83,928.0,1
+Viking Books,en-GB,3.83,821.0,1
+Douglas & McIntyre,en-US,3.83,807.0,1
+Harper Element,eng,3.83,781.0,1
+Miramax Books,en-US,3.83,772.5,2
+Ronin Publishing (CA),en-US,3.83,710.0,1
+New Page Books,eng,3.83,443.0,1
+Sterling Children's Books,en-US,3.83,420.0,1
+Douglas  McIntyre,eng,3.83,332.0,1
+University of Arkansas Press,en-US,3.83,247.0,1
+Listening Library (Audio),en-US,3.83,205.0,1
+University of Notre Dame Press,eng,3.83,76.0,1
+Pan Australia,eng,3.83,70.0,1
+HarperAudio,en-US,3.83,55.0,1
+Troll Communications,eng,3.83,39.0,1
+Fawcett crest,eng,3.83,37.0,1
+Addison Wesley,eng,3.83,36.0,1
+Grove Press  Granta,eng,3.83,34.0,1
+The Audio Partners,en-US,3.83,28.0,1
+Black Sparrow Press,en-US,3.83,18.0,1
+Better Homes and Gardens Books,eng,3.83,6.0,1
+Mel Bay Publications  Inc.,eng,3.83,6.0,1
+Timber Press (OR),eng,3.83,0.0,1
+Alfred A. Knopf,eng,3.828148148148148,18200.0,27
+Alfaguara,spa,3.8280000000000003,1425.0,5
+Riverhead Books,en-US,3.8275,2160.25,8
+Transworld Publishers,eng,3.8266666666666667,1927.0,3
+Earthlight,eng,3.825,113.25,2
+Scholastic Audio Books,eng,3.825,80.75,2
+Andrews McMeel Publishing,en-US,3.825,74.0,2
+Kessinger Publishing,eng,3.8240000000000003,28.25,10
+Arrow,eng,3.824,19036.0,25
+Running Press,eng,3.82375,169.0,8
+Fawcett,en-US,3.8225,1463.75,4
+Dell,eng,3.821,11433.25,20
+Little  Brown Young Readers,eng,3.8200000000000003,22168.0,3
+Ace Books,en-US,3.8200000000000003,17970.5,8
+Tor Fantasy,en-US,3.8200000000000003,7684.0,6
+Viking Books,eng,3.8200000000000003,2612.0,9
+Harlequin Books,eng,3.8200000000000003,174.75,2
+Random House Children's Books,en-US,3.8200000000000003,88.25,2
+Laurel Leaf Books,eng,3.82,16434.0,1
+Simon & Schuster Adult Publishing Group,eng,3.82,11739.0,1
+Downtown Press,eng,3.82,10677.0,2
+Perennial,eng,3.82,10452.0,1
+Morrow,eng,3.82,5626.0,1
+Collins Publishers,en-US,3.82,3170.0,1
+Sounds True,eng,3.82,2913.0,1
+Little Apple,en-US,3.82,2364.0,1
+HarperSanFrancisco,eng,3.82,1844.0,1
+Knopf Books for Young Readers,en-US,3.82,713.0,1
+The Modern Library,eng,3.82,687.0,1
+Julia MacRae,eng,3.82,348.0,2
+Spectra/Bantam Books (NYC),eng,3.82,320.0,1
+Tarcher,eng,3.82,228.0,1
+Gibbs Smith Publishers,en-US,3.82,114.0,1
+Pineapple Press,eng,3.82,45.0,1
+One Hour Entertainment,eng,3.82,34.0,1
+Éditions de L'Olivier,fre,3.82,34.0,1
+Kabel  Verlag GmbH Ernst,ger,3.82,23.0,1
+McFarland & Company,eng,3.82,16.0,1
+The Liffey Press,eng,3.82,12.0,1
+Simon  Schuster Audio,eng,3.815555555555556,1369.0,9
+Salamandra,spa,3.8150000000000004,1426.0,4
+Waking Lion Press,eng,3.8150000000000004,981.25,2
+Yale University Press,en-US,3.8150000000000004,862.0,2
+角川書店 (Kadokawa Shoten),jpn,3.8150000000000004,2.0,2
+Haymarket Books,eng,3.815,212.25,2
+McGraw-Hill,eng,3.813333333333334,1726.5,3
+Peachpit Press,en-US,3.813333333333333,671.0,3
+Broadway Books,en-US,3.812857142857143,1360.5,7
+John Wiley & Sons,eng,3.812857142857143,1005.5,7
+Dover Publications,en-US,3.8125,243.75,8
+Dante University of America Press,eng,3.81,194545.0,1
+Anchor Books,en-GB,3.81,68554.0,1
+Delacorte Books,eng,3.81,62199.0,1
+Bantam Doubleday Dell (NYC),eng,3.81,36446.0,1
+Rayo,eng,3.81,9368.5,3
+Forge,eng,3.81,8657.5,3
+DAW,eng,3.81,8631.0,31
+Tusquets,spa,3.81,4382.0,1
+Vintage International,en-US,3.81,2070.0,1
+Tom Doherty Associates,eng,3.81,1247.0,1
+Roaring Brook Press,eng,3.81,679.0,2
+Games Workshop(uk),eng,3.81,606.0,2
+Multnomah Books,en-US,3.81,453.0,2
+Academy Chicago Publishers,en-US,3.81,416.0,1
+Kessinger Publishing,en-US,3.81,395.0,1
+Large Print Press,en-US,3.81,367.0,1
+Berkley Prime Crime Books,eng,3.81,322.0,1
+Green Ronin Publishing,eng,3.81,305.0,1
+Borgo Press,en-US,3.81,257.0,1
+Voyager,en-GB,3.81,171.0,1
+Avery,en-US,3.81,165.0,1
+Duke University Press Books,en-US,3.81,138.0,1
+Bertrand,fre,3.81,104.0,1
+Harpercollins,en-US,3.81,103.0,1
+Sceptre,en-GB,3.81,91.0,1
+Wings,en-US,3.81,75.75,2
+Hamish hamilton,en-US,3.81,68.0,1
+Applause Theatre & Cinema Book Publishers,eng,3.81,61.0,1
+Vivendi,en-GB,3.81,31.0,1
+Literatura Random House,spa,3.81,27.0,1
+Ediciones Urano,spa,3.81,24.0,1
+HarperTeen,eng,3.8085714285714287,8058.0,7
+Dutton,eng,3.808,21382.0,5
+Rayo,spa,3.8066666666666666,1824.5,3
+Corgi Books,eng,3.8049999999999997,2569.0,2
+Granta UK,eng,3.8049999999999997,166.5,2
+Riverhead Books,eng,3.802222222222222,26406.0,18
+Picador,eng,3.801818181818182,6917.0,33
+Houghton Mifflin,en-US,3.8000000000000003,1027.5,3
+Plume (Penguin Books Ltd),eng,3.8,19927.0,1
+HQN Books,eng,3.8,17677.0,1
+Vanguard Press,eng,3.8,15187.25,2
+Bloomsbury Publishing PLC,en-US,3.8,8599.25,2
+Carroll & Graf Publishers,eng,3.8,3604.0,5
+Panther,eng,3.8,3224.0,1
+Booket,spa,3.8,3105.0,2
+Bantam Classic,eng,3.8,3083.0,1
+Swallow Press,eng,3.8,1843.0,1
+Verba Mundi,eng,3.8,1736.0,1
+Albin Michel,fre,3.8,975.0,5
+Cosmos Books (OH),eng,3.8,935.0,1
+Gallery Books,en-US,3.8,919.0,1
+iBooks,en-GB,3.8,894.0,1
+PerfectBound,eng,3.8,337.0,1
+Adams Media,eng,3.8,316.0,1
+Orion Publishing Co.,eng,3.8,311.0,1
+McSweeney's,en-GB,3.8,305.0,1
+MacMillan Publishing Company,eng,3.8,174.0,1
+Totem Books,en-US,3.8,163.0,1
+Polity Press,eng,3.8,131.5,4
+Hackett Publishing Company  Inc.,fre,3.8,114.0,1
+Penguin Books USA Inc.,eng,3.8,82.0,1
+Klett,eng,3.8,78.0,1
+Peachpit Press,eng,3.8,54.0,1
+Rowohlt Tb,ger,3.8,44.0,1
+Course Technology,en-US,3.8,30.75,2
+Allen Lane,eng,3.8,29.0,1
+Cumberland House Publishing,eng,3.8,24.75,2
+Delcourt,spa,3.8,10.0,1
+Lucent Books,eng,3.8,5.0,2
+Dark Horse Books,eng,3.7988888888888885,614.75,18
+Bloomsbury Publishing PLC,eng,3.7981818181818183,827.5,11
+Columbia University Press,en-US,3.7975,159.25,4
+Dalkey Archive Press,eng,3.795714285714286,6171.0,7
+Atlantic,eng,3.795,912.25,2
+Berrett-Koehler Publishers,en-US,3.795,153.5,2
+Northwestern University Press,en-US,3.793333333333333,638.0,3
+Jonathan Cape,eng,3.793333333333333,203.0,6
+Kodansha,eng,3.7925,2339.0,4
+Gibbs Smith,eng,3.7925,463.25,4
+Villard,eng,3.7916666666666665,2518.5,6
+Washington Square Press,eng,3.7903571428571428,36877.75,28
+Fourth Estate Paperbacks,eng,3.79,133237.0,1
+New Millennium Library,eng,3.79,91539.0,1
+Thomas Dunne Books,en-US,3.79,15191.0,1
+Kensington,eng,3.79,12523.25,14
+Dial Press Trade Paperback,en-US,3.79,7213.0,1
+Viking,en-US,3.79,6824.25,2
+Picador,en-GB,3.79,5837.0,2
+Free Press,en-US,3.79,4403.0,9
+Sidgwick & Jackson Ltd,eng,3.79,1664.0,1
+Jones Books,eng,3.79,1442.0,1
+St. Martin's True Crime,eng,3.79,1167.75,2
+Berkley Prime Crime,eng,3.79,1097.0,1
+Underwood/Miller  Berkley,eng,3.79,841.0,1
+Fandemonium Books,eng,3.79,448.0,1
+Yearling,en-GB,3.79,148.0,1
+Summit University Press,en-US,3.79,141.0,1
+Modern Publishing,en-GB,3.79,84.0,1
+Mythopoeic Press,eng,3.79,39.0,1
+Nantier Beall Minoustchine Publishing,eng,3.79,36.0,1
+Everyman Paperbacks,eng,3.79,33.0,1
+Open Court Publishing Company,eng,3.79,25.0,1
+Perigee Trade,eng,3.79,24.0,1
+Kaplan Publishing,en-US,3.79,20.0,1
+Kaplan,en-US,3.79,17.0,1
+Diana TB,ger,3.79,14.0,1
+時報出版,zho,3.79,1.0,1
+St. Martin's Griffin,en-US,3.78875,7965.75,8
+Picador,en-US,3.7879999999999994,2121.0,5
+Washington Square Press,en-US,3.785555555555556,5415.0,9
+Tor Fantasy,eng,3.7853846153846153,4691.0,13
+Vintage Espanol,spa,3.785,7380.0,2
+Small Beer Press,eng,3.785,566.5,2
+Cambridge University Press,grc,3.785,213.75,2
+Berkley Publishing Group,eng,3.7840000000000003,23630.0,5
+Seix Barral,spa,3.783333333333333,255.0,3
+Quill,eng,3.7800000000000002,377.5,2
+Hungry Minds,eng,3.7800000000000002,51.75,2
+Aegypan,eng,3.78,17325.0,1
+Contemporary Books,eng,3.78,16662.0,1
+Henry Holt,eng,3.78,9941.0,1
+Harvard Common Press,en-US,3.78,5695.0,1
+Orb Books,en-US,3.78,3971.0,3
+Amistad,en-US,3.78,1614.0,1
+List,ger,3.78,233.5,3
+W.W. Norton & Company  Inc. (NY),eng,3.78,170.0,1
+Alderac Entertainment Group,eng,3.78,169.0,1
+Martínez Roca,spa,3.78,91.0,1
+MIRA,en-US,3.78,65.0,1
+Penguin Audio,en-US,3.78,46.0,1
+Record,por,3.78,43.0,1
+Suma de Letras Brasileiras,por,3.78,43.0,1
+Love Inspired,eng,3.78,37.0,1
+Continuum,en-US,3.78,14.0,1
+BiblioLife,en-US,3.78,10.0,1
+Benjamin-Cummings Publishing Company,eng,3.78,9.0,1
+Deseret Book Company,eng,3.78,9.0,1
+Twayne Publishers,eng,3.78,7.0,1
+Charlesbridge,spa,3.78,4.0,1
+Goldmann,ger,3.7775,19.25,8
+Push,eng,3.776,3105.0,5
+Wiley,en-US,3.7750000000000004,54.25,4
+Theatre Communications Group,en-US,3.775,728.5,2
+Digital Manga Publishing,en-US,3.775,307.0,2
+North Light Books,en-US,3.775,74.0,2
+LGF,fre,3.77,178403.0,1
+HQN,eng,3.77,13317.0,1
+Joanna Cotler Books/HarperCollinsPublishers,en-US,3.77,6872.0,1
+Rodale Books,eng,3.77,5783.0,1
+Edebé,spa,3.77,5119.0,1
+Games Workshop,eng,3.77,1286.75,2
+Soho Crime,eng,3.77,1016.75,2
+Monkfish Book Publishing,en-GB,3.77,927.0,1
+Pegasus Books,eng,3.77,704.0,1
+W. W. Norton and Company,fre,3.77,695.0,1
+Burford Books,en-US,3.77,501.0,1
+Dutton Books for Young Readers,eng,3.77,432.0,1
+Counterpoint LLC,en-US,3.77,387.0,1
+Larousse Kingfisher Chambers,fre,3.77,217.0,1
+Manning Publications,eng,3.77,180.0,1
+Crown Publishers,eng,3.77,164.0,1
+Soho Press,eng,3.77,140.25,2
+For Dummies,en-GB,3.77,114.0,1
+Hackett Publishing Company  Inc. (USA),eng,3.77,100.0,1
+Editions de l'Olivier,fre,3.77,68.0,1
+Project Management Institute,en-GB,3.77,66.0,1
+Prometheus Books,en-GB,3.77,56.0,1
+Shepard Publications,en-GB,3.77,34.0,1
+Workman Publishing Company,spa,3.77,27.0,1
+Kaplan,fre,3.77,3.0,1
+Piper,ger,3.77,1.75,2
+Tor Books,en-US,3.7691666666666666,5922.0,24
+Headline Review,eng,3.76875,3725.5,8
+iBooks,eng,3.7662500000000003,672.75,8
+Grand Central Publishing (Formerly Warner Books),eng,3.765,5116.25,2
+Borgo Press,eng,3.763333333333333,756.5,3
+Random House,en-US,3.7625,74.0,4
+Penguin Books (NYC),eng,3.76,24290.0,1
+Editions 10/18,eng,3.76,17042.0,1
+HarperLargePrint,eng,3.76,16324.0,1
+Berkley Publishing Group,en-US,3.76,15360.0,1
+Harcourt  Brace Jovanovich/Harvest,eng,3.76,6782.0,1
+Top Shelf Productions,en-US,3.76,4415.0,1
+Tantor Media,eng,3.76,3867.25,6
+Touchstone Books,en-US,3.76,2001.0,1
+Chicken House / Scholastic,eng,3.76,1840.0,1
+Evans Brothers,eng,3.76,563.0,1
+Vintage Classics,en-GB,3.76,484.5,2
+Greenery Press (CA),eng,3.76,346.0,1
+Hyperion Books for Children,en-US,3.76,328.0,1
+Chu Hartley Publishers LLC,en-GB,3.76,288.0,1
+Changeling Press,eng,3.76,167.0,1
+Fourth Estate Ltd,eng,3.76,124.0,1
+Grupo Océano,spa,3.76,112.0,1
+Oxford University Press  USA,spa,3.76,83.0,1
+Prentice Hall Press,en-US,3.76,82.0,1
+New World Publishing,eng,3.76,68.0,1
+Haus Publishing,eng,3.76,55.0,1
+Grove Press  Open City Books,en-US,3.76,53.0,1
+Grasset,fre,3.76,20.25,2
+Everymans Library,eng,3.76,17.0,1
+Methuen Publishing,en-GB,3.76,17.0,1
+Trafford Publishing,eng,3.76,16.0,1
+Beltz und Gelberg,ger,3.76,8.0,1
+Johns Hopkins University Press,grc,3.76,6.0,1
+Claassen Verlag,ger,3.76,1.0,1
+Penguin,en-US,3.7585714285714285,339.5,7
+Love Spell,eng,3.756666666666667,410.0,9
+Bloomsbury USA,eng,3.7566666666666664,4587.0,3
+University of Massachusetts Press,eng,3.7566666666666664,46.5,3
+Price Stern Sloan,eng,3.755714285714286,452.5,7
+It Books,en-US,3.755,5255.25,4
+Berkley Trade,en-US,3.755,2421.25,2
+Bantam Books,en-US,3.755,1714.5,4
+Berrett-Koehler Publishers,eng,3.755,1239.0,2
+Avon Books,eng,3.7541176470588233,2530.0,17
+Disney-Hyperion,en-US,3.754,4393.0,5
+Margaret K. McElderry Books,eng,3.7525,11016.25,4
+Farrar Straus Giroux,eng,3.7525,9612.75,8
+Ecco,eng,3.7505882352941176,4956.0,17
+Penguin Books /Penguin Classics,eng,3.75,73757.0,1
+Plaza & Janés,spa,3.75,19205.0,1
+Ivan R. Dee Publisher,en-US,3.75,2056.0,1
+Harcourt Brace & company,eng,3.75,1312.0,1
+Brookline Books,eng,3.75,778.0,1
+New York Review of Books,en-US,3.75,494.0,1
+Leisure Books,en-US,3.75,409.0,1
+Kodansha America,eng,3.75,233.5,2
+VIZ Media,en-US,3.75,134.0,1
+Gollehon Books,en-US,3.75,104.0,1
+Booksales,eng,3.75,97.5,2
+NYRB Classics,en-GB,3.75,72.0,1
+Westview Press,eng,3.75,42.0,1
+Gamble Guides,eng,3.75,16.0,1
+Modern Language Association of America,eng,3.75,8.0,1
+University of South Carolina Press,eng,3.75,8.0,1
+Patmos,ger,3.75,2.0,1
+Algonquin Books,eng,3.748,2263.0,5
+Mysterious Press,eng,3.745,17847.25,4
+Nan A. Talese,eng,3.7433333333333336,6975.0,3
+See Sharp Press,eng,3.74,110423.0,1
+HarperCollins Publishers  Inc.,en-US,3.74,3877.0,1
+Fredonia Books (NL),eng,3.74,1854.0,3
+Heinemann Educational Books,eng,3.74,811.0,2
+New Riders Publishing,eng,3.74,341.0,1
+Prestwick House,eng,3.74,223.0,1
+Nelson Thornes Ltd,eng,3.74,179.0,1
+Blue Sky Press,eng,3.74,98.0,1
+Harlequin Temptation,eng,3.74,88.25,2
+Naxos Audiobooks,eng,3.74,84.0,4
+Ace Books,en-GB,3.74,59.0,1
+Advantage World Press,eng,3.74,49.0,1
+Sun & Moon Press,eng,3.74,47.0,1
+Insel,ger,3.74,37.0,1
+Grupo Editorial Norma  S.A.,spa,3.74,34.0,1
+Nimble Books,en-US,3.74,19.0,1
+Random House Large Print,eng,3.74,5.0,1
+Editions du Rocher,fre,3.74,1.0,2
+Avon,en-US,3.737142857142857,1466.0,7
+Barron's Educational Series,eng,3.736666666666667,391.0,3
+Theatre Communications Group,eng,3.7366666666666664,4028.0,3
+Silhouette Books,eng,3.7357142857142853,645.5,7
+Fawcett Crest Books,eng,3.735,1618.5,2
+Dover Publications,mul,3.735,27.5,2
+Tarcherperigee,eng,3.7328571428571427,1495.5,7
+Rowman & Littlefield Publishers,eng,3.7325,82.5,4
+Canongate U.S.,eng,3.7300000000000004,16820.5,3
+Delacorte Press,en-GB,3.73,8709.0,1
+Headline Review,en-GB,3.73,6560.75,2
+Houghton Mifflin Company,ger,3.73,5420.0,1
+Samhain Publishing,eng,3.73,2323.0,1
+Brava,eng,3.73,2164.0,1
+Chicken House,en-US,3.73,1233.0,1
+Soho Crime,en-US,3.73,1198.0,1
+Bison Books,eng,3.73,1065.5,6
+Michael O'Mara Books,eng,3.73,937.0,1
+Harlequin Blaze,eng,3.73,510.0,3
+Bantam Books (NY),en-US,3.73,475.0,1
+Faber and Faber,en-US,3.73,384.0,1
+Roc,en-US,3.73,193.0,1
+Viking Penguin Inc.,eng,3.73,159.0,1
+Picture Book Studio Ltd,eng,3.73,103.0,1
+Adventures Unlimited Press,en-US,3.73,62.0,1
+State University of New York Press,eng,3.73,44.0,1
+Alpha,eng,3.73,15.0,1
+Siete Cuentos,spa,3.73,14.0,1
+Harlequin Superromance,eng,3.73,13.0,1
+University of Utah Press,en-US,3.73,7.0,1
+Vintage/Ebury (A Division of Random House Group),eng,3.73,4.0,1
+Mira Books,eng,3.725454545454546,3271.5,11
+ReganBooks,eng,3.725,13042.0,2
+Ivy Books,eng,3.725,1970.0,8
+HarperCollins,en-GB,3.725,1154.75,2
+Storey Publishing  LLC,eng,3.725,146.0,2
+Regnery Publishing,eng,3.7249999999999996,2329.5,2
+Coffee House Press,eng,3.7249999999999996,1343.5,2
+Plume Books,en-US,3.723333333333333,12980.5,3
+Severn House Publishers,eng,3.7222222222222223,2278.0,9
+Atheneum Books for Young Readers: Richard Jackson Books,eng,3.72,270244.0,1
+Oni Press,eng,3.72,78219.5,3
+Sunburst,eng,3.72,9839.0,1
+Akashic Books/Punk Planet Books,eng,3.72,5298.0,1
+Headline Review,en-US,3.72,3286.0,1
+Brava,en-US,3.72,2757.0,1
+Apple Paperbacks (Scholastic),eng,3.72,1858.0,1
+Four Walls Eight Windows Press,eng,3.72,860.0,1
+Tokyopop,eng,3.72,820.0,1
+Atlantic Books,en-GB,3.72,667.0,1
+Not Avail,en-GB,3.72,630.0,1
+Harper Perennial,spa,3.72,514.0,1
+Yellow Jersey,en-GB,3.72,495.0,1
+William Morrow Paperbacks,en-GB,3.72,286.0,1
+George Braziller,eng,3.72,165.0,1
+Wipf & Stock Publishers,en-GB,3.72,92.0,1
+Thomas Nelson Publishers,eng,3.72,83.0,1
+Random House  Inc.,en-US,3.72,40.0,1
+Tauris Parke Paperbacks,eng,3.72,39.0,1
+Silhouette Bombshell,eng,3.72,38.0,1
+Baker Books,en-US,3.72,32.0,1
+Cliffs Notes,en-GB,3.72,21.0,5
+Pharos Books,eng,3.72,20.0,1
+Lions,en-US,3.72,16.0,1
+SparkNotes,eng,3.7154545454545453,158.5,11
+Soft Skull Press,eng,3.715,3290.75,2
+Filiquarian Publishing  LLC.,eng,3.715,2487.25,2
+Laurel,eng,3.715,741.75,2
+MacMillan Audio,eng,3.7133333333333334,46.0,3
+Running Press Adult,eng,3.7100000000000004,5192.5,3
+Europa Editions,en-US,3.71,1704.0,1
+Pragmatic Bookshelf,eng,3.71,1115.75,2
+Virago UK,en-US,3.71,509.0,1
+Bear  Company,en-US,3.71,186.0,1
+Middlesex University Press,eng,3.71,89.0,1
+Hyperion Books for Children,eng,3.71,79.0,1
+Alfred A. Knopf  Inc.,eng,3.71,51.0,1
+FASA Corporation,eng,3.71,31.0,1
+Clarkson Potter/Publishers,eng,3.71,24.0,1
+Scholastic Inc,eng,3.71,12.0,1
+John F. Blair  Publisher,en-US,3.71,7.0,1
+Arcadia Publishing (SC),eng,3.71,6.0,4
+Back Bay Books,en-US,3.7079999999999997,3107.0,10
+Ellora's Cave,eng,3.7066666666666666,1849.0,3
+Penguin Books Ltd,en-US,3.7066666666666666,894.0,3
+Cliffs Notes,eng,3.706451612903226,30.0,31
+IVP Books,eng,3.705,15.75,2
+Prestwick House - (Literary Touchstone Classic),eng,3.7,141555.0,1
+Seal,eng,3.7,32446.0,1
+Fireside,eng,3.7,3482.0,2
+Orchard Books (NY),en-US,3.7,2762.0,1
+Tinder Press,eng,3.7,648.0,1
+Nicholas Brealey,en-US,3.7,582.0,1
+Hci,eng,3.7,82.0,1
+Wadsworth Publishing Company,en-US,3.7,79.5,2
+Arrow Books,en-GB,3.7,61.0,1
+Pelican Publishing Company,eng,3.7,51.0,1
+Debolsillo,eng,3.7,47.0,1
+Brill/Rodopi,eng,3.7,10.0,1
+Dundurn,eng,3.7,8.75,2
+Adamant Media Corporation,eng,3.7,4.0,1
+Plaza & Janés Mexico,spa,3.7,2.0,1
+Vertical,eng,3.6999999999999997,6914.5,3
+Speak,eng,3.6925,93432.0,4
+For Dummies,eng,3.6916666666666664,132.0,6
+Naiad Press,eng,3.6900000000000004,75.75,2
+Canongate Books,eng,3.69,9118.0,4
+Atlantic Books,eng,3.69,2516.25,2
+Abrams,eng,3.69,850.0,2
+Bloomsbury,en-US,3.69,617.0,1
+Avon Books (AvoNova),eng,3.69,485.0,1
+Minnesota Historical Society Press,eng,3.69,184.0,1
+Hackett Publishing Company (Indianapolis  IN),eng,3.69,114.0,1
+Deadite Press (Eraserhead Press),eng,3.69,55.0,1
+Dell Yearling,eng,3.69,40.0,1
+Open Court,en-US,3.6875,794.0,4
+Speak,en-US,3.686666666666667,13543.0,3
+Clarion Books,en-US,3.686666666666667,142.5,3
+Scribner Book Company,eng,3.685,10870.5,6
+MONDIAL,eng,3.685,749.75,2
+Zondervan Publishing Company,eng,3.6849999999999996,15131.25,2
+Melville House Publishing,eng,3.6849999999999996,4568.25,2
+Wiley Publishing,eng,3.6849999999999996,134.5,2
+Serpent's Tail,en-US,3.6833333333333336,317.0,3
+Harlequin Historical,eng,3.6833333333333336,103.5,3
+Ivan R. Dee Publisher,eng,3.683333333333333,2124.0,3
+Silhouette Desire,eng,3.6825,530.0,4
+MIRA,eng,3.68125,3133.0,8
+Farrar  Straus and Giroux (NY),eng,3.68,87570.0,1
+Shaye Areheart Books,eng,3.68,3015.0,1
+Minotaur Books,en-US,3.68,1067.0,1
+Perfection Learning,en-US,3.68,479.0,1
+Andrews and McMeel,eng,3.68,97.0,1
+Abacus,en-GB,3.68,87.0,1
+Association for Supervision & Curriculum Development,en-US,3.68,77.0,1
+Penguin Group(CA),eng,3.68,58.0,1
+Prentice Hall,en-GB,3.68,55.0,1
+McClelland and Stewart,eng,3.68,53.0,1
+Vendome Press,eng,3.68,51.0,1
+Alderac Entertainment Group (AEG),eng,3.68,44.0,1
+Amereon Limited,eng,3.68,39.0,1
+Moody Publishers (Chicago),eng,3.68,39.0,1
+Star Trek,eng,3.6799999999999997,963.75,2
+Smart Pop,eng,3.6799999999999997,925.5,3
+Broadview Press Inc,eng,3.6759999999999997,1356.0,5
+Spectra Books,en-US,3.67,1118.0,1
+Sutton,eng,3.67,453.0,1
+Sphere,eng,3.67,380.0,4
+Billboard Books,eng,3.67,368.0,1
+Fortress Press,en-US,3.67,235.0,1
+Zondervan,en-US,3.67,232.0,2
+DC Comics,en-GB,3.67,192.0,1
+For Dummies,en-US,3.67,110.25,2
+Farrar Straus and Giroux,eng,3.67,70.0,1
+Stewart  Tabori and Chang,eng,3.67,48.0,1
+Jossey-Bass,en-GB,3.67,42.0,1
+Bloomsbury Paperbacks,eng,3.67,30.0,1
+Bristol Classical Press,ger,3.67,24.0,1
+Jane Nissen Books,eng,3.67,19.0,1
+MONDIAL,en-US,3.67,16.0,1
+Churchill Livingstone,eng,3.67,12.0,1
+Heinemann Drama,eng,3.67,10.0,1
+Bruno Gmünder,eng,3.67,3.0,1
+Penguin Putnam,eng,3.67,3.0,1
+Mira books,eng,3.67,1.0,1
+Tor Science Fiction,eng,3.6675,2236.75,4
+Hard Crime Case,eng,3.6666666666666665,12923.5,3
+Santillana USA Publishing Company,spa,3.665,33.25,4
+Walker & Company,eng,3.6633333333333336,893.0,3
+Little Brown,eng,3.66,6800.25,2
+CDS Books,en-CA,3.66,4513.0,1
+Pantheon,en-US,3.66,2057.0,1
+Avon HarperCollins,eng,3.66,992.0,1
+Award Books,eng,3.66,461.0,1
+Citadel Press,eng,3.66,451.5,3
+Carlton Publishing Group,eng,3.66,45.75,2
+Globe,eng,3.66,43.0,1
+Mira (Mills and Boon),eng,3.66,18.0,1
+Puzzle-Via Magna,spa,3.66,18.0,1
+Random House UK Ltd (A Division of Random House Group),eng,3.66,7.0,1
+Zebra,eng,3.658,478.25,10
+Umbriel,spa,3.652,1078.0,5
+Harlequin,eng,3.651666666666667,3062.25,6
+Feral House,eng,3.6500000000000004,348.25,2
+Dover Publications (NYC),en-US,3.65,108.0,1
+Maxima New Media,eng,3.65,71.0,1
+10/18,fre,3.65,43.5,2
+University of Wisconsin Press,eng,3.65,21.75,2
+Robson Books  London,eng,3.65,7.0,1
+Allyn & Bacon,eng,3.65,5.0,1
+Little Brown and Company,eng,3.6454545454545455,42374.0,11
+AudioText,eng,3.645,135.25,2
+Allyn & Bacon,en-US,3.645,17.0,2
+Dark Horse,eng,3.6439999999999997,518.0,5
+William Morrow Paperbacks,en-US,3.642631578947368,9153.5,19
+Penguin Books Ltd.,eng,3.64,18128.0,1
+Arrow,en-US,3.64,2155.0,1
+Hyperion Paperbacks,eng,3.64,1615.0,1
+Piper Taschenbuch,ger,3.64,343.0,1
+Aerie,eng,3.64,313.0,1
+Random House (Vintage),eng,3.64,223.0,1
+Townsend Press,eng,3.64,165.0,1
+First Avenue Editions (Tm),eng,3.64,88.0,1
+The Disinformation Company (NYC),eng,3.64,58.0,1
+Jump at the Sun,eng,3.64,54.0,1
+National Gallery London,en-GB,3.64,42.0,1
+Houghton Mifflin Harcourt,en-US,3.637777777777778,851.0,9
+Fanfare,eng,3.6366666666666667,1313.0,3
+McGraw-Hill Companies,eng,3.6366666666666667,125.25,6
+University of Chicago Press,en-GB,3.635,82.0,2
+Taschen,eng,3.635,53.5,2
+Owl Books (Henry Holt),eng,3.63,168362.0,1
+Bantam (Fanfare),eng,3.63,2537.0,1
+Overlook Press,eng,3.63,778.75,2
+New Island Books,eng,3.63,751.0,2
+University of North Carolina Press,en-US,3.63,258.0,1
+Treat Enterprises,eng,3.63,132.0,1
+Huntington House Publishers,eng,3.63,38.0,1
+International Polygonics,eng,3.63,15.0,1
+Bedford Books,eng,3.6275,529.75,4
+Digireads.com,en-US,3.6266666666666665,428.5,3
+Rutgers University Press,eng,3.6224999999999996,213.5,4
+Pan Childrens,eng,3.62,45863.0,1
+Counterpoint,eng,3.62,2592.25,4
+Vermilion,en-US,3.62,1595.0,1
+Jove,en-US,3.62,1421.0,1
+World Wrestling Entertainment Books,en-GB,3.62,1154.0,1
+Nelson Books,eng,3.62,1113.0,1
+Subterranean Press,eng,3.62,1097.75,2
+W.W. Norton  Company,eng,3.62,966.0,1
+Penguin Books (Penguin Classics),eng,3.62,378.0,1
+Del Rey Fantasy,eng,3.62,185.25,2
+Simple Productions,eng,3.62,55.0,1
+AVA Publishing,eng,3.62,51.0,1
+Hamish Hamilton Ltd,eng,3.62,24.0,1
+Orion,en-GB,3.62,20.0,1
+Amherst Media  Inc.,eng,3.62,16.0,1
+Loveswept,eng,3.62,12.0,1
+Dell,en-GB,3.62,9.0,1
+Aladdin,en-US,3.616666666666667,312.0,3
+Counterpoint LLC,eng,3.6166666666666667,9890.5,3
+Rodale Books,en-US,3.6159999999999997,553.0,5
+Running Press Book Publishers,eng,3.615,1268.75,2
+Carole Marsh Mysteries,eng,3.615,32.0,2
+Harper Business,en-US,3.6125,3665.25,4
+Red Dress Ink,en-US,3.6100000000000003,3901.0,2
+Silhouette Romance,eng,3.6100000000000003,476.25,2
+Viking Books,en-US,3.61,3025.0,3
+WaterBrook,eng,3.61,460.0,1
+Five Star Trade,en-US,3.61,187.0,1
+Nick Hern Books,en-US,3.61,82.0,1
+Gallopade International,eng,3.61,27.0,1
+Cengage Learning,eng,3.61,24.75,6
+Copernicus Books,en-US,3.61,21.0,1
+Harper Perennial (NYC),eng,3.6,11751.0,1
+Loyola Classics,eng,3.6,772.0,1
+York Press,eng,3.6,594.0,1
+Aspect,en-US,3.6,390.75,2
+Waterbrook Press,en-US,3.6,378.0,2
+Plaza & Janés Editores  S.A.,spa,3.6,336.0,1
+Ig Publishing,nor,3.6,86.0,1
+Franklin Watts,eng,3.6,10.0,1
+Godsfield Press Ltd,eng,3.6,7.0,1
+Crossroad Publishing Company,eng,3.6,5.0,1
+Five Star (ME),eng,3.6,5.0,1
+C. Bange,ger,3.6,4.0,1
+Mills & Boon,eng,3.6,0.0,1
+Pearson,eng,3.5990909090909096,290.0,11
+DC Comics,en-US,3.5980000000000003,3714.0,5
+DAW Books,eng,3.5966666666666662,10903.5,3
+Mondadori,spa,3.5966666666666662,63.5,3
+Green Integer,eng,3.5949999999999998,240840.75,2
+Coronet,eng,3.5949999999999998,428.75,2
+Starcatcher Press,eng,3.5949999999999998,43.25,2
+Dey Street Books,en-GB,3.59,8703.0,1
+Alyson Books,eng,3.59,1812.5,2
+Vintage Crime/Black Lizard,en-US,3.59,1752.0,1
+Hampton Roads Publishing Company,en-GB,3.59,68.0,1
+Rowohlt Taschenbuch Verlag GmbH,ger,3.59,27.0,1
+Westminster John Knox Press,en-US,3.59,12.0,1
+Forge Books,eng,3.5866666666666664,1397.0,3
+W.W. Norton & Company (NYC),en-US,3.58,30473.0,1
+Penguin Books Limited,eng,3.58,27546.5,3
+Red Dress Ink,eng,3.58,5725.5,4
+White Wolf Games Studio,eng,3.58,674.5,4
+Tor Classics,en-US,3.58,146.0,1
+Farrar  Strauss & Giroux-3pl,eng,3.58,99.0,1
+Highbridge Audio,eng,3.58,81.0,1
+1st Book Library,en-GB,3.58,54.0,1
+Benjamin-Cummings Publishing Company,en-US,3.58,6.0,1
+Rosenberg Publishing,eng,3.58,0.0,1
+Bethany House Publishers,en-US,3.5700000000000003,290.25,2
+Picador  Macmillan Publishers Ltd,eng,3.57,965.0,1
+Council Press,eng,3.57,242.0,1
+Century,en-US,3.57,186.0,1
+Charles Scribner's Sons,eng,3.57,78.0,1
+Sutton Publishing,en-US,3.57,71.0,1
+Gurze Books,eng,3.57,56.0,1
+Watkins Publishing,en-US,3.57,47.0,1
+Vacation Work Publications,eng,3.57,38.0,1
+Gürze Books,eng,3.57,15.0,1
+Hodder Audio,eng,3.57,8.0,1
+Harlequin Anthologies,eng,3.57,7.0,1
+Portable Press,eng,3.57,7.0,1
+YoungJin Singapore Pte. Ltd.,en-US,3.57,7.0,1
+HarperCollins UK,eng,3.57,1.0,1
+Puzzle-Roca,spa,3.57,0.0,1
+Eraserhead Press,eng,3.56,1691.0,1
+ACE,en-US,3.56,1549.0,1
+Midnight Ink,eng,3.56,764.0,1
+Eros Comix,eng,3.56,277.0,1
+Icon Books,en-GB,3.56,241.0,1
+DAW Books (NY),en-US,3.56,238.0,1
+Manning Publications,en-US,3.56,126.0,1
+Palgrave Macmillan,en-GB,3.56,108.0,1
+Berkley Books (NY),en-US,3.56,51.0,1
+Lulu.com,en-US,3.56,43.0,1
+Wordsworth Editions,en-US,3.56,42.0,1
+Allworth,eng,3.56,39.0,1
+Cold Spring Press,eng,3.56,25.75,2
+Time-Life Books  Inc.,eng,3.56,16.0,1
+Osprey Publishing,eng,3.56,15.0,1
+Running Press,en-US,3.5566666666666666,139.5,3
+Henry Holt & Company,eng,3.5549999999999997,7201.75,2
+Poppy,eng,3.55,16452.0,1
+International Publishers (NYC),eng,3.55,733.0,1
+Miramax,eng,3.55,619.0,1
+Signet,en-GB,3.55,344.0,1
+Presses de La Cite,fre,3.55,315.0,1
+Filiquarian Publishing  LLC.,en-US,3.55,138.0,1
+American University in Cairo Press,ara,3.55,122.0,1
+Dr. Master Productions Inc.,eng,3.55,112.0,1
+Bedford/St. Martin's,en-US,3.55,97.0,1
+Absolute Press,en-US,3.55,50.0,1
+Michael O'Mara,eng,3.55,30.0,1
+Points,fre,3.55,12.0,1
+Bantam (Fanfare Imprint),eng,3.545,2673.25,2
+Palgrave Macmillan,eng,3.545,128.5,6
+Gotham,en-US,3.54,11149.0,1
+TSR,en-US,3.54,257.0,1
+Metropolitan Books,en-US,3.54,61.0,1
+Penguin Young Readers,en-US,3.54,60.0,1
+Totem Books,en-GB,3.54,26.0,1
+Ann Arbor Media,eng,3.535,260.5,2
+The MIT Press,eng,3.5300000000000002,475.75,2
+Delacorte Press,en-US,3.53,356.0,1
+Dedalus Limited,eng,3.53,71.0,1
+Alison Green Books,en-GB,3.53,57.0,1
+Children's Press(CT),eng,3.53,1.0,1
+Dtv,ger,3.53,1.0,1
+Pearson Longman,eng,3.52,41041.0,1
+Poppy,en-US,3.52,19261.0,1
+Razorbill,eng,3.52,8988.0,2
+Fourth Estate (GB),eng,3.52,3996.0,1
+Bantam Doubleday Dell Publishing Company Inc.,eng,3.52,3542.0,1
+Knopf,en-US,3.52,790.0,1
+Yellow Jersey,en-US,3.52,274.0,1
+Crescent,eng,3.52,23.0,1
+University of New Mexico Press,eng,3.52,22.0,1
+Cartwheel,eng,3.515,551.25,4
+Smithmark Publishers,eng,3.51,117178.0,1
+Crown Journeys/Crown Publishers/Crown Publishing Group/Random House,en-US,3.51,8460.0,1
+Suhrkamp,fre,3.51,2525.0,1
+Laurel-Leaf Books,en-US,3.51,837.0,1
+Felony & Mayhem,eng,3.51,772.0,1
+Simon and Schuster,en-US,3.51,162.0,1
+Blood Moon Productions,eng,3.51,81.0,1
+Charlesbridge,eng,3.51,72.0,1
+Baen Books,en-GB,3.51,41.0,1
+Allen & Ulwin,eng,3.5,108646.0,1
+Penguin Audio,eng,3.5,8858.0,1
+Bantam Spectra,en-US,3.5,2916.0,2
+Penguin Books/Penguin Popular Classics,eng,3.5,701.0,1
+Candlewick Press,en-US,3.5,50.0,1
+Amadeus,eng,3.5,20.0,1
+Yesterday's Classics,eng,3.5,17.0,1
+Arrow (A Division of Random House Group),eng,3.5,15.0,1
+Woodrow Wilson Center Press / Johns Hopkins University Press,eng,3.5,10.0,1
+Heinemann Educational Books,en-US,3.5,8.0,1
+Apple,eng,3.5,6.0,1
+Merlin Publishing,eng,3.5,4.0,1
+Houghton Mifflin,spa,3.5,2.0,1
+University of Alaska Press,eng,3.5,2.0,1
+Th1nk Books,eng,3.49,806.0,1
+Penguin Classics,enm,3.49,792.0,1
+Topaz,eng,3.49,72.0,1
+Faber & Faber Limited,eng,3.49,60.0,1
+Forge Books,en-US,3.48,423.0,1
+Destino Ediciones,spa,3.48,14.0,1
+House of Anansi Press,eng,3.48,2.0,1
+Simon & Schuster (Trade Division),eng,3.475,1723.0,2
+Harcourt Children's Books,eng,3.47,1361.0,1
+Woodbridge Press Publishing Company,eng,3.47,15.0,1
+Libros para ninos,spa,3.47,2.0,1
+Profile Books,eng,3.465,156.5,2
+Rivages,fre,3.46,6441.0,1
+Bloomsbury Children's Books,eng,3.46,1684.0,1
+Dartmouth College Press,en-US,3.46,1019.0,1
+Longman Publishing Group,en-US,3.46,374.0,1
+Disinformation Books,eng,3.46,88.0,1
+KiWi,ger,3.46,46.0,1
+TSR,eng,3.46,38.0,1
+Icon Books,eng,3.45,137.0,2
+The New Press,en-US,3.45,99.0,1
+Roberts Rinehart Publishers,eng,3.45,56.0,1
+Bragelonne,fre,3.45,6.0,1
+Honor Books,eng,3.4450000000000003,898.5,2
+International Code Council,eng,3.4450000000000003,14.0,2
+Ace,en-US,3.4400000000000004,1336.0,2
+St. Martin's Paperback,eng,3.44,5531.0,1
+Gramedia Pustaka Utama,eng,3.44,2268.0,1
+B Fiction,en-US,3.44,36.0,1
+Taplinger Publ. Company,eng,3.44,21.0,1
+Anchor Books/Knopf Doubleday Publishing Group,eng,3.43,35998.0,1
+Actes Sud,eng,3.43,3683.0,1
+Hyperio,eng,3.43,1229.0,1
+W. W. Norton & Co.,eng,3.43,790.0,1
+Cistercian Publications,eng,3.43,7.0,1
+Sumach Press,eng,3.43,7.0,1
+Fodor's,eng,3.43,6.0,1
+Apress,en-US,3.425,127.75,2
+Tarcher,en-US,3.42,1416.0,1
+Piatkus,eng,3.42,60.0,1
+American Diabetes Association,eng,3.42,33.0,1
+Focus Publishing/R. Pullins Company,eng,3.42,23.0,1
+G. P. Putnam's Sons,eng,3.41,422.0,1
+Tor Fantasy,en-GB,3.41,1.0,1
+Kaplan,eng,3.4,406.25,2
+Business Plus,en-US,3.4,168.25,2
+Ace Trade,eng,3.4,147.0,1
+Thorndike Press,en-US,3.4,86.0,1
+Temenos Press,eng,3.4,46.0,1
+HighBridge Company,en-US,3.4,43.0,1
+French & European Publications,fre,3.4,19.0,1
+List Taschenbuch,ger,3.4,11.0,1
+Pippin Publishing,eng,3.4,5.0,1
+Wadsworth Publishing Company,eng,3.395,267.25,2
+Hawthorne Books,eng,3.39,6015.0,1
+Barrington Stoke,eng,3.39,23.0,1
+Heinle,eng,3.39,23.0,1
+Sunstone Press,eng,3.39,12.0,1
+Random House (NY),en-US,3.385,1740.0,2
+Ravensburger Buchverlag,eng,3.38,2591.0,1
+Dial Press,en-GB,3.38,1748.0,1
+Bantam Books,en-GB,3.38,813.0,1
+Travelers' Tales,eng,3.38,413.0,1
+Amherst Media,eng,3.38,51.0,1
+Big Finish,eng,3.38,42.0,1
+Ebury Press,eng,3.375,992.5,4
+Circlet Press,eng,3.37,116.0,1
+Versus Press,eng,3.37,81.0,1
+Cliffs Notes,en-US,3.3699999999999997,45.0,3
+Leisure Books,en-GB,3.36,971.0,1
+Edicións Xerais de Galicia  S.A.,glg,3.36,36.0,1
+Focus on the Family Publishing,eng,3.36,28.0,1
+Kensington,en-US,3.35,71.0,1
+Usborne Books,eng,3.35,13.0,1
+Other Press (NY),en-US,3.34,406.0,1
+Plexus Publishing,eng,3.33,397.0,2
+Totem Books,eng,3.33,56.0,1
+Wiley-Blackwell,en-GB,3.33,3.0,1
+Éditions du Rocher,fre,3.33,3.0,1
+Alpha Books,eng,3.32,16.0,1
+Everyman Paperback Classics,eng,3.32,8.0,1
+Harlequin Presents,eng,3.3175,181.25,4
+Virgin Publishing,eng,3.3166666666666664,499.5,3
+HarperTorch (an imprint of HarperCollins Publishers),eng,3.31,16483.0,1
+Abraham Guillen Press,en-US,3.31,127.0,1
+Julie Andrews Collection,eng,3.31,22.0,1
+Longman Publishing Group,eng,3.3000000000000003,3.25,6
+Nation Books,en-US,3.3,67.0,1
+University of Nebraska Press,eng,3.3,8.0,1
+Kuperard,eng,3.29,12.0,1
+Regan Books,eng,3.28,28014.0,1
+Distribooks,eng,3.28,15886.0,1
+Atria Books,spa,3.28,99.0,1
+Titan Books Ltd,eng,3.28,1.0,1
+Two Lions,eng,3.27,117.0,1
+ASCD,eng,3.25,55.0,1
+Marion Boyars Publishers Ltd,eng,3.25,50.0,1
+Luath Press Ltd,eng,3.25,12.0,1
+Pogue Press,eng,3.25,4.0,1
+Random House UK Distribution,eng,3.25,3.0,1
+Trafford Publishing,en-US,3.22,9.0,1
+St. Martin's Minotaur,eng,3.22,3.0,1
+The Guilford Press,en-US,3.215,7.0,2
+Ace Trade,en-US,3.21,22.0,1
+Little Brown and Company,en-US,3.2,1578.75,2
+North Star Publications (MA),en-GB,3.2,30.0,1
+Young Picador,eng,3.19,1048.0,1
+Hyperion,en-US,3.18,245.0,1
+Granta,eng,3.17,481.0,1
+Thunder's Mouth Press Books,eng,3.17,139.0,1
+RP Minis,eng,3.16,14.0,1
+B Books,eng,3.15,26.0,1
+O'Brien Press,eng,3.14,7.0,1
+Vanderbilt University Press,eng,3.14,7.0,1
+Roc Trade,eng,3.13,4438.0,1
+HarperCollins Publishers,en-GB,3.12,125.0,1
+DAW SF,eng,3.11,34.0,1
+British Academy,eng,3.11,15.0,1
+Northwestern Univ Press,eng,3.11,0.0,1
+Alliance Publishing,en-US,3.09,1601.0,1
+London : Faber  2002,eng,3.07,714.0,1
+Vertigo (DC Comics),en-US,3.07,148.0,1
+Cátedra,spa,3.06,13.0,1
+PublicAffairs,en-US,3.04,181.0,1
+Harlequin Romance,eng,3.04,18.0,2
+Authorhouse,eng,3.025,45.75,2
+Hachette Children's,en-GB,3.02,40.0,1
+New Tradition Books,eng,3.0,8.0,1
+AIT Planet Lar,eng,3.0,6.0,1
+Specialty Press,eng,3.0,6.0,1
+Fawcett Coventry,eng,3.0,3.0,1
+Prentice Hall PTR,eng,3.0,3.0,1
+Alfabeta Bokförlag,swe,3.0,1.0,1
+Bristol Classical Press,grc,3.0,1.0,1
+Cruithne Press,eng,3.0,1.0,1
+DeVorss & Company,en-US,2.98,34.0,1
+Voice,eng,2.93,195.0,1
+Deodand Publishing,eng,2.86,2276.0,1
+Revive Publishing,eng,2.86,114.0,1
+Inner Light - Global Communications,eng,2.83,2.0,1
+Trafalgar Square Publishing,eng,2.75,4.0,1
+Volo,eng,2.75,4.0,1
+Libraries Unlimited,eng,2.67,9.0,1
+Bloomsbury Methuen Drama,en-GB,2.67,3.0,1
+McDougal Littel,eng,2.0,3.0,1
+University of Toronto Press,eng,2.0,1.0,1
+Intercultural Publishing,eng,1.67,3.0,1
+Teacher's Pet Publications  Inc.,eng,1.0,2.0,1
+Walter Foster Publishing,eng,1.0,1.0,1
+AMR/Advanced Management Reports,eng,,0.0,1
+Arts Publications,eng,,0.0,1
+Beckett Media,eng,,0.0,1
+Between the Lines Productions,eng,,0.0,1
+Brown Son & Ferguson Ltd.,eng,,0.0,1
+Fithian Press,eng,,0.0,1
+Frederick P. Lenz Foundation for American Buddhism,eng,,0.0,2
+Gale Cengage,eng,,0.0,1
+Greenwood Press,eng,,0.0,1
+Grove Press  Open City Books,eng,,0.0,1
+Hodder & Stoughton Educational Division,eng,,0.0,1
+"Izdavačka agencija ""Draganić""",srp,,0.0,1
+K.G. Saur Verlag,grc,,0.0,1
+Knopf Doubleday Publishing Group,eng,,0.0,1
+Meredith Corporation,eng,,0.0,1
+Random House Puzzles & Games,eng,,0.0,1
+Salem Press Inc,eng,,0.0,1

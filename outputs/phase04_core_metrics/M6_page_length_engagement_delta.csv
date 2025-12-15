@@ -1,9 +1,5 @@
-page_length_bucket,engagement_delta
-short,0.2
-medium,0.0
-long,-0.1
-zero/audio,0.05
-multi-volume,-0.15
-short,0.25
-medium,-0.05
-long,0.1
+page_length_bucket,median_ratings_count_capped,median_text_reviews_capped,book_count,engagement_delta
+multi_volume,2113.5,82.5,12,2031.0
+short_reference,63.0,12.0,119,51.0
+zero_or_audio,28.0,3.0,73,25.0
+,785.0,48.0,10907,737.0

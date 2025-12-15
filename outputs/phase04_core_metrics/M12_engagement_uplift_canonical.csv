@@ -1,5 +1,3 @@
-edition_type,median_ratings_count
-canonical,15000
-duplicate,9500
-canonical,14000
-duplicate,9000
+edition_type,median_ratings_count,book_count
+canonical,746.0,11111
+duplicate,54.0,15

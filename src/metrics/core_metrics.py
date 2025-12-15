@@ -22,6 +22,12 @@ __all__ = [
     "compute_median_ratings_count_by_publication_year",
     "compute_language_rating_summary",
     "compute_duplicate_share",
+    "compute_author_engagement_index",
+    "compute_publisher_engagement",
+    "compute_page_length_engagement_delta",
+    "compute_engagement_uplift_canonical",
+    "compute_publisher_language_rankings",
+    "compute_publication_year_rolling_stats",
 ]
 
 
@@ -262,3 +268,110 @@ def compute_duplicate_share(df: pd.DataFrame) -> pd.DataFrame:
             "duplicate_share_pct": [round(share * 100, 4)],
         }
     )
+
+
+def compute_author_engagement_index(df: pd.DataFrame) -> pd.DataFrame:
+    """M2 (optional) – Simple author engagement index (z-score of two signals)."""
+    _ensure_columns(df, ["ratings_count_capped", "text_reviews_count_capped", "book_id", "authors_clean"])
+    # explode authors then aggregate per author
+    exploded = explode_authors(df[["book_id", "authors_clean", "authors_raw"]].drop_duplicates())
+    if exploded.empty:
+        return pd.DataFrame(columns=["author_name", "engagement_index", "ratings_count_capped", "text_reviews_count_capped", "book_count"])
+
+    merged = exploded.merge(
+        df[["book_id", "ratings_count_capped", "text_reviews_count_capped", "canonical_book_id"]],
+        on="book_id",
+        how="left",
+    )
+    g = (
+        merged.groupby("author_name", dropna=False)
+        .agg(
+            ratings_count_capped=("ratings_count_capped", "sum"),
+            text_reviews_count_capped=("text_reviews_count_capped", "sum"),
+            book_count=("canonical_book_id", "nunique"),
+        )
+        .reset_index()
+    )
+    # compute z-scores without requiring scipy
+    for col in ("ratings_count_capped", "text_reviews_count_capped"):
+        s = g[col].fillna(0)
+        denom = s.std(ddof=0)
+        g[f"z_{col}"] = (s - s.mean()) / (denom if denom != 0 else 1)
+
+    g["engagement_index"] = (g["z_ratings_count_capped"] + g["z_text_reviews_count_capped"]) / 2
+    return g.sort_values("engagement_index", ascending=False)[["author_name", "engagement_index", "ratings_count_capped", "text_reviews_count_capped", "book_count"]]
+
+
+def compute_publisher_engagement(df: pd.DataFrame) -> pd.DataFrame:
+    """M10 (optional) – Publisher-level median engagement and counts."""
+
+    _ensure_columns(df, ["publisher", "ratings_count_capped", "canonical_book_id"])
+    res = (
+        df.dropna(subset=["publisher"]) 
+        .groupby("publisher", dropna=False)
+        .agg(median_ratings_count_capped=("ratings_count_capped", "median"), book_count=("canonical_book_id", "nunique"))
+        .reset_index()
+    )
+    return res.sort_values("median_ratings_count_capped", ascending=False)
+
+
+def compute_page_length_engagement_delta(df: pd.DataFrame) -> pd.DataFrame:
+    """M6 (optional) – Engagement delta by page length bucket."""
+
+    _ensure_columns(df, ["page_length_bucket", "ratings_count_capped", "text_reviews_count_capped", "canonical_book_id"])
+    canonical = _canonical_rollup(df)
+    g = (
+        canonical.groupby("page_length_bucket", dropna=False)
+        .agg(
+            median_ratings_count_capped=("ratings_count_capped", "median"),
+            median_text_reviews_capped=("text_reviews_count_capped", "median"),
+            book_count=("canonical_book_id", "nunique"),
+        )
+        .reset_index()
+    )
+    g["engagement_delta"] = g["median_ratings_count_capped"] - g["median_text_reviews_capped"]
+    return g
+
+
+def compute_engagement_uplift_canonical(df: pd.DataFrame) -> pd.DataFrame:
+    """M12 (optional) – Compare canonical vs duplicate median engagement."""
+
+    _ensure_columns(df, ["is_duplicate", "ratings_count_capped", "canonical_book_id"])
+    # create edition_type column for clarity
+    tmp = df.copy()
+    tmp["edition_type"] = tmp["is_duplicate"].map({False: "canonical", True: "duplicate"})
+    res = (
+        tmp.groupby("edition_type", dropna=False)
+        .agg(median_ratings_count=("ratings_count_capped", "median"), book_count=("canonical_book_id", "nunique"))
+        .reset_index()
+    )
+    return res
+
+
+def compute_publisher_language_rankings(df: pd.DataFrame) -> pd.DataFrame:
+    """M13 (optional) – Publisher × language rankings (average rating and p75 engagement)."""
+
+    _ensure_columns(df, ["publisher", "language_code", "average_rating", "ratings_count_capped"])
+    res = (
+        df.dropna(subset=["publisher", "language_code"]) 
+        .groupby(["publisher", "language_code"], dropna=False)
+        .agg(average_rating=("average_rating", "mean"), p75_ratings_count=("ratings_count_capped", lambda s: s.quantile(0.75)), book_count=("canonical_book_id", "nunique"))
+        .reset_index()
+    )
+    return res.sort_values(["average_rating", "p75_ratings_count"], ascending=[False, False])
+
+
+def compute_publication_year_rolling_stats(df: pd.DataFrame, window: int = 3) -> pd.DataFrame:
+    """M14 (optional) – Rolling statistics by publication year (default window=3)."""
+
+    _ensure_columns(df, ["publication_year", "average_rating", "canonical_book_id"])
+    canonical = _canonical_rollup(df)
+    ts = (
+        canonical.dropna(subset=["publication_year"]) 
+        .groupby("publication_year", dropna=False)
+        .agg(average_rating=("average_rating", "mean"), book_count=("canonical_book_id", "nunique"))
+        .sort_index()
+    )
+    ts["rolling_average_rating"] = ts["average_rating"].rolling(window=window, min_periods=1).mean()
+    ts = ts.reset_index()
+    return ts

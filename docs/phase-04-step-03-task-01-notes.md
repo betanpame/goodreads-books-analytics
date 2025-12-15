@@ -132,6 +132,117 @@ docker compose --env-file .env.example -f docker-compose.python.yml run --no-dep
 3. All figures will be saved in `outputs/phase04_visualizations/` with descriptive filenames.
 4. Each chart is documented with a caption in this note and can be referenced in portfolio presentations or case studies.
 
+## Extras visuals — stubs used and how to produce real metric CSVs (Beginner-friendly)
+
+- Current state: The optional / extras charts (author engagement, publisher engagement, page-length deltas, engagement uplift, publisher-language rankings, and rolling-year stats) were generated from small stub CSVs placed into `outputs/phase04_core_metrics/` so example figures exist for the portfolio.
+
+- Why stubs were used: these extras are not produced by the default core-metrics CLI (`src/analyses/portfolio/p03_core_metrics_suite.py`). To create accurate extras you must add a few metric-generator functions and then run the CLI to write the real CSVs.
+
+Step-by-step (very specific):
+
+1. Open the metrics helper file: `src/metrics/core_metrics.py`.
+
+2. Add these function stubs (copy/paste). They use pandas and follow the project's existing style. Replace comments with any domain-specific tweaks you want.
+
+```python
+import pandas as pd
+from scipy import stats
+
+def compute_author_engagement_index(df: pd.DataFrame) -> pd.DataFrame:
+  # aggregate per author and compute a simple z-score across two signals
+  g = df.groupby('author_name', dropna=True).agg(
+    ratings_count_capped=('ratings_count_capped', 'sum'),
+    text_reviews_count_capped=('text_reviews_count_capped', 'sum'),
+    book_count=('book_id', 'nunique'),
+  ).reset_index()
+  # avoid divide-by-zero
+  g['engagement_index'] = (
+    stats.zscore(g['ratings_count_capped'].fillna(0))
+    + stats.zscore(g['text_reviews_count_capped'].fillna(0))
+  ) / 2
+  return g.sort_values('engagement_index', ascending=False)
+
+def compute_publisher_engagement(df: pd.DataFrame) -> pd.DataFrame:
+  return (
+    df[df['publisher'].notna()]
+    .groupby('publisher', dropna=True)
+    .agg(median_ratings_count_capped=('ratings_count_capped', 'median'), book_count=('book_id','nunique'))
+    .reset_index()
+  )
+
+def compute_page_length_engagement_delta(df: pd.DataFrame) -> pd.DataFrame:
+  # produces a row per page_length_bucket with a simple derived field
+  g = df.groupby('page_length_bucket').agg(
+    median_ratings_count_capped=('ratings_count_capped', 'median'),
+    median_text_reviews_capped=('text_reviews_count_capped', 'median')
+  ).reset_index()
+  g['engagement_delta'] = g['median_ratings_count_capped'] - g['median_text_reviews_capped']
+  return g
+
+def compute_engagement_uplift_canonical(df: pd.DataFrame) -> pd.DataFrame:
+  # expects a column that marks canonical vs duplicate, e.g. `edition_type`
+  return (
+    df.groupby('edition_type')
+    .agg(median_ratings_count=('ratings_count_capped', 'median'))
+    .reset_index()
+  )
+
+def compute_publisher_language_rankings(df: pd.DataFrame) -> pd.DataFrame:
+  return (
+    df.groupby(['publisher', 'language_code'])
+    .agg(average_rating=('average_rating', 'mean'), p75_ratings_count=('ratings_count_capped', lambda s: s.quantile(0.75)))
+    .reset_index()
+  )
+
+def compute_publication_year_rolling_stats(df: pd.DataFrame, window: int = 3) -> pd.DataFrame:
+  ts = (
+    df.groupby('publication_year')
+    .agg(average_rating=('average_rating', 'mean'))
+    .sort_index()
+  )
+  ts['rolling_average_rating'] = ts['average_rating'].rolling(window=window, min_periods=1).mean()
+  ts = ts.reset_index()
+  return ts
+```
+
+3. Wire these functions into the CLI so they write CSVs. Edit `src/analyses/portfolio/p03_core_metrics_suite.py` and add entries to the `tables` mapping (below the existing ones). Example addition:
+
+```python
+  "M2_author_engagement_index": compute_author_engagement_index(df_clean),
+  "M6_page_length_engagement_delta": compute_page_length_engagement_delta(df_clean),
+  "M10_publisher_engagement": compute_publisher_engagement(df_clean),
+  "M12_engagement_uplift_canonical": compute_engagement_uplift_canonical(df_clean),
+  "M13_publisher_language_rankings": compute_publisher_language_rankings(df_clean),
+  "M14_publication_year_rolling_stats": compute_publication_year_rolling_stats(df_clean),
+```
+
+4. Save your edits and run the core-metrics CLI. From the repository root (Docker recommended for reproducibility):
+
+```powershell
+docker compose --env-file .env.example -f docker-compose.python.yml run --no-deps --rm app python -m src.analyses.portfolio.p03_core_metrics_suite
+```
+
+This will overwrite the stub CSVs in `outputs/phase04_core_metrics/` with the real computed tables.
+
+5. Re-run the extras plotting script to refresh the figures from the real metrics:
+
+```powershell
+docker compose --env-file .env.example -f docker-compose.python.yml run --no-deps --rm app python -m src.analyses.plot_phase04_extras --input-dir outputs/phase04_core_metrics --output-dir outputs/phase04_visualizations/extras
+```
+
+6. Verify the CSVs and images:
+
+- CSVs: `outputs/phase04_core_metrics/M2_author_engagement_index.csv`, `M6_page_length_engagement_delta.csv`, `M10_publisher_engagement.csv`, `M12_engagement_uplift_canonical.csv`, `M13_publisher_language_rankings.csv`, `M14_publication_year_rolling_stats.csv`.
+- Images: `outputs/phase04_visualizations/extras/*.png`.
+
+Tips & common pitfalls (beginner-friendly):
+
+- If you see a `KeyError` when running the CLI, open the CSV names referenced in the plotting scripts and confirm the column names match exactly (case-sensitive).
+- Use a small interactive test in a Python REPL or Jupyter notebook to try the new function on `data/derived/books_clean.csv` before wiring it into the CLI.
+- If Docker networking prompts for authentication when pushing changes, complete the browser auth flow or configure SSH keys; this does not affect local runs.
+
+If you want, I can open `src/metrics/core_metrics.py` and add the exact implementations above, and then run the CLI for you so you don't have to edit files manually. Say "implement and run" and I'll do it now.
+
 ## 6. Success checklist
 
 - [x] Visualization plan table completed and reviewed
